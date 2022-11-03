@@ -66,7 +66,8 @@ type pbftInstance struct {
 	stopProp          sync.Once
 	//	next              int // The index  of the next to be proposed SN
 	startTs int64 // Timestamp of the start of the instance. Used for estimating duration of segment.
-	localhtn int32///1024
+	//localhtn int32///1024
+	hnsn map[int32]int32
 }
 
 type pbftBatch struct {
@@ -164,7 +165,8 @@ func (pi *pbftInstance) init(seg manager.Segment, orderer *PbftOrderer) {
 
 	//Initialize view change log
 	pi.viewChange = make(map[int32]*viewChangeInfo)
-
+//1103
+	pi.hnsn = make(map[int32]int32)
 	// Initialise protocol state
 	pi.batches = make(map[int32]map[int32]*pbftBatch)
 	pi.checkpointMsgs = make(map[int32]*pb.PbftCheckpoint)
@@ -433,7 +435,7 @@ func (pi *pbftInstance) handlePreprepare(preprepare *pb.PbftPreprepare, msg *pb.
 		//	return nil
 		//}
 
-		pi.announce(batch, tn, preprepare.Batch, preprepare.Aborted, preprepare.Ts, batch.lastCommitTs)
+		pi.announce(batch, sn, tn, preprepare.Batch, preprepare.Aborted, preprepare.Ts, batch.lastCommitTs)
 	}
 
 	return nil
@@ -532,7 +534,7 @@ func (pi *pbftInstance) handlePrepare(prepare *pb.PbftPrepare, msg *pb.ProtocolM
 		//	return nil
 		//}
 
-		pi.announce(batch, tn, batch.preprepareMsg.Batch, batch.preprepareMsg.Aborted, batch.preprepareMsg.Ts, batch.lastCommitTs)
+		pi.announce(batch,  sn, tn, batch.preprepareMsg.Batch, batch.preprepareMsg.Aborted, batch.preprepareMsg.Ts, batch.lastCommitTs)
 	}
 
 	return nil
@@ -673,7 +675,7 @@ func (pi *pbftInstance) handleCommit(commit *pb.PbftCommit, msg *pb.ProtocolMess
 		//	return nil
 		//}
 	///1101
-		pi.announce(batch, tn, batch.preprepareMsg.Batch, batch.preprepareMsg.Aborted, batch.preprepareMsg.Ts, batch.lastCommitTs)
+		pi.announce(batch, sn, tn, batch.preprepareMsg.Batch, batch.preprepareMsg.Aborted, batch.preprepareMsg.Ts, batch.lastCommitTs)
 		//pi.announce(batch, sn, batch.preprepareMsg.Batch, batch.preprepareMsg.Aborted, batch.preprepareMsg.Ts, batch.lastCommitTs)
 	}
 
@@ -703,12 +705,13 @@ func (pi *pbftInstance) handleMissingEntry(msg *pb.MissingEntry) {
 		batch.digest = msg.Digest
 		// We must not touch the preprepared or prepared flag to prevent potential segfaults,
 		// as the prepare messages and the preprepare message might still be absent.
+		sn := msg.Sn
 		tn := (msg.Sn - int32(pi.segment.SegID()))/4///1101
-		pi.announce(batch, tn, msg.Batch, msg.Aborted, pi.startTs, time.Now().UnixNano())
+		pi.announce(batch, sn, tn, msg.Batch, msg.Aborted, pi.startTs, time.Now().UnixNano())
 	}
 }
 ///1101
-func (pi *pbftInstance) announce(batch *pbftBatch, tn int32, reqBatch *pb.Batch, aborted bool, proposeTs int64, commitTs int64) {
+func (pi *pbftInstance) announce(batch *pbftBatch, sn int32, tn int32, reqBatch *pb.Batch, aborted bool, proposeTs int64, commitTs int64) {
 //func (pi *pbftInstance) announce(batch *pbftBatch, sn int32, reqBatch *pb.Batch, aborted bool, proposeTs int64, commitTs int64) {
 	if batch.viewChangeTimer != nil {
 		notFired := batch.viewChangeTimer.Stop()
@@ -725,7 +728,7 @@ func (pi *pbftInstance) announce(batch *pbftBatch, tn int32, reqBatch *pb.Batch,
 	request.RemoveBatch(batch.batch)
 
 	logEntry := &log.Entry{
-		Sn:        4*(int32(tn))+int32(pi.segment.SegID()),///1101
+		Sn:        4*(int32(tn-1))+int32(pi.segment.SegID()),///1101
 	//	Sn:        sn,
 		Batch:     reqBatch,
 		ProposeTs: proposeTs,
@@ -740,27 +743,33 @@ func (pi *pbftInstance) announce(batch *pbftBatch, tn int32, reqBatch *pb.Batch,
 	// Announce decision.
 	announcer.Announce(logEntry)
 	///1101
-	//hn :=(sn - int32(pi.segment.SegID()))/4///1101
+	hn :=(sn - int32(pi.segment.SegID()))/4 +1///1103
+	pi.hnsn[hn] = logEntry.Sn
 	logger.Info().
 		Int32("logEntry.Sn", logEntry.Sn).
 		Int32("Tn", tn).
-		//Int32("Hn", hn).
+		Int32("Hn", hn).
 		Int("SegID", pi.segment.SegID()).
 		Msg("Get logEntry.Sn from tn.")
-	for _, sn := range pi.segment.SNs() {
-		if !pi.batches[pi.view][sn].committed && sn<logEntry.Sn {
+	if hn>0 && pi.hnsn[hn]-pi.hnsn[hn-1]>4 {
+		for i := pi.hnsn[hn-1]+4; i < pi.hnsn[hn]; i=i+4 {	
 			logEntry1 := &log.Entry{
-				Sn:        sn,///1101
-				Batch:     nil,
-			ProposeTs: proposeTs,
-			CommitTs:  commitTs,
-			Aborted:   aborted,
-			Digest:    nil,
+				Sn:        i,///1103
+				Batch:     reqBatch,
+				ProposeTs: proposeTs,
+				CommitTs:  commitTs,
+				Aborted:   aborted,
+				Digest:    batch.digest,
 			}
-		announcer.Announce(logEntry1)
+			announcer.Announce(logEntry1)
+			logger.Info().
+			Int32("logEntry.Sn", logEntry1.Sn).
+			Int("SegID", pi.segment.SegID()).
+			Msg("Get logEntry.Sn from tn. Nil Blocks.")
 			//break
 		}
 	}
+	
 	// Start new view change timeout
 	// for the fist uncommitted sequence number in the segment
 	finished := true // Will be set to false if any SN is still uncommitted
