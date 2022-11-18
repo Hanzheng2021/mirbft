@@ -1,0 +1,2371 @@
+{"level":"debug","Logging":"debug","time":"2022-11-01T17:56:06+08:00","message":"Config"}
+{"level":"debug","UseTLS":false,"time":"2022-11-01T17:56:06+08:00","message":"Config"}
+{"level":"debug","CACertFile":"tls-data/ca.pem","time":"2022-11-01T17:56:06+08:00","message":"Config"}
+{"level":"debug","KeyFile":"tls-data/auth.key","time":"2022-11-01T17:56:06+08:00","message":"Config"}
+{"level":"debug","CertFile":"tls-data/auth.pem","time":"2022-11-01T17:56:06+08:00","message":"Config"}
+{"level":"debug","PriorityConnections":2,"time":"2022-11-01T17:56:06+08:00","message":"Config"}
+{"level":"debug","BasicConnections":4,"time":"2022-11-01T17:56:06+08:00","message":"Config"}
+{"level":"debug","TestConnections":false,"time":"2022-11-01T17:56:06+08:00","message":"Config"}
+{"level":"debug","ExcessConnections":1,"time":"2022-11-01T17:56:06+08:00","message":"Config"}
+{"level":"debug","ConnectionTestMsgs":4,"time":"2022-11-01T17:56:06+08:00","message":"Config"}
+{"level":"debug","ConnectionTestPayload":131072,"time":"2022-11-01T17:56:06+08:00","message":"Config"}
+{"level":"debug","OutMessageBufsize":1024,"time":"2022-11-01T17:56:06+08:00","message":"Config"}
+{"level":"debug","OutMessageBufsize":1,"time":"2022-11-01T17:56:06+08:00","message":"Config"}
+{"level":"debug","ThroughputCap":131072000,"time":"2022-11-01T17:56:06+08:00","message":"Config"}
+{"level":"debug","StragglerTolerance":1000,"time":"2022-11-01T17:56:06+08:00","message":"Config"}
+{"level":"debug","BatchSizeIncrement":256,"time":"2022-11-01T17:56:06+08:00","message":"Config"}
+{"level":"debug","Orderer":"Pbft","time":"2022-11-01T17:56:06+08:00","message":"Config"}
+{"level":"debug","Manager":"Mir","time":"2022-11-01T17:56:06+08:00","message":"Config"}
+{"level":"debug","Failures":0,"time":"2022-11-01T17:56:06+08:00","message":"Config"}
+{"level":"debug","CrashTiming":"EpochStart","time":"2022-11-01T17:56:06+08:00","message":"Config"}
+{"level":"debug","CheckpointInterval":256,"time":"2022-11-01T17:56:06+08:00","message":"Config"}
+{"level":"debug","WatermarkWindowSize":256,"time":"2022-11-01T17:56:06+08:00","message":"Config"}
+{"level":"debug","EpochLength":256,"time":"2022-11-01T17:56:06+08:00","message":"Config"}
+{"level":"debug","SegmentLength":64,"time":"2022-11-01T17:56:06+08:00","message":"Config"}
+{"level":"debug","WaitForCheckpoints":true,"time":"2022-11-01T17:56:06+08:00","message":"Config"}
+{"level":"debug","ClientWatermarkWindowSize":4194304,"time":"2022-11-01T17:56:06+08:00","message":"Config"}
+{"level":"debug","ClientRequestBacklogSize":4194304,"time":"2022-11-01T17:56:06+08:00","message":"Config"}
+{"level":"debug","RandomSeed":10017,"time":"2022-11-01T17:56:06+08:00","message":"Config"}
+{"level":"debug","NodeToLeaderRatio":1,"time":"2022-11-01T17:56:06+08:00","message":"Config"}
+{"level":"debug","LeaderPolicy":"Blacklist","time":"2022-11-01T17:56:06+08:00","message":"Config"}
+{"level":"debug","DefaultLeaderBan":2,"time":"2022-11-01T17:56:06+08:00","message":"Config"}
+{"level":"debug","NumBuckets":64,"time":"2022-11-01T17:56:06+08:00","message":"Config"}
+{"level":"debug","BatchSize":1000,"time":"2022-11-01T17:56:06+08:00","message":"Config"}
+{"level":"debug","DisabledViewChange":false,"time":"2022-11-01T17:56:06+08:00","message":"Config"}
+{"level":"debug","ViewChangeTimeout":60000,"time":"2022-11-01T17:56:06+08:00","message":"Config"}
+{"level":"debug","ClientTraceSampling":10,"time":"2022-11-01T17:56:06+08:00","message":"Config"}
+{"level":"debug","EventBufferSize":2097152,"time":"2022-11-01T17:56:06+08:00","message":"Config"}
+{"level":"debug","TraceSampling":1,"time":"2022-11-01T17:56:06+08:00","message":"Config"}
+{"level":"debug","ClientsPerProcess":1,"time":"2022-11-01T17:56:06+08:00","message":"Config"}
+{"level":"debug","RequestsPerClient":15360,"time":"2022-11-01T17:56:06+08:00","message":"Config"}
+{"level":"debug","ClientRunTime":30000,"time":"2022-11-01T17:56:06+08:00","message":"Config"}
+{"level":"debug","RequestRate":256,"time":"2022-11-01T17:56:06+08:00","message":"Config"}
+{"level":"debug","HardRequestRateLimit":false,"time":"2022-11-01T17:56:06+08:00","message":"Config"}
+{"level":"debug","RequestPayloadSize":500,"time":"2022-11-01T17:56:06+08:00","message":"Config"}
+{"level":"debug","SignRequests":true,"time":"2022-11-01T17:56:06+08:00","message":"Config"}
+{"level":"debug","ClientPrivKeyFile":"tls-data/client-ecdsa-256.key","time":"2022-11-01T17:56:06+08:00","message":"Config"}
+{"level":"debug","ClientPubKeyFile":"tls-data/client-ecdsa-256.pem","time":"2022-11-01T17:56:06+08:00","message":"Config"}
+{"level":"debug","PrecomputeRequests":false,"time":"2022-11-01T17:56:06+08:00","message":"Config"}
+{"level":"debug","RequestHandlerThreads":32,"time":"2022-11-01T17:56:06+08:00","message":"Config"}
+{"level":"debug","RequestInputChannelBuffer":8192,"time":"2022-11-01T17:56:06+08:00","message":"Config"}
+{"level":"debug","BatchVerifier":"external","time":"2022-11-01T17:56:06+08:00","message":"Config"}
+09:56:06.344 INF Registered with discovery server. numPeers=4 ownID=0
+09:56:06.345 INF Profiling enabled.
+09:56:06.345 INF Setting up profiling.
+09:56:06.345 INF Started Profiler: CPU
+09:56:06.346 INF Started Profiler: BLOCK
+09:56:06.346 INF Started Profiler: MUTEX
+09:56:06.346 INF Profiler will stop on signal. exit=true
+09:56:06.347 INF Tracing will stop on signal. exit=false
+09:56:06.348 INF Started tracing. traceFile=experiment-output/0000/slave-002/peer.trc
+09:56:06.349 DBG Starting backlog.
+09:56:06.349 INF Listening for connections. port=10000 useTLS=false
+09:56:06.349 INF Connecting to peer. addr=127.0.0.1:10000 basicConns=4 priorityConns=2
+09:56:06.349 INF Connecting to peer. addr=127.0.0.1:10011 basicConns=4 priorityConns=2
+09:56:06.349 INF Connecting to peer. addr=127.0.0.1:10033 basicConns=4 priorityConns=2
+09:56:06.349 INF Connecting to peer. addr=127.0.0.1:10022 basicConns=4 priorityConns=2
+09:56:06.366 INF Incoming connection for protocol messages. addr=127.0.0.1:34656
+09:56:06.379 INF Incoming connection for protocol messages. addr=127.0.0.1:34668
+09:56:06.381 INF Incoming connection for protocol messages. addr=127.0.0.1:34664
+09:56:06.385 INF Incoming connection for protocol messages. addr=127.0.0.1:34686
+09:56:06.387 INF Incoming connection for protocol messages. addr=127.0.0.1:34678
+09:56:06.387 INF Incoming connection for protocol messages. addr=127.0.0.1:34688
+09:56:06.389 INF Incoming connection for protocol messages. addr=127.0.0.1:34698
+09:56:06.390 INF Incoming connection for protocol messages. addr=127.0.0.1:34694
+09:56:06.390 INF Incoming connection for protocol messages. addr=127.0.0.1:34718
+09:56:06.391 INF Incoming connection for protocol messages. addr=127.0.0.1:34724
+09:56:06.391 INF Incoming connection for protocol messages. addr=127.0.0.1:34708
+09:56:06.391 INF Incoming connection for protocol messages. addr=127.0.0.1:34702
+09:56:06.392 INF Incoming connection for protocol messages. addr=127.0.0.1:34706
+09:56:06.393 INF Incoming connection for protocol messages. addr=127.0.0.1:34728
+09:56:06.393 INF Incoming connection for protocol messages. addr=127.0.0.1:34740
+09:56:06.393 INF Incoming connection for protocol messages. addr=127.0.0.1:34764
+09:56:06.393 INF Incoming connection for protocol messages. addr=127.0.0.1:34770
+09:56:06.394 INF Incoming connection for protocol messages. addr=127.0.0.1:34772
+09:56:06.395 DBG Connected. peerID=1
+09:56:06.396 INF Incoming connection for protocol messages. addr=127.0.0.1:34782
+09:56:06.396 INF Incoming connection for protocol messages. addr=127.0.0.1:34774
+09:56:06.396 DBG Connected. peerID=3
+09:56:06.396 DBG Connected. peerID=2
+09:56:06.396 INF Incoming connection for protocol messages. addr=127.0.0.1:34788
+09:56:06.397 INF Incoming connection for protocol messages. addr=127.0.0.1:34786
+09:56:06.397 DBG Connected. peerID=0
+09:56:06.397 INF Connected to all peers.
+09:56:06.397 INF Incoming connection for protocol messages. addr=127.0.0.1:34808
+09:56:06.397 INF Incoming connection for protocol messages. addr=127.0.0.1:34800
+09:56:06.401 INF All peers finished connecting. Starting ISS.
+09:56:06.402 DBG Buckets for 0-th leader 0: [0 4 8 12 16 20 24 28 32 36 40 44 48 52 56 60]
+09:56:06.402 DBG Buckets for 1-th leader 1: [1 5 9 13 17 21 25 29 33 37 41 45 49 53 57 61]
+09:56:06.402 DBG Buckets for 2-th leader 2: [2 6 10 14 18 22 26 30 34 38 42 46 50 54 58 62]
+09:56:06.402 DBG Buckets for 3-th leader 3: [3 7 11 15 19 23 27 31 35 39 43 47 51 55 59 63]
+09:56:06.403 INF PbftOrderer received a new segment: [0 4 8 12 16 20 24 28 32 36 40 44 48 52 56 60 64 68 72 76 80 84 88 92 96 100 104 108 112 116 120 124 128 132 136 140 144 148 152 156 160 164 168 172 176 180 184 188 192 196 200 204 208 212 216 220 224 228 232 236 240 244 248 252] first leader=0 firstSN=0 lastSN=252 len=64 length=64 segId=0
+09:56:06.403 INF Starting new view. segID=0 timeout=60000 view=0
+09:56:06.403 DBG Starting timer. sn=0 view=0
+09:56:06.403 INF Starting PBFT instance. first=0 last=252 segID=0
+09:56:06.404 DBG Subscribing to backlog. segID=0
+09:56:06.404 DBG Leading segment. segID=0
+09:56:06.404 INF Starting serialized message processing. segID=0
+09:56:06.404 DBG Waiting for batch. batchSize=4096
+09:56:06.404 INF PbftOrderer received a new segment: [1 5 9 13 17 21 25 29 33 37 41 45 49 53 57 61 65 69 73 77 81 85 89 93 97 101 105 109 113 117 121 125 129 133 137 141 145 149 153 157 161 165 169 173 177 181 185 189 193 197 201 205 209 213 217 221 225 229 233 237 241 245 249 253] first leader=1 firstSN=1 lastSN=253 len=64 length=64 segId=1
+09:56:06.404 INF Starting new view. segID=1 timeout=60000 view=0
+09:56:06.404 DBG Starting timer. sn=1 view=0
+09:56:06.405 INF Starting PBFT instance. first=1 last=253 segID=1
+09:56:06.405 DBG Subscribing to backlog. segID=1
+09:56:06.405 INF Starting serialized message processing. segID=1
+09:56:06.405 INF PbftOrderer received a new segment: [2 6 10 14 18 22 26 30 34 38 42 46 50 54 58 62 66 70 74 78 82 86 90 94 98 102 106 110 114 118 122 126 130 134 138 142 146 150 154 158 162 166 170 174 178 182 186 190 194 198 202 206 210 214 218 222 226 230 234 238 242 246 250 254] first leader=2 firstSN=2 lastSN=254 len=64 length=64 segId=2
+09:56:06.405 INF Starting new view. segID=2 timeout=60000 view=0
+09:56:06.405 DBG Starting timer. sn=2 view=0
+09:56:06.406 INF Starting PBFT instance. first=2 last=254 segID=2
+09:56:06.406 DBG Subscribing to backlog. segID=2
+09:56:06.406 INF Starting serialized message processing. segID=2
+09:56:06.406 INF PbftOrderer received a new segment: [3 7 11 15 19 23 27 31 35 39 43 47 51 55 59 63 67 71 75 79 83 87 91 95 99 103 107 111 115 119 123 127 131 135 139 143 147 151 155 159 163 167 171 175 179 183 187 191 195 199 203 207 211 215 219 223 227 231 235 239 243 247 251 255] first leader=3 firstSN=3 lastSN=255 len=64 length=64 segId=3
+09:56:06.406 INF Starting new view. segID=3 timeout=60000 view=0
+09:56:06.406 DBG Starting timer. sn=3 view=0
+09:56:06.407 INF Starting PBFT instance. first=3 last=255 segID=3
+09:56:06.407 DBG Subscribing to backlog. segID=3
+09:56:06.407 INF Starting serialized message processing. segID=3
+09:56:07.405 DBG Batch ready. batchSize=4096
+09:56:07.405 DBG Batch cut. left=0 nBuckets=16 nReq=0 next=0
+09:56:07.405 INF Sending PREPREPARE. nReq=0 senderID=0 sn=0 view=0
+09:56:07.405 DBG Waiting for batch. batchSize=4096
+09:56:07.409 INF Handling PREPREPARE. nReq=0 senderID=1 sn=1
+09:56:07.409 DBG Creating new Batch. nReq=0
+09:56:07.409 DBG Sending PREPARE. senderID=0 sn=1 view=0
+09:56:07.409 DBG func sendPrepare prepare Tn. sn=1 tn=1
+09:56:07.410 INF Handling PREPREPARE. nReq=0 senderID=2 sn=2
+09:56:07.411 DBG Creating new Batch. nReq=0
+09:56:07.411 DBG Sending PREPARE. senderID=0 sn=2 view=0
+09:56:07.411 DBG func sendPrepare prepare Tn. sn=2 tn=1
+09:56:07.412 INF Handling PREPREPARE. nReq=0 senderID=3 sn=3
+09:56:07.412 DBG Sending COMMIT. senderID=0 sn=0 view=0
+09:56:07.412 DBG Creating new Batch. nReq=0
+09:56:07.412 DBG func sendCommit commit Tn. sn=0 tn=1
+09:56:07.412 DBG Sending Htn. senderID=0 sn=0 view=0
+09:56:07.412 DBG Sending PREPARE. senderID=0 sn=3 view=0
+09:56:07.412 DBG Sending COMMIT. senderID=0 sn=2 view=0
+09:56:07.412 DBG func sendPrepare prepare Tn. sn=3 tn=1
+09:56:07.412 DBG func sendCommit commit Tn. sn=2 tn=1
+09:56:07.413 DBG Sending Htn. senderID=0 sn=2 view=0
+09:56:07.413 DBG Sending COMMIT. senderID=0 sn=1 view=0
+09:56:07.413 DBG func handleCommit commit Tn. tn=1
+09:56:07.414 DBG func sendCommit commit Tn. sn=1 tn=1
+09:56:07.414 DBG func handleHtnmsg htn. htn=1 localhtn=1 prelocalhtn=1
+09:56:07.414 DBG Sending Htn. senderID=0 sn=1 view=0
+09:56:07.414 DBG func handleCommit commit Tn. tn=1
+09:56:07.414 DBG func handleCommit commit Tn. tn=1
+09:56:07.414 DBG func handleHtnmsg htn. htn=1 localhtn=1 prelocalhtn=1
+09:56:07.414 INF Committed entry. latency=0 nReq=0 sn=0
+09:56:07.414 DBG Sending COMMIT. senderID=0 sn=3 view=0
+09:56:07.414 DBG func handleCommit commit Tn. tn=1
+09:56:07.414 INF Delivered batch. nReq=0 sn=0
+09:56:07.414 INF Committed entry. latency=0 nReq=0 sn=2
+09:56:07.415 DBG Starting timer. sn=4 view=0
+09:56:07.415 DBG Starting timer. sn=6 view=0
+09:56:07.415 DBG func handleCommit commit Tn. tn=1
+09:56:07.415 DBG func handleHtnmsg htn. htn=1 localhtn=1 prelocalhtn=1
+09:56:07.415 DBG func handleHtnmsg htn. htn=1 localhtn=1 prelocalhtn=1
+09:56:07.415 DBG func handleCommit commit Tn. tn=1
+09:56:07.414 DBG func handleCommit commit Tn. tn=1
+09:56:07.415 DBG func handleHtnmsg htn. htn=1 localhtn=1 prelocalhtn=1
+09:56:07.415 DBG func handleHtnmsg htn. htn=1 localhtn=1 prelocalhtn=1
+09:56:07.415 DBG func handleHtnmsg htn. htn=1 localhtn=1 prelocalhtn=1
+09:56:07.415 DBG func sendCommit commit Tn. sn=3 tn=1
+09:56:07.415 DBG func handleCommit commit Tn. tn=1
+09:56:07.416 DBG Sending Htn. senderID=0 sn=3 view=0
+09:56:07.416 INF Committed entry. latency=0 nReq=0 sn=1
+09:56:07.416 DBG func handleCommit commit Tn. tn=1
+09:56:07.416 INF Delivered batch. nReq=0 sn=1
+09:56:07.416 DBG func handleCommit commit Tn. tn=1
+09:56:07.416 INF Delivered batch. nReq=0 sn=2
+09:56:07.416 INF Committed entry. latency=0 nReq=0 sn=3
+09:56:07.416 INF Delivered batch. nReq=0 sn=3
+09:56:07.416 DBG Starting timer. sn=5 view=0
+09:56:07.416 DBG Starting timer. sn=7 view=0
+09:56:07.417 DBG func handleHtnmsg htn. htn=1 localhtn=1 prelocalhtn=1
+09:56:07.417 DBG func handleCommit commit Tn. tn=1
+09:56:07.417 DBG func handleHtnmsg htn. htn=1 localhtn=1 prelocalhtn=1
+09:56:07.417 DBG func handleHtnmsg htn. htn=1 localhtn=1 prelocalhtn=1
+09:56:07.417 DBG func handleCommit commit Tn. tn=1
+09:56:07.417 DBG func handleHtnmsg htn. htn=1 localhtn=1 prelocalhtn=1
+09:56:07.417 DBG func handleHtnmsg htn. htn=1 localhtn=1 prelocalhtn=1
+09:56:08.406 DBG Batch ready. batchSize=4096
+09:56:08.406 DBG Batch cut. left=0 nBuckets=16 nReq=0 next=0
+09:56:08.406 INF Sending PREPREPARE. nReq=0 senderID=0 sn=4 view=0
+09:56:08.406 DBG Waiting for batch. batchSize=4096
+09:56:08.407 INF Handling PREPREPARE. nReq=0 senderID=1 sn=5
+09:56:08.408 DBG Creating new Batch. nReq=0
+09:56:08.408 DBG Sending PREPARE. senderID=0 sn=5 view=0
+09:56:08.408 DBG func sendPrepare prepare Tn. sn=5 tn=2
+09:56:08.409 INF Handling PREPREPARE. nReq=0 senderID=2 sn=6
+09:56:08.409 DBG Creating new Batch. nReq=0
+09:56:08.409 DBG Sending PREPARE. senderID=0 sn=6 view=0
+09:56:08.410 DBG func sendPrepare prepare Tn. sn=6 tn=2
+09:56:08.410 DBG Sending COMMIT. senderID=0 sn=4 view=0
+09:56:08.410 DBG Sending COMMIT. senderID=0 sn=5 view=0
+09:56:08.410 DBG func sendCommit commit Tn. sn=4 tn=2
+09:56:08.410 DBG func sendCommit commit Tn. sn=5 tn=2
+09:56:08.410 DBG Sending Htn. senderID=0 sn=5 view=0
+09:56:08.410 DBG Sending Htn. senderID=0 sn=4 view=0
+09:56:08.410 DBG func handleCommit commit Tn. tn=2
+09:56:08.410 DBG func handleCommit commit Tn. tn=2
+09:56:08.411 DBG func handleCommit commit Tn. tn=2
+09:56:08.411 DBG func handleCommit commit Tn. tn=2
+09:56:08.411 INF Committed entry. latency=0 nReq=0 sn=5
+09:56:08.411 INF Delivered batch. nReq=0 sn=4
+09:56:08.411 INF Committed entry. latency=0 nReq=0 sn=4
+09:56:08.411 DBG Sending COMMIT. senderID=0 sn=6 view=0
+09:56:08.411 INF Delivered batch. nReq=0 sn=5
+09:56:08.411 DBG func sendCommit commit Tn. sn=6 tn=2
+09:56:08.411 DBG Starting timer. sn=9 view=0
+09:56:08.411 INF Handling PREPREPARE. nReq=0 senderID=3 sn=7
+09:56:08.411 DBG Starting timer. sn=8 view=0
+09:56:08.411 DBG Creating new Batch. nReq=0
+09:56:08.411 DBG func handleHtnmsg htn. htn=2 localhtn=2 prelocalhtn=2
+09:56:08.412 DBG func handleHtnmsg htn. htn=2 localhtn=2 prelocalhtn=2
+09:56:08.412 DBG func handleCommit commit Tn. tn=2
+09:56:08.411 DBG Sending Htn. senderID=0 sn=6 view=0
+09:56:08.412 DBG Sending PREPARE. senderID=0 sn=7 view=0
+09:56:08.412 DBG func handleHtnmsg htn. htn=2 localhtn=2 prelocalhtn=2
+09:56:08.412 DBG func handleCommit commit Tn. tn=2
+09:56:08.412 DBG func sendPrepare prepare Tn. sn=7 tn=2
+09:56:08.412 DBG func handleHtnmsg htn. htn=2 localhtn=2 prelocalhtn=2
+09:56:08.412 DBG func handleCommit commit Tn. tn=2
+09:56:08.412 DBG func handleHtnmsg htn. htn=2 localhtn=2 prelocalhtn=2
+09:56:08.412 DBG func handleCommit commit Tn. tn=2
+09:56:08.412 DBG func handleHtnmsg htn. htn=2 localhtn=2 prelocalhtn=2
+09:56:08.413 INF Committed entry. latency=0 nReq=0 sn=6
+09:56:08.413 INF Delivered batch. nReq=0 sn=6
+09:56:08.413 DBG Starting timer. sn=10 view=0
+09:56:08.413 DBG func handleHtnmsg htn. htn=2 localhtn=2 prelocalhtn=2
+09:56:08.413 DBG Sending COMMIT. senderID=0 sn=7 view=0
+09:56:08.413 DBG func handleCommit commit Tn. tn=2
+09:56:08.413 DBG func sendCommit commit Tn. sn=7 tn=2
+09:56:08.413 DBG func handleHtnmsg htn. htn=2 localhtn=2 prelocalhtn=2
+09:56:08.413 DBG Sending Htn. senderID=0 sn=7 view=0
+09:56:08.414 DBG func handleHtnmsg htn. htn=2 localhtn=2 prelocalhtn=2
+09:56:08.414 DBG func handleCommit commit Tn. tn=2
+09:56:08.415 DBG func handleCommit commit Tn. tn=2
+09:56:08.415 INF Committed entry. latency=0 nReq=0 sn=7
+09:56:08.415 INF Delivered batch. nReq=0 sn=7
+09:56:08.415 DBG Starting timer. sn=11 view=0
+09:56:08.415 DBG func handleHtnmsg htn. htn=2 localhtn=2 prelocalhtn=2
+09:56:08.415 DBG func handleCommit commit Tn. tn=2
+09:56:08.415 DBG func handleHtnmsg htn. htn=2 localhtn=2 prelocalhtn=2
+09:56:08.416 DBG func handleHtnmsg htn. htn=2 localhtn=2 prelocalhtn=2
+09:56:08.436 INF Incoming connection for requests. addr=127.0.0.1:34836
+09:56:09.408 DBG Batch ready. batchSize=4096
+09:56:09.408 DBG Batch cut. left=0 nBuckets=16 nReq=61 next=0
+09:56:09.408 DBG Waiting for batch. batchSize=4096
+09:56:09.414 INF Sending PREPREPARE. nReq=61 senderID=0 sn=8 view=0
+09:56:09.417 INF Handling PREPREPARE. nReq=61 senderID=1 sn=9
+09:56:09.417 DBG Creating new Batch. nReq=61
+09:56:09.418 INF Handling PREPREPARE. nReq=61 senderID=2 sn=10
+09:56:09.418 DBG Creating new Batch. nReq=61
+09:56:09.426 DBG Sending PREPARE. senderID=0 sn=9 view=0
+09:56:09.426 DBG func sendPrepare prepare Tn. sn=9 tn=3
+09:56:09.428 DBG Sending PREPARE. senderID=0 sn=10 view=0
+09:56:09.428 DBG func sendPrepare prepare Tn. sn=10 tn=3
+09:56:09.429 INF Handling PREPREPARE. nReq=61 senderID=3 sn=11
+09:56:09.429 DBG Creating new Batch. nReq=61
+09:56:09.430 DBG Sending COMMIT. senderID=0 sn=10 view=0
+09:56:09.430 DBG func sendCommit commit Tn. sn=10 tn=3
+09:56:09.430 DBG Sending Htn. senderID=0 sn=10 view=0
+09:56:09.431 DBG func handleCommit commit Tn. tn=3
+09:56:09.432 DBG func handleHtnmsg htn. htn=3 localhtn=3 prelocalhtn=3
+09:56:09.432 DBG func handleCommit commit Tn. tn=3
+09:56:09.433 INF Committed entry. latency=0 nReq=61 sn=10
+09:56:09.433 DBG Starting timer. sn=14 view=0
+09:56:09.433 DBG func handleHtnmsg htn. htn=3 localhtn=3 prelocalhtn=3
+09:56:09.434 DBG Sending COMMIT. senderID=0 sn=9 view=0
+09:56:09.435 DBG func sendCommit commit Tn. sn=9 tn=3
+09:56:09.435 DBG Sending Htn. senderID=0 sn=9 view=0
+09:56:09.435 DBG func handleCommit commit Tn. tn=3
+09:56:09.435 DBG func handleHtnmsg htn. htn=3 localhtn=3 prelocalhtn=3
+09:56:09.436 DBG func handleCommit commit Tn. tn=3
+09:56:09.436 INF Committed entry. latency=0 nReq=61 sn=9
+09:56:09.436 DBG Starting timer. sn=13 view=0
+09:56:09.436 DBG func handleHtnmsg htn. htn=3 localhtn=3 prelocalhtn=3
+09:56:09.436 DBG Sending PREPARE. senderID=0 sn=11 view=0
+09:56:09.437 DBG func handleCommit commit Tn. tn=3
+09:56:09.437 DBG Sending COMMIT. senderID=0 sn=8 view=0
+09:56:09.437 DBG func sendPrepare prepare Tn. sn=11 tn=3
+09:56:09.437 DBG func handleHtnmsg htn. htn=3 localhtn=3 prelocalhtn=3
+09:56:09.437 DBG func sendCommit commit Tn. sn=8 tn=3
+09:56:09.437 DBG Sending COMMIT. senderID=0 sn=11 view=0
+09:56:09.437 DBG Sending Htn. senderID=0 sn=8 view=0
+09:56:09.437 DBG func sendCommit commit Tn. sn=11 tn=3
+09:56:09.437 DBG func handleCommit commit Tn. tn=3
+09:56:09.437 DBG func handleCommit commit Tn. tn=3
+09:56:09.437 DBG func handleCommit commit Tn. tn=3
+09:56:09.437 DBG Sending Htn. senderID=0 sn=11 view=0
+09:56:09.437 DBG func handleHtnmsg htn. htn=3 localhtn=3 prelocalhtn=3
+09:56:09.438 INF Committed entry. latency=0 nReq=61 sn=8
+09:56:09.438 INF Delivered batch. nReq=61 sn=8
+09:56:09.438 INF Delivered batch. nReq=61 sn=9
+09:56:09.438 INF Delivered batch. nReq=61 sn=10
+09:56:09.438 DBG Starting timer. sn=12 view=0
+09:56:09.438 DBG func handleHtnmsg htn. htn=3 localhtn=3 prelocalhtn=3
+09:56:09.438 DBG func handleHtnmsg htn. htn=3 localhtn=3 prelocalhtn=3
+09:56:09.439 DBG func handleCommit commit Tn. tn=3
+09:56:09.439 DBG func handleHtnmsg htn. htn=3 localhtn=3 prelocalhtn=3
+09:56:09.439 DBG func handleCommit commit Tn. tn=3
+09:56:09.439 DBG func handleHtnmsg htn. htn=3 localhtn=3 prelocalhtn=3
+09:56:09.439 DBG func handleCommit commit Tn. tn=3
+09:56:09.440 INF Committed entry. latency=0 nReq=61 sn=11
+09:56:09.440 INF Delivered batch. nReq=61 sn=11
+09:56:09.440 DBG Starting timer. sn=15 view=0
+09:56:09.440 DBG func handleHtnmsg htn. htn=3 localhtn=3 prelocalhtn=3
+09:56:09.440 DBG func handleCommit commit Tn. tn=3
+09:56:09.440 DBG func handleHtnmsg htn. htn=3 localhtn=3 prelocalhtn=3
+09:56:10.409 DBG Batch ready. batchSize=4096
+09:56:10.410 DBG Batch cut. left=0 nBuckets=16 nReq=64 next=0
+09:56:10.410 DBG Waiting for batch. batchSize=4096
+09:56:10.411 INF Sending PREPREPARE. nReq=64 senderID=0 sn=12 view=0
+09:56:10.419 INF Handling PREPREPARE. nReq=64 senderID=1 sn=13
+09:56:10.420 DBG Creating new Batch. nReq=64
+09:56:10.422 INF Handling PREPREPARE. nReq=64 senderID=3 sn=15
+09:56:10.422 DBG Creating new Batch. nReq=64
+09:56:10.422 INF Handling PREPREPARE. nReq=64 senderID=2 sn=14
+09:56:10.423 DBG Creating new Batch. nReq=64
+09:56:10.434 DBG Sending PREPARE. senderID=0 sn=14 view=0
+09:56:10.434 DBG func sendPrepare prepare Tn. sn=14 tn=4
+09:56:10.434 DBG Sending PREPARE. senderID=0 sn=13 view=0
+09:56:10.434 DBG Sending COMMIT. senderID=0 sn=14 view=0
+09:56:10.434 DBG func sendPrepare prepare Tn. sn=13 tn=4
+09:56:10.434 DBG Sending PREPARE. senderID=0 sn=15 view=0
+09:56:10.434 DBG func sendCommit commit Tn. sn=14 tn=4
+09:56:10.435 DBG func sendPrepare prepare Tn. sn=15 tn=4
+09:56:10.435 DBG Sending Htn. senderID=0 sn=14 view=0
+09:56:10.435 DBG Sending COMMIT. senderID=0 sn=13 view=0
+09:56:10.435 DBG func sendCommit commit Tn. sn=13 tn=4
+09:56:10.435 DBG Sending Htn. senderID=0 sn=13 view=0
+09:56:10.436 DBG Sending COMMIT. senderID=0 sn=12 view=0
+09:56:10.436 DBG func sendCommit commit Tn. sn=12 tn=4
+09:56:10.436 DBG Sending Htn. senderID=0 sn=12 view=0
+09:56:10.436 DBG func handleCommit commit Tn. tn=4
+09:56:10.436 DBG func handleCommit commit Tn. tn=4
+09:56:10.436 DBG func handleHtnmsg htn. htn=4 localhtn=4 prelocalhtn=4
+09:56:10.437 DBG Sending COMMIT. senderID=0 sn=15 view=0
+09:56:10.437 DBG func handleCommit commit Tn. tn=4
+09:56:10.437 DBG func sendCommit commit Tn. sn=15 tn=4
+09:56:10.437 DBG Sending Htn. senderID=0 sn=15 view=0
+09:56:10.437 DBG func handleCommit commit Tn. tn=4
+09:56:10.437 INF Committed entry. latency=0 nReq=64 sn=14
+09:56:10.437 DBG func handleCommit commit Tn. tn=4
+09:56:10.438 DBG Starting timer. sn=18 view=0
+09:56:10.438 DBG func handleCommit commit Tn. tn=4
+09:56:10.438 DBG func handleHtnmsg htn. htn=4 localhtn=4 prelocalhtn=4
+09:56:10.438 INF Committed entry. latency=0 nReq=64 sn=12
+09:56:10.438 DBG func handleHtnmsg htn. htn=4 localhtn=4 prelocalhtn=4
+09:56:10.438 DBG func handleCommit commit Tn. tn=4
+09:56:10.438 INF Delivered batch. nReq=64 sn=12
+09:56:10.438 DBG func handleHtnmsg htn. htn=4 localhtn=4 prelocalhtn=4
+09:56:10.438 DBG Starting timer. sn=16 view=0
+09:56:10.438 DBG func handleCommit commit Tn. tn=4
+09:56:10.438 DBG func handleCommit commit Tn. tn=4
+09:56:10.438 DBG func handleHtnmsg htn. htn=4 localhtn=4 prelocalhtn=4
+09:56:10.438 INF Committed entry. latency=0 nReq=64 sn=13
+09:56:10.438 DBG func handleHtnmsg htn. htn=4 localhtn=4 prelocalhtn=4
+09:56:10.438 DBG func handleHtnmsg htn. htn=4 localhtn=4 prelocalhtn=4
+09:56:10.438 INF Delivered batch. nReq=64 sn=13
+09:56:10.439 DBG func handleCommit commit Tn. tn=4
+09:56:10.438 INF Committed entry. latency=0 nReq=64 sn=15
+09:56:10.439 INF Delivered batch. nReq=64 sn=14
+09:56:10.439 DBG func handleHtnmsg htn. htn=4 localhtn=4 prelocalhtn=4
+09:56:10.439 INF Delivered batch. nReq=64 sn=15
+09:56:10.439 DBG Starting timer. sn=17 view=0
+09:56:10.439 DBG Starting timer. sn=19 view=0
+09:56:10.439 DBG func handleHtnmsg htn. htn=4 localhtn=4 prelocalhtn=4
+09:56:10.439 DBG func handleHtnmsg htn. htn=4 localhtn=4 prelocalhtn=4
+09:56:10.439 DBG func handleCommit commit Tn. tn=4
+09:56:10.439 DBG func handleCommit commit Tn. tn=4
+09:56:10.440 DBG func handleHtnmsg htn. htn=4 localhtn=4 prelocalhtn=4
+09:56:10.440 DBG func handleHtnmsg htn. htn=4 localhtn=4 prelocalhtn=4
+09:56:11.412 DBG Batch ready. batchSize=4096
+09:56:11.412 DBG Batch cut. left=0 nBuckets=16 nReq=65 next=0
+09:56:11.414 DBG Waiting for batch. batchSize=4096
+09:56:11.415 INF Sending PREPREPARE. nReq=65 senderID=0 sn=16 view=0
+09:56:11.421 INF Handling PREPREPARE. nReq=64 senderID=1 sn=17
+09:56:11.421 DBG Creating new Batch. nReq=64
+09:56:11.423 INF Handling PREPREPARE. nReq=64 senderID=2 sn=18
+09:56:11.423 INF Handling PREPREPARE. nReq=64 senderID=3 sn=19
+09:56:11.424 DBG Creating new Batch. nReq=64
+09:56:11.424 DBG Creating new Batch. nReq=64
+09:56:11.435 DBG Sending COMMIT. senderID=0 sn=16 view=0
+09:56:11.435 DBG func sendCommit commit Tn. sn=16 tn=5
+09:56:11.436 DBG Sending Htn. senderID=0 sn=16 view=0
+09:56:11.436 DBG func handleCommit commit Tn. tn=5
+09:56:11.436 DBG func handleHtnmsg htn. htn=5 localhtn=5 prelocalhtn=5
+09:56:11.436 DBG Sending PREPARE. senderID=0 sn=17 view=0
+09:56:11.436 DBG func handleCommit commit Tn. tn=5
+09:56:11.436 DBG func sendPrepare prepare Tn. sn=17 tn=5
+09:56:11.437 DBG Sending COMMIT. senderID=0 sn=17 view=0
+09:56:11.437 DBG func sendCommit commit Tn. sn=17 tn=5
+09:56:11.437 DBG Sending PREPARE. senderID=0 sn=19 view=0
+09:56:11.437 INF Committed entry. latency=0 nReq=65 sn=16
+09:56:11.437 DBG Sending Htn. senderID=0 sn=17 view=0
+09:56:11.437 DBG func sendPrepare prepare Tn. sn=19 tn=5
+09:56:11.437 INF Delivered batch. nReq=65 sn=16
+09:56:11.437 DBG func handleCommit commit Tn. tn=5
+09:56:11.437 DBG Sending PREPARE. senderID=0 sn=18 view=0
+09:56:11.437 DBG Sending COMMIT. senderID=0 sn=19 view=0
+09:56:11.437 DBG Starting timer. sn=20 view=0
+09:56:11.437 DBG func handleHtnmsg htn. htn=5 localhtn=5 prelocalhtn=5
+09:56:11.438 DBG func sendPrepare prepare Tn. sn=18 tn=5
+09:56:11.438 DBG func sendCommit commit Tn. sn=19 tn=5
+09:56:11.438 DBG func handleCommit commit Tn. tn=5
+09:56:11.438 DBG func handleHtnmsg htn. htn=5 localhtn=5 prelocalhtn=5
+09:56:11.438 DBG Sending COMMIT. senderID=0 sn=18 view=0
+09:56:11.438 DBG Sending Htn. senderID=0 sn=19 view=0
+09:56:11.438 DBG func handleCommit commit Tn. tn=5
+09:56:11.438 INF Committed entry. latency=0 nReq=64 sn=17
+09:56:11.438 DBG func sendCommit commit Tn. sn=18 tn=5
+09:56:11.438 DBG func handleCommit commit Tn. tn=5
+09:56:11.438 DBG func handleHtnmsg htn. htn=5 localhtn=5 prelocalhtn=5
+09:56:11.438 INF Delivered batch. nReq=64 sn=17
+09:56:11.438 DBG func handleHtnmsg htn. htn=5 localhtn=5 prelocalhtn=5
+09:56:11.438 DBG Sending Htn. senderID=0 sn=18 view=0
+09:56:11.439 DBG Starting timer. sn=21 view=0
+09:56:11.439 DBG func handleCommit commit Tn. tn=5
+09:56:11.439 DBG func handleCommit commit Tn. tn=5
+09:56:11.439 DBG func handleHtnmsg htn. htn=5 localhtn=5 prelocalhtn=5
+09:56:11.439 DBG func handleCommit commit Tn. tn=5
+09:56:11.439 DBG func handleCommit commit Tn. tn=5
+09:56:11.439 INF Committed entry. latency=0 nReq=64 sn=19
+09:56:11.439 DBG func handleHtnmsg htn. htn=5 localhtn=5 prelocalhtn=5
+09:56:11.439 DBG Starting timer. sn=23 view=0
+09:56:11.440 INF Committed entry. latency=0 nReq=64 sn=18
+09:56:11.440 DBG func handleCommit commit Tn. tn=5
+09:56:11.440 DBG func handleHtnmsg htn. htn=5 localhtn=5 prelocalhtn=5
+09:56:11.440 INF Delivered batch. nReq=64 sn=18
+09:56:11.440 DBG func handleHtnmsg htn. htn=5 localhtn=5 prelocalhtn=5
+09:56:11.440 INF Delivered batch. nReq=64 sn=19
+09:56:11.440 DBG Starting timer. sn=22 view=0
+09:56:11.441 DBG func handleHtnmsg htn. htn=5 localhtn=5 prelocalhtn=5
+09:56:11.441 DBG func handleHtnmsg htn. htn=5 localhtn=5 prelocalhtn=5
+09:56:11.441 DBG func handleCommit commit Tn. tn=5
+09:56:11.441 DBG func handleHtnmsg htn. htn=5 localhtn=5 prelocalhtn=5
+09:56:12.415 DBG Batch ready. batchSize=4096
+09:56:12.415 DBG Batch cut. left=0 nBuckets=16 nReq=64 next=0
+09:56:12.416 DBG Waiting for batch. batchSize=4096
+09:56:12.417 INF Sending PREPREPARE. nReq=64 senderID=0 sn=20 view=0
+09:56:12.422 INF Handling PREPREPARE. nReq=64 senderID=1 sn=21
+09:56:12.422 DBG Creating new Batch. nReq=64
+09:56:12.425 INF Handling PREPREPARE. nReq=64 senderID=3 sn=23
+09:56:12.426 DBG Creating new Batch. nReq=64
+09:56:12.426 INF Handling PREPREPARE. nReq=64 senderID=2 sn=22
+09:56:12.426 DBG Creating new Batch. nReq=64
+09:56:12.435 DBG Sending PREPARE. senderID=0 sn=21 view=0
+09:56:12.435 DBG func sendPrepare prepare Tn. sn=21 tn=6
+09:56:12.437 DBG Sending COMMIT. senderID=0 sn=21 view=0
+09:56:12.437 DBG func sendCommit commit Tn. sn=21 tn=6
+09:56:12.437 DBG Sending Htn. senderID=0 sn=21 view=0
+09:56:12.438 DBG Sending PREPARE. senderID=0 sn=22 view=0
+09:56:12.438 DBG Sending PREPARE. senderID=0 sn=23 view=0
+09:56:12.438 DBG func sendPrepare prepare Tn. sn=22 tn=6
+09:56:12.438 DBG func handleCommit commit Tn. tn=6
+09:56:12.438 DBG func sendPrepare prepare Tn. sn=23 tn=6
+09:56:12.438 DBG Sending COMMIT. senderID=0 sn=22 view=0
+09:56:12.438 DBG func handleCommit commit Tn. tn=6
+09:56:12.438 DBG Sending COMMIT. senderID=0 sn=20 view=0
+09:56:12.438 DBG func sendCommit commit Tn. sn=22 tn=6
+09:56:12.438 DBG Sending COMMIT. senderID=0 sn=23 view=0
+09:56:12.439 DBG func sendCommit commit Tn. sn=20 tn=6
+09:56:12.439 DBG func sendCommit commit Tn. sn=23 tn=6
+09:56:12.439 DBG Sending Htn. senderID=0 sn=20 view=0
+09:56:12.439 DBG Sending Htn. senderID=0 sn=22 view=0
+09:56:12.439 INF Committed entry. latency=0 nReq=64 sn=21
+09:56:12.439 DBG Sending Htn. senderID=0 sn=23 view=0
+09:56:12.439 DBG Starting timer. sn=25 view=0
+09:56:12.439 DBG func handleHtnmsg htn. htn=6 localhtn=6 prelocalhtn=6
+09:56:12.439 DBG func handleCommit commit Tn. tn=6
+09:56:12.439 DBG func handleCommit commit Tn. tn=6
+09:56:12.439 DBG func handleHtnmsg htn. htn=6 localhtn=6 prelocalhtn=6
+09:56:12.439 DBG func handleCommit commit Tn. tn=6
+09:56:12.439 DBG func handleHtnmsg htn. htn=6 localhtn=6 prelocalhtn=6
+09:56:12.440 DBG func handleHtnmsg htn. htn=6 localhtn=6 prelocalhtn=6
+09:56:12.440 DBG func handleCommit commit Tn. tn=6
+09:56:12.440 DBG func handleCommit commit Tn. tn=6
+09:56:12.440 INF Committed entry. latency=0 nReq=64 sn=22
+09:56:12.440 DBG Starting timer. sn=26 view=0
+09:56:12.440 DBG func handleHtnmsg htn. htn=6 localhtn=6 prelocalhtn=6
+09:56:12.440 DBG func handleCommit commit Tn. tn=6
+09:56:12.440 DBG func handleHtnmsg htn. htn=6 localhtn=6 prelocalhtn=6
+09:56:12.440 DBG func handleHtnmsg htn. htn=6 localhtn=6 prelocalhtn=6
+09:56:12.440 DBG func handleHtnmsg htn. htn=6 localhtn=6 prelocalhtn=6
+09:56:12.441 DBG func handleCommit commit Tn. tn=6
+09:56:12.441 DBG func handleCommit commit Tn. tn=6
+09:56:12.441 INF Committed entry. latency=0 nReq=64 sn=20
+09:56:12.441 INF Committed entry. latency=0 nReq=64 sn=23
+09:56:12.441 INF Delivered batch. nReq=64 sn=20
+09:56:12.441 INF Delivered batch. nReq=64 sn=21
+09:56:12.441 INF Delivered batch. nReq=64 sn=22
+09:56:12.442 INF Delivered batch. nReq=64 sn=23
+09:56:12.442 DBG Starting timer. sn=24 view=0
+09:56:12.442 DBG Starting timer. sn=27 view=0
+09:56:12.442 DBG func handleHtnmsg htn. htn=6 localhtn=6 prelocalhtn=6
+09:56:12.442 DBG func handleHtnmsg htn. htn=6 localhtn=6 prelocalhtn=6
+09:56:12.442 DBG func handleCommit commit Tn. tn=6
+09:56:12.442 DBG func handleCommit commit Tn. tn=6
+09:56:12.442 DBG func handleHtnmsg htn. htn=6 localhtn=6 prelocalhtn=6
+09:56:12.442 DBG func handleHtnmsg htn. htn=6 localhtn=6 prelocalhtn=6
+09:56:13.416 DBG Batch ready. batchSize=4096
+09:56:13.417 DBG Batch cut. left=0 nBuckets=16 nReq=64 next=0
+09:56:13.418 DBG Waiting for batch. batchSize=4096
+09:56:13.419 INF Sending PREPREPARE. nReq=64 senderID=0 sn=24 view=0
+09:56:13.423 INF Handling PREPREPARE. nReq=65 senderID=1 sn=25
+09:56:13.423 DBG Creating new Batch. nReq=65
+09:56:13.427 INF Handling PREPREPARE. nReq=64 senderID=2 sn=26
+09:56:13.428 DBG Creating new Batch. nReq=64
+09:56:13.433 INF Handling PREPREPARE. nReq=64 senderID=3 sn=27
+09:56:13.434 DBG Creating new Batch. nReq=64
+09:56:13.437 DBG Sending PREPARE. senderID=0 sn=25 view=0
+09:56:13.437 DBG func sendPrepare prepare Tn. sn=25 tn=7
+09:56:13.438 DBG Sending COMMIT. senderID=0 sn=25 view=0
+09:56:13.438 DBG func sendCommit commit Tn. sn=25 tn=7
+09:56:13.438 DBG Sending Htn. senderID=0 sn=25 view=0
+09:56:13.439 DBG func handleCommit commit Tn. tn=7
+09:56:13.440 DBG func handleHtnmsg htn. htn=7 localhtn=7 prelocalhtn=7
+09:56:13.440 DBG func handleCommit commit Tn. tn=7
+09:56:13.440 INF Committed entry. latency=0 nReq=65 sn=25
+09:56:13.440 DBG Starting timer. sn=29 view=0
+09:56:13.440 DBG Sending PREPARE. senderID=0 sn=26 view=0
+09:56:13.441 DBG func handleHtnmsg htn. htn=7 localhtn=7 prelocalhtn=7
+09:56:13.441 DBG func handleCommit commit Tn. tn=7
+09:56:13.441 DBG func sendPrepare prepare Tn. sn=26 tn=7
+09:56:13.441 DBG Sending COMMIT. senderID=0 sn=24 view=0
+09:56:13.441 DBG func handleHtnmsg htn. htn=7 localhtn=7 prelocalhtn=7
+09:56:13.441 DBG Sending COMMIT. senderID=0 sn=26 view=0
+09:56:13.441 DBG func sendCommit commit Tn. sn=24 tn=7
+09:56:13.441 DBG func sendCommit commit Tn. sn=26 tn=7
+09:56:13.441 DBG Sending Htn. senderID=0 sn=24 view=0
+09:56:13.441 DBG Sending Htn. senderID=0 sn=26 view=0
+09:56:13.441 DBG func handleCommit commit Tn. tn=7
+09:56:13.442 DBG func handleCommit commit Tn. tn=7
+09:56:13.442 DBG Sending PREPARE. senderID=0 sn=27 view=0
+09:56:13.442 DBG func handleHtnmsg htn. htn=7 localhtn=7 prelocalhtn=7
+09:56:13.442 DBG func sendPrepare prepare Tn. sn=27 tn=7
+09:56:13.442 DBG func handleHtnmsg htn. htn=7 localhtn=7 prelocalhtn=7
+09:56:13.442 DBG func handleCommit commit Tn. tn=7
+09:56:13.442 DBG Sending COMMIT. senderID=0 sn=27 view=0
+09:56:13.442 INF Committed entry. latency=0 nReq=64 sn=24
+09:56:13.442 DBG func sendCommit commit Tn. sn=27 tn=7
+09:56:13.443 INF Delivered batch. nReq=64 sn=24
+09:56:13.443 DBG Sending Htn. senderID=0 sn=27 view=0
+09:56:13.443 INF Delivered batch. nReq=65 sn=25
+09:56:13.443 DBG func handleCommit commit Tn. tn=7
+09:56:13.443 DBG Starting timer. sn=28 view=0
+09:56:13.443 DBG func handleHtnmsg htn. htn=7 localhtn=7 prelocalhtn=7
+09:56:13.443 DBG func handleCommit commit Tn. tn=7
+09:56:13.443 DBG func handleHtnmsg htn. htn=7 localhtn=7 prelocalhtn=7
+09:56:13.443 DBG func handleCommit commit Tn. tn=7
+09:56:13.443 DBG func handleCommit commit Tn. tn=7
+09:56:13.444 DBG func handleHtnmsg htn. htn=7 localhtn=7 prelocalhtn=7
+09:56:13.444 INF Committed entry. latency=0 nReq=64 sn=26
+09:56:13.444 INF Committed entry. latency=0 nReq=64 sn=27
+09:56:13.444 INF Delivered batch. nReq=64 sn=26
+09:56:13.444 INF Delivered batch. nReq=64 sn=27
+09:56:13.444 DBG Starting timer. sn=30 view=0
+09:56:13.444 DBG Starting timer. sn=31 view=0
+09:56:13.444 DBG func handleHtnmsg htn. htn=7 localhtn=7 prelocalhtn=7
+09:56:13.445 DBG func handleCommit commit Tn. tn=7
+09:56:13.445 DBG func handleCommit commit Tn. tn=7
+09:56:13.445 DBG func handleHtnmsg htn. htn=7 localhtn=7 prelocalhtn=7
+09:56:13.445 DBG func handleHtnmsg htn. htn=7 localhtn=7 prelocalhtn=7
+09:56:13.445 DBG func handleHtnmsg htn. htn=7 localhtn=7 prelocalhtn=7
+09:56:14.419 DBG Batch ready. batchSize=4096
+09:56:14.420 DBG Batch cut. left=0 nBuckets=16 nReq=64 next=0
+09:56:14.420 DBG Waiting for batch. batchSize=4096
+09:56:14.421 INF Sending PREPREPARE. nReq=64 senderID=0 sn=28 view=0
+09:56:14.425 INF Handling PREPREPARE. nReq=64 senderID=1 sn=29
+09:56:14.425 DBG Creating new Batch. nReq=64
+09:56:14.429 INF Handling PREPREPARE. nReq=64 senderID=2 sn=30
+09:56:14.429 DBG Creating new Batch. nReq=64
+09:56:14.433 INF Handling PREPREPARE. nReq=64 senderID=3 sn=31
+09:56:14.433 DBG Creating new Batch. nReq=64
+09:56:14.434 DBG Sending PREPARE. senderID=0 sn=29 view=0
+09:56:14.434 DBG func sendPrepare prepare Tn. sn=29 tn=8
+09:56:14.437 DBG Sending COMMIT. senderID=0 sn=29 view=0
+09:56:14.437 DBG func sendCommit commit Tn. sn=29 tn=8
+09:56:14.437 DBG Sending Htn. senderID=0 sn=29 view=0
+09:56:14.438 DBG func handleCommit commit Tn. tn=8
+09:56:14.438 DBG func handleHtnmsg htn. htn=8 localhtn=8 prelocalhtn=8
+09:56:14.438 DBG func handleCommit commit Tn. tn=8
+09:56:14.438 INF Committed entry. latency=0 nReq=64 sn=29
+09:56:14.439 DBG Starting timer. sn=33 view=0
+09:56:14.439 DBG func handleHtnmsg htn. htn=8 localhtn=8 prelocalhtn=8
+09:56:14.439 DBG Sending PREPARE. senderID=0 sn=30 view=0
+09:56:14.439 DBG func handleCommit commit Tn. tn=8
+09:56:14.440 DBG func sendPrepare prepare Tn. sn=30 tn=8
+09:56:14.440 DBG func handleHtnmsg htn. htn=8 localhtn=8 prelocalhtn=8
+09:56:14.441 DBG Sending PREPARE. senderID=0 sn=31 view=0
+09:56:14.441 DBG func sendPrepare prepare Tn. sn=31 tn=8
+09:56:14.442 DBG Sending COMMIT. senderID=0 sn=28 view=0
+09:56:14.442 DBG Sending COMMIT. senderID=0 sn=30 view=0
+09:56:14.442 DBG func sendCommit commit Tn. sn=28 tn=8
+09:56:14.442 DBG func sendCommit commit Tn. sn=30 tn=8
+09:56:14.443 DBG Sending Htn. senderID=0 sn=28 view=0
+09:56:14.443 DBG Sending Htn. senderID=0 sn=30 view=0
+09:56:14.443 DBG func handleCommit commit Tn. tn=8
+09:56:14.443 DBG func handleCommit commit Tn. tn=8
+09:56:14.443 DBG func handleHtnmsg htn. htn=8 localhtn=8 prelocalhtn=8
+09:56:14.443 DBG func handleHtnmsg htn. htn=8 localhtn=8 prelocalhtn=8
+09:56:14.444 DBG func handleCommit commit Tn. tn=8
+09:56:14.444 DBG func handleCommit commit Tn. tn=8
+09:56:14.445 DBG Sending COMMIT. senderID=0 sn=31 view=0
+09:56:14.445 DBG func sendCommit commit Tn. sn=31 tn=8
+09:56:14.445 INF Committed entry. latency=0 nReq=64 sn=30
+09:56:14.445 DBG Sending Htn. senderID=0 sn=31 view=0
+09:56:14.445 INF Committed entry. latency=0 nReq=64 sn=28
+09:56:14.445 INF Delivered batch. nReq=64 sn=28
+09:56:14.445 DBG func handleCommit commit Tn. tn=8
+09:56:14.445 DBG func handleHtnmsg htn. htn=8 localhtn=8 prelocalhtn=8
+09:56:14.445 INF Delivered batch. nReq=64 sn=29
+09:56:14.445 DBG func handleCommit commit Tn. tn=8
+09:56:14.445 INF Delivered batch. nReq=64 sn=30
+09:56:14.446 DBG Starting timer. sn=34 view=0
+09:56:14.446 INF Committed entry. latency=0 nReq=64 sn=31
+09:56:14.446 INF Delivered batch. nReq=64 sn=31
+09:56:14.446 DBG func handleHtnmsg htn. htn=8 localhtn=8 prelocalhtn=8
+09:56:14.446 DBG func handleCommit commit Tn. tn=8
+09:56:14.446 DBG Starting timer. sn=32 view=0
+09:56:14.446 DBG func handleHtnmsg htn. htn=8 localhtn=8 prelocalhtn=8
+09:56:14.446 DBG Starting timer. sn=35 view=0
+09:56:14.446 DBG func handleHtnmsg htn. htn=8 localhtn=8 prelocalhtn=8
+09:56:14.446 DBG func handleCommit commit Tn. tn=8
+09:56:14.446 DBG func handleHtnmsg htn. htn=8 localhtn=8 prelocalhtn=8
+09:56:14.446 DBG func handleHtnmsg htn. htn=8 localhtn=8 prelocalhtn=8
+09:56:14.446 DBG func handleCommit commit Tn. tn=8
+09:56:14.447 DBG func handleHtnmsg htn. htn=8 localhtn=8 prelocalhtn=8
+09:56:15.421 DBG Batch ready. batchSize=4096
+09:56:15.421 DBG Batch cut. left=0 nBuckets=16 nReq=64 next=0
+09:56:15.422 DBG Waiting for batch. batchSize=4096
+09:56:15.423 INF Sending PREPREPARE. nReq=64 senderID=0 sn=32 view=0
+09:56:15.427 INF Handling PREPREPARE. nReq=64 senderID=1 sn=33
+09:56:15.427 DBG Creating new Batch. nReq=64
+09:56:15.428 INF Handling PREPREPARE. nReq=65 senderID=2 sn=34
+09:56:15.429 DBG Creating new Batch. nReq=65
+09:56:15.433 INF Handling PREPREPARE. nReq=65 senderID=3 sn=35
+09:56:15.433 DBG Creating new Batch. nReq=65
+09:56:15.440 DBG Sending PREPARE. senderID=0 sn=34 view=0
+09:56:15.440 DBG func sendPrepare prepare Tn. sn=34 tn=9
+09:56:15.440 DBG Sending COMMIT. senderID=0 sn=34 view=0
+09:56:15.440 DBG func sendCommit commit Tn. sn=34 tn=9
+09:56:15.441 DBG Sending Htn. senderID=0 sn=34 view=0
+09:56:15.441 DBG Sending PREPARE. senderID=0 sn=33 view=0
+09:56:15.441 DBG func sendPrepare prepare Tn. sn=33 tn=9
+09:56:15.441 DBG Sending COMMIT. senderID=0 sn=33 view=0
+09:56:15.441 DBG func sendCommit commit Tn. sn=33 tn=9
+09:56:15.442 DBG Sending Htn. senderID=0 sn=33 view=0
+09:56:15.444 DBG func handleCommit commit Tn. tn=9
+09:56:15.444 DBG func handleCommit commit Tn. tn=9
+09:56:15.444 DBG Sending PREPARE. senderID=0 sn=35 view=0
+09:56:15.444 DBG func handleCommit commit Tn. tn=9
+09:56:15.444 DBG func handleCommit commit Tn. tn=9
+09:56:15.444 DBG func handleCommit commit Tn. tn=9
+09:56:15.444 DBG func sendPrepare prepare Tn. sn=35 tn=9
+09:56:15.444 DBG func handleHtnmsg htn. htn=9 localhtn=9 prelocalhtn=8
+09:56:15.445 DBG Sending COMMIT. senderID=0 sn=35 view=0
+09:56:15.445 DBG Sending COMMIT. senderID=0 sn=32 view=0
+09:56:15.445 INF Committed entry. latency=0 nReq=64 sn=33
+09:56:15.445 DBG func sendCommit commit Tn. sn=35 tn=9
+09:56:15.445 INF Committed entry. latency=0 nReq=65 sn=34
+09:56:15.445 DBG func sendCommit commit Tn. sn=32 tn=9
+09:56:15.445 DBG Starting timer. sn=37 view=0
+09:56:15.445 DBG Sending Htn. senderID=0 sn=35 view=0
+09:56:15.445 DBG Starting timer. sn=38 view=0
+09:56:15.445 DBG Sending Htn. senderID=0 sn=32 view=0
+09:56:15.445 DBG func handleHtnmsg htn. htn=9 localhtn=9 prelocalhtn=9
+09:56:15.445 DBG func handleCommit commit Tn. tn=9
+09:56:15.445 DBG func handleHtnmsg htn. htn=9 localhtn=9 prelocalhtn=9
+09:56:15.445 DBG func handleCommit commit Tn. tn=9
+09:56:15.446 DBG func handleHtnmsg htn. htn=9 localhtn=9 prelocalhtn=9
+09:56:15.446 DBG func handleCommit commit Tn. tn=9
+09:56:15.446 INF Committed entry. latency=0 nReq=64 sn=32
+09:56:15.446 DBG func handleHtnmsg htn. htn=9 localhtn=9 prelocalhtn=9
+09:56:15.446 DBG func handleHtnmsg htn. htn=9 localhtn=9 prelocalhtn=9
+09:56:15.446 INF Delivered batch. nReq=64 sn=32
+09:56:15.446 DBG func handleHtnmsg htn. htn=9 localhtn=9 prelocalhtn=9
+09:56:15.446 INF Delivered batch. nReq=64 sn=33
+09:56:15.446 DBG func handleCommit commit Tn. tn=9
+09:56:15.446 INF Delivered batch. nReq=65 sn=34
+09:56:15.446 DBG Starting timer. sn=36 view=0
+09:56:15.447 DBG func handleHtnmsg htn. htn=9 localhtn=9 prelocalhtn=9
+09:56:15.447 DBG func handleCommit commit Tn. tn=9
+09:56:15.447 DBG func handleCommit commit Tn. tn=9
+09:56:15.447 DBG func handleHtnmsg htn. htn=9 localhtn=9 prelocalhtn=9
+09:56:15.447 INF Committed entry. latency=0 nReq=65 sn=35
+09:56:15.447 INF Delivered batch. nReq=65 sn=35
+09:56:15.448 DBG Starting timer. sn=39 view=0
+09:56:15.448 DBG func handleHtnmsg htn. htn=9 localhtn=9 prelocalhtn=9
+09:56:15.448 DBG func handleCommit commit Tn. tn=9
+09:56:15.448 DBG func handleHtnmsg htn. htn=9 localhtn=9 prelocalhtn=9
+09:56:15.448 DBG func handleHtnmsg htn. htn=9 localhtn=9 prelocalhtn=9
+09:56:16.423 DBG Batch ready. batchSize=4096
+09:56:16.423 DBG Batch cut. left=0 nBuckets=16 nReq=64 next=0
+09:56:16.424 DBG Waiting for batch. batchSize=4096
+09:56:16.426 INF Sending PREPREPARE. nReq=64 senderID=0 sn=36 view=0
+09:56:16.427 INF Handling PREPREPARE. nReq=64 senderID=1 sn=37
+09:56:16.427 DBG Creating new Batch. nReq=64
+09:56:16.431 INF Handling PREPREPARE. nReq=64 senderID=2 sn=38
+09:56:16.432 DBG Creating new Batch. nReq=64
+09:56:16.434 INF Handling PREPREPARE. nReq=64 senderID=3 sn=39
+09:56:16.434 DBG Creating new Batch. nReq=64
+09:56:16.438 DBG Sending PREPARE. senderID=0 sn=37 view=0
+09:56:16.439 DBG func sendPrepare prepare Tn. sn=37 tn=10
+09:56:16.442 DBG Sending PREPARE. senderID=0 sn=38 view=0
+09:56:16.442 DBG func sendPrepare prepare Tn. sn=38 tn=10
+09:56:16.445 DBG Sending PREPARE. senderID=0 sn=39 view=0
+09:56:16.445 DBG func sendPrepare prepare Tn. sn=39 tn=10
+09:56:16.449 DBG func handleCommit commit Tn. tn=10
+09:56:16.449 DBG Sending COMMIT. senderID=0 sn=37 view=0
+09:56:16.449 DBG func handleHtnmsg htn. htn=10 localhtn=10 prelocalhtn=9
+09:56:16.449 DBG func sendCommit commit Tn. sn=37 tn=10
+09:56:16.449 DBG Sending COMMIT. senderID=0 sn=36 view=0
+09:56:16.449 DBG Sending COMMIT. senderID=0 sn=38 view=0
+09:56:16.449 DBG Sending COMMIT. senderID=0 sn=39 view=0
+09:56:16.449 DBG Sending Htn. senderID=0 sn=37 view=0
+09:56:16.449 DBG func sendCommit commit Tn. sn=36 tn=10
+09:56:16.449 DBG func sendCommit commit Tn. sn=38 tn=10
+09:56:16.450 DBG func sendCommit commit Tn. sn=39 tn=10
+09:56:16.450 DBG func handleCommit commit Tn. tn=10
+09:56:16.450 DBG Sending Htn. senderID=0 sn=36 view=0
+09:56:16.450 DBG Sending Htn. senderID=0 sn=38 view=0
+09:56:16.450 DBG Sending Htn. senderID=0 sn=39 view=0
+09:56:16.450 DBG func handleHtnmsg htn. htn=10 localhtn=10 prelocalhtn=10
+09:56:16.450 DBG func handleCommit commit Tn. tn=10
+09:56:16.450 DBG func handleCommit commit Tn. tn=10
+09:56:16.450 DBG func handleCommit commit Tn. tn=10
+09:56:16.450 INF Committed entry. latency=0 nReq=64 sn=37
+09:56:16.450 DBG func handleCommit commit Tn. tn=10
+09:56:16.451 DBG func handleHtnmsg htn. htn=10 localhtn=10 prelocalhtn=10
+09:56:16.450 DBG func handleHtnmsg htn. htn=10 localhtn=10 prelocalhtn=10
+09:56:16.451 DBG Starting timer. sn=41 view=0
+09:56:16.451 DBG func handleHtnmsg htn. htn=10 localhtn=10 prelocalhtn=10
+09:56:16.451 DBG func handleCommit commit Tn. tn=10
+09:56:16.451 INF Committed entry. latency=0 nReq=64 sn=38
+09:56:16.451 DBG func handleCommit commit Tn. tn=10
+09:56:16.451 DBG func handleHtnmsg htn. htn=10 localhtn=10 prelocalhtn=10
+09:56:16.451 DBG func handleCommit commit Tn. tn=10
+09:56:16.451 INF Committed entry. latency=0 nReq=64 sn=39
+09:56:16.452 DBG func handleHtnmsg htn. htn=10 localhtn=10 prelocalhtn=10
+09:56:16.452 DBG Starting timer. sn=43 view=0
+09:56:16.452 INF Committed entry. latency=0 nReq=64 sn=36
+09:56:16.452 DBG func handleHtnmsg htn. htn=10 localhtn=10 prelocalhtn=10
+09:56:16.452 INF Delivered batch. nReq=64 sn=36
+09:56:16.452 DBG func handleCommit commit Tn. tn=10
+09:56:16.452 DBG func handleHtnmsg htn. htn=10 localhtn=10 prelocalhtn=10
+09:56:16.452 INF Delivered batch. nReq=64 sn=37
+09:56:16.452 INF Delivered batch. nReq=64 sn=38
+09:56:16.453 INF Delivered batch. nReq=64 sn=39
+09:56:16.453 DBG Starting timer. sn=40 view=0
+09:56:16.451 DBG Starting timer. sn=42 view=0
+09:56:16.453 DBG func handleHtnmsg htn. htn=10 localhtn=10 prelocalhtn=10
+09:56:16.453 DBG func handleHtnmsg htn. htn=10 localhtn=10 prelocalhtn=10
+09:56:16.453 DBG func handleCommit commit Tn. tn=10
+09:56:16.453 DBG func handleCommit commit Tn. tn=10
+09:56:16.454 DBG func handleHtnmsg htn. htn=10 localhtn=10 prelocalhtn=10
+09:56:17.425 DBG Batch ready. batchSize=4096
+09:56:17.426 DBG Batch cut. left=0 nBuckets=16 nReq=64 next=0
+09:56:17.426 DBG Waiting for batch. batchSize=4096
+09:56:17.428 INF Sending PREPREPARE. nReq=64 senderID=0 sn=40 view=0
+09:56:17.430 INF Handling PREPREPARE. nReq=64 senderID=1 sn=41
+09:56:17.430 DBG Creating new Batch. nReq=64
+09:56:17.434 INF Handling PREPREPARE. nReq=64 senderID=2 sn=42
+09:56:17.434 DBG Creating new Batch. nReq=64
+09:56:17.440 INF Handling PREPREPARE. nReq=64 senderID=3 sn=43
+09:56:17.441 DBG Creating new Batch. nReq=64
+09:56:17.442 DBG Sending PREPARE. senderID=0 sn=41 view=0
+09:56:17.443 DBG func sendPrepare prepare Tn. sn=41 tn=11
+09:56:17.443 DBG Sending COMMIT. senderID=0 sn=41 view=0
+09:56:17.443 DBG func sendCommit commit Tn. sn=41 tn=11
+09:56:17.444 DBG Sending Htn. senderID=0 sn=41 view=0
+09:56:17.444 DBG Sending PREPARE. senderID=0 sn=42 view=0
+09:56:17.444 DBG func sendPrepare prepare Tn. sn=42 tn=11
+09:56:17.445 DBG Sending COMMIT. senderID=0 sn=42 view=0
+09:56:17.445 DBG func sendCommit commit Tn. sn=42 tn=11
+09:56:17.445 DBG Sending Htn. senderID=0 sn=42 view=0
+09:56:17.445 DBG func handleCommit commit Tn. tn=11
+09:56:17.445 DBG func handleHtnmsg htn. htn=11 localhtn=11 prelocalhtn=11
+09:56:17.446 DBG func handleCommit commit Tn. tn=11
+09:56:17.447 INF Committed entry. latency=0 nReq=64 sn=41
+09:56:17.447 DBG Starting timer. sn=45 view=0
+09:56:17.447 DBG func handleCommit commit Tn. tn=11
+09:56:17.447 DBG func handleHtnmsg htn. htn=11 localhtn=11 prelocalhtn=11
+09:56:17.447 DBG func handleHtnmsg htn. htn=11 localhtn=11 prelocalhtn=11
+09:56:17.447 DBG func handleCommit commit Tn. tn=11
+09:56:17.447 DBG func handleHtnmsg htn. htn=11 localhtn=11 prelocalhtn=11
+09:56:17.448 DBG func handleCommit commit Tn. tn=11
+09:56:17.448 INF Committed entry. latency=0 nReq=64 sn=42
+09:56:17.448 DBG Starting timer. sn=46 view=0
+09:56:17.448 DBG func handleHtnmsg htn. htn=11 localhtn=11 prelocalhtn=11
+09:56:17.449 DBG func handleCommit commit Tn. tn=11
+09:56:17.449 DBG func handleHtnmsg htn. htn=11 localhtn=11 prelocalhtn=11
+09:56:17.451 DBG Sending COMMIT. senderID=0 sn=40 view=0
+09:56:17.451 DBG func sendCommit commit Tn. sn=40 tn=11
+09:56:17.451 DBG Sending Htn. senderID=0 sn=40 view=0
+09:56:17.452 DBG func handleCommit commit Tn. tn=11
+09:56:17.452 DBG func handleHtnmsg htn. htn=11 localhtn=11 prelocalhtn=11
+09:56:17.452 DBG func handleCommit commit Tn. tn=11
+09:56:17.452 INF Committed entry. latency=0 nReq=64 sn=40
+09:56:17.453 INF Delivered batch. nReq=64 sn=40
+09:56:17.453 INF Delivered batch. nReq=64 sn=41
+09:56:17.453 INF Delivered batch. nReq=64 sn=42
+09:56:17.453 DBG Starting timer. sn=44 view=0
+09:56:17.453 DBG Sending PREPARE. senderID=0 sn=43 view=0
+09:56:17.454 DBG func handleHtnmsg htn. htn=11 localhtn=11 prelocalhtn=11
+09:56:17.454 DBG func sendPrepare prepare Tn. sn=43 tn=11
+09:56:17.454 DBG func handleCommit commit Tn. tn=11
+09:56:17.454 DBG func handleHtnmsg htn. htn=11 localhtn=11 prelocalhtn=11
+09:56:17.454 DBG Sending COMMIT. senderID=0 sn=43 view=0
+09:56:17.454 DBG func sendCommit commit Tn. sn=43 tn=11
+09:56:17.454 DBG Sending Htn. senderID=0 sn=43 view=0
+09:56:17.455 DBG func handleCommit commit Tn. tn=11
+09:56:17.455 DBG func handleHtnmsg htn. htn=11 localhtn=11 prelocalhtn=11
+09:56:17.455 DBG func handleCommit commit Tn. tn=11
+09:56:17.455 INF Committed entry. latency=0 nReq=64 sn=43
+09:56:17.456 INF Delivered batch. nReq=64 sn=43
+09:56:17.456 DBG Starting timer. sn=47 view=0
+09:56:17.456 DBG func handleHtnmsg htn. htn=11 localhtn=11 prelocalhtn=11
+09:56:17.456 DBG func handleCommit commit Tn. tn=11
+09:56:17.457 DBG func handleHtnmsg htn. htn=11 localhtn=11 prelocalhtn=11
+09:56:18.427 DBG Batch ready. batchSize=4096
+09:56:18.427 DBG Batch cut. left=0 nBuckets=16 nReq=65 next=0
+09:56:18.427 DBG Waiting for batch. batchSize=4096
+09:56:18.428 INF Sending PREPREPARE. nReq=65 senderID=0 sn=44 view=0
+09:56:18.430 INF Handling PREPREPARE. nReq=64 senderID=1 sn=45
+09:56:18.430 DBG Creating new Batch. nReq=64
+09:56:18.433 INF Handling PREPREPARE. nReq=64 senderID=2 sn=46
+09:56:18.433 DBG Creating new Batch. nReq=64
+09:56:18.438 DBG Sending PREPARE. senderID=0 sn=45 view=0
+09:56:18.438 DBG func sendPrepare prepare Tn. sn=45 tn=12
+09:56:18.441 INF Handling PREPREPARE. nReq=64 senderID=3 sn=47
+09:56:18.441 DBG Creating new Batch. nReq=64
+09:56:18.442 DBG Sending PREPARE. senderID=0 sn=46 view=0
+09:56:18.442 DBG Sending COMMIT. senderID=0 sn=45 view=0
+09:56:18.442 DBG func sendPrepare prepare Tn. sn=46 tn=12
+09:56:18.442 DBG func sendCommit commit Tn. sn=45 tn=12
+09:56:18.442 DBG Sending COMMIT. senderID=0 sn=46 view=0
+09:56:18.442 DBG Sending Htn. senderID=0 sn=45 view=0
+09:56:18.442 DBG func sendCommit commit Tn. sn=46 tn=12
+09:56:18.442 DBG Sending Htn. senderID=0 sn=46 view=0
+09:56:18.445 DBG func handleCommit commit Tn. tn=12
+09:56:18.445 DBG func handleHtnmsg htn. htn=12 localhtn=12 prelocalhtn=12
+09:56:18.445 DBG func handleCommit commit Tn. tn=12
+09:56:18.446 DBG func handleCommit commit Tn. tn=12
+09:56:18.446 INF Committed entry. latency=0 nReq=64 sn=45
+09:56:18.446 DBG func handleCommit commit Tn. tn=12
+09:56:18.446 DBG Starting timer. sn=49 view=0
+09:56:18.446 DBG func handleHtnmsg htn. htn=12 localhtn=12 prelocalhtn=12
+09:56:18.446 DBG func handleCommit commit Tn. tn=12
+09:56:18.446 INF Committed entry. latency=0 nReq=64 sn=46
+09:56:18.447 DBG func handleHtnmsg htn. htn=12 localhtn=12 prelocalhtn=12
+09:56:18.447 DBG Starting timer. sn=50 view=0
+09:56:18.447 DBG func handleHtnmsg htn. htn=12 localhtn=12 prelocalhtn=12
+09:56:18.447 DBG func handleCommit commit Tn. tn=12
+09:56:18.447 DBG func handleHtnmsg htn. htn=12 localhtn=12 prelocalhtn=12
+09:56:18.447 DBG func handleHtnmsg htn. htn=12 localhtn=12 prelocalhtn=12
+09:56:18.450 DBG Sending COMMIT. senderID=0 sn=44 view=0
+09:56:18.450 DBG func sendCommit commit Tn. sn=44 tn=12
+09:56:18.451 DBG Sending Htn. senderID=0 sn=44 view=0
+09:56:18.451 DBG Sending PREPARE. senderID=0 sn=47 view=0
+09:56:18.451 DBG func sendPrepare prepare Tn. sn=47 tn=12
+09:56:18.451 DBG func handleCommit commit Tn. tn=12
+09:56:18.451 DBG func handleHtnmsg htn. htn=12 localhtn=12 prelocalhtn=12
+09:56:18.452 DBG func handleCommit commit Tn. tn=12
+09:56:18.452 INF Committed entry. latency=0 nReq=65 sn=44
+09:56:18.452 INF Delivered batch. nReq=65 sn=44
+09:56:18.452 INF Delivered batch. nReq=64 sn=45
+09:56:18.452 INF Delivered batch. nReq=64 sn=46
+09:56:18.452 DBG Sending COMMIT. senderID=0 sn=47 view=0
+09:56:18.452 DBG Starting timer. sn=48 view=0
+09:56:18.453 DBG func sendCommit commit Tn. sn=47 tn=12
+09:56:18.453 DBG func handleHtnmsg htn. htn=12 localhtn=12 prelocalhtn=12
+09:56:18.453 DBG Sending Htn. senderID=0 sn=47 view=0
+09:56:18.453 DBG func handleCommit commit Tn. tn=12
+09:56:18.453 DBG func handleHtnmsg htn. htn=12 localhtn=12 prelocalhtn=12
+09:56:18.454 DBG func handleCommit commit Tn. tn=12
+09:56:18.454 DBG func handleHtnmsg htn. htn=12 localhtn=12 prelocalhtn=12
+09:56:18.454 DBG func handleHtnmsg htn. htn=12 localhtn=12 prelocalhtn=12
+09:56:18.455 DBG func handleCommit commit Tn. tn=12
+09:56:18.455 INF Committed entry. latency=0 nReq=64 sn=47
+09:56:18.455 INF Delivered batch. nReq=64 sn=47
+09:56:18.455 DBG Starting timer. sn=51 view=0
+09:56:18.455 DBG func handleCommit commit Tn. tn=12
+09:56:18.455 DBG func handleHtnmsg htn. htn=12 localhtn=12 prelocalhtn=12
+09:56:19.429 DBG Batch ready. batchSize=4096
+09:56:19.429 DBG Batch cut. left=0 nBuckets=16 nReq=64 next=0
+09:56:19.429 DBG Waiting for batch. batchSize=4096
+09:56:19.431 INF Sending PREPREPARE. nReq=64 senderID=0 sn=48 view=0
+09:56:19.435 INF Handling PREPREPARE. nReq=64 senderID=1 sn=49
+09:56:19.435 INF Handling PREPREPARE. nReq=64 senderID=2 sn=50
+09:56:19.435 DBG Creating new Batch. nReq=64
+09:56:19.435 DBG Creating new Batch. nReq=64
+09:56:19.444 INF Handling PREPREPARE. nReq=64 senderID=3 sn=51
+09:56:19.444 DBG Creating new Batch. nReq=64
+09:56:19.447 DBG Sending PREPARE. senderID=0 sn=50 view=0
+09:56:19.447 DBG func sendPrepare prepare Tn. sn=50 tn=13
+09:56:19.447 DBG Sending COMMIT. senderID=0 sn=50 view=0
+09:56:19.447 DBG func sendCommit commit Tn. sn=50 tn=13
+09:56:19.448 DBG Sending Htn. senderID=0 sn=50 view=0
+09:56:19.449 DBG Sending PREPARE. senderID=0 sn=49 view=0
+09:56:19.450 DBG func sendPrepare prepare Tn. sn=49 tn=13
+09:56:19.450 DBG func handleCommit commit Tn. tn=13
+09:56:19.450 DBG Sending COMMIT. senderID=0 sn=49 view=0
+09:56:19.450 DBG func sendCommit commit Tn. sn=49 tn=13
+09:56:19.450 DBG Sending Htn. senderID=0 sn=49 view=0
+09:56:19.450 DBG func handleCommit commit Tn. tn=13
+09:56:19.451 INF Committed entry. latency=0 nReq=64 sn=50
+09:56:19.451 DBG Starting timer. sn=54 view=0
+09:56:19.451 DBG func handleHtnmsg htn. htn=13 localhtn=13 prelocalhtn=13
+09:56:19.451 DBG func handleHtnmsg htn. htn=13 localhtn=13 prelocalhtn=13
+09:56:19.451 DBG func handleCommit commit Tn. tn=13
+09:56:19.451 DBG func handleHtnmsg htn. htn=13 localhtn=13 prelocalhtn=13
+09:56:19.452 DBG func handleCommit commit Tn. tn=13
+09:56:19.452 DBG Sending PREPARE. senderID=0 sn=51 view=0
+09:56:19.452 DBG func sendPrepare prepare Tn. sn=51 tn=13
+09:56:19.452 DBG func handleHtnmsg htn. htn=13 localhtn=13 prelocalhtn=13
+09:56:19.452 DBG func handleCommit commit Tn. tn=13
+09:56:19.452 DBG Sending COMMIT. senderID=0 sn=51 view=0
+09:56:19.452 DBG Sending COMMIT. senderID=0 sn=48 view=0
+09:56:19.453 DBG func sendCommit commit Tn. sn=51 tn=13
+09:56:19.453 DBG func sendCommit commit Tn. sn=48 tn=13
+09:56:19.453 DBG Sending Htn. senderID=0 sn=51 view=0
+09:56:19.453 DBG Sending Htn. senderID=0 sn=48 view=0
+09:56:19.453 INF Committed entry. latency=0 nReq=64 sn=49
+09:56:19.453 DBG func handleCommit commit Tn. tn=13
+09:56:19.453 DBG Starting timer. sn=53 view=0
+09:56:19.453 DBG func handleHtnmsg htn. htn=13 localhtn=13 prelocalhtn=13
+09:56:19.453 DBG func handleHtnmsg htn. htn=13 localhtn=13 prelocalhtn=13
+09:56:19.453 DBG func handleCommit commit Tn. tn=13
+09:56:19.453 DBG func handleHtnmsg htn. htn=13 localhtn=13 prelocalhtn=13
+09:56:19.454 DBG func handleCommit commit Tn. tn=13
+09:56:19.454 DBG func handleCommit commit Tn. tn=13
+09:56:19.454 DBG func handleHtnmsg htn. htn=13 localhtn=13 prelocalhtn=13
+09:56:19.454 INF Committed entry. latency=0 nReq=64 sn=48
+09:56:19.454 DBG func handleCommit commit Tn. tn=13
+09:56:19.454 INF Delivered batch. nReq=64 sn=48
+09:56:19.454 INF Delivered batch. nReq=64 sn=49
+09:56:19.454 INF Committed entry. latency=0 nReq=64 sn=51
+09:56:19.455 INF Delivered batch. nReq=64 sn=50
+09:56:19.455 INF Delivered batch. nReq=64 sn=51
+09:56:19.455 DBG Starting timer. sn=52 view=0
+09:56:19.455 DBG Starting timer. sn=55 view=0
+09:56:19.455 DBG func handleHtnmsg htn. htn=13 localhtn=13 prelocalhtn=13
+09:56:19.455 DBG func handleHtnmsg htn. htn=13 localhtn=13 prelocalhtn=13
+09:56:19.455 DBG func handleCommit commit Tn. tn=13
+09:56:19.455 DBG func handleCommit commit Tn. tn=13
+09:56:19.455 DBG func handleHtnmsg htn. htn=13 localhtn=13 prelocalhtn=13
+09:56:19.455 DBG func handleHtnmsg htn. htn=13 localhtn=13 prelocalhtn=13
+09:56:20.430 DBG Batch ready. batchSize=4096
+09:56:20.430 DBG Batch cut. left=0 nBuckets=16 nReq=64 next=0
+09:56:20.430 DBG Waiting for batch. batchSize=4096
+09:56:20.432 INF Sending PREPREPARE. nReq=64 senderID=0 sn=52 view=0
+09:56:20.434 INF Handling PREPREPARE. nReq=64 senderID=1 sn=53
+09:56:20.434 DBG Creating new Batch. nReq=64
+09:56:20.436 INF Handling PREPREPARE. nReq=64 senderID=2 sn=54
+09:56:20.437 DBG Creating new Batch. nReq=64
+09:56:20.445 DBG Sending PREPARE. senderID=0 sn=53 view=0
+09:56:20.445 DBG func sendPrepare prepare Tn. sn=53 tn=14
+09:56:20.445 DBG Sending COMMIT. senderID=0 sn=53 view=0
+09:56:20.445 DBG func sendCommit commit Tn. sn=53 tn=14
+09:56:20.446 DBG Sending Htn. senderID=0 sn=53 view=0
+09:56:20.446 INF Handling PREPREPARE. nReq=64 senderID=3 sn=55
+09:56:20.446 DBG Creating new Batch. nReq=64
+09:56:20.447 DBG Sending PREPARE. senderID=0 sn=54 view=0
+09:56:20.447 DBG func sendPrepare prepare Tn. sn=54 tn=14
+09:56:20.447 DBG Sending COMMIT. senderID=0 sn=54 view=0
+09:56:20.447 DBG func sendCommit commit Tn. sn=54 tn=14
+09:56:20.447 DBG Sending Htn. senderID=0 sn=54 view=0
+09:56:20.447 DBG func handleCommit commit Tn. tn=14
+09:56:20.448 DBG func handleHtnmsg htn. htn=14 localhtn=14 prelocalhtn=14
+09:56:20.448 DBG func handleCommit commit Tn. tn=14
+09:56:20.448 DBG func handleHtnmsg htn. htn=14 localhtn=14 prelocalhtn=14
+09:56:20.449 DBG func handleCommit commit Tn. tn=14
+09:56:20.449 INF Committed entry. latency=0 nReq=64 sn=53
+09:56:20.450 DBG Starting timer. sn=57 view=0
+09:56:20.450 DBG func handleCommit commit Tn. tn=14
+09:56:20.450 DBG func handleHtnmsg htn. htn=14 localhtn=14 prelocalhtn=14
+09:56:20.450 DBG func handleCommit commit Tn. tn=14
+09:56:20.450 INF Committed entry. latency=0 nReq=64 sn=54
+09:56:20.450 DBG func handleHtnmsg htn. htn=14 localhtn=14 prelocalhtn=14
+09:56:20.450 DBG Starting timer. sn=58 view=0
+09:56:20.451 DBG func handleHtnmsg htn. htn=14 localhtn=14 prelocalhtn=14
+09:56:20.451 DBG func handleCommit commit Tn. tn=14
+09:56:20.451 DBG func handleHtnmsg htn. htn=14 localhtn=14 prelocalhtn=14
+09:56:20.453 DBG Sending COMMIT. senderID=0 sn=52 view=0
+09:56:20.454 DBG func sendCommit commit Tn. sn=52 tn=14
+09:56:20.454 DBG Sending Htn. senderID=0 sn=52 view=0
+09:56:20.454 DBG func handleCommit commit Tn. tn=14
+09:56:20.454 DBG func handleCommit commit Tn. tn=14
+09:56:20.454 INF Committed entry. latency=0 nReq=64 sn=52
+09:56:20.454 INF Delivered batch. nReq=64 sn=52
+09:56:20.455 INF Delivered batch. nReq=64 sn=53
+09:56:20.455 INF Delivered batch. nReq=64 sn=54
+09:56:20.455 DBG Sending PREPARE. senderID=0 sn=55 view=0
+09:56:20.455 DBG Starting timer. sn=56 view=0
+09:56:20.455 DBG func sendPrepare prepare Tn. sn=55 tn=14
+09:56:20.455 DBG func handleHtnmsg htn. htn=14 localhtn=14 prelocalhtn=14
+09:56:20.455 DBG func handleHtnmsg htn. htn=14 localhtn=14 prelocalhtn=14
+09:56:20.455 DBG func handleCommit commit Tn. tn=14
+09:56:20.456 DBG func handleHtnmsg htn. htn=14 localhtn=14 prelocalhtn=14
+09:56:20.456 DBG Sending COMMIT. senderID=0 sn=55 view=0
+09:56:20.456 DBG func sendCommit commit Tn. sn=55 tn=14
+09:56:20.456 DBG Sending Htn. senderID=0 sn=55 view=0
+09:56:20.457 DBG func handleCommit commit Tn. tn=14
+09:56:20.457 DBG func handleCommit commit Tn. tn=14
+09:56:20.457 INF Committed entry. latency=0 nReq=64 sn=55
+09:56:20.457 INF Delivered batch. nReq=64 sn=55
+09:56:20.458 DBG Starting timer. sn=59 view=0
+09:56:20.458 DBG func handleHtnmsg htn. htn=14 localhtn=14 prelocalhtn=14
+09:56:20.458 DBG func handleCommit commit Tn. tn=14
+09:56:20.458 DBG func handleHtnmsg htn. htn=14 localhtn=14 prelocalhtn=14
+09:56:20.458 DBG func handleHtnmsg htn. htn=14 localhtn=14 prelocalhtn=14
+09:56:21.431 DBG Batch ready. batchSize=4096
+09:56:21.432 DBG Batch cut. left=0 nBuckets=16 nReq=64 next=0
+09:56:21.432 DBG Waiting for batch. batchSize=4096
+09:56:21.433 INF Sending PREPREPARE. nReq=64 senderID=0 sn=56 view=0
+09:56:21.436 INF Handling PREPREPARE. nReq=64 senderID=1 sn=57
+09:56:21.436 DBG Creating new Batch. nReq=64
+09:56:21.436 INF Handling PREPREPARE. nReq=64 senderID=2 sn=58
+09:56:21.436 DBG Creating new Batch. nReq=64
+09:56:21.444 INF Handling PREPREPARE. nReq=64 senderID=3 sn=59
+09:56:21.444 DBG Creating new Batch. nReq=64
+09:56:21.446 DBG Sending PREPARE. senderID=0 sn=57 view=0
+09:56:21.446 DBG func sendPrepare prepare Tn. sn=57 tn=15
+09:56:21.447 DBG Sending PREPARE. senderID=0 sn=58 view=0
+09:56:21.447 DBG func sendPrepare prepare Tn. sn=58 tn=15
+09:56:21.450 DBG Sending COMMIT. senderID=0 sn=57 view=0
+09:56:21.451 DBG func sendCommit commit Tn. sn=57 tn=15
+09:56:21.451 DBG Sending Htn. senderID=0 sn=57 view=0
+09:56:21.451 DBG func handleCommit commit Tn. tn=15
+09:56:21.451 DBG func handleHtnmsg htn. htn=15 localhtn=15 prelocalhtn=15
+09:56:21.451 DBG func handleCommit commit Tn. tn=15
+09:56:21.452 DBG Sending COMMIT. senderID=0 sn=58 view=0
+09:56:21.452 INF Committed entry. latency=0 nReq=64 sn=57
+09:56:21.452 DBG func sendCommit commit Tn. sn=58 tn=15
+09:56:21.452 DBG Starting timer. sn=61 view=0
+09:56:21.452 DBG Sending Htn. senderID=0 sn=58 view=0
+09:56:21.452 DBG func handleHtnmsg htn. htn=15 localhtn=15 prelocalhtn=15
+09:56:21.452 DBG func handleCommit commit Tn. tn=15
+09:56:21.452 DBG func handleCommit commit Tn. tn=15
+09:56:21.452 DBG func handleHtnmsg htn. htn=15 localhtn=15 prelocalhtn=15
+09:56:21.453 DBG func handleHtnmsg htn. htn=15 localhtn=15 prelocalhtn=15
+09:56:21.453 DBG func handleCommit commit Tn. tn=15
+09:56:21.453 INF Committed entry. latency=0 nReq=64 sn=58
+09:56:21.453 DBG Sending PREPARE. senderID=0 sn=59 view=0
+09:56:21.453 DBG Starting timer. sn=62 view=0
+09:56:21.453 DBG func sendPrepare prepare Tn. sn=59 tn=15
+09:56:21.453 DBG func handleHtnmsg htn. htn=15 localhtn=15 prelocalhtn=15
+09:56:21.454 DBG func handleCommit commit Tn. tn=15
+09:56:21.454 DBG func handleHtnmsg htn. htn=15 localhtn=15 prelocalhtn=15
+09:56:21.456 DBG Sending COMMIT. senderID=0 sn=59 view=0
+09:56:21.456 DBG Sending COMMIT. senderID=0 sn=56 view=0
+09:56:21.456 DBG func sendCommit commit Tn. sn=59 tn=15
+09:56:21.456 DBG func sendCommit commit Tn. sn=56 tn=15
+09:56:21.456 DBG Sending Htn. senderID=0 sn=59 view=0
+09:56:21.456 DBG Sending Htn. senderID=0 sn=56 view=0
+09:56:21.456 DBG func handleCommit commit Tn. tn=15
+09:56:21.456 DBG func handleCommit commit Tn. tn=15
+09:56:21.456 DBG func handleCommit commit Tn. tn=15
+09:56:21.457 INF Committed entry. latency=0 nReq=64 sn=59
+09:56:21.457 DBG Starting timer. sn=63 view=0
+09:56:21.457 DBG func handleHtnmsg htn. htn=15 localhtn=15 prelocalhtn=15
+09:56:21.457 DBG func handleHtnmsg htn. htn=15 localhtn=15 prelocalhtn=15
+09:56:21.457 DBG func handleHtnmsg htn. htn=15 localhtn=15 prelocalhtn=15
+09:56:21.457 DBG func handleCommit commit Tn. tn=15
+09:56:21.457 DBG func handleHtnmsg htn. htn=15 localhtn=15 prelocalhtn=15
+09:56:21.458 DBG func handleCommit commit Tn. tn=15
+09:56:21.458 INF Committed entry. latency=0 nReq=64 sn=56
+09:56:21.458 INF Delivered batch. nReq=64 sn=56
+09:56:21.458 INF Delivered batch. nReq=64 sn=57
+09:56:21.459 INF Delivered batch. nReq=64 sn=58
+09:56:21.459 INF Delivered batch. nReq=64 sn=59
+09:56:21.459 DBG Starting timer. sn=60 view=0
+09:56:21.459 DBG func handleHtnmsg htn. htn=15 localhtn=15 prelocalhtn=15
+09:56:21.459 DBG func handleCommit commit Tn. tn=15
+09:56:21.459 DBG func handleHtnmsg htn. htn=15 localhtn=15 prelocalhtn=15
+09:56:22.432 DBG Batch ready. batchSize=4096
+09:56:22.433 DBG Batch cut. left=0 nBuckets=16 nReq=64 next=0
+09:56:22.433 DBG Waiting for batch. batchSize=4096
+09:56:22.434 INF Sending PREPREPARE. nReq=64 senderID=0 sn=60 view=0
+09:56:22.436 INF Handling PREPREPARE. nReq=64 senderID=1 sn=61
+09:56:22.437 DBG Creating new Batch. nReq=64
+09:56:22.440 INF Handling PREPREPARE. nReq=64 senderID=2 sn=62
+09:56:22.440 DBG Creating new Batch. nReq=64
+09:56:22.445 DBG Sending PREPARE. senderID=0 sn=61 view=0
+09:56:22.445 DBG func sendPrepare prepare Tn. sn=61 tn=16
+09:56:22.447 INF Handling PREPREPARE. nReq=64 senderID=3 sn=63
+09:56:22.447 DBG Creating new Batch. nReq=64
+09:56:22.447 DBG Sending COMMIT. senderID=0 sn=61 view=0
+09:56:22.447 DBG func sendCommit commit Tn. sn=61 tn=16
+09:56:22.448 DBG Sending Htn. senderID=0 sn=61 view=0
+09:56:22.449 DBG func handleCommit commit Tn. tn=16
+09:56:22.450 DBG func handleCommit commit Tn. tn=16
+09:56:22.450 INF Committed entry. latency=0 nReq=64 sn=61
+09:56:22.450 DBG Starting timer. sn=65 view=0
+09:56:22.450 DBG func handleHtnmsg htn. htn=16 localhtn=16 prelocalhtn=16
+09:56:22.451 DBG Sending PREPARE. senderID=0 sn=62 view=0
+09:56:22.451 DBG func sendPrepare prepare Tn. sn=62 tn=16
+09:56:22.452 DBG func handleHtnmsg htn. htn=16 localhtn=16 prelocalhtn=16
+09:56:22.453 DBG func handleCommit commit Tn. tn=16
+09:56:22.453 DBG func handleHtnmsg htn. htn=16 localhtn=16 prelocalhtn=16
+09:56:22.454 DBG Sending COMMIT. senderID=0 sn=60 view=0
+09:56:22.454 DBG Sending COMMIT. senderID=0 sn=62 view=0
+09:56:22.454 DBG func sendCommit commit Tn. sn=60 tn=16
+09:56:22.454 DBG func sendCommit commit Tn. sn=62 tn=16
+09:56:22.454 DBG Sending Htn. senderID=0 sn=60 view=0
+09:56:22.454 DBG Sending Htn. senderID=0 sn=62 view=0
+09:56:22.455 DBG Sending PREPARE. senderID=0 sn=63 view=0
+09:56:22.455 DBG func handleCommit commit Tn. tn=16
+09:56:22.455 DBG func sendPrepare prepare Tn. sn=63 tn=16
+09:56:22.455 DBG func handleCommit commit Tn. tn=16
+09:56:22.455 DBG Sending COMMIT. senderID=0 sn=63 view=0
+09:56:22.455 DBG func handleCommit commit Tn. tn=16
+09:56:22.455 DBG func sendCommit commit Tn. sn=63 tn=16
+09:56:22.455 DBG func handleHtnmsg htn. htn=16 localhtn=16 prelocalhtn=16
+09:56:22.455 DBG Sending Htn. senderID=0 sn=63 view=0
+09:56:22.455 INF Committed entry. latency=0 nReq=64 sn=60
+09:56:22.456 INF Delivered batch. nReq=64 sn=60
+09:56:22.456 INF Delivered batch. nReq=64 sn=61
+09:56:22.456 DBG Starting timer. sn=64 view=0
+09:56:22.456 DBG func handleCommit commit Tn. tn=16
+09:56:22.456 DBG func handleHtnmsg htn. htn=16 localhtn=16 prelocalhtn=16
+09:56:22.457 INF Committed entry. latency=0 nReq=64 sn=62
+09:56:22.457 DBG func handleHtnmsg htn. htn=16 localhtn=16 prelocalhtn=16
+09:56:22.457 INF Delivered batch. nReq=64 sn=62
+09:56:22.457 DBG Starting timer. sn=66 view=0
+09:56:22.457 DBG func handleHtnmsg htn. htn=16 localhtn=16 prelocalhtn=16
+09:56:22.457 DBG func handleCommit commit Tn. tn=16
+09:56:22.457 DBG func handleHtnmsg htn. htn=16 localhtn=16 prelocalhtn=16
+09:56:22.458 DBG func handleCommit commit Tn. tn=16
+09:56:22.459 DBG func handleHtnmsg htn. htn=16 localhtn=16 prelocalhtn=16
+09:56:22.459 DBG func handleCommit commit Tn. tn=16
+09:56:22.459 DBG func handleCommit commit Tn. tn=16
+09:56:22.459 DBG func handleHtnmsg htn. htn=16 localhtn=16 prelocalhtn=16
+09:56:22.459 INF Committed entry. latency=0 nReq=64 sn=63
+09:56:22.460 INF Delivered batch. nReq=64 sn=63
+09:56:22.460 DBG Starting timer. sn=67 view=0
+09:56:22.460 DBG func handleHtnmsg htn. htn=16 localhtn=16 prelocalhtn=16
+09:56:22.460 DBG func handleCommit commit Tn. tn=16
+09:56:22.460 DBG func handleHtnmsg htn. htn=16 localhtn=16 prelocalhtn=16
+09:56:23.434 DBG Batch ready. batchSize=4096
+09:56:23.434 DBG Batch cut. left=0 nBuckets=16 nReq=64 next=0
+09:56:23.434 DBG Waiting for batch. batchSize=4096
+09:56:23.436 INF Sending PREPREPARE. nReq=64 senderID=0 sn=64 view=0
+09:56:23.438 INF Handling PREPREPARE. nReq=64 senderID=1 sn=65
+09:56:23.438 DBG Creating new Batch. nReq=64
+09:56:23.440 INF Handling PREPREPARE. nReq=64 senderID=2 sn=66
+09:56:23.440 DBG Creating new Batch. nReq=64
+09:56:23.449 DBG Sending PREPARE. senderID=0 sn=65 view=0
+09:56:23.449 DBG func sendPrepare prepare Tn. sn=65 tn=17
+09:56:23.450 INF Handling PREPREPARE. nReq=64 senderID=3 sn=67
+09:56:23.450 DBG Creating new Batch. nReq=64
+09:56:23.450 DBG Sending PREPARE. senderID=0 sn=66 view=0
+09:56:23.450 DBG func sendPrepare prepare Tn. sn=66 tn=17
+09:56:23.451 DBG Sending COMMIT. senderID=0 sn=66 view=0
+09:56:23.451 DBG func sendCommit commit Tn. sn=66 tn=17
+09:56:23.451 DBG Sending Htn. senderID=0 sn=66 view=0
+09:56:23.452 DBG Sending COMMIT. senderID=0 sn=65 view=0
+09:56:23.452 DBG func sendCommit commit Tn. sn=65 tn=17
+09:56:23.452 DBG Sending Htn. senderID=0 sn=65 view=0
+09:56:23.452 DBG func handleCommit commit Tn. tn=17
+09:56:23.452 DBG func handleHtnmsg htn. htn=17 localhtn=17 prelocalhtn=17
+09:56:23.453 DBG func handleCommit commit Tn. tn=17
+09:56:23.453 INF Committed entry. latency=0 nReq=64 sn=65
+09:56:23.453 DBG Starting timer. sn=69 view=0
+09:56:23.454 DBG func handleHtnmsg htn. htn=17 localhtn=17 prelocalhtn=17
+09:56:23.454 DBG func handleCommit commit Tn. tn=17
+09:56:23.454 DBG func handleCommit commit Tn. tn=17
+09:56:23.454 DBG func handleHtnmsg htn. htn=17 localhtn=17 prelocalhtn=17
+09:56:23.454 DBG func handleCommit commit Tn. tn=17
+09:56:23.454 DBG func handleHtnmsg htn. htn=17 localhtn=17 prelocalhtn=17
+09:56:23.454 INF Committed entry. latency=0 nReq=64 sn=66
+09:56:23.455 DBG Starting timer. sn=70 view=0
+09:56:23.455 DBG func handleHtnmsg htn. htn=17 localhtn=17 prelocalhtn=17
+09:56:23.455 DBG func handleCommit commit Tn. tn=17
+09:56:23.455 DBG func handleHtnmsg htn. htn=17 localhtn=17 prelocalhtn=17
+09:56:23.457 DBG Sending COMMIT. senderID=0 sn=64 view=0
+09:56:23.458 DBG func sendCommit commit Tn. sn=64 tn=17
+09:56:23.458 DBG Sending Htn. senderID=0 sn=64 view=0
+09:56:23.458 DBG Sending PREPARE. senderID=0 sn=67 view=0
+09:56:23.458 DBG func sendPrepare prepare Tn. sn=67 tn=17
+09:56:23.459 DBG func handleCommit commit Tn. tn=17
+09:56:23.459 DBG func handleHtnmsg htn. htn=17 localhtn=17 prelocalhtn=17
+09:56:23.459 DBG func handleCommit commit Tn. tn=17
+09:56:23.459 INF Committed entry. latency=0 nReq=64 sn=64
+09:56:23.460 INF Delivered batch. nReq=64 sn=64
+09:56:23.460 DBG Sending COMMIT. senderID=0 sn=67 view=0
+09:56:23.460 INF Delivered batch. nReq=64 sn=65
+09:56:23.460 DBG func sendCommit commit Tn. sn=67 tn=17
+09:56:23.460 INF Delivered batch. nReq=64 sn=66
+09:56:23.460 DBG Sending Htn. senderID=0 sn=67 view=0
+09:56:23.460 DBG Starting timer. sn=68 view=0
+09:56:23.460 DBG func handleHtnmsg htn. htn=17 localhtn=17 prelocalhtn=17
+09:56:23.460 DBG func handleCommit commit Tn. tn=17
+09:56:23.460 DBG func handleHtnmsg htn. htn=17 localhtn=17 prelocalhtn=17
+09:56:23.461 DBG func handleCommit commit Tn. tn=17
+09:56:23.461 DBG func handleHtnmsg htn. htn=17 localhtn=17 prelocalhtn=17
+09:56:23.461 DBG func handleCommit commit Tn. tn=17
+09:56:23.461 INF Committed entry. latency=0 nReq=64 sn=67
+09:56:23.462 INF Delivered batch. nReq=64 sn=67
+09:56:23.462 DBG Starting timer. sn=71 view=0
+09:56:23.462 DBG func handleHtnmsg htn. htn=17 localhtn=17 prelocalhtn=17
+09:56:23.462 DBG func handleCommit commit Tn. tn=17
+09:56:23.462 DBG func handleHtnmsg htn. htn=17 localhtn=17 prelocalhtn=17
+09:56:24.435 DBG Batch ready. batchSize=4096
+09:56:24.436 DBG Batch cut. left=0 nBuckets=16 nReq=64 next=0
+09:56:24.436 DBG Waiting for batch. batchSize=4096
+09:56:24.438 INF Sending PREPREPARE. nReq=64 senderID=0 sn=68 view=0
+09:56:24.439 INF Handling PREPREPARE. nReq=65 senderID=1 sn=69
+09:56:24.439 DBG Creating new Batch. nReq=65
+09:56:24.443 INF Handling PREPREPARE. nReq=65 senderID=2 sn=70
+09:56:24.443 DBG Creating new Batch. nReq=65
+09:56:24.448 DBG Sending PREPARE. senderID=0 sn=69 view=0
+09:56:24.448 DBG func sendPrepare prepare Tn. sn=69 tn=18
+09:56:24.450 INF Handling PREPREPARE. nReq=65 senderID=3 sn=71
+09:56:24.450 DBG Creating new Batch. nReq=65
+09:56:24.450 DBG Sending COMMIT. senderID=0 sn=69 view=0
+09:56:24.451 DBG func sendCommit commit Tn. sn=69 tn=18
+09:56:24.451 DBG Sending Htn. senderID=0 sn=69 view=0
+09:56:24.451 DBG func handleCommit commit Tn. tn=18
+09:56:24.452 DBG func handleHtnmsg htn. htn=18 localhtn=18 prelocalhtn=18
+09:56:24.452 DBG Sending PREPARE. senderID=0 sn=70 view=0
+09:56:24.452 DBG func handleCommit commit Tn. tn=18
+09:56:24.452 DBG func sendPrepare prepare Tn. sn=70 tn=18
+09:56:24.452 INF Committed entry. latency=0 nReq=65 sn=69
+09:56:24.453 DBG Starting timer. sn=73 view=0
+09:56:24.453 DBG func handleHtnmsg htn. htn=18 localhtn=18 prelocalhtn=18
+09:56:24.453 DBG func handleCommit commit Tn. tn=18
+09:56:24.453 DBG func handleHtnmsg htn. htn=18 localhtn=18 prelocalhtn=18
+09:56:24.456 DBG Sending COMMIT. senderID=0 sn=70 view=0
+09:56:24.457 DBG func sendCommit commit Tn. sn=70 tn=18
+09:56:24.457 DBG Sending Htn. senderID=0 sn=70 view=0
+09:56:24.457 DBG func handleCommit commit Tn. tn=18
+09:56:24.457 DBG func handleCommit commit Tn. tn=18
+09:56:24.457 INF Committed entry. latency=0 nReq=65 sn=70
+09:56:24.458 DBG Starting timer. sn=74 view=0
+09:56:24.458 DBG func handleHtnmsg htn. htn=18 localhtn=18 prelocalhtn=18
+09:56:24.458 DBG func handleHtnmsg htn. htn=18 localhtn=18 prelocalhtn=18
+09:56:24.458 DBG func handleCommit commit Tn. tn=18
+09:56:24.458 DBG func handleHtnmsg htn. htn=18 localhtn=18 prelocalhtn=18
+09:56:24.459 DBG Sending COMMIT. senderID=0 sn=68 view=0
+09:56:24.459 DBG func sendCommit commit Tn. sn=68 tn=18
+09:56:24.459 DBG Sending Htn. senderID=0 sn=68 view=0
+09:56:24.459 DBG Sending PREPARE. senderID=0 sn=71 view=0
+09:56:24.459 DBG func handleCommit commit Tn. tn=18
+09:56:24.459 DBG func sendPrepare prepare Tn. sn=71 tn=18
+09:56:24.460 DBG func handleCommit commit Tn. tn=18
+09:56:24.460 INF Committed entry. latency=0 nReq=64 sn=68
+09:56:24.460 INF Delivered batch. nReq=64 sn=68
+09:56:24.460 INF Delivered batch. nReq=65 sn=69
+09:56:24.460 INF Delivered batch. nReq=65 sn=70
+09:56:24.461 DBG Starting timer. sn=72 view=0
+09:56:24.461 DBG func handleHtnmsg htn. htn=18 localhtn=18 prelocalhtn=18
+09:56:24.461 DBG func handleCommit commit Tn. tn=18
+09:56:24.461 DBG func handleHtnmsg htn. htn=18 localhtn=18 prelocalhtn=18
+09:56:24.461 DBG func handleHtnmsg htn. htn=18 localhtn=18 prelocalhtn=18
+09:56:24.462 DBG Sending COMMIT. senderID=0 sn=71 view=0
+09:56:24.462 DBG func sendCommit commit Tn. sn=71 tn=18
+09:56:24.462 DBG Sending Htn. senderID=0 sn=71 view=0
+09:56:24.462 DBG func handleCommit commit Tn. tn=18
+09:56:24.462 DBG func handleHtnmsg htn. htn=18 localhtn=18 prelocalhtn=18
+09:56:24.463 DBG func handleCommit commit Tn. tn=18
+09:56:24.463 INF Committed entry. latency=0 nReq=65 sn=71
+09:56:24.463 INF Delivered batch. nReq=65 sn=71
+09:56:24.463 DBG Starting timer. sn=75 view=0
+09:56:24.463 DBG func handleHtnmsg htn. htn=18 localhtn=18 prelocalhtn=18
+09:56:24.464 DBG func handleCommit commit Tn. tn=18
+09:56:24.464 DBG func handleHtnmsg htn. htn=18 localhtn=18 prelocalhtn=18
+09:56:25.437 DBG Batch ready. batchSize=4096
+09:56:25.438 DBG Batch cut. left=0 nBuckets=16 nReq=64 next=0
+09:56:25.438 DBG Waiting for batch. batchSize=4096
+09:56:25.439 INF Sending PREPREPARE. nReq=64 senderID=0 sn=72 view=0
+09:56:25.440 INF Handling PREPREPARE. nReq=64 senderID=1 sn=73
+09:56:25.440 DBG Creating new Batch. nReq=64
+09:56:25.444 INF Handling PREPREPARE. nReq=64 senderID=2 sn=74
+09:56:25.444 DBG Creating new Batch. nReq=64
+09:56:25.450 INF Handling PREPREPARE. nReq=64 senderID=3 sn=75
+09:56:25.451 DBG Creating new Batch. nReq=64
+09:56:25.453 DBG Sending PREPARE. senderID=0 sn=73 view=0
+09:56:25.453 DBG func sendPrepare prepare Tn. sn=73 tn=19
+09:56:25.453 DBG Sending COMMIT. senderID=0 sn=73 view=0
+09:56:25.453 DBG func sendCommit commit Tn. sn=73 tn=19
+09:56:25.454 DBG Sending Htn. senderID=0 sn=73 view=0
+09:56:25.455 DBG func handleCommit commit Tn. tn=19
+09:56:25.455 DBG func handleHtnmsg htn. htn=19 localhtn=19 prelocalhtn=19
+09:56:25.456 DBG Sending PREPARE. senderID=0 sn=74 view=0
+09:56:25.456 DBG func sendPrepare prepare Tn. sn=74 tn=19
+09:56:25.457 DBG func handleCommit commit Tn. tn=19
+09:56:25.457 DBG Sending COMMIT. senderID=0 sn=74 view=0
+09:56:25.457 DBG func sendCommit commit Tn. sn=74 tn=19
+09:56:25.457 INF Committed entry. latency=0 nReq=64 sn=73
+09:56:25.457 DBG Sending Htn. senderID=0 sn=74 view=0
+09:56:25.457 DBG Starting timer. sn=77 view=0
+09:56:25.457 DBG func handleCommit commit Tn. tn=19
+09:56:25.457 DBG func handleHtnmsg htn. htn=19 localhtn=19 prelocalhtn=19
+09:56:25.457 DBG func handleHtnmsg htn. htn=19 localhtn=19 prelocalhtn=19
+09:56:25.458 DBG func handleCommit commit Tn. tn=19
+09:56:25.458 DBG func handleCommit commit Tn. tn=19
+09:56:25.458 DBG func handleHtnmsg htn. htn=19 localhtn=19 prelocalhtn=19
+09:56:25.458 INF Committed entry. latency=0 nReq=64 sn=74
+09:56:25.459 DBG Starting timer. sn=78 view=0
+09:56:25.459 DBG func handleHtnmsg htn. htn=19 localhtn=19 prelocalhtn=19
+09:56:25.459 DBG func handleCommit commit Tn. tn=19
+09:56:25.459 DBG Sending COMMIT. senderID=0 sn=72 view=0
+09:56:25.459 DBG func handleHtnmsg htn. htn=19 localhtn=19 prelocalhtn=19
+09:56:25.459 DBG func sendCommit commit Tn. sn=72 tn=19
+09:56:25.460 DBG Sending Htn. senderID=0 sn=72 view=0
+09:56:25.460 DBG Sending PREPARE. senderID=0 sn=75 view=0
+09:56:25.460 DBG func sendPrepare prepare Tn. sn=75 tn=19
+09:56:25.460 DBG func handleCommit commit Tn. tn=19
+09:56:25.460 DBG func handleCommit commit Tn. tn=19
+09:56:25.461 INF Committed entry. latency=0 nReq=64 sn=72
+09:56:25.461 INF Delivered batch. nReq=64 sn=72
+09:56:25.461 INF Delivered batch. nReq=64 sn=73
+09:56:25.461 INF Delivered batch. nReq=64 sn=74
+09:56:25.462 DBG Starting timer. sn=76 view=0
+09:56:25.462 DBG func handleHtnmsg htn. htn=19 localhtn=19 prelocalhtn=19
+09:56:25.462 DBG func handleCommit commit Tn. tn=19
+09:56:25.462 DBG func handleHtnmsg htn. htn=19 localhtn=19 prelocalhtn=19
+09:56:25.462 DBG func handleHtnmsg htn. htn=19 localhtn=19 prelocalhtn=19
+09:56:25.462 DBG Sending COMMIT. senderID=0 sn=75 view=0
+09:56:25.462 DBG func sendCommit commit Tn. sn=75 tn=19
+09:56:25.463 DBG Sending Htn. senderID=0 sn=75 view=0
+09:56:25.464 DBG func handleCommit commit Tn. tn=19
+09:56:25.464 DBG func handleHtnmsg htn. htn=19 localhtn=19 prelocalhtn=19
+09:56:25.464 DBG func handleCommit commit Tn. tn=19
+09:56:25.465 INF Committed entry. latency=0 nReq=64 sn=75
+09:56:25.465 INF Delivered batch. nReq=64 sn=75
+09:56:25.465 DBG Starting timer. sn=79 view=0
+09:56:25.465 DBG func handleCommit commit Tn. tn=19
+09:56:25.465 DBG func handleHtnmsg htn. htn=19 localhtn=19 prelocalhtn=19
+09:56:25.466 DBG func handleHtnmsg htn. htn=19 localhtn=19 prelocalhtn=19
+09:56:26.439 DBG Batch ready. batchSize=4096
+09:56:26.439 DBG Batch cut. left=0 nBuckets=16 nReq=64 next=0
+09:56:26.440 DBG Waiting for batch. batchSize=4096
+09:56:26.441 INF Sending PREPREPARE. nReq=64 senderID=0 sn=76 view=0
+09:56:26.442 INF Handling PREPREPARE. nReq=64 senderID=1 sn=77
+09:56:26.442 DBG Creating new Batch. nReq=64
+09:56:26.445 INF Handling PREPREPARE. nReq=64 senderID=2 sn=78
+09:56:26.445 DBG Creating new Batch. nReq=64
+09:56:26.450 DBG Sending PREPARE. senderID=0 sn=77 view=0
+09:56:26.451 DBG func sendPrepare prepare Tn. sn=77 tn=20
+09:56:26.451 DBG Sending COMMIT. senderID=0 sn=77 view=0
+09:56:26.451 DBG func sendCommit commit Tn. sn=77 tn=20
+09:56:26.451 DBG Sending Htn. senderID=0 sn=77 view=0
+09:56:26.453 DBG func handleCommit commit Tn. tn=20
+09:56:26.453 INF Handling PREPREPARE. nReq=64 senderID=3 sn=79
+09:56:26.453 DBG Creating new Batch. nReq=64
+09:56:26.453 DBG func handleHtnmsg htn. htn=20 localhtn=20 prelocalhtn=20
+09:56:26.454 DBG func handleCommit commit Tn. tn=20
+09:56:26.454 DBG Sending PREPARE. senderID=0 sn=78 view=0
+09:56:26.454 INF Committed entry. latency=0 nReq=64 sn=77
+09:56:26.454 DBG func sendPrepare prepare Tn. sn=78 tn=20
+09:56:26.454 DBG Starting timer. sn=81 view=0
+09:56:26.455 DBG func handleHtnmsg htn. htn=20 localhtn=20 prelocalhtn=20
+09:56:26.457 DBG func handleCommit commit Tn. tn=20
+09:56:26.458 DBG func handleHtnmsg htn. htn=20 localhtn=20 prelocalhtn=20
+09:56:26.460 DBG Sending COMMIT. senderID=0 sn=78 view=0
+09:56:26.460 DBG func sendCommit commit Tn. sn=78 tn=20
+09:56:26.460 DBG Sending Htn. senderID=0 sn=78 view=0
+09:56:26.460 DBG func handleCommit commit Tn. tn=20
+09:56:26.460 DBG func handleHtnmsg htn. htn=20 localhtn=20 prelocalhtn=20
+09:56:26.461 DBG func handleCommit commit Tn. tn=20
+09:56:26.461 DBG Sending COMMIT. senderID=0 sn=76 view=0
+09:56:26.461 DBG func sendCommit commit Tn. sn=76 tn=20
+09:56:26.461 DBG Sending Htn. senderID=0 sn=76 view=0
+09:56:26.461 INF Committed entry. latency=0 nReq=64 sn=78
+09:56:26.461 DBG Starting timer. sn=82 view=0
+09:56:26.461 DBG func handleHtnmsg htn. htn=20 localhtn=20 prelocalhtn=20
+09:56:26.461 DBG func handleCommit commit Tn. tn=20
+09:56:26.462 DBG func handleHtnmsg htn. htn=20 localhtn=20 prelocalhtn=20
+09:56:26.462 DBG func handleCommit commit Tn. tn=20
+09:56:26.462 DBG func handleHtnmsg htn. htn=20 localhtn=20 prelocalhtn=20
+09:56:26.462 DBG Sending PREPARE. senderID=0 sn=79 view=0
+09:56:26.462 DBG func sendPrepare prepare Tn. sn=79 tn=20
+09:56:26.463 DBG func handleCommit commit Tn. tn=20
+09:56:26.463 INF Committed entry. latency=0 nReq=64 sn=76
+09:56:26.463 INF Delivered batch. nReq=64 sn=76
+09:56:26.463 INF Delivered batch. nReq=64 sn=77
+09:56:26.463 INF Delivered batch. nReq=64 sn=78
+09:56:26.463 DBG Starting timer. sn=80 view=0
+09:56:26.464 DBG func handleHtnmsg htn. htn=20 localhtn=20 prelocalhtn=20
+09:56:26.464 DBG func handleCommit commit Tn. tn=20
+09:56:26.464 DBG func handleHtnmsg htn. htn=20 localhtn=20 prelocalhtn=20
+09:56:26.464 DBG Sending COMMIT. senderID=0 sn=79 view=0
+09:56:26.465 DBG func sendCommit commit Tn. sn=79 tn=20
+09:56:26.465 DBG Sending Htn. senderID=0 sn=79 view=0
+09:56:26.465 DBG func handleCommit commit Tn. tn=20
+09:56:26.466 DBG func handleHtnmsg htn. htn=20 localhtn=20 prelocalhtn=20
+09:56:26.466 DBG func handleCommit commit Tn. tn=20
+09:56:26.467 INF Committed entry. latency=0 nReq=64 sn=79
+09:56:26.467 INF Delivered batch. nReq=64 sn=79
+09:56:26.467 DBG Starting timer. sn=83 view=0
+09:56:26.467 DBG func handleHtnmsg htn. htn=20 localhtn=20 prelocalhtn=20
+09:56:26.467 DBG func handleCommit commit Tn. tn=20
+09:56:26.467 DBG func handleHtnmsg htn. htn=20 localhtn=20 prelocalhtn=20
+09:56:27.440 DBG Batch ready. batchSize=4096
+09:56:27.441 DBG Batch cut. left=0 nBuckets=16 nReq=65 next=0
+09:56:27.441 DBG Waiting for batch. batchSize=4096
+09:56:27.442 INF Sending PREPREPARE. nReq=65 senderID=0 sn=80 view=0
+09:56:27.444 INF Handling PREPREPARE. nReq=64 senderID=1 sn=81
+09:56:27.444 DBG Creating new Batch. nReq=64
+09:56:27.449 INF Handling PREPREPARE. nReq=64 senderID=2 sn=82
+09:56:27.449 DBG Creating new Batch. nReq=64
+09:56:27.453 DBG Sending PREPARE. senderID=0 sn=81 view=0
+09:56:27.453 DBG func sendPrepare prepare Tn. sn=81 tn=21
+09:56:27.453 DBG Sending COMMIT. senderID=0 sn=81 view=0
+09:56:27.453 DBG func sendCommit commit Tn. sn=81 tn=21
+09:56:27.454 DBG Sending Htn. senderID=0 sn=81 view=0
+09:56:27.455 DBG func handleCommit commit Tn. tn=21
+09:56:27.455 DBG func handleHtnmsg htn. htn=21 localhtn=21 prelocalhtn=21
+09:56:27.458 DBG func handleCommit commit Tn. tn=21
+09:56:27.458 INF Handling PREPREPARE. nReq=64 senderID=3 sn=83
+09:56:27.458 DBG Creating new Batch. nReq=64
+09:56:27.458 DBG Sending PREPARE. senderID=0 sn=82 view=0
+09:56:27.458 INF Committed entry. latency=0 nReq=64 sn=81
+09:56:27.459 DBG func sendPrepare prepare Tn. sn=82 tn=21
+09:56:27.459 DBG Starting timer. sn=85 view=0
+09:56:27.459 DBG func handleHtnmsg htn. htn=21 localhtn=21 prelocalhtn=21
+09:56:27.459 DBG func handleCommit commit Tn. tn=21
+09:56:27.459 DBG func handleHtnmsg htn. htn=21 localhtn=21 prelocalhtn=21
+09:56:27.461 DBG Sending COMMIT. senderID=0 sn=82 view=0
+09:56:27.461 DBG func sendCommit commit Tn. sn=82 tn=21
+09:56:27.461 DBG Sending Htn. senderID=0 sn=82 view=0
+09:56:27.461 DBG func handleCommit commit Tn. tn=21
+09:56:27.462 DBG func handleHtnmsg htn. htn=21 localhtn=21 prelocalhtn=21
+09:56:27.462 DBG func handleCommit commit Tn. tn=21
+09:56:27.462 INF Committed entry. latency=0 nReq=64 sn=82
+09:56:27.462 DBG Starting timer. sn=86 view=0
+09:56:27.462 DBG func handleHtnmsg htn. htn=21 localhtn=21 prelocalhtn=21
+09:56:27.463 DBG func handleCommit commit Tn. tn=21
+09:56:27.463 DBG func handleHtnmsg htn. htn=21 localhtn=21 prelocalhtn=21
+09:56:27.465 DBG Sending COMMIT. senderID=0 sn=80 view=0
+09:56:27.465 DBG func sendCommit commit Tn. sn=80 tn=21
+09:56:27.465 DBG Sending Htn. senderID=0 sn=80 view=0
+09:56:27.465 DBG func handleCommit commit Tn. tn=21
+09:56:27.466 DBG func handleHtnmsg htn. htn=21 localhtn=21 prelocalhtn=21
+09:56:27.466 DBG Sending PREPARE. senderID=0 sn=83 view=0
+09:56:27.466 DBG func sendPrepare prepare Tn. sn=83 tn=21
+09:56:27.466 DBG func handleCommit commit Tn. tn=21
+09:56:27.466 INF Committed entry. latency=0 nReq=65 sn=80
+09:56:27.467 INF Delivered batch. nReq=65 sn=80
+09:56:27.467 INF Delivered batch. nReq=64 sn=81
+09:56:27.467 INF Delivered batch. nReq=64 sn=82
+09:56:27.467 DBG Starting timer. sn=84 view=0
+09:56:27.467 DBG func handleHtnmsg htn. htn=21 localhtn=21 prelocalhtn=21
+09:56:27.467 DBG Sending COMMIT. senderID=0 sn=83 view=0
+09:56:27.467 DBG func sendCommit commit Tn. sn=83 tn=21
+09:56:27.468 DBG Sending Htn. senderID=0 sn=83 view=0
+09:56:27.468 DBG func handleCommit commit Tn. tn=21
+09:56:27.468 DBG func handleHtnmsg htn. htn=21 localhtn=21 prelocalhtn=21
+09:56:27.468 DBG func handleCommit commit Tn. tn=21
+09:56:27.469 DBG func handleHtnmsg htn. htn=21 localhtn=21 prelocalhtn=21
+09:56:27.469 DBG func handleCommit commit Tn. tn=21
+09:56:27.469 INF Committed entry. latency=0 nReq=64 sn=83
+09:56:27.469 INF Delivered batch. nReq=64 sn=83
+09:56:27.469 DBG Starting timer. sn=87 view=0
+09:56:27.469 DBG func handleHtnmsg htn. htn=21 localhtn=21 prelocalhtn=21
+09:56:27.470 DBG func handleCommit commit Tn. tn=21
+09:56:27.470 DBG func handleHtnmsg htn. htn=21 localhtn=21 prelocalhtn=21
+09:56:28.442 DBG Batch ready. batchSize=4096
+09:56:28.443 DBG Batch cut. left=0 nBuckets=16 nReq=64 next=0
+09:56:28.443 DBG Waiting for batch. batchSize=4096
+09:56:28.444 INF Handling PREPREPARE. nReq=64 senderID=1 sn=85
+09:56:28.444 DBG Creating new Batch. nReq=64
+09:56:28.444 INF Sending PREPREPARE. nReq=64 senderID=0 sn=84 view=0
+09:56:28.449 INF Handling PREPREPARE. nReq=64 senderID=2 sn=86
+09:56:28.449 DBG Creating new Batch. nReq=64
+09:56:28.453 DBG Sending PREPARE. senderID=0 sn=85 view=0
+09:56:28.454 DBG func sendPrepare prepare Tn. sn=85 tn=22
+09:56:28.456 DBG Sending COMMIT. senderID=0 sn=85 view=0
+09:56:28.456 DBG func sendCommit commit Tn. sn=85 tn=22
+09:56:28.456 DBG Sending Htn. senderID=0 sn=85 view=0
+09:56:28.457 DBG func handleCommit commit Tn. tn=22
+09:56:28.457 DBG func handleHtnmsg htn. htn=22 localhtn=22 prelocalhtn=22
+09:56:28.457 INF Handling PREPREPARE. nReq=64 senderID=3 sn=87
+09:56:28.457 DBG func handleCommit commit Tn. tn=22
+09:56:28.458 DBG Creating new Batch. nReq=64
+09:56:28.458 INF Committed entry. latency=0 nReq=64 sn=85
+09:56:28.458 DBG Starting timer. sn=89 view=0
+09:56:28.458 DBG func handleCommit commit Tn. tn=22
+09:56:28.458 DBG func handleHtnmsg htn. htn=22 localhtn=22 prelocalhtn=22
+09:56:28.458 DBG func handleHtnmsg htn. htn=22 localhtn=22 prelocalhtn=22
+09:56:28.460 DBG Sending PREPARE. senderID=0 sn=86 view=0
+09:56:28.461 DBG func sendPrepare prepare Tn. sn=86 tn=22
+09:56:28.461 DBG Sending COMMIT. senderID=0 sn=86 view=0
+09:56:28.461 DBG func sendCommit commit Tn. sn=86 tn=22
+09:56:28.461 DBG Sending Htn. senderID=0 sn=86 view=0
+09:56:28.464 DBG func handleCommit commit Tn. tn=22
+09:56:28.464 DBG func handleHtnmsg htn. htn=22 localhtn=22 prelocalhtn=22
+09:56:28.465 DBG func handleCommit commit Tn. tn=22
+09:56:28.465 INF Committed entry. latency=0 nReq=64 sn=86
+09:56:28.465 DBG Sending COMMIT. senderID=0 sn=84 view=0
+09:56:28.465 DBG Starting timer. sn=90 view=0
+09:56:28.465 DBG func sendCommit commit Tn. sn=84 tn=22
+09:56:28.465 DBG func handleHtnmsg htn. htn=22 localhtn=22 prelocalhtn=22
+09:56:28.465 DBG Sending Htn. senderID=0 sn=84 view=0
+09:56:28.465 DBG func handleCommit commit Tn. tn=22
+09:56:28.466 DBG func handleHtnmsg htn. htn=22 localhtn=22 prelocalhtn=22
+09:56:28.466 DBG Sending PREPARE. senderID=0 sn=87 view=0
+09:56:28.466 DBG func handleCommit commit Tn. tn=22
+09:56:28.466 DBG func handleCommit commit Tn. tn=22
+09:56:28.466 DBG func sendPrepare prepare Tn. sn=87 tn=22
+09:56:28.466 DBG func handleHtnmsg htn. htn=22 localhtn=22 prelocalhtn=22
+09:56:28.466 INF Committed entry. latency=0 nReq=64 sn=84
+09:56:28.466 INF Delivered batch. nReq=64 sn=84
+09:56:28.466 INF Delivered batch. nReq=64 sn=85
+09:56:28.466 INF Delivered batch. nReq=64 sn=86
+09:56:28.466 DBG Starting timer. sn=88 view=0
+09:56:28.467 DBG func handleHtnmsg htn. htn=22 localhtn=22 prelocalhtn=22
+09:56:28.468 DBG Sending COMMIT. senderID=0 sn=87 view=0
+09:56:28.468 DBG func sendCommit commit Tn. sn=87 tn=22
+09:56:28.468 DBG Sending Htn. senderID=0 sn=87 view=0
+09:56:28.468 DBG func handleCommit commit Tn. tn=22
+09:56:28.469 DBG func handleCommit commit Tn. tn=22
+09:56:28.469 DBG func handleCommit commit Tn. tn=22
+09:56:28.469 DBG func handleHtnmsg htn. htn=22 localhtn=22 prelocalhtn=22
+09:56:28.469 INF Committed entry. latency=0 nReq=64 sn=87
+09:56:28.470 INF Delivered batch. nReq=64 sn=87
+09:56:28.470 DBG Starting timer. sn=91 view=0
+09:56:28.470 DBG func handleHtnmsg htn. htn=22 localhtn=22 prelocalhtn=22
+09:56:28.470 DBG func handleCommit commit Tn. tn=22
+09:56:28.470 DBG func handleHtnmsg htn. htn=22 localhtn=22 prelocalhtn=22
+09:56:28.470 DBG func handleHtnmsg htn. htn=22 localhtn=22 prelocalhtn=22
+09:56:29.444 DBG Batch ready. batchSize=4096
+09:56:29.444 DBG Batch cut. left=0 nBuckets=16 nReq=64 next=0
+09:56:29.445 DBG Waiting for batch. batchSize=4096
+09:56:29.446 INF Sending PREPREPARE. nReq=64 senderID=0 sn=88 view=0
+09:56:29.447 INF Handling PREPREPARE. nReq=64 senderID=1 sn=89
+09:56:29.447 DBG Creating new Batch. nReq=64
+09:56:29.453 INF Handling PREPREPARE. nReq=64 senderID=2 sn=90
+09:56:29.453 DBG Creating new Batch. nReq=64
+09:56:29.455 DBG Sending PREPARE. senderID=0 sn=89 view=0
+09:56:29.455 DBG func sendPrepare prepare Tn. sn=89 tn=23
+09:56:29.458 DBG Sending COMMIT. senderID=0 sn=89 view=0
+09:56:29.458 DBG func sendCommit commit Tn. sn=89 tn=23
+09:56:29.458 DBG Sending Htn. senderID=0 sn=89 view=0
+09:56:29.458 DBG func handleCommit commit Tn. tn=23
+09:56:29.459 DBG func handleHtnmsg htn. htn=23 localhtn=23 prelocalhtn=23
+09:56:29.460 DBG func handleCommit commit Tn. tn=23
+09:56:29.460 INF Handling PREPREPARE. nReq=64 senderID=3 sn=91
+09:56:29.460 DBG Creating new Batch. nReq=64
+09:56:29.460 INF Committed entry. latency=0 nReq=64 sn=89
+09:56:29.460 DBG Starting timer. sn=93 view=0
+09:56:29.461 DBG func handleHtnmsg htn. htn=23 localhtn=23 prelocalhtn=23
+09:56:29.461 DBG func handleCommit commit Tn. tn=23
+09:56:29.461 DBG func handleHtnmsg htn. htn=23 localhtn=23 prelocalhtn=23
+09:56:29.461 DBG Sending PREPARE. senderID=0 sn=90 view=0
+09:56:29.462 DBG func sendPrepare prepare Tn. sn=90 tn=23
+09:56:29.466 DBG Sending COMMIT. senderID=0 sn=90 view=0
+09:56:29.466 DBG func sendCommit commit Tn. sn=90 tn=23
+09:56:29.466 DBG Sending Htn. senderID=0 sn=90 view=0
+09:56:29.466 DBG func handleCommit commit Tn. tn=23
+09:56:29.466 DBG func handleHtnmsg htn. htn=23 localhtn=23 prelocalhtn=23
+09:56:29.467 DBG Sending COMMIT. senderID=0 sn=88 view=0
+09:56:29.467 DBG func sendCommit commit Tn. sn=88 tn=23
+09:56:29.467 DBG func handleCommit commit Tn. tn=23
+09:56:29.467 DBG Sending Htn. senderID=0 sn=88 view=0
+09:56:29.467 DBG func handleCommit commit Tn. tn=23
+09:56:29.468 INF Committed entry. latency=0 nReq=64 sn=90
+09:56:29.468 DBG func handleHtnmsg htn. htn=23 localhtn=23 prelocalhtn=23
+09:56:29.468 DBG Starting timer. sn=94 view=0
+09:56:29.468 DBG func handleCommit commit Tn. tn=23
+09:56:29.468 DBG Sending PREPARE. senderID=0 sn=91 view=0
+09:56:29.468 DBG func handleHtnmsg htn. htn=23 localhtn=23 prelocalhtn=23
+09:56:29.468 DBG func sendPrepare prepare Tn. sn=91 tn=23
+09:56:29.468 DBG func handleCommit commit Tn. tn=23
+09:56:29.468 INF Committed entry. latency=0 nReq=64 sn=88
+09:56:29.468 DBG func handleHtnmsg htn. htn=23 localhtn=23 prelocalhtn=23
+09:56:29.468 INF Delivered batch. nReq=64 sn=88
+09:56:29.469 INF Delivered batch. nReq=64 sn=89
+09:56:29.469 INF Delivered batch. nReq=64 sn=90
+09:56:29.469 DBG Starting timer. sn=92 view=0
+09:56:29.469 DBG func handleHtnmsg htn. htn=23 localhtn=23 prelocalhtn=23
+09:56:29.469 DBG func handleCommit commit Tn. tn=23
+09:56:29.469 DBG func handleHtnmsg htn. htn=23 localhtn=23 prelocalhtn=23
+09:56:29.470 DBG Sending COMMIT. senderID=0 sn=91 view=0
+09:56:29.470 DBG func sendCommit commit Tn. sn=91 tn=23
+09:56:29.470 DBG Sending Htn. senderID=0 sn=91 view=0
+09:56:29.471 DBG func handleCommit commit Tn. tn=23
+09:56:29.471 DBG func handleCommit commit Tn. tn=23
+09:56:29.471 INF Committed entry. latency=0 nReq=64 sn=91
+09:56:29.471 INF Delivered batch. nReq=64 sn=91
+09:56:29.472 DBG Starting timer. sn=95 view=0
+09:56:29.472 DBG func handleCommit commit Tn. tn=23
+09:56:29.472 DBG func handleHtnmsg htn. htn=23 localhtn=23 prelocalhtn=23
+09:56:29.472 DBG func handleHtnmsg htn. htn=23 localhtn=23 prelocalhtn=23
+09:56:29.472 DBG func handleHtnmsg htn. htn=23 localhtn=23 prelocalhtn=23
+09:56:30.446 DBG Batch ready. batchSize=4096
+09:56:30.447 DBG Batch cut. left=0 nBuckets=16 nReq=64 next=0
+09:56:30.448 DBG Waiting for batch. batchSize=4096
+09:56:30.449 INF Handling PREPREPARE. nReq=64 senderID=1 sn=93
+09:56:30.449 DBG Creating new Batch. nReq=64
+09:56:30.450 INF Sending PREPREPARE. nReq=64 senderID=0 sn=92 view=0
+09:56:30.456 INF Handling PREPREPARE. nReq=64 senderID=2 sn=94
+09:56:30.457 DBG Creating new Batch. nReq=64
+09:56:30.457 DBG Sending PREPARE. senderID=0 sn=93 view=0
+09:56:30.457 DBG func sendPrepare prepare Tn. sn=93 tn=24
+09:56:30.458 INF Handling PREPREPARE. nReq=64 senderID=3 sn=95
+09:56:30.458 DBG Creating new Batch. nReq=64
+09:56:30.458 DBG Sending COMMIT. senderID=0 sn=93 view=0
+09:56:30.459 DBG func sendCommit commit Tn. sn=93 tn=24
+09:56:30.459 DBG Sending Htn. senderID=0 sn=93 view=0
+09:56:30.459 DBG func handleCommit commit Tn. tn=24
+09:56:30.459 DBG func handleHtnmsg htn. htn=24 localhtn=24 prelocalhtn=24
+09:56:30.460 DBG func handleCommit commit Tn. tn=24
+09:56:30.460 INF Committed entry. latency=0 nReq=64 sn=93
+09:56:30.460 DBG Starting timer. sn=97 view=0
+09:56:30.460 DBG func handleHtnmsg htn. htn=24 localhtn=24 prelocalhtn=24
+09:56:30.465 DBG func handleCommit commit Tn. tn=24
+09:56:30.466 DBG func handleHtnmsg htn. htn=24 localhtn=24 prelocalhtn=24
+09:56:30.467 DBG Sending PREPARE. senderID=0 sn=95 view=0
+09:56:30.467 DBG func sendPrepare prepare Tn. sn=95 tn=24
+09:56:30.469 DBG Sending PREPARE. senderID=0 sn=94 view=0
+09:56:30.469 DBG func sendPrepare prepare Tn. sn=94 tn=24
+09:56:30.469 DBG Sending COMMIT. senderID=0 sn=94 view=0
+09:56:30.469 DBG func sendCommit commit Tn. sn=94 tn=24
+09:56:30.470 DBG Sending Htn. senderID=0 sn=94 view=0
+09:56:30.470 DBG func handleCommit commit Tn. tn=24
+09:56:30.470 DBG func handleHtnmsg htn. htn=24 localhtn=24 prelocalhtn=24
+09:56:30.470 DBG func handleCommit commit Tn. tn=24
+09:56:30.470 INF Committed entry. latency=0 nReq=64 sn=94
+09:56:30.471 DBG Starting timer. sn=98 view=0
+09:56:30.471 DBG Sending COMMIT. senderID=0 sn=92 view=0
+09:56:30.471 DBG Sending COMMIT. senderID=0 sn=95 view=0
+09:56:30.471 DBG func handleHtnmsg htn. htn=24 localhtn=24 prelocalhtn=24
+09:56:30.471 DBG func sendCommit commit Tn. sn=92 tn=24
+09:56:30.471 DBG func handleCommit commit Tn. tn=24
+09:56:30.471 DBG Sending Htn. senderID=0 sn=92 view=0
+09:56:30.471 DBG func sendCommit commit Tn. sn=95 tn=24
+09:56:30.471 DBG func handleHtnmsg htn. htn=24 localhtn=24 prelocalhtn=24
+09:56:30.471 DBG func handleCommit commit Tn. tn=24
+09:56:30.471 DBG Sending Htn. senderID=0 sn=95 view=0
+09:56:30.471 DBG func handleHtnmsg htn. htn=24 localhtn=24 prelocalhtn=24
+09:56:30.471 DBG func handleCommit commit Tn. tn=24
+09:56:30.472 DBG func handleCommit commit Tn. tn=24
+09:56:30.472 DBG func handleCommit commit Tn. tn=24
+09:56:30.472 INF Committed entry. latency=0 nReq=64 sn=95
+09:56:30.472 INF Committed entry. latency=0 nReq=64 sn=92
+09:56:30.472 INF Delivered batch. nReq=64 sn=92
+09:56:30.473 INF Delivered batch. nReq=64 sn=93
+09:56:30.473 INF Delivered batch. nReq=64 sn=94
+09:56:30.473 INF Delivered batch. nReq=64 sn=95
+09:56:30.473 DBG Starting timer. sn=99 view=0
+09:56:30.473 DBG Starting timer. sn=96 view=0
+09:56:30.474 DBG func handleHtnmsg htn. htn=24 localhtn=24 prelocalhtn=24
+09:56:30.474 DBG func handleCommit commit Tn. tn=24
+09:56:30.474 DBG func handleHtnmsg htn. htn=24 localhtn=24 prelocalhtn=24
+09:56:30.473 DBG func handleHtnmsg htn. htn=24 localhtn=24 prelocalhtn=24
+09:56:30.474 DBG func handleHtnmsg htn. htn=24 localhtn=24 prelocalhtn=24
+09:56:30.474 DBG func handleCommit commit Tn. tn=24
+09:56:30.474 DBG func handleHtnmsg htn. htn=24 localhtn=24 prelocalhtn=24
+09:56:31.449 INF Handling PREPREPARE. nReq=64 senderID=1 sn=97
+09:56:31.449 DBG Batch ready. batchSize=4096
+09:56:31.449 DBG Creating new Batch. nReq=64
+09:56:31.450 DBG Batch cut. left=0 nBuckets=16 nReq=64 next=0
+09:56:31.450 DBG Waiting for batch. batchSize=4096
+09:56:31.453 INF Sending PREPREPARE. nReq=64 senderID=0 sn=96 view=0
+09:56:31.456 INF Handling PREPREPARE. nReq=64 senderID=2 sn=98
+09:56:31.456 DBG Creating new Batch. nReq=64
+09:56:31.456 DBG Sending PREPARE. senderID=0 sn=97 view=0
+09:56:31.457 DBG func sendPrepare prepare Tn. sn=97 tn=25
+09:56:31.460 DBG Sending COMMIT. senderID=0 sn=97 view=0
+09:56:31.461 DBG func sendCommit commit Tn. sn=97 tn=25
+09:56:31.461 DBG Sending Htn. senderID=0 sn=97 view=0
+09:56:31.461 DBG func handleCommit commit Tn. tn=25
+09:56:31.461 DBG func handleHtnmsg htn. htn=25 localhtn=25 prelocalhtn=25
+09:56:31.461 INF Handling PREPREPARE. nReq=64 senderID=3 sn=99
+09:56:31.462 DBG Creating new Batch. nReq=64
+09:56:31.465 DBG func handleCommit commit Tn. tn=25
+09:56:31.465 INF Committed entry. latency=0 nReq=64 sn=97
+09:56:31.466 DBG Starting timer. sn=101 view=0
+09:56:31.466 DBG func handleHtnmsg htn. htn=25 localhtn=25 prelocalhtn=25
+09:56:31.466 DBG func handleCommit commit Tn. tn=25
+09:56:31.466 DBG func handleHtnmsg htn. htn=25 localhtn=25 prelocalhtn=25
+09:56:31.468 DBG Sending PREPARE. senderID=0 sn=98 view=0
+09:56:31.468 DBG func sendPrepare prepare Tn. sn=98 tn=25
+09:56:31.468 DBG Sending COMMIT. senderID=0 sn=98 view=0
+09:56:31.468 DBG func sendCommit commit Tn. sn=98 tn=25
+09:56:31.468 DBG Sending Htn. senderID=0 sn=98 view=0
+09:56:31.469 DBG func handleCommit commit Tn. tn=25
+09:56:31.469 DBG func handleCommit commit Tn. tn=25
+09:56:31.469 INF Committed entry. latency=0 nReq=64 sn=98
+09:56:31.469 DBG Starting timer. sn=102 view=0
+09:56:31.470 DBG func handleHtnmsg htn. htn=25 localhtn=25 prelocalhtn=25
+09:56:31.470 DBG func handleCommit commit Tn. tn=25
+09:56:31.470 DBG func handleHtnmsg htn. htn=25 localhtn=25 prelocalhtn=25
+09:56:31.470 DBG func handleHtnmsg htn. htn=25 localhtn=25 prelocalhtn=25
+09:56:31.471 DBG Sending PREPARE. senderID=0 sn=99 view=0
+09:56:31.471 DBG Sending COMMIT. senderID=0 sn=96 view=0
+09:56:31.472 DBG func sendPrepare prepare Tn. sn=99 tn=25
+09:56:31.472 DBG func sendCommit commit Tn. sn=96 tn=25
+09:56:31.472 DBG Sending COMMIT. senderID=0 sn=99 view=0
+09:56:31.472 DBG Sending Htn. senderID=0 sn=96 view=0
+09:56:31.472 DBG func sendCommit commit Tn. sn=99 tn=25
+09:56:31.472 DBG Sending Htn. senderID=0 sn=99 view=0
+09:56:31.472 DBG func handleCommit commit Tn. tn=25
+09:56:31.472 DBG func handleCommit commit Tn. tn=25
+09:56:31.472 DBG func handleHtnmsg htn. htn=25 localhtn=25 prelocalhtn=25
+09:56:31.473 DBG func handleCommit commit Tn. tn=25
+09:56:31.473 DBG func handleCommit commit Tn. tn=25
+09:56:31.473 INF Committed entry. latency=0 nReq=64 sn=99
+09:56:31.473 DBG Starting timer. sn=103 view=0
+09:56:31.473 INF Committed entry. latency=0 nReq=64 sn=96
+09:56:31.473 DBG func handleHtnmsg htn. htn=25 localhtn=25 prelocalhtn=25
+09:56:31.473 INF Delivered batch. nReq=64 sn=96
+09:56:31.473 DBG func handleCommit commit Tn. tn=25
+09:56:31.473 INF Delivered batch. nReq=64 sn=97
+09:56:31.474 DBG func handleHtnmsg htn. htn=25 localhtn=25 prelocalhtn=25
+09:56:31.474 INF Delivered batch. nReq=64 sn=98
+09:56:31.474 INF Delivered batch. nReq=64 sn=99
+09:56:31.474 DBG Starting timer. sn=100 view=0
+09:56:31.474 DBG func handleHtnmsg htn. htn=25 localhtn=25 prelocalhtn=25
+09:56:31.474 DBG func handleCommit commit Tn. tn=25
+09:56:31.474 DBG func handleHtnmsg htn. htn=25 localhtn=25 prelocalhtn=25
+09:56:31.474 DBG func handleHtnmsg htn. htn=25 localhtn=25 prelocalhtn=25
+09:56:32.450 INF Handling PREPREPARE. nReq=64 senderID=1 sn=101
+09:56:32.450 DBG Batch ready. batchSize=4096
+09:56:32.450 DBG Creating new Batch. nReq=64
+09:56:32.451 DBG Batch cut. left=0 nBuckets=16 nReq=64 next=0
+09:56:32.453 DBG Waiting for batch. batchSize=4096
+09:56:32.454 INF Sending PREPREPARE. nReq=64 senderID=0 sn=100 view=0
+09:56:32.458 INF Handling PREPREPARE. nReq=65 senderID=2 sn=102
+09:56:32.458 DBG Creating new Batch. nReq=65
+09:56:32.460 DBG Sending PREPARE. senderID=0 sn=101 view=0
+09:56:32.460 DBG func sendPrepare prepare Tn. sn=101 tn=26
+09:56:32.461 DBG Sending COMMIT. senderID=0 sn=101 view=0
+09:56:32.461 DBG func sendCommit commit Tn. sn=101 tn=26
+09:56:32.461 DBG Sending Htn. senderID=0 sn=101 view=0
+09:56:32.461 INF Handling PREPREPARE. nReq=64 senderID=3 sn=103
+09:56:32.462 DBG Creating new Batch. nReq=64
+09:56:32.462 DBG func handleCommit commit Tn. tn=26
+09:56:32.462 DBG func handleHtnmsg htn. htn=26 localhtn=26 prelocalhtn=26
+09:56:32.465 DBG func handleCommit commit Tn. tn=26
+09:56:32.465 INF Committed entry. latency=0 nReq=64 sn=101
+09:56:32.465 DBG Starting timer. sn=105 view=0
+09:56:32.465 DBG func handleHtnmsg htn. htn=26 localhtn=26 prelocalhtn=26
+09:56:32.467 DBG func handleCommit commit Tn. tn=26
+09:56:32.467 DBG func handleHtnmsg htn. htn=26 localhtn=26 prelocalhtn=26
+09:56:32.469 DBG Sending PREPARE. senderID=0 sn=102 view=0
+09:56:32.469 DBG func sendPrepare prepare Tn. sn=102 tn=26
+09:56:32.471 DBG Sending PREPARE. senderID=0 sn=103 view=0
+09:56:32.471 DBG func sendPrepare prepare Tn. sn=103 tn=26
+09:56:32.472 DBG Sending COMMIT. senderID=0 sn=102 view=0
+09:56:32.472 DBG func sendCommit commit Tn. sn=102 tn=26
+09:56:32.472 DBG Sending Htn. senderID=0 sn=102 view=0
+09:56:32.473 DBG func handleCommit commit Tn. tn=26
+09:56:32.473 DBG func handleHtnmsg htn. htn=26 localhtn=26 prelocalhtn=26
+09:56:32.473 DBG Sending COMMIT. senderID=0 sn=103 view=0
+09:56:32.474 DBG func sendCommit commit Tn. sn=103 tn=26
+09:56:32.474 DBG func handleCommit commit Tn. tn=26
+09:56:32.474 DBG Sending Htn. senderID=0 sn=103 view=0
+09:56:32.474 DBG func handleCommit commit Tn. tn=26
+09:56:32.474 INF Committed entry. latency=0 nReq=65 sn=102
+09:56:32.474 DBG func handleHtnmsg htn. htn=26 localhtn=26 prelocalhtn=26
+09:56:32.474 DBG func handleCommit commit Tn. tn=26
+09:56:32.474 DBG Starting timer. sn=106 view=0
+09:56:32.475 INF Committed entry. latency=0 nReq=64 sn=103
+09:56:32.475 DBG Sending COMMIT. senderID=0 sn=100 view=0
+09:56:32.475 DBG Starting timer. sn=107 view=0
+09:56:32.475 DBG func handleHtnmsg htn. htn=26 localhtn=26 prelocalhtn=26
+09:56:32.475 DBG func sendCommit commit Tn. sn=100 tn=26
+09:56:32.475 DBG func handleCommit commit Tn. tn=26
+09:56:32.475 DBG func handleCommit commit Tn. tn=26
+09:56:32.475 DBG Sending Htn. senderID=0 sn=100 view=0
+09:56:32.475 DBG func handleHtnmsg htn. htn=26 localhtn=26 prelocalhtn=26
+09:56:32.475 DBG func handleHtnmsg htn. htn=26 localhtn=26 prelocalhtn=26
+09:56:32.476 DBG func handleHtnmsg htn. htn=26 localhtn=26 prelocalhtn=26
+09:56:32.476 DBG func handleCommit commit Tn. tn=26
+09:56:32.476 DBG func handleCommit commit Tn. tn=26
+09:56:32.476 INF Committed entry. latency=0 nReq=64 sn=100
+09:56:32.476 INF Delivered batch. nReq=64 sn=100
+09:56:32.477 INF Delivered batch. nReq=64 sn=101
+09:56:32.477 INF Delivered batch. nReq=65 sn=102
+09:56:32.477 INF Delivered batch. nReq=64 sn=103
+09:56:32.477 DBG Starting timer. sn=104 view=0
+09:56:32.477 DBG func handleHtnmsg htn. htn=26 localhtn=26 prelocalhtn=26
+09:56:32.477 DBG func handleHtnmsg htn. htn=26 localhtn=26 prelocalhtn=26
+09:56:32.477 DBG func handleCommit commit Tn. tn=26
+09:56:32.478 DBG func handleHtnmsg htn. htn=26 localhtn=26 prelocalhtn=26
+09:56:33.451 INF Handling PREPREPARE. nReq=64 senderID=1 sn=105
+09:56:33.452 DBG Creating new Batch. nReq=64
+09:56:33.453 DBG Batch ready. batchSize=4096
+09:56:33.454 DBG Batch cut. left=0 nBuckets=16 nReq=64 next=0
+09:56:33.455 DBG Waiting for batch. batchSize=4096
+09:56:33.456 INF Sending PREPREPARE. nReq=64 senderID=0 sn=104 view=0
+09:56:33.462 DBG Sending PREPARE. senderID=0 sn=105 view=0
+09:56:33.462 DBG func sendPrepare prepare Tn. sn=105 tn=27
+09:56:33.462 DBG Sending COMMIT. senderID=0 sn=105 view=0
+09:56:33.462 INF Handling PREPREPARE. nReq=64 senderID=2 sn=106
+09:56:33.462 DBG func sendCommit commit Tn. sn=105 tn=27
+09:56:33.463 DBG Creating new Batch. nReq=64
+09:56:33.463 DBG Sending Htn. senderID=0 sn=105 view=0
+09:56:33.463 DBG func handleCommit commit Tn. tn=27
+09:56:33.463 INF Handling PREPREPARE. nReq=64 senderID=3 sn=107
+09:56:33.463 DBG func handleHtnmsg htn. htn=27 localhtn=27 prelocalhtn=27
+09:56:33.463 DBG Creating new Batch. nReq=64
+09:56:33.463 DBG func handleCommit commit Tn. tn=27
+09:56:33.464 INF Committed entry. latency=0 nReq=64 sn=105
+09:56:33.464 DBG Starting timer. sn=109 view=0
+09:56:33.464 DBG func handleCommit commit Tn. tn=27
+09:56:33.465 DBG func handleHtnmsg htn. htn=27 localhtn=27 prelocalhtn=27
+09:56:33.469 DBG func handleHtnmsg htn. htn=27 localhtn=27 prelocalhtn=27
+09:56:33.474 DBG Sending PREPARE. senderID=0 sn=107 view=0
+09:56:33.474 DBG Sending PREPARE. senderID=0 sn=106 view=0
+09:56:33.474 DBG func sendPrepare prepare Tn. sn=107 tn=27
+09:56:33.474 DBG func sendPrepare prepare Tn. sn=106 tn=27
+09:56:33.475 DBG Sending COMMIT. senderID=0 sn=107 view=0
+09:56:33.475 DBG func sendCommit commit Tn. sn=107 tn=27
+09:56:33.475 DBG Sending Htn. senderID=0 sn=107 view=0
+09:56:33.475 DBG Sending COMMIT. senderID=0 sn=106 view=0
+09:56:33.476 DBG func sendCommit commit Tn. sn=106 tn=27
+09:56:33.476 DBG Sending Htn. senderID=0 sn=106 view=0
+09:56:33.476 DBG Sending COMMIT. senderID=0 sn=104 view=0
+09:56:33.476 DBG func sendCommit commit Tn. sn=104 tn=27
+09:56:33.476 DBG Sending Htn. senderID=0 sn=104 view=0
+09:56:33.476 DBG func handleCommit commit Tn. tn=27
+09:56:33.477 DBG func handleHtnmsg htn. htn=27 localhtn=27 prelocalhtn=27
+09:56:33.477 DBG func handleCommit commit Tn. tn=27
+09:56:33.477 DBG func handleCommit commit Tn. tn=27
+09:56:33.477 INF Committed entry. latency=0 nReq=64 sn=107
+09:56:33.477 DBG func handleCommit commit Tn. tn=27
+09:56:33.477 DBG Starting timer. sn=111 view=0
+09:56:33.478 DBG func handleHtnmsg htn. htn=27 localhtn=27 prelocalhtn=27
+09:56:33.478 INF Committed entry. latency=0 nReq=64 sn=104
+09:56:33.478 DBG func handleCommit commit Tn. tn=27
+09:56:33.478 INF Delivered batch. nReq=64 sn=104
+09:56:33.477 DBG func handleCommit commit Tn. tn=27
+09:56:33.478 INF Delivered batch. nReq=64 sn=105
+09:56:33.478 DBG func handleHtnmsg htn. htn=27 localhtn=27 prelocalhtn=27
+09:56:33.478 DBG Starting timer. sn=108 view=0
+09:56:33.478 DBG func handleCommit commit Tn. tn=27
+09:56:33.478 DBG func handleHtnmsg htn. htn=27 localhtn=27 prelocalhtn=27
+09:56:33.478 DBG func handleHtnmsg htn. htn=27 localhtn=27 prelocalhtn=27
+09:56:33.478 DBG func handleCommit commit Tn. tn=27
+09:56:33.479 INF Committed entry. latency=0 nReq=64 sn=106
+09:56:33.479 DBG func handleHtnmsg htn. htn=27 localhtn=27 prelocalhtn=27
+09:56:33.479 INF Delivered batch. nReq=64 sn=106
+09:56:33.479 DBG func handleHtnmsg htn. htn=27 localhtn=27 prelocalhtn=27
+09:56:33.479 INF Delivered batch. nReq=64 sn=107
+09:56:33.479 DBG Starting timer. sn=110 view=0
+09:56:33.479 DBG func handleHtnmsg htn. htn=27 localhtn=27 prelocalhtn=27
+09:56:33.479 DBG func handleCommit commit Tn. tn=27
+09:56:33.479 DBG func handleHtnmsg htn. htn=27 localhtn=27 prelocalhtn=27
+09:56:34.455 INF Handling PREPREPARE. nReq=65 senderID=1 sn=109
+09:56:34.455 DBG Creating new Batch. nReq=65
+09:56:34.456 DBG Batch ready. batchSize=4096
+09:56:34.456 DBG Batch cut. left=0 nBuckets=16 nReq=64 next=0
+09:56:34.459 DBG Waiting for batch. batchSize=4096
+09:56:34.460 INF Sending PREPREPARE. nReq=64 senderID=0 sn=108 view=0
+09:56:34.461 INF Handling PREPREPARE. nReq=64 senderID=2 sn=110
+09:56:34.461 DBG Creating new Batch. nReq=64
+09:56:34.464 INF Handling PREPREPARE. nReq=64 senderID=3 sn=111
+09:56:34.464 DBG Creating new Batch. nReq=64
+09:56:34.466 DBG Sending PREPARE. senderID=0 sn=109 view=0
+09:56:34.466 DBG func sendPrepare prepare Tn. sn=109 tn=28
+09:56:34.466 DBG Sending COMMIT. senderID=0 sn=109 view=0
+09:56:34.467 DBG func sendCommit commit Tn. sn=109 tn=28
+09:56:34.467 DBG Sending Htn. senderID=0 sn=109 view=0
+09:56:34.467 DBG func handleCommit commit Tn. tn=28
+09:56:34.467 DBG func handleHtnmsg htn. htn=28 localhtn=28 prelocalhtn=28
+09:56:34.468 DBG func handleCommit commit Tn. tn=28
+09:56:34.469 INF Committed entry. latency=0 nReq=65 sn=109
+09:56:34.469 DBG Starting timer. sn=113 view=0
+09:56:34.469 DBG func handleHtnmsg htn. htn=28 localhtn=28 prelocalhtn=28
+09:56:34.469 DBG func handleCommit commit Tn. tn=28
+09:56:34.469 DBG func handleHtnmsg htn. htn=28 localhtn=28 prelocalhtn=28
+09:56:34.470 DBG Sending PREPARE. senderID=0 sn=110 view=0
+09:56:34.471 DBG func sendPrepare prepare Tn. sn=110 tn=28
+09:56:34.471 DBG Sending COMMIT. senderID=0 sn=110 view=0
+09:56:34.471 DBG func sendCommit commit Tn. sn=110 tn=28
+09:56:34.471 DBG Sending Htn. senderID=0 sn=110 view=0
+09:56:34.472 DBG Sending PREPARE. senderID=0 sn=111 view=0
+09:56:34.472 DBG func sendPrepare prepare Tn. sn=111 tn=28
+09:56:34.473 DBG func handleCommit commit Tn. tn=28
+09:56:34.473 DBG func handleHtnmsg htn. htn=28 localhtn=28 prelocalhtn=28
+09:56:34.474 DBG func handleCommit commit Tn. tn=28
+09:56:34.474 INF Committed entry. latency=0 nReq=64 sn=110
+09:56:34.474 DBG Starting timer. sn=114 view=0
+09:56:34.475 DBG func handleHtnmsg htn. htn=28 localhtn=28 prelocalhtn=28
+09:56:34.475 DBG func handleCommit commit Tn. tn=28
+09:56:34.475 DBG func handleHtnmsg htn. htn=28 localhtn=28 prelocalhtn=28
+09:56:34.475 DBG Sending COMMIT. senderID=0 sn=111 view=0
+09:56:34.476 DBG func sendCommit commit Tn. sn=111 tn=28
+09:56:34.476 DBG Sending Htn. senderID=0 sn=111 view=0
+09:56:34.476 DBG func handleCommit commit Tn. tn=28
+09:56:34.476 DBG func handleHtnmsg htn. htn=28 localhtn=28 prelocalhtn=28
+09:56:34.476 DBG func handleCommit commit Tn. tn=28
+09:56:34.477 INF Committed entry. latency=0 nReq=64 sn=111
+09:56:34.477 DBG Starting timer. sn=115 view=0
+09:56:34.477 DBG func handleHtnmsg htn. htn=28 localhtn=28 prelocalhtn=28
+09:56:34.477 DBG func handleCommit commit Tn. tn=28
+09:56:34.477 DBG func handleHtnmsg htn. htn=28 localhtn=28 prelocalhtn=28
+09:56:34.478 DBG Sending COMMIT. senderID=0 sn=108 view=0
+09:56:34.478 DBG func sendCommit commit Tn. sn=108 tn=28
+09:56:34.479 DBG Sending Htn. senderID=0 sn=108 view=0
+09:56:34.479 DBG func handleCommit commit Tn. tn=28
+09:56:34.479 DBG func handleHtnmsg htn. htn=28 localhtn=28 prelocalhtn=28
+09:56:34.480 DBG func handleCommit commit Tn. tn=28
+09:56:34.480 INF Committed entry. latency=0 nReq=64 sn=108
+09:56:34.480 INF Delivered batch. nReq=64 sn=108
+09:56:34.480 INF Delivered batch. nReq=65 sn=109
+09:56:34.480 INF Delivered batch. nReq=64 sn=110
+09:56:34.480 INF Delivered batch. nReq=64 sn=111
+09:56:34.481 DBG Starting timer. sn=112 view=0
+09:56:34.481 DBG func handleHtnmsg htn. htn=28 localhtn=28 prelocalhtn=28
+09:56:34.481 DBG func handleCommit commit Tn. tn=28
+09:56:34.481 DBG func handleHtnmsg htn. htn=28 localhtn=28 prelocalhtn=28
+09:56:35.456 INF Handling PREPREPARE. nReq=64 senderID=1 sn=113
+09:56:35.457 DBG Creating new Batch. nReq=64
+09:56:35.459 DBG Batch ready. batchSize=4096
+09:56:35.460 DBG Batch cut. left=0 nBuckets=16 nReq=65 next=0
+09:56:35.460 DBG Waiting for batch. batchSize=4096
+09:56:35.461 INF Sending PREPREPARE. nReq=65 senderID=0 sn=112 view=0
+09:56:35.464 INF Handling PREPREPARE. nReq=64 senderID=2 sn=114
+09:56:35.464 DBG Sending PREPARE. senderID=0 sn=113 view=0
+09:56:35.464 DBG Creating new Batch. nReq=64
+09:56:35.464 DBG func sendPrepare prepare Tn. sn=113 tn=29
+09:56:35.464 INF Handling PREPREPARE. nReq=65 senderID=3 sn=115
+09:56:35.465 DBG Creating new Batch. nReq=65
+09:56:35.466 DBG Sending COMMIT. senderID=0 sn=113 view=0
+09:56:35.466 DBG func sendCommit commit Tn. sn=113 tn=29
+09:56:35.466 DBG Sending Htn. senderID=0 sn=113 view=0
+09:56:35.466 DBG func handleCommit commit Tn. tn=29
+09:56:35.467 DBG func handleCommit commit Tn. tn=29
+09:56:35.468 INF Committed entry. latency=0 nReq=64 sn=113
+09:56:35.469 DBG Starting timer. sn=117 view=0
+09:56:35.469 DBG func handleHtnmsg htn. htn=29 localhtn=29 prelocalhtn=29
+09:56:35.469 DBG func handleHtnmsg htn. htn=29 localhtn=29 prelocalhtn=29
+09:56:35.469 DBG func handleCommit commit Tn. tn=29
+09:56:35.470 DBG func handleHtnmsg htn. htn=29 localhtn=29 prelocalhtn=29
+09:56:35.475 DBG Sending PREPARE. senderID=0 sn=115 view=0
+09:56:35.475 DBG Sending PREPARE. senderID=0 sn=114 view=0
+09:56:35.475 DBG func sendPrepare prepare Tn. sn=115 tn=29
+09:56:35.475 DBG func sendPrepare prepare Tn. sn=114 tn=29
+09:56:35.475 DBG Sending COMMIT. senderID=0 sn=114 view=0
+09:56:35.475 DBG func sendCommit commit Tn. sn=114 tn=29
+09:56:35.476 DBG Sending Htn. senderID=0 sn=114 view=0
+09:56:35.476 DBG Sending COMMIT. senderID=0 sn=115 view=0
+09:56:35.477 DBG func sendCommit commit Tn. sn=115 tn=29
+09:56:35.477 DBG Sending Htn. senderID=0 sn=115 view=0
+09:56:35.477 DBG func handleCommit commit Tn. tn=29
+09:56:35.477 DBG func handleCommit commit Tn. tn=29
+09:56:35.478 DBG func handleHtnmsg htn. htn=29 localhtn=29 prelocalhtn=29
+09:56:35.478 DBG func handleCommit commit Tn. tn=29
+09:56:35.478 DBG func handleHtnmsg htn. htn=29 localhtn=29 prelocalhtn=29
+09:56:35.478 DBG func handleCommit commit Tn. tn=29
+09:56:35.478 INF Committed entry. latency=0 nReq=64 sn=114
+09:56:35.478 DBG Starting timer. sn=118 view=0
+09:56:35.478 DBG func handleHtnmsg htn. htn=29 localhtn=29 prelocalhtn=29
+09:56:35.478 INF Committed entry. latency=0 nReq=65 sn=115
+09:56:35.478 DBG func handleCommit commit Tn. tn=29
+09:56:35.479 DBG Starting timer. sn=119 view=0
+09:56:35.479 DBG func handleHtnmsg htn. htn=29 localhtn=29 prelocalhtn=29
+09:56:35.479 DBG func handleHtnmsg htn. htn=29 localhtn=29 prelocalhtn=29
+09:56:35.479 DBG func handleCommit commit Tn. tn=29
+09:56:35.479 DBG func handleHtnmsg htn. htn=29 localhtn=29 prelocalhtn=29
+09:56:35.480 DBG Sending COMMIT. senderID=0 sn=112 view=0
+09:56:35.480 DBG func sendCommit commit Tn. sn=112 tn=29
+09:56:35.481 DBG Sending Htn. senderID=0 sn=112 view=0
+09:56:35.481 DBG func handleCommit commit Tn. tn=29
+09:56:35.481 DBG func handleCommit commit Tn. tn=29
+09:56:35.481 INF Committed entry. latency=0 nReq=65 sn=112
+09:56:35.481 INF Delivered batch. nReq=65 sn=112
+09:56:35.482 INF Delivered batch. nReq=64 sn=113
+09:56:35.482 INF Delivered batch. nReq=64 sn=114
+09:56:35.482 INF Delivered batch. nReq=65 sn=115
+09:56:35.482 DBG Starting timer. sn=116 view=0
+09:56:35.482 DBG func handleHtnmsg htn. htn=29 localhtn=29 prelocalhtn=29
+09:56:35.482 DBG func handleHtnmsg htn. htn=29 localhtn=29 prelocalhtn=29
+09:56:35.483 DBG func handleCommit commit Tn. tn=29
+09:56:35.483 DBG func handleHtnmsg htn. htn=29 localhtn=29 prelocalhtn=29
+09:56:36.459 INF Handling PREPREPARE. nReq=64 senderID=1 sn=117
+09:56:36.459 DBG Creating new Batch. nReq=64
+09:56:36.461 DBG Batch ready. batchSize=4096
+09:56:36.462 DBG Batch cut. left=0 nBuckets=16 nReq=64 next=0
+09:56:36.463 DBG Waiting for batch. batchSize=4096
+09:56:36.464 INF Sending PREPREPARE. nReq=64 senderID=0 sn=116 view=0
+09:56:36.465 INF Handling PREPREPARE. nReq=64 senderID=2 sn=118
+09:56:36.465 DBG Creating new Batch. nReq=64
+09:56:36.465 INF Handling PREPREPARE. nReq=64 senderID=3 sn=119
+09:56:36.465 DBG Creating new Batch. nReq=64
+09:56:36.467 DBG Sending PREPARE. senderID=0 sn=117 view=0
+09:56:36.467 DBG func sendPrepare prepare Tn. sn=117 tn=30
+09:56:36.467 DBG Sending COMMIT. senderID=0 sn=117 view=0
+09:56:36.467 DBG func sendCommit commit Tn. sn=117 tn=30
+09:56:36.468 DBG Sending Htn. senderID=0 sn=117 view=0
+09:56:36.470 DBG func handleCommit commit Tn. tn=30
+09:56:36.471 DBG func handleHtnmsg htn. htn=30 localhtn=30 prelocalhtn=30
+09:56:36.471 DBG func handleCommit commit Tn. tn=30
+09:56:36.471 INF Committed entry. latency=0 nReq=64 sn=117
+09:56:36.472 DBG Starting timer. sn=121 view=0
+09:56:36.472 DBG func handleHtnmsg htn. htn=30 localhtn=30 prelocalhtn=30
+09:56:36.472 DBG func handleCommit commit Tn. tn=30
+09:56:36.472 DBG func handleHtnmsg htn. htn=30 localhtn=30 prelocalhtn=30
+09:56:36.475 DBG Sending PREPARE. senderID=0 sn=119 view=0
+09:56:36.476 DBG func sendPrepare prepare Tn. sn=119 tn=30
+09:56:36.477 DBG Sending COMMIT. senderID=0 sn=119 view=0
+09:56:36.477 DBG func sendCommit commit Tn. sn=119 tn=30
+09:56:36.477 DBG Sending Htn. senderID=0 sn=119 view=0
+09:56:36.478 DBG Sending PREPARE. senderID=0 sn=118 view=0
+09:56:36.478 DBG func sendPrepare prepare Tn. sn=118 tn=30
+09:56:36.478 DBG Sending COMMIT. senderID=0 sn=118 view=0
+09:56:36.478 DBG func sendCommit commit Tn. sn=118 tn=30
+09:56:36.478 DBG Sending Htn. senderID=0 sn=118 view=0
+09:56:36.479 DBG func handleCommit commit Tn. tn=30
+09:56:36.479 DBG func handleCommit commit Tn. tn=30
+09:56:36.479 DBG func handleHtnmsg htn. htn=30 localhtn=30 prelocalhtn=30
+09:56:36.480 DBG func handleHtnmsg htn. htn=30 localhtn=30 prelocalhtn=30
+09:56:36.480 DBG func handleCommit commit Tn. tn=30
+09:56:36.480 DBG func handleCommit commit Tn. tn=30
+09:56:36.480 INF Committed entry. latency=0 nReq=64 sn=119
+09:56:36.481 DBG Starting timer. sn=123 view=0
+09:56:36.481 INF Committed entry. latency=0 nReq=64 sn=118
+09:56:36.481 DBG func handleHtnmsg htn. htn=30 localhtn=30 prelocalhtn=30
+09:56:36.481 DBG func handleCommit commit Tn. tn=30
+09:56:36.481 DBG Starting timer. sn=122 view=0
+09:56:36.481 DBG func handleHtnmsg htn. htn=30 localhtn=30 prelocalhtn=30
+09:56:36.481 DBG func handleHtnmsg htn. htn=30 localhtn=30 prelocalhtn=30
+09:56:36.481 DBG func handleCommit commit Tn. tn=30
+09:56:36.481 DBG func handleHtnmsg htn. htn=30 localhtn=30 prelocalhtn=30
+09:56:36.484 DBG Sending COMMIT. senderID=0 sn=116 view=0
+09:56:36.484 DBG func sendCommit commit Tn. sn=116 tn=30
+09:56:36.484 DBG Sending Htn. senderID=0 sn=116 view=0
+09:56:36.485 DBG func handleCommit commit Tn. tn=30
+09:56:36.485 DBG func handleCommit commit Tn. tn=30
+09:56:36.486 INF Committed entry. latency=0 nReq=64 sn=116
+09:56:36.486 INF Delivered batch. nReq=64 sn=116
+09:56:36.486 INF Delivered batch. nReq=64 sn=117
+09:56:36.486 INF Delivered batch. nReq=64 sn=118
+09:56:36.486 INF Delivered batch. nReq=64 sn=119
+09:56:36.486 DBG Starting timer. sn=120 view=0
+09:56:36.486 DBG func handleHtnmsg htn. htn=30 localhtn=30 prelocalhtn=30
+09:56:36.486 DBG func handleCommit commit Tn. tn=30
+09:56:36.487 DBG func handleHtnmsg htn. htn=30 localhtn=30 prelocalhtn=30
+09:56:36.487 DBG func handleHtnmsg htn. htn=30 localhtn=30 prelocalhtn=30
+09:56:37.458 INF Handling PREPREPARE. nReq=64 senderID=1 sn=121
+09:56:37.459 DBG Creating new Batch. nReq=64
+09:56:37.464 DBG Batch ready. batchSize=4096
+09:56:37.464 DBG Batch cut. left=0 nBuckets=16 nReq=64 next=0
+09:56:37.465 DBG Waiting for batch. batchSize=4096
+09:56:37.465 INF Handling PREPREPARE. nReq=64 senderID=2 sn=122
+09:56:37.465 DBG Creating new Batch. nReq=64
+09:56:37.468 DBG Sending PREPARE. senderID=0 sn=121 view=0
+09:56:37.468 DBG func sendPrepare prepare Tn. sn=121 tn=31
+09:56:37.468 INF Sending PREPREPARE. nReq=64 senderID=0 sn=120 view=0
+09:56:37.469 DBG Sending COMMIT. senderID=0 sn=121 view=0
+09:56:37.469 DBG func sendCommit commit Tn. sn=121 tn=31
+09:56:37.469 DBG Sending Htn. senderID=0 sn=121 view=0
+09:56:37.470 INF Handling PREPREPARE. nReq=64 senderID=3 sn=123
+09:56:37.471 DBG Creating new Batch. nReq=64
+09:56:37.471 DBG func handleCommit commit Tn. tn=31
+09:56:37.471 DBG func handleCommit commit Tn. tn=31
+09:56:37.471 INF Committed entry. latency=0 nReq=64 sn=121
+09:56:37.472 DBG Starting timer. sn=125 view=0
+09:56:37.472 DBG func handleHtnmsg htn. htn=31 localhtn=31 prelocalhtn=31
+09:56:37.472 DBG func handleCommit commit Tn. tn=31
+09:56:37.472 DBG func handleHtnmsg htn. htn=31 localhtn=31 prelocalhtn=31
+09:56:37.472 DBG func handleHtnmsg htn. htn=31 localhtn=31 prelocalhtn=31
+09:56:37.474 DBG Sending PREPARE. senderID=0 sn=122 view=0
+09:56:37.474 DBG func sendPrepare prepare Tn. sn=122 tn=31
+09:56:37.475 DBG Sending COMMIT. senderID=0 sn=122 view=0
+09:56:37.475 DBG func sendCommit commit Tn. sn=122 tn=31
+09:56:37.475 DBG Sending Htn. senderID=0 sn=122 view=0
+09:56:37.476 DBG func handleCommit commit Tn. tn=31
+09:56:37.477 DBG func handleCommit commit Tn. tn=31
+09:56:37.477 INF Committed entry. latency=0 nReq=64 sn=122
+09:56:37.478 DBG Starting timer. sn=126 view=0
+09:56:37.478 DBG func handleHtnmsg htn. htn=31 localhtn=31 prelocalhtn=31
+09:56:37.478 DBG Sending PREPARE. senderID=0 sn=123 view=0
+09:56:37.478 DBG func sendPrepare prepare Tn. sn=123 tn=31
+09:56:37.478 DBG func handleCommit commit Tn. tn=31
+09:56:37.479 DBG func handleHtnmsg htn. htn=31 localhtn=31 prelocalhtn=31
+09:56:37.479 DBG func handleHtnmsg htn. htn=31 localhtn=31 prelocalhtn=31
+09:56:37.481 DBG Sending COMMIT. senderID=0 sn=123 view=0
+09:56:37.481 DBG func sendCommit commit Tn. sn=123 tn=31
+09:56:37.481 DBG Sending Htn. senderID=0 sn=123 view=0
+09:56:37.481 DBG func handleCommit commit Tn. tn=31
+09:56:37.481 DBG func handleHtnmsg htn. htn=31 localhtn=31 prelocalhtn=31
+09:56:37.482 DBG func handleCommit commit Tn. tn=31
+09:56:37.483 INF Committed entry. latency=0 nReq=64 sn=123
+09:56:37.483 DBG Starting timer. sn=127 view=0
+09:56:37.483 DBG func handleHtnmsg htn. htn=31 localhtn=31 prelocalhtn=31
+09:56:37.483 DBG func handleCommit commit Tn. tn=31
+09:56:37.483 DBG func handleHtnmsg htn. htn=31 localhtn=31 prelocalhtn=31
+09:56:37.487 DBG Sending COMMIT. senderID=0 sn=120 view=0
+09:56:37.487 DBG func sendCommit commit Tn. sn=120 tn=31
+09:56:37.487 DBG Sending Htn. senderID=0 sn=120 view=0
+09:56:37.488 DBG func handleCommit commit Tn. tn=31
+09:56:37.488 DBG func handleCommit commit Tn. tn=31
+09:56:37.489 INF Committed entry. latency=0 nReq=64 sn=120
+09:56:37.489 INF Delivered batch. nReq=64 sn=120
+09:56:37.489 INF Delivered batch. nReq=64 sn=121
+09:56:37.489 INF Delivered batch. nReq=64 sn=122
+09:56:37.489 INF Delivered batch. nReq=64 sn=123
+09:56:37.489 DBG Starting timer. sn=124 view=0
+09:56:37.490 DBG func handleHtnmsg htn. htn=31 localhtn=31 prelocalhtn=31
+09:56:37.490 DBG func handleCommit commit Tn. tn=31
+09:56:37.490 DBG func handleHtnmsg htn. htn=31 localhtn=31 prelocalhtn=31
+09:56:37.490 DBG func handleHtnmsg htn. htn=31 localhtn=31 prelocalhtn=31
+09:56:38.461 INF Handling PREPREPARE. nReq=64 senderID=1 sn=125
+09:56:38.461 DBG Creating new Batch. nReq=64
+09:56:38.465 DBG Batch ready. batchSize=4096
+09:56:38.466 DBG Batch cut. left=0 nBuckets=16 nReq=64 next=0
+09:56:38.466 INF Handling PREPREPARE. nReq=64 senderID=2 sn=126
+09:56:38.466 DBG Creating new Batch. nReq=64
+09:56:38.466 DBG Waiting for batch. batchSize=4096
+09:56:38.468 INF Sending PREPREPARE. nReq=64 senderID=0 sn=124 view=0
+09:56:38.469 DBG Sending PREPARE. senderID=0 sn=125 view=0
+09:56:38.470 DBG func sendPrepare prepare Tn. sn=125 tn=32
+09:56:38.470 DBG Sending COMMIT. senderID=0 sn=125 view=0
+09:56:38.470 DBG func sendCommit commit Tn. sn=125 tn=32
+09:56:38.470 DBG Sending Htn. senderID=0 sn=125 view=0
+09:56:38.471 DBG func handleCommit commit Tn. tn=32
+09:56:38.472 DBG func handleCommit commit Tn. tn=32
+09:56:38.472 INF Committed entry. latency=0 nReq=64 sn=125
+09:56:38.472 DBG Starting timer. sn=129 view=0
+09:56:38.472 DBG func handleHtnmsg htn. htn=32 localhtn=32 prelocalhtn=32
+09:56:38.473 DBG func handleHtnmsg htn. htn=32 localhtn=32 prelocalhtn=32
+09:56:38.473 DBG func handleCommit commit Tn. tn=32
+09:56:38.473 DBG func handleHtnmsg htn. htn=32 localhtn=32 prelocalhtn=32
+09:56:38.474 INF Handling PREPREPARE. nReq=64 senderID=3 sn=127
+09:56:38.474 DBG Creating new Batch. nReq=64
+09:56:38.476 DBG Sending PREPARE. senderID=0 sn=126 view=0
+09:56:38.476 DBG func sendPrepare prepare Tn. sn=126 tn=32
+09:56:38.478 DBG func handleCommit commit Tn. tn=32
+09:56:38.479 DBG func handleHtnmsg htn. htn=32 localhtn=32 prelocalhtn=31
+09:56:38.479 DBG Sending COMMIT. senderID=0 sn=126 view=0
+09:56:38.479 DBG func sendCommit commit Tn. sn=126 tn=32
+09:56:38.479 DBG Sending Htn. senderID=0 sn=126 view=0
+09:56:38.479 DBG func handleCommit commit Tn. tn=32
+09:56:38.480 INF Committed entry. latency=0 nReq=64 sn=126
+09:56:38.480 DBG Starting timer. sn=130 view=0
+09:56:38.480 DBG func handleHtnmsg htn. htn=32 localhtn=32 prelocalhtn=32
+09:56:38.480 DBG func handleCommit commit Tn. tn=32
+09:56:38.480 DBG func handleHtnmsg htn. htn=32 localhtn=32 prelocalhtn=32
+09:56:38.484 DBG Sending PREPARE. senderID=0 sn=127 view=0
+09:56:38.485 DBG func sendPrepare prepare Tn. sn=127 tn=32
+09:56:38.485 DBG Sending COMMIT. senderID=0 sn=127 view=0
+09:56:38.485 DBG func sendCommit commit Tn. sn=127 tn=32
+09:56:38.485 DBG Sending Htn. senderID=0 sn=127 view=0
+09:56:38.486 DBG func handleCommit commit Tn. tn=32
+09:56:38.486 DBG Sending COMMIT. senderID=0 sn=124 view=0
+09:56:38.486 DBG func sendCommit commit Tn. sn=124 tn=32
+09:56:38.486 DBG Sending Htn. senderID=0 sn=124 view=0
+09:56:38.486 DBG func handleCommit commit Tn. tn=32
+09:56:38.487 DBG func handleCommit commit Tn. tn=32
+09:56:38.487 DBG func handleHtnmsg htn. htn=32 localhtn=32 prelocalhtn=32
+09:56:38.487 DBG func handleCommit commit Tn. tn=32
+09:56:38.487 INF Committed entry. latency=0 nReq=64 sn=124
+09:56:38.488 INF Delivered batch. nReq=64 sn=124
+09:56:38.488 INF Committed entry. latency=0 nReq=64 sn=127
+09:56:38.488 INF Delivered batch. nReq=64 sn=125
+09:56:38.488 INF Delivered batch. nReq=64 sn=126
+09:56:38.488 INF Delivered batch. nReq=64 sn=127
+09:56:38.488 DBG Starting timer. sn=128 view=0
+09:56:38.488 DBG func handleHtnmsg htn. htn=32 localhtn=32 prelocalhtn=32
+09:56:38.489 DBG Starting timer. sn=131 view=0
+09:56:38.489 DBG func handleCommit commit Tn. tn=32
+09:56:38.489 DBG func handleHtnmsg htn. htn=32 localhtn=32 prelocalhtn=32
+09:56:38.489 DBG func handleCommit commit Tn. tn=32
+09:56:38.489 DBG func handleHtnmsg htn. htn=32 localhtn=32 prelocalhtn=32
+09:56:38.489 DBG func handleHtnmsg htn. htn=32 localhtn=32 prelocalhtn=32
+09:56:38.489 DBG func handleHtnmsg htn. htn=32 localhtn=32 prelocalhtn=32
+09:56:39.455 INF Handling PREPREPARE. nReq=1 senderID=1 sn=129
+09:56:39.456 DBG Creating new Batch. nReq=1
+09:56:39.456 DBG Sending PREPARE. senderID=0 sn=129 view=0
+09:56:39.456 DBG func sendPrepare prepare Tn. sn=129 tn=33
+09:56:39.458 DBG Sending COMMIT. senderID=0 sn=129 view=0
+09:56:39.458 DBG func sendCommit commit Tn. sn=129 tn=33
+09:56:39.458 DBG Sending Htn. senderID=0 sn=129 view=0
+09:56:39.459 DBG func handleCommit commit Tn. tn=33
+09:56:39.459 INF Handling PREPREPARE. nReq=0 senderID=2 sn=130
+09:56:39.459 DBG func handleCommit commit Tn. tn=33
+09:56:39.459 DBG Creating new Batch. nReq=0
+09:56:39.460 INF Committed entry. latency=0 nReq=1 sn=129
+09:56:39.460 DBG Sending PREPARE. senderID=0 sn=130 view=0
+09:56:39.460 DBG Starting timer. sn=133 view=0
+09:56:39.460 DBG func sendPrepare prepare Tn. sn=130 tn=33
+09:56:39.460 DBG func handleHtnmsg htn. htn=33 localhtn=33 prelocalhtn=33
+09:56:39.460 DBG func handleCommit commit Tn. tn=33
+09:56:39.460 DBG func handleHtnmsg htn. htn=33 localhtn=33 prelocalhtn=33
+09:56:39.460 DBG Sending COMMIT. senderID=0 sn=130 view=0
+09:56:39.460 DBG func handleHtnmsg htn. htn=33 localhtn=33 prelocalhtn=33
+09:56:39.461 DBG func sendCommit commit Tn. sn=130 tn=33
+09:56:39.461 DBG Sending Htn. senderID=0 sn=130 view=0
+09:56:39.461 INF Handling PREPREPARE. nReq=0 senderID=3 sn=131
+09:56:39.461 DBG Creating new Batch. nReq=0
+09:56:39.462 DBG Sending PREPARE. senderID=0 sn=131 view=0
+09:56:39.462 DBG func sendPrepare prepare Tn. sn=131 tn=33
+09:56:39.462 DBG func handleCommit commit Tn. tn=33
+09:56:39.462 DBG func handleHtnmsg htn. htn=33 localhtn=33 prelocalhtn=33
+09:56:39.463 DBG func handleCommit commit Tn. tn=33
+09:56:39.463 INF Committed entry. latency=0 nReq=0 sn=130
+09:56:39.463 DBG Sending COMMIT. senderID=0 sn=131 view=0
+09:56:39.463 DBG Starting timer. sn=134 view=0
+09:56:39.463 DBG func sendCommit commit Tn. sn=131 tn=33
+09:56:39.463 DBG func handleHtnmsg htn. htn=33 localhtn=33 prelocalhtn=33
+09:56:39.463 DBG func handleCommit commit Tn. tn=33
+09:56:39.463 DBG Sending Htn. senderID=0 sn=131 view=0
+09:56:39.463 DBG func handleHtnmsg htn. htn=33 localhtn=33 prelocalhtn=33
+09:56:39.464 DBG func handleCommit commit Tn. tn=33
+09:56:39.464 DBG func handleCommit commit Tn. tn=33
+09:56:39.464 INF Committed entry. latency=0 nReq=0 sn=131
+09:56:39.464 DBG Starting timer. sn=135 view=0
+09:56:39.465 DBG func handleHtnmsg htn. htn=33 localhtn=33 prelocalhtn=33
+09:56:39.465 DBG func handleCommit commit Tn. tn=33
+09:56:39.465 DBG func handleHtnmsg htn. htn=33 localhtn=33 prelocalhtn=33
+09:56:39.465 DBG func handleHtnmsg htn. htn=33 localhtn=33 prelocalhtn=33
+09:56:39.467 DBG Batch ready. batchSize=4096
+09:56:39.468 DBG Batch cut. left=0 nBuckets=16 nReq=0 next=0
+09:56:39.468 DBG Waiting for batch. batchSize=4096
+09:56:39.468 INF Sending PREPREPARE. nReq=0 senderID=0 sn=128 view=0
+09:56:39.470 DBG Sending COMMIT. senderID=0 sn=128 view=0
+09:56:39.470 DBG func sendCommit commit Tn. sn=128 tn=33
+09:56:39.470 DBG Sending Htn. senderID=0 sn=128 view=0
+09:56:39.471 DBG func handleCommit commit Tn. tn=33
+09:56:39.471 DBG func handleCommit commit Tn. tn=33
+09:56:39.471 INF Committed entry. latency=0 nReq=0 sn=128
+09:56:39.472 INF Delivered batch. nReq=0 sn=128
+09:56:39.472 INF Delivered batch. nReq=1 sn=129
+09:56:39.472 INF Delivered batch. nReq=0 sn=130
+09:56:39.472 INF Delivered batch. nReq=0 sn=131
+09:56:39.472 DBG Starting timer. sn=132 view=0
+09:56:39.472 DBG func handleHtnmsg htn. htn=33 localhtn=33 prelocalhtn=33
+09:56:39.472 DBG func handleHtnmsg htn. htn=33 localhtn=33 prelocalhtn=33
+09:56:39.473 DBG func handleCommit commit Tn. tn=33
+09:56:39.473 DBG func handleHtnmsg htn. htn=33 localhtn=33 prelocalhtn=33
+09:56:40.457 INF Handling PREPREPARE. nReq=0 senderID=1 sn=133
+09:56:40.457 DBG Creating new Batch. nReq=0
+09:56:40.457 DBG Sending PREPARE. senderID=0 sn=133 view=0
+09:56:40.457 DBG func sendPrepare prepare Tn. sn=133 tn=34
+09:56:40.458 DBG Sending COMMIT. senderID=0 sn=133 view=0
+09:56:40.458 DBG func sendCommit commit Tn. sn=133 tn=34
+09:56:40.458 DBG Sending Htn. senderID=0 sn=133 view=0
+09:56:40.459 DBG func handleCommit commit Tn. tn=34
+09:56:40.459 DBG func handleHtnmsg htn. htn=34 localhtn=34 prelocalhtn=34
+09:56:40.459 DBG func handleCommit commit Tn. tn=34
+09:56:40.460 INF Committed entry. latency=0 nReq=0 sn=133
+09:56:40.460 DBG Starting timer. sn=137 view=0
+09:56:40.460 DBG func handleHtnmsg htn. htn=34 localhtn=34 prelocalhtn=34
+09:56:40.460 DBG func handleCommit commit Tn. tn=34
+09:56:40.460 DBG func handleHtnmsg htn. htn=34 localhtn=34 prelocalhtn=34
+09:56:40.460 INF Handling PREPREPARE. nReq=0 senderID=2 sn=134
+09:56:40.460 DBG Creating new Batch. nReq=0
+09:56:40.460 DBG Sending PREPARE. senderID=0 sn=134 view=0
+09:56:40.461 DBG func sendPrepare prepare Tn. sn=134 tn=34
+09:56:40.461 INF Connection terminated. error="rpc error: code = Canceled desc = context canceled" address=127.0.0.1:34836
+09:56:40.462 INF Finished sending bucket assignments to client. clId=0
+09:56:40.462 DBG Sending COMMIT. senderID=0 sn=134 view=0
+09:56:40.462 DBG func sendCommit commit Tn. sn=134 tn=34
+09:56:40.462 DBG Sending Htn. senderID=0 sn=134 view=0
+09:56:40.463 INF Handling PREPREPARE. nReq=0 senderID=3 sn=135
+09:56:40.463 DBG func handleCommit commit Tn. tn=34
+09:56:40.463 DBG Creating new Batch. nReq=0
+09:56:40.463 DBG func handleCommit commit Tn. tn=34
+09:56:40.463 INF Committed entry. latency=0 nReq=0 sn=134
+09:56:40.463 DBG Sending PREPARE. senderID=0 sn=135 view=0
+09:56:40.463 DBG Starting timer. sn=138 view=0
+09:56:40.463 DBG func sendPrepare prepare Tn. sn=135 tn=34
+09:56:40.463 DBG func handleHtnmsg htn. htn=34 localhtn=34 prelocalhtn=34
+09:56:40.464 DBG func handleCommit commit Tn. tn=34
+09:56:40.464 DBG func handleHtnmsg htn. htn=34 localhtn=34 prelocalhtn=34
+09:56:40.464 DBG Sending COMMIT. senderID=0 sn=135 view=0
+09:56:40.464 DBG func sendCommit commit Tn. sn=135 tn=34
+09:56:40.464 DBG Sending Htn. senderID=0 sn=135 view=0
+09:56:40.465 DBG func handleCommit commit Tn. tn=34
+09:56:40.465 DBG func handleHtnmsg htn. htn=34 localhtn=34 prelocalhtn=34
+09:56:40.465 DBG func handleCommit commit Tn. tn=34
+09:56:40.465 INF Committed entry. latency=0 nReq=0 sn=135
+09:56:40.465 DBG Starting timer. sn=139 view=0
+09:56:40.466 DBG func handleHtnmsg htn. htn=34 localhtn=34 prelocalhtn=34
+09:56:40.466 DBG func handleHtnmsg htn. htn=34 localhtn=34 prelocalhtn=34
+09:56:40.466 DBG func handleCommit commit Tn. tn=34
+09:56:40.466 DBG func handleHtnmsg htn. htn=34 localhtn=34 prelocalhtn=34
+09:56:40.469 DBG Batch ready. batchSize=4096
+09:56:40.469 DBG Batch cut. left=0 nBuckets=16 nReq=0 next=0
+09:56:40.469 INF Sending PREPREPARE. nReq=0 senderID=0 sn=132 view=0
+09:56:40.469 DBG Waiting for batch. batchSize=4096
+09:56:40.472 DBG Sending COMMIT. senderID=0 sn=132 view=0
+09:56:40.472 DBG func sendCommit commit Tn. sn=132 tn=34
+09:56:40.472 DBG Sending Htn. senderID=0 sn=132 view=0
+09:56:40.473 DBG func handleCommit commit Tn. tn=34
+09:56:40.473 DBG func handleHtnmsg htn. htn=34 localhtn=34 prelocalhtn=34
+09:56:40.473 DBG func handleCommit commit Tn. tn=34
+09:56:40.473 INF Committed entry. latency=0 nReq=0 sn=132
+09:56:40.474 INF Delivered batch. nReq=0 sn=132
+09:56:40.474 INF Delivered batch. nReq=0 sn=133
+09:56:40.474 INF Delivered batch. nReq=0 sn=134
+09:56:40.474 INF Delivered batch. nReq=0 sn=135
+09:56:40.474 DBG Starting timer. sn=136 view=0
+09:56:40.474 DBG func handleHtnmsg htn. htn=34 localhtn=34 prelocalhtn=34
+09:56:40.474 DBG func handleCommit commit Tn. tn=34
+09:56:40.474 DBG func handleHtnmsg htn. htn=34 localhtn=34 prelocalhtn=34
+09:56:40.821 INF Stopping profiler.
+09:56:40.821 INF Stopping Tracer. events=245 fileName=experiment-output/0000/slave-002/peer.trc
+==================
+WARNING: DATA RACE
+Read at 0x00c0009a0000 by goroutine 114:
+  runtime.racereadrange()
+      <autogenerated>:1 +0x1b
+  github.com/hyperledger-labs/mirbft/tracing.(*BufferedTrace).StopOnSignal.func1()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/tracing/bufferedtrace.go:298 +0x4e
+
+Previous write at 0x00c0009a0000 by goroutine 411:
+  github.com/hyperledger-labs/mirbft/tracing.(*BufferedTrace).Event()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/tracing/bufferedtrace.go:105 +0x2d9
+  github.com/hyperledger-labs/mirbft/manager.(*MirManager).handleLogEntries()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/manager/mirmanager.go:139 +0x1d8
+  github.com/hyperledger-labs/mirbft/manager.(*MirManager).Start·dwrap·7()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/manager/mirmanager.go:101 +0x47
+
+Goroutine 114 (running) created at:
+  github.com/hyperledger-labs/mirbft/tracing.(*BufferedTrace).StopOnSignal()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/tracing/bufferedtrace.go:292 +0x172
+  main.setUpTracing()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/cmd/orderingpeer/main.go:204 +0xf5
+  main.main()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/cmd/orderingpeer/main.go:98 +0x9d6
+
+Goroutine 411 (running) created at:
+  github.com/hyperledger-labs/mirbft/manager.(*MirManager).Start()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/manager/mirmanager.go:101 +0x19e
+  main.main·dwrap·4()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/cmd/orderingpeer/main.go:168 +0x59
+==================
+==================
+WARNING: DATA RACE
+Read at 0x00c0009a25f8 by goroutine 114:
+  runtime.racereadrange()
+      <autogenerated>:1 +0x1b
+  github.com/hyperledger-labs/mirbft/tracing.(*BufferedTrace).StopOnSignal.func1()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/tracing/bufferedtrace.go:298 +0x4e
+
+Previous write at 0x00c0009a25f8 by goroutine 113:
+  github.com/hyperledger-labs/mirbft/tracing.(*BufferedTrace).Event()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/tracing/bufferedtrace.go:105 +0x2d9
+  github.com/hyperledger-labs/mirbft/profiling.StartCPUTracing.func1()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/profiling/cpuusage.go:31 +0x95
+
+Goroutine 114 (running) created at:
+  github.com/hyperledger-labs/mirbft/tracing.(*BufferedTrace).StopOnSignal()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/tracing/bufferedtrace.go:292 +0x172
+  main.setUpTracing()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/cmd/orderingpeer/main.go:204 +0xf5
+  main.main()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/cmd/orderingpeer/main.go:98 +0x9d6
+
+Goroutine 113 (running) created at:
+  github.com/hyperledger-labs/mirbft/profiling.StartCPUTracing()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/profiling/cpuusage.go:28 +0xb6
+  main.setUpTracing()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/cmd/orderingpeer/main.go:196 +0x85
+  main.main()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/cmd/orderingpeer/main.go:98 +0x9d6
+==================
+09:56:40.826 INF Trace data written.
+09:56:40.852 INF Profile data written. filename=experiment-output/0000/slave-002/prof.cpu name=cpu
+09:56:40.923 INF Profile data written. filename=experiment-output/0000/slave-002/prof.block name=block
+09:56:40.960 INF Profile data written. filename=experiment-output/0000/slave-002/prof.mutex name=mutex

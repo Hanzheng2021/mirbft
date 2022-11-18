@@ -1,0 +1,680 @@
+--- mutex:
+cycles/second=2994290189
+sampling period=0
+253539390 7 @ 0x4a98f5 0xaf5592 0x49be21
+#	0x4a98f4	sync.(*Mutex).Unlock+0x54			/home/dell/wmj/go/src/sync/mutex.go:190
+#	0xaf5591	google.golang.org/grpc.(*addrConn).connect+0xb1	/opt/gopath/src/google.golang.org/grpc/clientconn.go:802
+
+60275250 7 @ 0x4a98f5 0x8d6cb8 0x8dafde 0x8db138 0x8d419a 0x8d81f5 0x982143 0x987c34 0xaf24db 0xaecec5 0x9ac442 0xb008c3 0x9abf16 0x9abb45 0xaeb699 0xaeb604 0x49be21
+#	0x4a98f4	sync.(*Mutex).Unlock+0x54										/home/dell/wmj/go/src/sync/mutex.go:190
+#	0x8d6cb7	log.(*Logger).Output+0x477										/home/dell/wmj/go/src/log/log.go:185
+#	0x8dafdd	google.golang.org/grpc/grpclog.(*loggerT).output+0x35d							/opt/gopath/src/google.golang.org/grpc/grpclog/loggerv2.go:174
+#	0x8db137	google.golang.org/grpc/grpclog.(*loggerT).Infoln+0x57							/opt/gopath/src/google.golang.org/grpc/grpclog/loggerv2.go:191
+#	0x8d4199	google.golang.org/grpc/internal/grpclog.InfoDepth+0xb9							/opt/gopath/src/google.golang.org/grpc/internal/grpclog/grpclog.go:37
+#	0x8d81f4	google.golang.org/grpc/grpclog.(*componentData).InfoDepth+0x174						/opt/gopath/src/google.golang.org/grpc/grpclog/component.go:36
+#	0x982142	google.golang.org/grpc/internal/channelz.AddTraceEvent+0x402						/opt/gopath/src/google.golang.org/grpc/internal/channelz/funcs.go:340
+#	0x987c33	google.golang.org/grpc/internal/channelz.Infof+0xd3							/opt/gopath/src/google.golang.org/grpc/internal/channelz/logging.go:43
+#	0xaf24da	google.golang.org/grpc.(*connectivityStateManager).updateState+0x1ba					/opt/gopath/src/google.golang.org/grpc/clientconn.go:418
+#	0xaecec4	google.golang.org/grpc.(*ccBalancerWrapper).UpdateState+0xc4						/opt/gopath/src/google.golang.org/grpc/balancer_conn_wrappers.go:348
+#	0x9ac441	google.golang.org/grpc/internal/balancer/gracefulswitch.(*balancerWrapper).UpdateState+0x2e1		/opt/gopath/src/google.golang.org/grpc/internal/balancer/gracefulswitch/gracefulswitch.go:317
+#	0xb008c2	google.golang.org/grpc.(*pickfirstBalancer).UpdateSubConnState+0x3e2					/opt/gopath/src/google.golang.org/grpc/pickfirst.go:135
+#	0x9abf15	google.golang.org/grpc/internal/balancer/gracefulswitch.(*balancerWrapper).UpdateSubConnState+0x135	/opt/gopath/src/google.golang.org/grpc/internal/balancer/gracefulswitch/gracefulswitch.go:266
+#	0x9abb44	google.golang.org/grpc/internal/balancer/gracefulswitch.(*Balancer).UpdateSubConnState+0x304		/opt/gopath/src/google.golang.org/grpc/internal/balancer/gracefulswitch/gracefulswitch.go:223
+#	0xaeb698	google.golang.org/grpc.(*ccBalancerWrapper).handleSubConnStateChange+0x438				/opt/gopath/src/google.golang.org/grpc/balancer_conn_wrappers.go:215
+#	0xaeb603	google.golang.org/grpc.(*ccBalancerWrapper).watcher+0x3a3						/opt/gopath/src/google.golang.org/grpc/balancer_conn_wrappers.go:122
+
+58665750 19 @ 0x4a98f5 0x4a889e 0x58a486 0x590b50 0x6f307b 0x6f4cb3 0x6f541d 0x7bb86a 0x7bb83d 0x7bbe0e 0x7ba1d2 0xb644c9 0x49be21
+#	0x4a98f4	sync.(*Mutex).Unlock+0x54						/home/dell/wmj/go/src/sync/mutex.go:190
+#	0x4a889d	sync.(*Map).LoadOrStore+0x45d						/home/dell/wmj/go/src/sync/map.go:230
+#	0x58a485	reflect.(*rtype).ptrTo+0x205						/home/dell/wmj/go/src/reflect/type.go:1444
+#	0x590b4f	reflect.Value.Addr+0x4f							/home/dell/wmj/go/src/reflect/value.go:278
+#	0x6f307a	encoding/asn1.parseField+0x137a						/home/dell/wmj/go/src/encoding/asn1/asn1.go:854
+#	0x6f4cb2	encoding/asn1.parseField+0x2fb2						/home/dell/wmj/go/src/encoding/asn1/asn1.go:935
+#	0x6f541c	encoding/asn1.UnmarshalWithParams+0x3fc					/home/dell/wmj/go/src/encoding/asn1/asn1.go:1117
+#	0x7bb869	encoding/asn1.Unmarshal+0x89						/home/dell/wmj/go/src/encoding/asn1/asn1.go:1090
+#	0x7bb83c	github.com/hyperledger-labs/mirbft/crypto.ECDSASignatureFromBytes+0x5c	/opt/gopath/src/github.com/hyperledger-labs/mirbft/crypto/ecdsa.go:38
+#	0x7bbe0d	github.com/hyperledger-labs/mirbft/crypto.VerifyECDSASignature+0x6d	/opt/gopath/src/github.com/hyperledger-labs/mirbft/crypto/ecdsa.go:70
+#	0x7ba1d1	github.com/hyperledger-labs/mirbft/crypto.CheckSig+0xd1			/opt/gopath/src/github.com/hyperledger-labs/mirbft/crypto/crypto.go:97
+#	0xb644c8	github.com/hyperledger-labs/mirbft/request.Init.func2+0x188		/opt/gopath/src/github.com/hyperledger-labs/mirbft/request/request.go:113
+
+41603310 2 @ 0x4a98f5 0xaf2560 0xaecec5 0x9ac442 0xb008c3 0x9abf16 0x9abb45 0xaeb699 0xaeb604 0x49be21
+#	0x4a98f4	sync.(*Mutex).Unlock+0x54										/home/dell/wmj/go/src/sync/mutex.go:190
+#	0xaf255f	google.golang.org/grpc.(*connectivityStateManager).updateState+0x23f					/opt/gopath/src/google.golang.org/grpc/clientconn.go:424
+#	0xaecec4	google.golang.org/grpc.(*ccBalancerWrapper).UpdateState+0xc4						/opt/gopath/src/google.golang.org/grpc/balancer_conn_wrappers.go:348
+#	0x9ac441	google.golang.org/grpc/internal/balancer/gracefulswitch.(*balancerWrapper).UpdateState+0x2e1		/opt/gopath/src/google.golang.org/grpc/internal/balancer/gracefulswitch/gracefulswitch.go:317
+#	0xb008c2	google.golang.org/grpc.(*pickfirstBalancer).UpdateSubConnState+0x3e2					/opt/gopath/src/google.golang.org/grpc/pickfirst.go:135
+#	0x9abf15	google.golang.org/grpc/internal/balancer/gracefulswitch.(*balancerWrapper).UpdateSubConnState+0x135	/opt/gopath/src/google.golang.org/grpc/internal/balancer/gracefulswitch/gracefulswitch.go:266
+#	0x9abb44	google.golang.org/grpc/internal/balancer/gracefulswitch.(*Balancer).UpdateSubConnState+0x304		/opt/gopath/src/google.golang.org/grpc/internal/balancer/gracefulswitch/gracefulswitch.go:223
+#	0xaeb698	google.golang.org/grpc.(*ccBalancerWrapper).handleSubConnStateChange+0x438				/opt/gopath/src/google.golang.org/grpc/balancer_conn_wrappers.go:215
+#	0xaeb603	google.golang.org/grpc.(*ccBalancerWrapper).watcher+0x3a3						/opt/gopath/src/google.golang.org/grpc/balancer_conn_wrappers.go:122
+
+36749010 10 @ 0x4a98f5 0x8d6cb8 0x8dafde 0x8db138 0x8d419a 0x8d81f5 0x982143 0xaf4dd6 0xaec8f3 0x9ac80f 0xafff75 0x9ab40e 0xaebd69 0xaeb4cc 0x49be21
+#	0x4a98f4	sync.(*Mutex).Unlock+0x54									/home/dell/wmj/go/src/sync/mutex.go:190
+#	0x8d6cb7	log.(*Logger).Output+0x477									/home/dell/wmj/go/src/log/log.go:185
+#	0x8dafdd	google.golang.org/grpc/grpclog.(*loggerT).output+0x35d						/opt/gopath/src/google.golang.org/grpc/grpclog/loggerv2.go:174
+#	0x8db137	google.golang.org/grpc/grpclog.(*loggerT).Infoln+0x57						/opt/gopath/src/google.golang.org/grpc/grpclog/loggerv2.go:191
+#	0x8d4199	google.golang.org/grpc/internal/grpclog.InfoDepth+0xb9						/opt/gopath/src/google.golang.org/grpc/internal/grpclog/grpclog.go:37
+#	0x8d81f4	google.golang.org/grpc/grpclog.(*componentData).InfoDepth+0x174					/opt/gopath/src/google.golang.org/grpc/grpclog/component.go:36
+#	0x982142	google.golang.org/grpc/internal/channelz.AddTraceEvent+0x402					/opt/gopath/src/google.golang.org/grpc/internal/channelz/funcs.go:340
+#	0xaf4dd5	google.golang.org/grpc.(*ClientConn).newAddrConn+0x6d5						/opt/gopath/src/google.golang.org/grpc/clientconn.go:725
+#	0xaec8f2	google.golang.org/grpc.(*ccBalancerWrapper).NewSubConn+0xd2					/opt/gopath/src/google.golang.org/grpc/balancer_conn_wrappers.go:303
+#	0x9ac80e	google.golang.org/grpc/internal/balancer/gracefulswitch.(*balancerWrapper).NewSubConn+0x1ce	/opt/gopath/src/google.golang.org/grpc/internal/balancer/gracefulswitch/gracefulswitch.go:338
+#	0xafff74	google.golang.org/grpc.(*pickfirstBalancer).UpdateClientConnState+0x294				/opt/gopath/src/google.golang.org/grpc/pickfirst.go:90
+#	0x9ab40d	google.golang.org/grpc/internal/balancer/gracefulswitch.(*Balancer).UpdateClientConnState+0x10d	/opt/gopath/src/google.golang.org/grpc/internal/balancer/gracefulswitch/gracefulswitch.go:164
+#	0xaebd68	google.golang.org/grpc.(*ccBalancerWrapper).handleClientConnStateChange+0x2c8			/opt/gopath/src/google.golang.org/grpc/balancer_conn_wrappers.go:189
+#	0xaeb4cb	google.golang.org/grpc.(*ccBalancerWrapper).watcher+0x26b					/opt/gopath/src/google.golang.org/grpc/balancer_conn_wrappers.go:120
+
+36503670 14 @ 0x4a98f5 0x8d6cb8 0x8dafde 0x8db138 0x8d419a 0x8d81f5 0x982143 0x987c34 0xafd397 0xaefc7c 0xb57225 0xb571dc 0xb570b0 0x49be21
+#	0x4a98f4	sync.(*Mutex).Unlock+0x54							/home/dell/wmj/go/src/sync/mutex.go:190
+#	0x8d6cb7	log.(*Logger).Output+0x477							/home/dell/wmj/go/src/log/log.go:185
+#	0x8dafdd	google.golang.org/grpc/grpclog.(*loggerT).output+0x35d				/opt/gopath/src/google.golang.org/grpc/grpclog/loggerv2.go:174
+#	0x8db137	google.golang.org/grpc/grpclog.(*loggerT).Infoln+0x57				/opt/gopath/src/google.golang.org/grpc/grpclog/loggerv2.go:191
+#	0x8d4199	google.golang.org/grpc/internal/grpclog.InfoDepth+0xb9				/opt/gopath/src/google.golang.org/grpc/internal/grpclog/grpclog.go:37
+#	0x8d81f4	google.golang.org/grpc/grpclog.(*componentData).InfoDepth+0x174			/opt/gopath/src/google.golang.org/grpc/grpclog/component.go:36
+#	0x982142	google.golang.org/grpc/internal/channelz.AddTraceEvent+0x402			/opt/gopath/src/google.golang.org/grpc/internal/channelz/funcs.go:340
+#	0x987c33	google.golang.org/grpc/internal/channelz.Infof+0xd3				/opt/gopath/src/google.golang.org/grpc/internal/channelz/logging.go:43
+#	0xafd396	google.golang.org/grpc.(*ClientConn).parseTargetAndFindResolver+0x4b6		/opt/gopath/src/google.golang.org/grpc/clientconn.go:1599
+#	0xaefc7b	google.golang.org/grpc.DialContext+0x17fb					/opt/gopath/src/google.golang.org/grpc/clientconn.go:255
+#	0xb57224	google.golang.org/grpc.Dial+0xa4						/opt/gopath/src/google.golang.org/grpc/clientconn.go:105
+#	0xb571db	github.com/hyperledger-labs/mirbft/messenger.createConnection+0x5b		/opt/gopath/src/github.com/hyperledger-labs/mirbft/messenger/peers.go:465
+#	0xb570af	github.com/hyperledger-labs/mirbft/messenger.createConnections.func1+0x8f	/opt/gopath/src/github.com/hyperledger-labs/mirbft/messenger/peers.go:437
+
+25631760 11 @ 0x4a98f5 0x4a7def 0x58a2fb 0x590b50 0x6f307b 0x6f4cb3 0x6f541d 0x7bb86a 0x7bb83d 0x7bbe0e 0x7ba1d2 0xb644c9 0x49be21
+#	0x4a98f4	sync.(*Mutex).Unlock+0x54						/home/dell/wmj/go/src/sync/mutex.go:190
+#	0x4a7dee	sync.(*Map).Load+0x18e							/home/dell/wmj/go/src/sync/map.go:120
+#	0x58a2fa	reflect.(*rtype).ptrTo+0x7a						/home/dell/wmj/go/src/reflect/type.go:1433
+#	0x590b4f	reflect.Value.Addr+0x4f							/home/dell/wmj/go/src/reflect/value.go:278
+#	0x6f307a	encoding/asn1.parseField+0x137a						/home/dell/wmj/go/src/encoding/asn1/asn1.go:854
+#	0x6f4cb2	encoding/asn1.parseField+0x2fb2						/home/dell/wmj/go/src/encoding/asn1/asn1.go:935
+#	0x6f541c	encoding/asn1.UnmarshalWithParams+0x3fc					/home/dell/wmj/go/src/encoding/asn1/asn1.go:1117
+#	0x7bb869	encoding/asn1.Unmarshal+0x89						/home/dell/wmj/go/src/encoding/asn1/asn1.go:1090
+#	0x7bb83c	github.com/hyperledger-labs/mirbft/crypto.ECDSASignatureFromBytes+0x5c	/opt/gopath/src/github.com/hyperledger-labs/mirbft/crypto/ecdsa.go:38
+#	0x7bbe0d	github.com/hyperledger-labs/mirbft/crypto.VerifyECDSASignature+0x6d	/opt/gopath/src/github.com/hyperledger-labs/mirbft/crypto/ecdsa.go:70
+#	0x7ba1d1	github.com/hyperledger-labs/mirbft/crypto.CheckSig+0xd1			/opt/gopath/src/github.com/hyperledger-labs/mirbft/crypto/crypto.go:97
+#	0xb644c8	github.com/hyperledger-labs/mirbft/request.Init.func2+0x188		/opt/gopath/src/github.com/hyperledger-labs/mirbft/request/request.go:113
+
+20284980 228 @ 0x4a98f5 0xa2f21b 0xa5ece5 0xa5eca9 0xb26bd1 0xb3c575 0xb51655 0xb63f1d 0x49be21
+#	0x4a98f4	sync.(*Mutex).Unlock+0x54								/home/dell/wmj/go/src/sync/mutex.go:190
+#	0xa2f21a	google.golang.org/grpc/internal/transport.(*controlBuffer).executeAndPut+0x3fa		/opt/gopath/src/google.golang.org/grpc/internal/transport/controlbuf.go:355
+#	0xa5ece4	google.golang.org/grpc/internal/transport.(*controlBuffer).put+0x3a4			/opt/gopath/src/google.golang.org/grpc/internal/transport/controlbuf.go:325
+#	0xa5eca8	google.golang.org/grpc/internal/transport.(*http2Server).Write+0x368			/opt/gopath/src/google.golang.org/grpc/internal/transport/http2_server.go:1099
+#	0xb26bd0	google.golang.org/grpc.(*serverStream).SendMsg+0x2f0					/opt/gopath/src/google.golang.org/grpc/stream.go:1549
+#	0xb3c574	github.com/hyperledger-labs/mirbft/protobufs.(*messengerRequestServer).Send+0x54	/opt/gopath/src/github.com/hyperledger-labs/mirbft/protobufs/messenger.pb.go:1191
+#	0xb51654	github.com/hyperledger-labs/mirbft/messenger.RespondToClient+0x94			/opt/gopath/src/github.com/hyperledger-labs/mirbft/messenger/clients.go:190
+#	0xb63f1c	github.com/hyperledger-labs/mirbft/request.(*Responder).Start+0x27c			/opt/gopath/src/github.com/hyperledger-labs/mirbft/request/responder.go:66
+
+20065500 13 @ 0x4a98f5 0x8d6cb8 0x8dafde 0x8db138 0x8d419a 0x8d81f5 0x982143 0x987c34 0xb030a5 0xb0188e 0xa70549 0xa7042e 0xb01364 0xaf0505 0xb57225 0xb571dc 0xb570b0 0x49be21
+#	0x4a98f4	sync.(*Mutex).Unlock+0x54								/home/dell/wmj/go/src/sync/mutex.go:190
+#	0x8d6cb7	log.(*Logger).Output+0x477								/home/dell/wmj/go/src/log/log.go:185
+#	0x8dafdd	google.golang.org/grpc/grpclog.(*loggerT).output+0x35d					/opt/gopath/src/google.golang.org/grpc/grpclog/loggerv2.go:174
+#	0x8db137	google.golang.org/grpc/grpclog.(*loggerT).Infoln+0x57					/opt/gopath/src/google.golang.org/grpc/grpclog/loggerv2.go:191
+#	0x8d4199	google.golang.org/grpc/internal/grpclog.InfoDepth+0xb9					/opt/gopath/src/google.golang.org/grpc/internal/grpclog/grpclog.go:37
+#	0x8d81f4	google.golang.org/grpc/grpclog.(*componentData).InfoDepth+0x174				/opt/gopath/src/google.golang.org/grpc/grpclog/component.go:36
+#	0x982142	google.golang.org/grpc/internal/channelz.AddTraceEvent+0x402				/opt/gopath/src/google.golang.org/grpc/internal/channelz/funcs.go:340
+#	0x987c33	google.golang.org/grpc/internal/channelz.Infof+0xd3					/opt/gopath/src/google.golang.org/grpc/internal/channelz/logging.go:43
+#	0xb030a4	google.golang.org/grpc.(*ccResolverWrapper).addChannelzTraceEvent+0x624			/opt/gopath/src/google.golang.org/grpc/resolver_conn_wrapper.go:175
+#	0xb0188d	google.golang.org/grpc.(*ccResolverWrapper).UpdateState+0x16d				/opt/gopath/src/google.golang.org/grpc/resolver_conn_wrapper.go:100
+#	0xa70548	google.golang.org/grpc/internal/resolver/passthrough.(*passthroughResolver).start+0x248	/opt/gopath/src/google.golang.org/grpc/internal/resolver/passthrough/passthrough.go:48
+#	0xa7042d	google.golang.org/grpc/internal/resolver/passthrough.(*passthroughBuilder).Build+0x12d	/opt/gopath/src/google.golang.org/grpc/internal/resolver/passthrough/passthrough.go:34
+#	0xb01363	google.golang.org/grpc.newCCResolverWrapper+0x483					/opt/gopath/src/google.golang.org/grpc/resolver_conn_wrapper.go:72
+#	0xaf0504	google.golang.org/grpc.DialContext+0x2084						/opt/gopath/src/google.golang.org/grpc/clientconn.go:296
+#	0xb57224	google.golang.org/grpc.Dial+0xa4							/opt/gopath/src/google.golang.org/grpc/clientconn.go:105
+#	0xb571db	github.com/hyperledger-labs/mirbft/messenger.createConnection+0x5b			/opt/gopath/src/github.com/hyperledger-labs/mirbft/messenger/peers.go:465
+#	0xb570af	github.com/hyperledger-labs/mirbft/messenger.createConnections.func1+0x8f		/opt/gopath/src/github.com/hyperledger-labs/mirbft/messenger/peers.go:437
+
+19943070 9 @ 0x4a98f5 0x8d6cb8 0x8dafde 0x8db138 0x8d419a 0x8d81f5 0x982143 0x987c34 0xaec34f 0xaeb5c5 0x49be21
+#	0x4a98f4	sync.(*Mutex).Unlock+0x54						/home/dell/wmj/go/src/sync/mutex.go:190
+#	0x8d6cb7	log.(*Logger).Output+0x477						/home/dell/wmj/go/src/log/log.go:185
+#	0x8dafdd	google.golang.org/grpc/grpclog.(*loggerT).output+0x35d			/opt/gopath/src/google.golang.org/grpc/grpclog/loggerv2.go:174
+#	0x8db137	google.golang.org/grpc/grpclog.(*loggerT).Infoln+0x57			/opt/gopath/src/google.golang.org/grpc/grpclog/loggerv2.go:191
+#	0x8d4199	google.golang.org/grpc/internal/grpclog.InfoDepth+0xb9			/opt/gopath/src/google.golang.org/grpc/internal/grpclog/grpclog.go:37
+#	0x8d81f4	google.golang.org/grpc/grpclog.(*componentData).InfoDepth+0x174		/opt/gopath/src/google.golang.org/grpc/grpclog/component.go:36
+#	0x982142	google.golang.org/grpc/internal/channelz.AddTraceEvent+0x402		/opt/gopath/src/google.golang.org/grpc/internal/channelz/funcs.go:340
+#	0x987c33	google.golang.org/grpc/internal/channelz.Infof+0xd3			/opt/gopath/src/google.golang.org/grpc/internal/channelz/logging.go:43
+#	0xaec34e	google.golang.org/grpc.(*ccBalancerWrapper).handleSwitchTo+0x1ee	/opt/gopath/src/google.golang.org/grpc/balancer_conn_wrappers.go:271
+#	0xaeb5c4	google.golang.org/grpc.(*ccBalancerWrapper).watcher+0x364		/opt/gopath/src/google.golang.org/grpc/balancer_conn_wrappers.go:128
+
+16328490 20 @ 0x4a98f5 0xa2f8bc 0xa30245 0xa5452d 0x49be21
+#	0x4a98f4	sync.(*Mutex).Unlock+0x54							/home/dell/wmj/go/src/sync/mutex.go:190
+#	0xa2f8bb	google.golang.org/grpc/internal/transport.(*controlBuffer).get+0x47b		/opt/gopath/src/google.golang.org/grpc/internal/transport/controlbuf.go:399
+#	0xa30244	google.golang.org/grpc/internal/transport.(*loopyWriter).run+0x124		/opt/gopath/src/google.golang.org/grpc/internal/transport/controlbuf.go:535
+#	0xa5452c	google.golang.org/grpc/internal/transport.NewServerTransport.func2+0x1cc	/opt/gopath/src/google.golang.org/grpc/internal/transport/http2_server.go:331
+
+13382040 189 @ 0x4a98f5 0xa2f8bc 0xa30369 0xa5452d 0x49be21
+#	0x4a98f4	sync.(*Mutex).Unlock+0x54							/home/dell/wmj/go/src/sync/mutex.go:190
+#	0xa2f8bb	google.golang.org/grpc/internal/transport.(*controlBuffer).get+0x47b		/opt/gopath/src/google.golang.org/grpc/internal/transport/controlbuf.go:399
+#	0xa30368	google.golang.org/grpc/internal/transport.(*loopyWriter).run+0x248		/opt/gopath/src/google.golang.org/grpc/internal/transport/controlbuf.go:548
+#	0xa5452c	google.golang.org/grpc/internal/transport.NewServerTransport.func2+0x1cc	/opt/gopath/src/google.golang.org/grpc/internal/transport/http2_server.go:331
+
+12897930 1 @ 0x4a98f5 0x8ae539 0x8ae425 0x89c11a 0x848687 0x845be7 0x89c593 0x89c20b 0x89c076 0x7ef794 0x7ef386 0x8eeda5 0xa71568 0xa71569 0xb037eb 0xb289ec 0xb1f45f 0xb3c075 0xb523ef 0x49be21
+#	0x4a98f4	sync.(*Mutex).Unlock+0x54									/home/dell/wmj/go/src/sync/mutex.go:190
+#	0x8ae538	google.golang.org/protobuf/internal/impl.(*MessageInfo).initOnce+0xd8				/opt/gopath/src/google.golang.org/protobuf/internal/impl/message.go:80
+#	0x8ae424	google.golang.org/protobuf/internal/impl.(*MessageInfo).init+0x44				/opt/gopath/src/google.golang.org/protobuf/internal/impl/message.go:72
+#	0x89c119	google.golang.org/protobuf/internal/impl.(*MessageInfo).sizePointer+0x39			/opt/gopath/src/google.golang.org/protobuf/internal/impl/encode.go:47
+#	0x848686	google.golang.org/protobuf/internal/impl.sizeMessageInfo+0x86					/opt/gopath/src/google.golang.org/protobuf/internal/impl/codec_field.go:232
+#	0x845be6	google.golang.org/protobuf/internal/impl.(*MessageInfo).initOneofFieldCoders.func3+0xa6		/opt/gopath/src/google.golang.org/protobuf/internal/impl/codec_field.go:89
+#	0x89c592	google.golang.org/protobuf/internal/impl.(*MessageInfo).sizePointerSlow+0x312			/opt/gopath/src/google.golang.org/protobuf/internal/impl/encode.go:79
+#	0x89c20a	google.golang.org/protobuf/internal/impl.(*MessageInfo).sizePointer+0x12a			/opt/gopath/src/google.golang.org/protobuf/internal/impl/encode.go:56
+#	0x89c075	google.golang.org/protobuf/internal/impl.(*MessageInfo).size+0x95				/opt/gopath/src/google.golang.org/protobuf/internal/impl/encode.go:40
+#	0x7ef793	google.golang.org/protobuf/proto.MarshalOptions.marshal+0x1f3					/opt/gopath/src/google.golang.org/protobuf/proto/encode.go:153
+#	0x7ef385	google.golang.org/protobuf/proto.MarshalOptions.MarshalAppend+0xa5				/opt/gopath/src/google.golang.org/protobuf/proto/encode.go:122
+#	0x8eeda4	github.com/golang/protobuf/proto.marshalAppend+0xe4						/opt/gopath/src/github.com/golang/protobuf/proto/wire.go:40
+#	0xa71567	github.com/golang/protobuf/proto.Marshal+0x67							/opt/gopath/src/github.com/golang/protobuf/proto/wire.go:23
+#	0xa71568	google.golang.org/grpc/encoding/proto.codec.Marshal+0x68					/opt/gopath/src/google.golang.org/grpc/encoding/proto/proto.go:45
+#	0xb037ea	google.golang.org/grpc.encode+0x6a								/opt/gopath/src/google.golang.org/grpc/rpc_util.go:594
+#	0xb289eb	google.golang.org/grpc.prepareMsg+0x1ab								/opt/gopath/src/google.golang.org/grpc/stream.go:1651
+#	0xb1f45e	google.golang.org/grpc.(*clientStream).SendMsg+0x1fe						/opt/gopath/src/google.golang.org/grpc/stream.go:819
+#	0xb3c074	github.com/hyperledger-labs/mirbft/protobufs.(*messengerListenClient).Send+0x54			/opt/gopath/src/github.com/hyperledger-labs/mirbft/protobufs/messenger.pb.go:1052
+#	0xb523ee	github.com/hyperledger-labs/mirbft/messenger.(*BufferedMultiConnection).sendMessages+0x8e	/opt/gopath/src/github.com/hyperledger-labs/mirbft/messenger/peerconnection.go:325
+
+9923070 3 @ 0x4a98f5 0x8d6cb8 0x8dafde 0x8db138 0x8d419a 0x8d81f5 0x982143 0x987c34 0xaf7d65 0xafb6d7 0xafac60 0xaf9e12 0xaf8ab8 0xaf818b 0xaf559c 0x49be21
+#	0x4a98f4	sync.(*Mutex).Unlock+0x54						/home/dell/wmj/go/src/sync/mutex.go:190
+#	0x8d6cb7	log.(*Logger).Output+0x477						/home/dell/wmj/go/src/log/log.go:185
+#	0x8dafdd	google.golang.org/grpc/grpclog.(*loggerT).output+0x35d			/opt/gopath/src/google.golang.org/grpc/grpclog/loggerv2.go:174
+#	0x8db137	google.golang.org/grpc/grpclog.(*loggerT).Infoln+0x57			/opt/gopath/src/google.golang.org/grpc/grpclog/loggerv2.go:191
+#	0x8d4199	google.golang.org/grpc/internal/grpclog.InfoDepth+0xb9			/opt/gopath/src/google.golang.org/grpc/internal/grpclog/grpclog.go:37
+#	0x8d81f4	google.golang.org/grpc/grpclog.(*componentData).InfoDepth+0x174		/opt/gopath/src/google.golang.org/grpc/grpclog/component.go:36
+#	0x982142	google.golang.org/grpc/internal/channelz.AddTraceEvent+0x402		/opt/gopath/src/google.golang.org/grpc/internal/channelz/funcs.go:340
+#	0x987c33	google.golang.org/grpc/internal/channelz.Infof+0xd3			/opt/gopath/src/google.golang.org/grpc/internal/channelz/logging.go:43
+#	0xaf7d64	google.golang.org/grpc.(*addrConn).updateConnectivityState+0x144	/opt/gopath/src/google.golang.org/grpc/clientconn.go:1101
+#	0xafb6d6	google.golang.org/grpc.(*addrConn).startHealthCheck.func1+0x56		/opt/gopath/src/google.golang.org/grpc/clientconn.go:1355
+#	0xafac5f	google.golang.org/grpc.(*addrConn).startHealthCheck+0x65f		/opt/gopath/src/google.golang.org/grpc/clientconn.go:1364
+#	0xaf9e11	google.golang.org/grpc.(*addrConn).createTransport+0x11f1		/opt/gopath/src/google.golang.org/grpc/clientconn.go:1325
+#	0xaf8ab7	google.golang.org/grpc.(*addrConn).tryAllAddrs+0x537			/opt/gopath/src/google.golang.org/grpc/clientconn.go:1214
+#	0xaf818a	google.golang.org/grpc.(*addrConn).resetTransport+0x20a			/opt/gopath/src/google.golang.org/grpc/clientconn.go:1149
+#	0xaf559b	google.golang.org/grpc.(*addrConn).connect+0xbb				/opt/gopath/src/google.golang.org/grpc/clientconn.go:804
+
+8517060 14 @ 0x4a98f5 0x8d6cb8 0x8dafde 0x8db138 0x8d419a 0x8d81f5 0x982143 0x987c34 0xaf7d65 0xaf5588 0x49be21
+#	0x4a98f4	sync.(*Mutex).Unlock+0x54						/home/dell/wmj/go/src/sync/mutex.go:190
+#	0x8d6cb7	log.(*Logger).Output+0x477						/home/dell/wmj/go/src/log/log.go:185
+#	0x8dafdd	google.golang.org/grpc/grpclog.(*loggerT).output+0x35d			/opt/gopath/src/google.golang.org/grpc/grpclog/loggerv2.go:174
+#	0x8db137	google.golang.org/grpc/grpclog.(*loggerT).Infoln+0x57			/opt/gopath/src/google.golang.org/grpc/grpclog/loggerv2.go:191
+#	0x8d4199	google.golang.org/grpc/internal/grpclog.InfoDepth+0xb9			/opt/gopath/src/google.golang.org/grpc/internal/grpclog/grpclog.go:37
+#	0x8d81f4	google.golang.org/grpc/grpclog.(*componentData).InfoDepth+0x174		/opt/gopath/src/google.golang.org/grpc/grpclog/component.go:36
+#	0x982142	google.golang.org/grpc/internal/channelz.AddTraceEvent+0x402		/opt/gopath/src/google.golang.org/grpc/internal/channelz/funcs.go:340
+#	0x987c33	google.golang.org/grpc/internal/channelz.Infof+0xd3			/opt/gopath/src/google.golang.org/grpc/internal/channelz/logging.go:43
+#	0xaf7d64	google.golang.org/grpc.(*addrConn).updateConnectivityState+0x144	/opt/gopath/src/google.golang.org/grpc/clientconn.go:1101
+#	0xaf5587	google.golang.org/grpc.(*addrConn).connect+0xa7				/opt/gopath/src/google.golang.org/grpc/clientconn.go:801
+
+7687560 20 @ 0x4a98f5 0x8d6cb8 0x8dafde 0x8db138 0x8d419a 0x8d81f5 0x982143 0x987c34 0xafd1c9 0xaefc7c 0xb57225 0xb571dc 0xb570b0 0x49be21
+#	0x4a98f4	sync.(*Mutex).Unlock+0x54							/home/dell/wmj/go/src/sync/mutex.go:190
+#	0x8d6cb7	log.(*Logger).Output+0x477							/home/dell/wmj/go/src/log/log.go:185
+#	0x8dafdd	google.golang.org/grpc/grpclog.(*loggerT).output+0x35d				/opt/gopath/src/google.golang.org/grpc/grpclog/loggerv2.go:174
+#	0x8db137	google.golang.org/grpc/grpclog.(*loggerT).Infoln+0x57				/opt/gopath/src/google.golang.org/grpc/grpclog/loggerv2.go:191
+#	0x8d4199	google.golang.org/grpc/internal/grpclog.InfoDepth+0xb9				/opt/gopath/src/google.golang.org/grpc/internal/grpclog/grpclog.go:37
+#	0x8d81f4	google.golang.org/grpc/grpclog.(*componentData).InfoDepth+0x174			/opt/gopath/src/google.golang.org/grpc/grpclog/component.go:36
+#	0x982142	google.golang.org/grpc/internal/channelz.AddTraceEvent+0x402			/opt/gopath/src/google.golang.org/grpc/internal/channelz/funcs.go:340
+#	0x987c33	google.golang.org/grpc/internal/channelz.Infof+0xd3				/opt/gopath/src/google.golang.org/grpc/internal/channelz/logging.go:43
+#	0xafd1c8	google.golang.org/grpc.(*ClientConn).parseTargetAndFindResolver+0x2e8		/opt/gopath/src/google.golang.org/grpc/clientconn.go:1584
+#	0xaefc7b	google.golang.org/grpc.DialContext+0x17fb					/opt/gopath/src/google.golang.org/grpc/clientconn.go:255
+#	0xb57224	google.golang.org/grpc.Dial+0xa4						/opt/gopath/src/google.golang.org/grpc/clientconn.go:105
+#	0xb571db	github.com/hyperledger-labs/mirbft/messenger.createConnection+0x5b		/opt/gopath/src/github.com/hyperledger-labs/mirbft/messenger/peers.go:465
+#	0xb570af	github.com/hyperledger-labs/mirbft/messenger.createConnections.func1+0x8f	/opt/gopath/src/github.com/hyperledger-labs/mirbft/messenger/peers.go:437
+
+5840130 1 @ 0x4a98f5 0x8ae6c6 0x8ae425 0x8bee94 0x7ef61d 0x7ef623 0x7ef386 0x8eeda5 0xa71568 0xa71569 0xb037eb 0xb289ec 0xb1f45f 0xb3c075 0xb523ef 0x49be21
+#	0x4a98f4	sync.(*Mutex).Unlock+0x54									/home/dell/wmj/go/src/sync/mutex.go:190
+#	0x8ae6c5	google.golang.org/protobuf/internal/impl.(*MessageInfo).initOnce+0x265				/opt/gopath/src/google.golang.org/protobuf/internal/impl/message.go:94
+#	0x8ae424	google.golang.org/protobuf/internal/impl.(*MessageInfo).init+0x44				/opt/gopath/src/google.golang.org/protobuf/internal/impl/message.go:72
+#	0x8bee93	google.golang.org/protobuf/internal/impl.(*messageState).ProtoMethods+0x73			/opt/gopath/src/google.golang.org/protobuf/internal/impl/message_reflect_gen.go:30
+#	0x7ef61c	google.golang.org/protobuf/proto.protoMethods+0x7c						/opt/gopath/src/google.golang.org/protobuf/proto/proto_methods.go:19
+#	0x7ef622	google.golang.org/protobuf/proto.MarshalOptions.marshal+0x82					/opt/gopath/src/google.golang.org/protobuf/proto/encode.go:140
+#	0x7ef385	google.golang.org/protobuf/proto.MarshalOptions.MarshalAppend+0xa5				/opt/gopath/src/google.golang.org/protobuf/proto/encode.go:122
+#	0x8eeda4	github.com/golang/protobuf/proto.marshalAppend+0xe4						/opt/gopath/src/github.com/golang/protobuf/proto/wire.go:40
+#	0xa71567	github.com/golang/protobuf/proto.Marshal+0x67							/opt/gopath/src/github.com/golang/protobuf/proto/wire.go:23
+#	0xa71568	google.golang.org/grpc/encoding/proto.codec.Marshal+0x68					/opt/gopath/src/google.golang.org/grpc/encoding/proto/proto.go:45
+#	0xb037ea	google.golang.org/grpc.encode+0x6a								/opt/gopath/src/google.golang.org/grpc/rpc_util.go:594
+#	0xb289eb	google.golang.org/grpc.prepareMsg+0x1ab								/opt/gopath/src/google.golang.org/grpc/stream.go:1651
+#	0xb1f45e	google.golang.org/grpc.(*clientStream).SendMsg+0x1fe						/opt/gopath/src/google.golang.org/grpc/stream.go:819
+#	0xb3c074	github.com/hyperledger-labs/mirbft/protobufs.(*messengerListenClient).Send+0x54			/opt/gopath/src/github.com/hyperledger-labs/mirbft/protobufs/messenger.pb.go:1052
+#	0xb523ee	github.com/hyperledger-labs/mirbft/messenger.(*BufferedMultiConnection).sendMessages+0x8e	/opt/gopath/src/github.com/hyperledger-labs/mirbft/messenger/peerconnection.go:325
+
+5253120 10 @ 0x4a98f5 0x8d6cb8 0x8dafde 0x8db138 0x8d419a 0x8d81f5 0x982143 0x987c34 0xaf8994 0xaf818b 0xaf559c 0x49be21
+#	0x4a98f4	sync.(*Mutex).Unlock+0x54					/home/dell/wmj/go/src/sync/mutex.go:190
+#	0x8d6cb7	log.(*Logger).Output+0x477					/home/dell/wmj/go/src/log/log.go:185
+#	0x8dafdd	google.golang.org/grpc/grpclog.(*loggerT).output+0x35d		/opt/gopath/src/google.golang.org/grpc/grpclog/loggerv2.go:174
+#	0x8db137	google.golang.org/grpc/grpclog.(*loggerT).Infoln+0x57		/opt/gopath/src/google.golang.org/grpc/grpclog/loggerv2.go:191
+#	0x8d4199	google.golang.org/grpc/internal/grpclog.InfoDepth+0xb9		/opt/gopath/src/google.golang.org/grpc/internal/grpclog/grpclog.go:37
+#	0x8d81f4	google.golang.org/grpc/grpclog.(*componentData).InfoDepth+0x174	/opt/gopath/src/google.golang.org/grpc/grpclog/component.go:36
+#	0x982142	google.golang.org/grpc/internal/channelz.AddTraceEvent+0x402	/opt/gopath/src/google.golang.org/grpc/internal/channelz/funcs.go:340
+#	0x987c33	google.golang.org/grpc/internal/channelz.Infof+0xd3		/opt/gopath/src/google.golang.org/grpc/internal/channelz/logging.go:43
+#	0xaf8993	google.golang.org/grpc.(*addrConn).tryAllAddrs+0x413		/opt/gopath/src/google.golang.org/grpc/clientconn.go:1212
+#	0xaf818a	google.golang.org/grpc.(*addrConn).resetTransport+0x20a		/opt/gopath/src/google.golang.org/grpc/clientconn.go:1149
+#	0xaf559b	google.golang.org/grpc.(*addrConn).connect+0xbb			/opt/gopath/src/google.golang.org/grpc/clientconn.go:804
+
+4948080 2 @ 0x4a98f5 0xa2f8bc 0xa30245 0xa409c6 0x49be21
+#	0x4a98f4	sync.(*Mutex).Unlock+0x54						/home/dell/wmj/go/src/sync/mutex.go:190
+#	0xa2f8bb	google.golang.org/grpc/internal/transport.(*controlBuffer).get+0x47b	/opt/gopath/src/google.golang.org/grpc/internal/transport/controlbuf.go:399
+#	0xa30244	google.golang.org/grpc/internal/transport.(*loopyWriter).run+0x124	/opt/gopath/src/google.golang.org/grpc/internal/transport/controlbuf.go:535
+#	0xa409c5	google.golang.org/grpc/internal/transport.newHTTP2Client.func3+0x105	/opt/gopath/src/google.golang.org/grpc/internal/transport/http2_client.go:417
+
+4918590 14 @ 0x4a98f5 0xa2f21b 0xa5c0b6 0xa5c024 0xa59349 0xb0a50a 0xb09a25 0x49be21
+#	0x4a98f4	sync.(*Mutex).Unlock+0x54								/home/dell/wmj/go/src/sync/mutex.go:190
+#	0xa2f21a	google.golang.org/grpc/internal/transport.(*controlBuffer).executeAndPut+0x3fa		/opt/gopath/src/google.golang.org/grpc/internal/transport/controlbuf.go:355
+#	0xa5c0b5	google.golang.org/grpc/internal/transport.(*controlBuffer).put+0xf5			/opt/gopath/src/google.golang.org/grpc/internal/transport/controlbuf.go:325
+#	0xa5c023	google.golang.org/grpc/internal/transport.(*http2Server).handleWindowUpdate+0x63	/opt/gopath/src/google.golang.org/grpc/internal/transport/http2_server.go:901
+#	0xa59348	google.golang.org/grpc/internal/transport.(*http2Server).HandleStreams+0x3e8		/opt/gopath/src/google.golang.org/grpc/internal/transport/http2_server.go:661
+#	0xb0a509	google.golang.org/grpc.(*Server).serveStreams+0x289					/opt/gopath/src/google.golang.org/grpc/server.go:916
+#	0xb09a24	google.golang.org/grpc.(*Server).handleRawConn.func1+0x64				/opt/gopath/src/google.golang.org/grpc/server.go:858
+
+4644750 9 @ 0x4a98f5 0x8d6cb8 0x8dafde 0x8db138 0x8d419a 0x8d81f5 0x982143 0x987c34 0xafd689 0xaefc7c 0xb57225 0xb571dc 0xb570b0 0x49be21
+#	0x4a98f4	sync.(*Mutex).Unlock+0x54							/home/dell/wmj/go/src/sync/mutex.go:190
+#	0x8d6cb7	log.(*Logger).Output+0x477							/home/dell/wmj/go/src/log/log.go:185
+#	0x8dafdd	google.golang.org/grpc/grpclog.(*loggerT).output+0x35d				/opt/gopath/src/google.golang.org/grpc/grpclog/loggerv2.go:174
+#	0x8db137	google.golang.org/grpc/grpclog.(*loggerT).Infoln+0x57				/opt/gopath/src/google.golang.org/grpc/grpclog/loggerv2.go:191
+#	0x8d4199	google.golang.org/grpc/internal/grpclog.InfoDepth+0xb9				/opt/gopath/src/google.golang.org/grpc/internal/grpclog/grpclog.go:37
+#	0x8d81f4	google.golang.org/grpc/grpclog.(*componentData).InfoDepth+0x174			/opt/gopath/src/google.golang.org/grpc/grpclog/component.go:36
+#	0x982142	google.golang.org/grpc/internal/channelz.AddTraceEvent+0x402			/opt/gopath/src/google.golang.org/grpc/internal/channelz/funcs.go:340
+#	0x987c33	google.golang.org/grpc/internal/channelz.Infof+0xd3				/opt/gopath/src/google.golang.org/grpc/internal/channelz/logging.go:43
+#	0xafd688	google.golang.org/grpc.(*ClientConn).parseTargetAndFindResolver+0x7a8		/opt/gopath/src/google.golang.org/grpc/clientconn.go:1607
+#	0xaefc7b	google.golang.org/grpc.DialContext+0x17fb					/opt/gopath/src/google.golang.org/grpc/clientconn.go:255
+#	0xb57224	google.golang.org/grpc.Dial+0xa4						/opt/gopath/src/google.golang.org/grpc/clientconn.go:105
+#	0xb571db	github.com/hyperledger-labs/mirbft/messenger.createConnection+0x5b		/opt/gopath/src/github.com/hyperledger-labs/mirbft/messenger/peers.go:465
+#	0xb570af	github.com/hyperledger-labs/mirbft/messenger.createConnections.func1+0x8f	/opt/gopath/src/github.com/hyperledger-labs/mirbft/messenger/peers.go:437
+
+4047240 16 @ 0x4a98f5 0x8d6cb8 0x8dafde 0x8db138 0x8d419a 0x8d81f5 0x982143 0xaeefa6 0xb57225 0xb571dc 0xb570b0 0x49be21
+#	0x4a98f4	sync.(*Mutex).Unlock+0x54							/home/dell/wmj/go/src/sync/mutex.go:190
+#	0x8d6cb7	log.(*Logger).Output+0x477							/home/dell/wmj/go/src/log/log.go:185
+#	0x8dafdd	google.golang.org/grpc/grpclog.(*loggerT).output+0x35d				/opt/gopath/src/google.golang.org/grpc/grpclog/loggerv2.go:174
+#	0x8db137	google.golang.org/grpc/grpclog.(*loggerT).Infoln+0x57				/opt/gopath/src/google.golang.org/grpc/grpclog/loggerv2.go:191
+#	0x8d4199	google.golang.org/grpc/internal/grpclog.InfoDepth+0xb9				/opt/gopath/src/google.golang.org/grpc/internal/grpclog/grpclog.go:37
+#	0x8d81f4	google.golang.org/grpc/grpclog.(*componentData).InfoDepth+0x174			/opt/gopath/src/google.golang.org/grpc/grpclog/component.go:36
+#	0x982142	google.golang.org/grpc/internal/channelz.AddTraceEvent+0x402			/opt/gopath/src/google.golang.org/grpc/internal/channelz/funcs.go:340
+#	0xaeefa5	google.golang.org/grpc.DialContext+0xb25					/opt/gopath/src/google.golang.org/grpc/clientconn.go:178
+#	0xb57224	google.golang.org/grpc.Dial+0xa4						/opt/gopath/src/google.golang.org/grpc/clientconn.go:105
+#	0xb571db	github.com/hyperledger-labs/mirbft/messenger.createConnection+0x5b		/opt/gopath/src/github.com/hyperledger-labs/mirbft/messenger/peers.go:465
+#	0xb570af	github.com/hyperledger-labs/mirbft/messenger.createConnections.func1+0x8f	/opt/gopath/src/github.com/hyperledger-labs/mirbft/messenger/peers.go:437
+
+3558660 8 @ 0x4a98f5 0x4a7def 0xbaf14d 0xbaf16a 0xb53704 0xb5376b 0xb530fc 0xb3c23f 0xb12cf8 0xb14eca 0xb0ab9e 0x49be21
+#	0x4a98f4	sync.(*Mutex).Unlock+0x54							/home/dell/wmj/go/src/sync/mutex.go:190
+#	0x4a7dee	sync.(*Map).Load+0x18e								/home/dell/wmj/go/src/sync/map.go:120
+#	0xbaf14c	github.com/hyperledger-labs/mirbft/orderer.(*pbftDispatcher).load+0x3ec		/opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftorderer.go:45
+#	0xbaf169	github.com/hyperledger-labs/mirbft/orderer.(*PbftOrderer).HandleMessage+0x409	/opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftorderer.go:96
+#	0xb53703	github.com/hyperledger-labs/mirbft/messenger.handleMessage+0x503		/opt/gopath/src/github.com/hyperledger-labs/mirbft/messenger/peers.go:136
+#	0xb5376a	github.com/hyperledger-labs/mirbft/messenger.handleMessage+0x56a		/opt/gopath/src/github.com/hyperledger-labs/mirbft/messenger/peers.go:113
+#	0xb530fb	github.com/hyperledger-labs/mirbft/messenger.(*messengerServer).Listen+0x15b	/opt/gopath/src/github.com/hyperledger-labs/mirbft/messenger/peers.go:89
+#	0xb3c23e	github.com/hyperledger-labs/mirbft/protobufs._Messenger_Listen_Handler+0xbe	/opt/gopath/src/github.com/hyperledger-labs/mirbft/protobufs/messenger.pb.go:1151
+#	0xb12cf7	google.golang.org/grpc.(*Server).processStreamingRPC+0x1ab7			/opt/gopath/src/google.golang.org/grpc/server.go:1558
+#	0xb14ec9	google.golang.org/grpc.(*Server).handleStream+0xf89				/opt/gopath/src/google.golang.org/grpc/server.go:1640
+#	0xb0ab9d	google.golang.org/grpc.(*Server).serveStreams.func1.2+0xfd			/opt/gopath/src/google.golang.org/grpc/server.go:932
+
+3499800 13 @ 0x4a98f5 0x8d6cb8 0x8dafde 0x8db138 0x8d419a 0x8d81f5 0x982143 0x987c34 0xafcffb 0xaefc7c 0xb57225 0xb571dc 0xb570b0 0x49be21
+#	0x4a98f4	sync.(*Mutex).Unlock+0x54							/home/dell/wmj/go/src/sync/mutex.go:190
+#	0x8d6cb7	log.(*Logger).Output+0x477							/home/dell/wmj/go/src/log/log.go:185
+#	0x8dafdd	google.golang.org/grpc/grpclog.(*loggerT).output+0x35d				/opt/gopath/src/google.golang.org/grpc/grpclog/loggerv2.go:174
+#	0x8db137	google.golang.org/grpc/grpclog.(*loggerT).Infoln+0x57				/opt/gopath/src/google.golang.org/grpc/grpclog/loggerv2.go:191
+#	0x8d4199	google.golang.org/grpc/internal/grpclog.InfoDepth+0xb9				/opt/gopath/src/google.golang.org/grpc/internal/grpclog/grpclog.go:37
+#	0x8d81f4	google.golang.org/grpc/grpclog.(*componentData).InfoDepth+0x174			/opt/gopath/src/google.golang.org/grpc/grpclog/component.go:36
+#	0x982142	google.golang.org/grpc/internal/channelz.AddTraceEvent+0x402			/opt/gopath/src/google.golang.org/grpc/internal/channelz/funcs.go:340
+#	0x987c33	google.golang.org/grpc/internal/channelz.Infof+0xd3				/opt/gopath/src/google.golang.org/grpc/internal/channelz/logging.go:43
+#	0xafcffa	google.golang.org/grpc.(*ClientConn).parseTargetAndFindResolver+0x11a		/opt/gopath/src/google.golang.org/grpc/clientconn.go:1579
+#	0xaefc7b	google.golang.org/grpc.DialContext+0x17fb					/opt/gopath/src/google.golang.org/grpc/clientconn.go:255
+#	0xb57224	google.golang.org/grpc.Dial+0xa4						/opt/gopath/src/google.golang.org/grpc/clientconn.go:105
+#	0xb571db	github.com/hyperledger-labs/mirbft/messenger.createConnection+0x5b		/opt/gopath/src/github.com/hyperledger-labs/mirbft/messenger/peers.go:465
+#	0xb570af	github.com/hyperledger-labs/mirbft/messenger.createConnections.func1+0x8f	/opt/gopath/src/github.com/hyperledger-labs/mirbft/messenger/peers.go:437
+
+3034890 9 @ 0x4a98f5 0x8d6cb8 0x8dafde 0x8db138 0x8d419a 0x8d81f5 0x982143 0x987c34 0xaefef7 0xb57225 0xb571dc 0xb570b0 0x49be21
+#	0x4a98f4	sync.(*Mutex).Unlock+0x54							/home/dell/wmj/go/src/sync/mutex.go:190
+#	0x8d6cb7	log.(*Logger).Output+0x477							/home/dell/wmj/go/src/log/log.go:185
+#	0x8dafdd	google.golang.org/grpc/grpclog.(*loggerT).output+0x35d				/opt/gopath/src/google.golang.org/grpc/grpclog/loggerv2.go:174
+#	0x8db137	google.golang.org/grpc/grpclog.(*loggerT).Infoln+0x57				/opt/gopath/src/google.golang.org/grpc/grpclog/loggerv2.go:191
+#	0x8d4199	google.golang.org/grpc/internal/grpclog.InfoDepth+0xb9				/opt/gopath/src/google.golang.org/grpc/internal/grpclog/grpclog.go:37
+#	0x8d81f4	google.golang.org/grpc/grpclog.(*componentData).InfoDepth+0x174			/opt/gopath/src/google.golang.org/grpc/grpclog/component.go:36
+#	0x982142	google.golang.org/grpc/internal/channelz.AddTraceEvent+0x402			/opt/gopath/src/google.golang.org/grpc/internal/channelz/funcs.go:340
+#	0x987c33	google.golang.org/grpc/internal/channelz.Infof+0xd3				/opt/gopath/src/google.golang.org/grpc/internal/channelz/logging.go:43
+#	0xaefef6	google.golang.org/grpc.DialContext+0x1a76					/opt/gopath/src/google.golang.org/grpc/clientconn.go:263
+#	0xb57224	google.golang.org/grpc.Dial+0xa4						/opt/gopath/src/google.golang.org/grpc/clientconn.go:105
+#	0xb571db	github.com/hyperledger-labs/mirbft/messenger.createConnection+0x5b		/opt/gopath/src/github.com/hyperledger-labs/mirbft/messenger/peers.go:465
+#	0xb570af	github.com/hyperledger-labs/mirbft/messenger.createConnections.func1+0x8f	/opt/gopath/src/github.com/hyperledger-labs/mirbft/messenger/peers.go:437
+
+2572710 1 @ 0x4a98f5 0x8ae539 0x8ae425 0x89c11a 0x848687 0x89c593 0x89c20b 0x848687 0x845be7 0x89c593 0x89c20b 0x89c076 0x7ef794 0x7ef386 0x8eeda5 0xa71568 0xa71569 0xb037eb 0xb289ec 0xb1f45f 0xb3c075 0xb523ef 0x49be21
+#	0x4a98f4	sync.(*Mutex).Unlock+0x54									/home/dell/wmj/go/src/sync/mutex.go:190
+#	0x8ae538	google.golang.org/protobuf/internal/impl.(*MessageInfo).initOnce+0xd8				/opt/gopath/src/google.golang.org/protobuf/internal/impl/message.go:80
+#	0x8ae424	google.golang.org/protobuf/internal/impl.(*MessageInfo).init+0x44				/opt/gopath/src/google.golang.org/protobuf/internal/impl/message.go:72
+#	0x89c119	google.golang.org/protobuf/internal/impl.(*MessageInfo).sizePointer+0x39			/opt/gopath/src/google.golang.org/protobuf/internal/impl/encode.go:47
+#	0x848686	google.golang.org/protobuf/internal/impl.sizeMessageInfo+0x86					/opt/gopath/src/google.golang.org/protobuf/internal/impl/codec_field.go:232
+#	0x89c592	google.golang.org/protobuf/internal/impl.(*MessageInfo).sizePointerSlow+0x312			/opt/gopath/src/google.golang.org/protobuf/internal/impl/encode.go:79
+#	0x89c20a	google.golang.org/protobuf/internal/impl.(*MessageInfo).sizePointer+0x12a			/opt/gopath/src/google.golang.org/protobuf/internal/impl/encode.go:56
+#	0x848686	google.golang.org/protobuf/internal/impl.sizeMessageInfo+0x86					/opt/gopath/src/google.golang.org/protobuf/internal/impl/codec_field.go:232
+#	0x845be6	google.golang.org/protobuf/internal/impl.(*MessageInfo).initOneofFieldCoders.func3+0xa6		/opt/gopath/src/google.golang.org/protobuf/internal/impl/codec_field.go:89
+#	0x89c592	google.golang.org/protobuf/internal/impl.(*MessageInfo).sizePointerSlow+0x312			/opt/gopath/src/google.golang.org/protobuf/internal/impl/encode.go:79
+#	0x89c20a	google.golang.org/protobuf/internal/impl.(*MessageInfo).sizePointer+0x12a			/opt/gopath/src/google.golang.org/protobuf/internal/impl/encode.go:56
+#	0x89c075	google.golang.org/protobuf/internal/impl.(*MessageInfo).size+0x95				/opt/gopath/src/google.golang.org/protobuf/internal/impl/encode.go:40
+#	0x7ef793	google.golang.org/protobuf/proto.MarshalOptions.marshal+0x1f3					/opt/gopath/src/google.golang.org/protobuf/proto/encode.go:153
+#	0x7ef385	google.golang.org/protobuf/proto.MarshalOptions.MarshalAppend+0xa5				/opt/gopath/src/google.golang.org/protobuf/proto/encode.go:122
+#	0x8eeda4	github.com/golang/protobuf/proto.marshalAppend+0xe4						/opt/gopath/src/github.com/golang/protobuf/proto/wire.go:40
+#	0xa71567	github.com/golang/protobuf/proto.Marshal+0x67							/opt/gopath/src/github.com/golang/protobuf/proto/wire.go:23
+#	0xa71568	google.golang.org/grpc/encoding/proto.codec.Marshal+0x68					/opt/gopath/src/google.golang.org/grpc/encoding/proto/proto.go:45
+#	0xb037ea	google.golang.org/grpc.encode+0x6a								/opt/gopath/src/google.golang.org/grpc/rpc_util.go:594
+#	0xb289eb	google.golang.org/grpc.prepareMsg+0x1ab								/opt/gopath/src/google.golang.org/grpc/stream.go:1651
+#	0xb1f45e	google.golang.org/grpc.(*clientStream).SendMsg+0x1fe						/opt/gopath/src/google.golang.org/grpc/stream.go:819
+#	0xb3c074	github.com/hyperledger-labs/mirbft/protobufs.(*messengerListenClient).Send+0x54			/opt/gopath/src/github.com/hyperledger-labs/mirbft/protobufs/messenger.pb.go:1052
+#	0xb523ee	github.com/hyperledger-labs/mirbft/messenger.(*BufferedMultiConnection).sendMessages+0x8e	/opt/gopath/src/github.com/hyperledger-labs/mirbft/messenger/peerconnection.go:325
+
+2495280 11 @ 0x4a98f5 0xa2f21b 0xa5b94a 0xa5b906 0xa59309 0xb0a50a 0xb09a25 0x49be21
+#	0x4a98f4	sync.(*Mutex).Unlock+0x54							/home/dell/wmj/go/src/sync/mutex.go:190
+#	0xa2f21a	google.golang.org/grpc/internal/transport.(*controlBuffer).executeAndPut+0x3fa	/opt/gopath/src/google.golang.org/grpc/internal/transport/controlbuf.go:355
+#	0xa5b949	google.golang.org/grpc/internal/transport.(*controlBuffer).put+0x5a9		/opt/gopath/src/google.golang.org/grpc/internal/transport/controlbuf.go:325
+#	0xa5b905	google.golang.org/grpc/internal/transport.(*http2Server).handlePing+0x565	/opt/gopath/src/google.golang.org/grpc/internal/transport/http2_server.go:862
+#	0xa59308	google.golang.org/grpc/internal/transport.(*http2Server).HandleStreams+0x3a8	/opt/gopath/src/google.golang.org/grpc/internal/transport/http2_server.go:659
+#	0xb0a509	google.golang.org/grpc.(*Server).serveStreams+0x289				/opt/gopath/src/google.golang.org/grpc/server.go:916
+#	0xb09a24	google.golang.org/grpc.(*Server).handleRawConn.func1+0x64			/opt/gopath/src/google.golang.org/grpc/server.go:858
+
+2443440 1 @ 0x4a98f5 0xb4f836 0xb4e5a5 0xb9ff25 0xb9ff1e 0xb9f3f1 0xbac2b0 0xbab9fc 0x49be21
+#	0x4a98f4	sync.(*Mutex).Unlock+0x54									/home/dell/wmj/go/src/sync/mutex.go:190
+#	0xb4f835	github.com/hyperledger-labs/mirbft/log.publishEntries+0x375					/opt/gopath/src/github.com/hyperledger-labs/mirbft/log/log.go:283
+#	0xb4e5a4	github.com/hyperledger-labs/mirbft/log.CommitEntry+0x284					/opt/gopath/src/github.com/hyperledger-labs/mirbft/log/log.go:101
+#	0xb9ff24	github.com/hyperledger-labs/mirbft/announcer.Announce+0x364					/opt/gopath/src/github.com/hyperledger-labs/mirbft/announcer/announcer.go:26
+#	0xb9ff1d	github.com/hyperledger-labs/mirbft/orderer.(*pbftInstance).announce+0x35d			/opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftinstance.go:718
+#	0xb9f3f0	github.com/hyperledger-labs/mirbft/orderer.(*pbftInstance).handleCommit+0x7d0			/opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftinstance.go:656
+#	0xbac2af	github.com/hyperledger-labs/mirbft/orderer.(*pbftInstance).handleMessage+0x84f			/opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftinstance.go:1802
+#	0xbab9fb	github.com/hyperledger-labs/mirbft/orderer.(*pbftInstance).processSerializedMessages+0xdb	/opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftinstance.go:1756
+
+1308780 2 @ 0x4a98f5 0xa2f21b 0xa4b045 0xa4b010 0xa4fc05 0x49be21
+#	0x4a98f4	sync.(*Mutex).Unlock+0x54							/home/dell/wmj/go/src/sync/mutex.go:190
+#	0xa2f21a	google.golang.org/grpc/internal/transport.(*controlBuffer).executeAndPut+0x3fa	/opt/gopath/src/google.golang.org/grpc/internal/transport/controlbuf.go:355
+#	0xa4b044	google.golang.org/grpc/internal/transport.(*controlBuffer).put+0x164		/opt/gopath/src/google.golang.org/grpc/internal/transport/controlbuf.go:325
+#	0xa4b00f	google.golang.org/grpc/internal/transport.(*http2Client).handlePing+0x12f	/opt/gopath/src/google.golang.org/grpc/internal/transport/http2_client.go:1179
+#	0xa4fc04	google.golang.org/grpc/internal/transport.(*http2Client).reader+0xbc4		/opt/gopath/src/google.golang.org/grpc/internal/transport/http2_client.go:1544
+
+899490 1 @ 0x4a98f5 0x8ae6c6 0x8ae425 0x8c0b28 0x7f583c 0x7f5826 0x7f5725 0x8eea05 0xa5df73 0xa5df56 0xb287b9 0xb27c60 0xb3c3a8 0xb530c9 0xb3c23f 0xb12cf8 0xb14eca 0xb0ab9e 0x49be21
+#	0x4a98f4	sync.(*Mutex).Unlock+0x54								/home/dell/wmj/go/src/sync/mutex.go:190
+#	0x8ae6c5	google.golang.org/protobuf/internal/impl.(*MessageInfo).initOnce+0x265			/opt/gopath/src/google.golang.org/protobuf/internal/impl/message.go:94
+#	0x8ae424	google.golang.org/protobuf/internal/impl.(*MessageInfo).init+0x44			/opt/gopath/src/google.golang.org/protobuf/internal/impl/message.go:72
+#	0x8c0b27	google.golang.org/protobuf/internal/impl.(*messageReflectWrapper).ProtoMethods+0x47	/opt/gopath/src/google.golang.org/protobuf/internal/impl/message_reflect_gen.go:150
+#	0x7f583b	google.golang.org/protobuf/proto.protoMethods+0x5b					/opt/gopath/src/google.golang.org/protobuf/proto/proto_methods.go:19
+#	0x7f5825	google.golang.org/protobuf/proto.mergeOptions.mergeMessage+0x45				/opt/gopath/src/google.golang.org/protobuf/proto/merge.go:67
+#	0x7f5724	google.golang.org/protobuf/proto.Clone+0x84						/opt/gopath/src/google.golang.org/protobuf/proto/merge.go:58
+#	0x8eea04	github.com/golang/protobuf/proto.Clone+0x64						/opt/gopath/src/github.com/golang/protobuf/proto/proto.go:130
+#	0xa5df72	google.golang.org/grpc/internal/status.(*Status).Proto+0x692				/opt/gopath/src/google.golang.org/grpc/internal/status/status.go:92
+#	0xa5df55	google.golang.org/grpc/internal/transport.(*http2Server).WriteStatus+0x675		/opt/gopath/src/google.golang.org/grpc/internal/transport/http2_server.go:1037
+#	0xb287b8	google.golang.org/grpc.(*serverStream).RecvMsg.func1+0x538				/opt/gopath/src/google.golang.org/grpc/stream.go:1588
+#	0xb27c5f	google.golang.org/grpc.(*serverStream).RecvMsg+0x43f					/opt/gopath/src/google.golang.org/grpc/stream.go:1614
+#	0xb3c3a7	github.com/hyperledger-labs/mirbft/protobufs.(*messengerListenServer).Recv+0x67		/opt/gopath/src/github.com/hyperledger-labs/mirbft/protobufs/messenger.pb.go:1170
+#	0xb530c8	github.com/hyperledger-labs/mirbft/messenger.(*messengerServer).Listen+0x128		/opt/gopath/src/github.com/hyperledger-labs/mirbft/messenger/peers.go:87
+#	0xb3c23e	github.com/hyperledger-labs/mirbft/protobufs._Messenger_Listen_Handler+0xbe		/opt/gopath/src/github.com/hyperledger-labs/mirbft/protobufs/messenger.pb.go:1151
+#	0xb12cf7	google.golang.org/grpc.(*Server).processStreamingRPC+0x1ab7				/opt/gopath/src/google.golang.org/grpc/server.go:1558
+#	0xb14ec9	google.golang.org/grpc.(*Server).handleStream+0xf89					/opt/gopath/src/google.golang.org/grpc/server.go:1640
+#	0xb0ab9d	google.golang.org/grpc.(*Server).serveStreams.func1.2+0xfd				/opt/gopath/src/google.golang.org/grpc/server.go:932
+
+717000 1 @ 0x4a98f5 0x7fa785 0x7fa6a6 0x7fb005 0x7fafd9 0x8b0696 0x8b04a5 0x8ae671 0x8ae425 0x8bee94 0x7e6762 0x7e674c 0x7e65ea 0x8ef29e 0x8ef073 0xa716d0 0xb04b47 0xb27ae5 0xb3c628 0xb512fc 0xb50a76 0xb3c4bf 0xb12cf8 0xb14eca 0xb0ab9e 0x49be21
+#	0x4a98f4	sync.(*Mutex).Unlock+0x54									/home/dell/wmj/go/src/sync/mutex.go:190
+#	0x7fa784	google.golang.org/protobuf/internal/filedesc.(*File).lazyInitOnce+0x84				/opt/gopath/src/google.golang.org/protobuf/internal/filedesc/desc.go:100
+#	0x7fa6a5	google.golang.org/protobuf/internal/filedesc.(*File).lazyInit+0x45				/opt/gopath/src/google.golang.org/protobuf/internal/filedesc/desc.go:89
+#	0x7fb004	google.golang.org/protobuf/internal/filedesc.(*Message).lazyInit+0x44				/opt/gopath/src/google.golang.org/protobuf/internal/filedesc/desc.go:250
+#	0x7fafd8	google.golang.org/protobuf/internal/filedesc.(*Message).Fields+0x18				/opt/gopath/src/google.golang.org/protobuf/internal/filedesc/desc.go:232
+#	0x8b0695	google.golang.org/protobuf/internal/impl.(*MessageInfo).makeKnownFieldsFunc+0xd5		/opt/gopath/src/google.golang.org/protobuf/internal/impl/message_reflect.go:57
+#	0x8b04a4	google.golang.org/protobuf/internal/impl.(*MessageInfo).makeReflectFuncs+0x84			/opt/gopath/src/google.golang.org/protobuf/internal/impl/message_reflect.go:42
+#	0x8ae670	google.golang.org/protobuf/internal/impl.(*MessageInfo).initOnce+0x210				/opt/gopath/src/google.golang.org/protobuf/internal/impl/message.go:90
+#	0x8ae424	google.golang.org/protobuf/internal/impl.(*MessageInfo).init+0x44				/opt/gopath/src/google.golang.org/protobuf/internal/impl/message.go:72
+#	0x8bee93	google.golang.org/protobuf/internal/impl.(*messageState).ProtoMethods+0x73			/opt/gopath/src/google.golang.org/protobuf/internal/impl/message_reflect_gen.go:30
+#	0x7e6761	google.golang.org/protobuf/proto.protoMethods+0x101						/opt/gopath/src/google.golang.org/protobuf/proto/proto_methods.go:19
+#	0x7e674b	google.golang.org/protobuf/proto.UnmarshalOptions.unmarshal+0xeb				/opt/gopath/src/google.golang.org/protobuf/proto/decode.go:92
+#	0x7e65e9	google.golang.org/protobuf/proto.UnmarshalOptions.UnmarshalState+0xe9				/opt/gopath/src/google.golang.org/protobuf/proto/decode.go:76
+#	0x8ef29d	github.com/golang/protobuf/proto.UnmarshalMerge+0x1bd						/opt/gopath/src/github.com/golang/protobuf/proto/wire.go:67
+#	0x8ef072	github.com/golang/protobuf/proto.Unmarshal+0x72							/opt/gopath/src/github.com/golang/protobuf/proto/wire.go:58
+#	0xa716cf	google.golang.org/grpc/encoding/proto.codec.Unmarshal+0x6f					/opt/gopath/src/google.golang.org/grpc/encoding/proto/proto.go:53
+#	0xb04b46	google.golang.org/grpc.recv+0x106								/opt/gopath/src/google.golang.org/grpc/rpc_util.go:760
+#	0xb27ae4	google.golang.org/grpc.(*serverStream).RecvMsg+0x2c4						/opt/gopath/src/google.golang.org/grpc/stream.go:1604
+#	0xb3c627	github.com/hyperledger-labs/mirbft/protobufs.(*messengerRequestServer).Recv+0x67		/opt/gopath/src/github.com/hyperledger-labs/mirbft/protobufs/messenger.pb.go:1196
+#	0xb512fb	github.com/hyperledger-labs/mirbft/messenger.(*messengerServer).performClientHandshake+0x3b	/opt/gopath/src/github.com/hyperledger-labs/mirbft/messenger/clients.go:144
+#	0xb50a75	github.com/hyperledger-labs/mirbft/messenger.(*messengerServer).Request+0x155			/opt/gopath/src/github.com/hyperledger-labs/mirbft/messenger/clients.go:69
+#	0xb3c4be	github.com/hyperledger-labs/mirbft/protobufs._Messenger_Request_Handler+0xbe			/opt/gopath/src/github.com/hyperledger-labs/mirbft/protobufs/messenger.pb.go:1177
+#	0xb12cf7	google.golang.org/grpc.(*Server).processStreamingRPC+0x1ab7					/opt/gopath/src/google.golang.org/grpc/server.go:1558
+#	0xb14ec9	google.golang.org/grpc.(*Server).handleStream+0xf89						/opt/gopath/src/google.golang.org/grpc/server.go:1640
+#	0xb0ab9d	google.golang.org/grpc.(*Server).serveStreams.func1.2+0xfd					/opt/gopath/src/google.golang.org/grpc/server.go:932
+
+633390 5 @ 0x4a98f5 0x8ae539 0x8ae425 0x8bee94 0x7ef61d 0x7ef623 0x7ef386 0x8eeda5 0xa71568 0xa71569 0xb037eb 0xb289ec 0xb1f45f 0xb3c075 0xb523ef 0x49be21
+#	0x4a98f4	sync.(*Mutex).Unlock+0x54									/home/dell/wmj/go/src/sync/mutex.go:190
+#	0x8ae538	google.golang.org/protobuf/internal/impl.(*MessageInfo).initOnce+0xd8				/opt/gopath/src/google.golang.org/protobuf/internal/impl/message.go:80
+#	0x8ae424	google.golang.org/protobuf/internal/impl.(*MessageInfo).init+0x44				/opt/gopath/src/google.golang.org/protobuf/internal/impl/message.go:72
+#	0x8bee93	google.golang.org/protobuf/internal/impl.(*messageState).ProtoMethods+0x73			/opt/gopath/src/google.golang.org/protobuf/internal/impl/message_reflect_gen.go:30
+#	0x7ef61c	google.golang.org/protobuf/proto.protoMethods+0x7c						/opt/gopath/src/google.golang.org/protobuf/proto/proto_methods.go:19
+#	0x7ef622	google.golang.org/protobuf/proto.MarshalOptions.marshal+0x82					/opt/gopath/src/google.golang.org/protobuf/proto/encode.go:140
+#	0x7ef385	google.golang.org/protobuf/proto.MarshalOptions.MarshalAppend+0xa5				/opt/gopath/src/google.golang.org/protobuf/proto/encode.go:122
+#	0x8eeda4	github.com/golang/protobuf/proto.marshalAppend+0xe4						/opt/gopath/src/github.com/golang/protobuf/proto/wire.go:40
+#	0xa71567	github.com/golang/protobuf/proto.Marshal+0x67							/opt/gopath/src/github.com/golang/protobuf/proto/wire.go:23
+#	0xa71568	google.golang.org/grpc/encoding/proto.codec.Marshal+0x68					/opt/gopath/src/google.golang.org/grpc/encoding/proto/proto.go:45
+#	0xb037ea	google.golang.org/grpc.encode+0x6a								/opt/gopath/src/google.golang.org/grpc/rpc_util.go:594
+#	0xb289eb	google.golang.org/grpc.prepareMsg+0x1ab								/opt/gopath/src/google.golang.org/grpc/stream.go:1651
+#	0xb1f45e	google.golang.org/grpc.(*clientStream).SendMsg+0x1fe						/opt/gopath/src/google.golang.org/grpc/stream.go:819
+#	0xb3c074	github.com/hyperledger-labs/mirbft/protobufs.(*messengerListenClient).Send+0x54			/opt/gopath/src/github.com/hyperledger-labs/mirbft/protobufs/messenger.pb.go:1052
+#	0xb523ee	github.com/hyperledger-labs/mirbft/messenger.(*BufferedMultiConnection).sendMessages+0x8e	/opt/gopath/src/github.com/hyperledger-labs/mirbft/messenger/peerconnection.go:325
+
+605100 4 @ 0x4a98f5 0xa2f21b 0xa5a68f 0xa5a63c 0xa592bb 0xb0a50a 0xb09a25 0x49be21
+#	0x4a98f4	sync.(*Mutex).Unlock+0x54							/home/dell/wmj/go/src/sync/mutex.go:190
+#	0xa2f21a	google.golang.org/grpc/internal/transport.(*controlBuffer).executeAndPut+0x3fa	/opt/gopath/src/google.golang.org/grpc/internal/transport/controlbuf.go:355
+#	0xa5a68e	google.golang.org/grpc/internal/transport.(*controlBuffer).put+0x2ae		/opt/gopath/src/google.golang.org/grpc/internal/transport/controlbuf.go:325
+#	0xa5a63b	google.golang.org/grpc/internal/transport.(*http2Server).handleData+0x25b	/opt/gopath/src/google.golang.org/grpc/internal/transport/http2_server.go:762
+#	0xa592ba	google.golang.org/grpc/internal/transport.(*http2Server).HandleStreams+0x35a	/opt/gopath/src/google.golang.org/grpc/internal/transport/http2_server.go:653
+#	0xb0a509	google.golang.org/grpc.(*Server).serveStreams+0x289				/opt/gopath/src/google.golang.org/grpc/server.go:916
+#	0xb09a24	google.golang.org/grpc.(*Server).handleRawConn.func1+0x64			/opt/gopath/src/google.golang.org/grpc/server.go:858
+
+318810 4 @ 0x4a98f5 0xa2f21b 0xa5a63b 0xa5a5c4 0xa592bb 0xb0a50a 0xb09a25 0x49be21
+#	0x4a98f4	sync.(*Mutex).Unlock+0x54							/home/dell/wmj/go/src/sync/mutex.go:190
+#	0xa2f21a	google.golang.org/grpc/internal/transport.(*controlBuffer).executeAndPut+0x3fa	/opt/gopath/src/google.golang.org/grpc/internal/transport/controlbuf.go:355
+#	0xa5a63a	google.golang.org/grpc/internal/transport.(*controlBuffer).put+0x25a		/opt/gopath/src/google.golang.org/grpc/internal/transport/controlbuf.go:325
+#	0xa5a5c3	google.golang.org/grpc/internal/transport.(*http2Server).handleData+0x1e3	/opt/gopath/src/google.golang.org/grpc/internal/transport/http2_server.go:757
+#	0xa592ba	google.golang.org/grpc/internal/transport.(*http2Server).HandleStreams+0x35a	/opt/gopath/src/google.golang.org/grpc/internal/transport/http2_server.go:653
+#	0xb0a509	google.golang.org/grpc.(*Server).serveStreams+0x289				/opt/gopath/src/google.golang.org/grpc/server.go:916
+#	0xb09a24	google.golang.org/grpc.(*Server).handleRawConn.func1+0x64			/opt/gopath/src/google.golang.org/grpc/server.go:858
+
+266310 2 @ 0x4a98f5 0x8ae539 0x8ae425 0x8c0b28 0x7f583c 0x7f5826 0x7f5725 0x8eea05 0xa5df73 0xa5df56 0xb287b9 0xb27c60 0xb3c3a8 0xb530c9 0xb3c23f 0xb12cf8 0xb14eca 0xb0ab9e 0x49be21
+#	0x4a98f4	sync.(*Mutex).Unlock+0x54								/home/dell/wmj/go/src/sync/mutex.go:190
+#	0x8ae538	google.golang.org/protobuf/internal/impl.(*MessageInfo).initOnce+0xd8			/opt/gopath/src/google.golang.org/protobuf/internal/impl/message.go:80
+#	0x8ae424	google.golang.org/protobuf/internal/impl.(*MessageInfo).init+0x44			/opt/gopath/src/google.golang.org/protobuf/internal/impl/message.go:72
+#	0x8c0b27	google.golang.org/protobuf/internal/impl.(*messageReflectWrapper).ProtoMethods+0x47	/opt/gopath/src/google.golang.org/protobuf/internal/impl/message_reflect_gen.go:150
+#	0x7f583b	google.golang.org/protobuf/proto.protoMethods+0x5b					/opt/gopath/src/google.golang.org/protobuf/proto/proto_methods.go:19
+#	0x7f5825	google.golang.org/protobuf/proto.mergeOptions.mergeMessage+0x45				/opt/gopath/src/google.golang.org/protobuf/proto/merge.go:67
+#	0x7f5724	google.golang.org/protobuf/proto.Clone+0x84						/opt/gopath/src/google.golang.org/protobuf/proto/merge.go:58
+#	0x8eea04	github.com/golang/protobuf/proto.Clone+0x64						/opt/gopath/src/github.com/golang/protobuf/proto/proto.go:130
+#	0xa5df72	google.golang.org/grpc/internal/status.(*Status).Proto+0x692				/opt/gopath/src/google.golang.org/grpc/internal/status/status.go:92
+#	0xa5df55	google.golang.org/grpc/internal/transport.(*http2Server).WriteStatus+0x675		/opt/gopath/src/google.golang.org/grpc/internal/transport/http2_server.go:1037
+#	0xb287b8	google.golang.org/grpc.(*serverStream).RecvMsg.func1+0x538				/opt/gopath/src/google.golang.org/grpc/stream.go:1588
+#	0xb27c5f	google.golang.org/grpc.(*serverStream).RecvMsg+0x43f					/opt/gopath/src/google.golang.org/grpc/stream.go:1614
+#	0xb3c3a7	github.com/hyperledger-labs/mirbft/protobufs.(*messengerListenServer).Recv+0x67		/opt/gopath/src/github.com/hyperledger-labs/mirbft/protobufs/messenger.pb.go:1170
+#	0xb530c8	github.com/hyperledger-labs/mirbft/messenger.(*messengerServer).Listen+0x128		/opt/gopath/src/github.com/hyperledger-labs/mirbft/messenger/peers.go:87
+#	0xb3c23e	github.com/hyperledger-labs/mirbft/protobufs._Messenger_Listen_Handler+0xbe		/opt/gopath/src/github.com/hyperledger-labs/mirbft/protobufs/messenger.pb.go:1151
+#	0xb12cf7	google.golang.org/grpc.(*Server).processStreamingRPC+0x1ab7				/opt/gopath/src/google.golang.org/grpc/server.go:1558
+#	0xb14ec9	google.golang.org/grpc.(*Server).handleStream+0xf89					/opt/gopath/src/google.golang.org/grpc/server.go:1640
+#	0xb0ab9d	google.golang.org/grpc.(*Server).serveStreams.func1.2+0xfd				/opt/gopath/src/google.golang.org/grpc/server.go:932
+
+178170 1 @ 0x4a98f5 0xb4e59c 0xb9ff25 0xb9ff1e 0xb9f3f1 0xbac2b0 0xbab9fc 0x49be21
+#	0x4a98f4	sync.(*Mutex).Unlock+0x54									/home/dell/wmj/go/src/sync/mutex.go:190
+#	0xb4e59b	github.com/hyperledger-labs/mirbft/log.CommitEntry+0x27b					/opt/gopath/src/github.com/hyperledger-labs/mirbft/log/log.go:99
+#	0xb9ff24	github.com/hyperledger-labs/mirbft/announcer.Announce+0x364					/opt/gopath/src/github.com/hyperledger-labs/mirbft/announcer/announcer.go:26
+#	0xb9ff1d	github.com/hyperledger-labs/mirbft/orderer.(*pbftInstance).announce+0x35d			/opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftinstance.go:718
+#	0xb9f3f0	github.com/hyperledger-labs/mirbft/orderer.(*pbftInstance).handleCommit+0x7d0			/opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftinstance.go:656
+#	0xbac2af	github.com/hyperledger-labs/mirbft/orderer.(*pbftInstance).handleMessage+0x84f			/opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftinstance.go:1802
+#	0xbab9fb	github.com/hyperledger-labs/mirbft/orderer.(*pbftInstance).processSerializedMessages+0xdb	/opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftinstance.go:1756
+
+175290 1 @ 0x4a98f5 0x8ae6c6 0x8ae425 0x89c11a 0x848687 0x89c593 0x89c20b 0x848687 0x845be7 0x89c593 0x89c20b 0x89c076 0x7ef794 0x7ef386 0x8eeda5 0xa71568 0xa71569 0xb037eb 0xb289ec 0xb1f45f 0xb3c075 0xb523ef 0x49be21
+#	0x4a98f4	sync.(*Mutex).Unlock+0x54									/home/dell/wmj/go/src/sync/mutex.go:190
+#	0x8ae6c5	google.golang.org/protobuf/internal/impl.(*MessageInfo).initOnce+0x265				/opt/gopath/src/google.golang.org/protobuf/internal/impl/message.go:94
+#	0x8ae424	google.golang.org/protobuf/internal/impl.(*MessageInfo).init+0x44				/opt/gopath/src/google.golang.org/protobuf/internal/impl/message.go:72
+#	0x89c119	google.golang.org/protobuf/internal/impl.(*MessageInfo).sizePointer+0x39			/opt/gopath/src/google.golang.org/protobuf/internal/impl/encode.go:47
+#	0x848686	google.golang.org/protobuf/internal/impl.sizeMessageInfo+0x86					/opt/gopath/src/google.golang.org/protobuf/internal/impl/codec_field.go:232
+#	0x89c592	google.golang.org/protobuf/internal/impl.(*MessageInfo).sizePointerSlow+0x312			/opt/gopath/src/google.golang.org/protobuf/internal/impl/encode.go:79
+#	0x89c20a	google.golang.org/protobuf/internal/impl.(*MessageInfo).sizePointer+0x12a			/opt/gopath/src/google.golang.org/protobuf/internal/impl/encode.go:56
+#	0x848686	google.golang.org/protobuf/internal/impl.sizeMessageInfo+0x86					/opt/gopath/src/google.golang.org/protobuf/internal/impl/codec_field.go:232
+#	0x845be6	google.golang.org/protobuf/internal/impl.(*MessageInfo).initOneofFieldCoders.func3+0xa6		/opt/gopath/src/google.golang.org/protobuf/internal/impl/codec_field.go:89
+#	0x89c592	google.golang.org/protobuf/internal/impl.(*MessageInfo).sizePointerSlow+0x312			/opt/gopath/src/google.golang.org/protobuf/internal/impl/encode.go:79
+#	0x89c20a	google.golang.org/protobuf/internal/impl.(*MessageInfo).sizePointer+0x12a			/opt/gopath/src/google.golang.org/protobuf/internal/impl/encode.go:56
+#	0x89c075	google.golang.org/protobuf/internal/impl.(*MessageInfo).size+0x95				/opt/gopath/src/google.golang.org/protobuf/internal/impl/encode.go:40
+#	0x7ef793	google.golang.org/protobuf/proto.MarshalOptions.marshal+0x1f3					/opt/gopath/src/google.golang.org/protobuf/proto/encode.go:153
+#	0x7ef385	google.golang.org/protobuf/proto.MarshalOptions.MarshalAppend+0xa5				/opt/gopath/src/google.golang.org/protobuf/proto/encode.go:122
+#	0x8eeda4	github.com/golang/protobuf/proto.marshalAppend+0xe4						/opt/gopath/src/github.com/golang/protobuf/proto/wire.go:40
+#	0xa71567	github.com/golang/protobuf/proto.Marshal+0x67							/opt/gopath/src/github.com/golang/protobuf/proto/wire.go:23
+#	0xa71568	google.golang.org/grpc/encoding/proto.codec.Marshal+0x68					/opt/gopath/src/google.golang.org/grpc/encoding/proto/proto.go:45
+#	0xb037ea	google.golang.org/grpc.encode+0x6a								/opt/gopath/src/google.golang.org/grpc/rpc_util.go:594
+#	0xb289eb	google.golang.org/grpc.prepareMsg+0x1ab								/opt/gopath/src/google.golang.org/grpc/stream.go:1651
+#	0xb1f45e	google.golang.org/grpc.(*clientStream).SendMsg+0x1fe						/opt/gopath/src/google.golang.org/grpc/stream.go:819
+#	0xb3c074	github.com/hyperledger-labs/mirbft/protobufs.(*messengerListenClient).Send+0x54			/opt/gopath/src/github.com/hyperledger-labs/mirbft/protobufs/messenger.pb.go:1052
+#	0xb523ee	github.com/hyperledger-labs/mirbft/messenger.(*BufferedMultiConnection).sendMessages+0x8e	/opt/gopath/src/github.com/hyperledger-labs/mirbft/messenger/peerconnection.go:325
+
+171810 1 @ 0x4a98f5 0x8ae6c6 0x8ae425 0x89c11a 0x848687 0x845be7 0x89c593 0x89c20b 0x89c076 0x7ef794 0x7ef386 0x8eeda5 0xa71568 0xa71569 0xb037eb 0xb289ec 0xb1f45f 0xb3c075 0xb523ef 0x49be21
+#	0x4a98f4	sync.(*Mutex).Unlock+0x54									/home/dell/wmj/go/src/sync/mutex.go:190
+#	0x8ae6c5	google.golang.org/protobuf/internal/impl.(*MessageInfo).initOnce+0x265				/opt/gopath/src/google.golang.org/protobuf/internal/impl/message.go:94
+#	0x8ae424	google.golang.org/protobuf/internal/impl.(*MessageInfo).init+0x44				/opt/gopath/src/google.golang.org/protobuf/internal/impl/message.go:72
+#	0x89c119	google.golang.org/protobuf/internal/impl.(*MessageInfo).sizePointer+0x39			/opt/gopath/src/google.golang.org/protobuf/internal/impl/encode.go:47
+#	0x848686	google.golang.org/protobuf/internal/impl.sizeMessageInfo+0x86					/opt/gopath/src/google.golang.org/protobuf/internal/impl/codec_field.go:232
+#	0x845be6	google.golang.org/protobuf/internal/impl.(*MessageInfo).initOneofFieldCoders.func3+0xa6		/opt/gopath/src/google.golang.org/protobuf/internal/impl/codec_field.go:89
+#	0x89c592	google.golang.org/protobuf/internal/impl.(*MessageInfo).sizePointerSlow+0x312			/opt/gopath/src/google.golang.org/protobuf/internal/impl/encode.go:79
+#	0x89c20a	google.golang.org/protobuf/internal/impl.(*MessageInfo).sizePointer+0x12a			/opt/gopath/src/google.golang.org/protobuf/internal/impl/encode.go:56
+#	0x89c075	google.golang.org/protobuf/internal/impl.(*MessageInfo).size+0x95				/opt/gopath/src/google.golang.org/protobuf/internal/impl/encode.go:40
+#	0x7ef793	google.golang.org/protobuf/proto.MarshalOptions.marshal+0x1f3					/opt/gopath/src/google.golang.org/protobuf/proto/encode.go:153
+#	0x7ef385	google.golang.org/protobuf/proto.MarshalOptions.MarshalAppend+0xa5				/opt/gopath/src/google.golang.org/protobuf/proto/encode.go:122
+#	0x8eeda4	github.com/golang/protobuf/proto.marshalAppend+0xe4						/opt/gopath/src/github.com/golang/protobuf/proto/wire.go:40
+#	0xa71567	github.com/golang/protobuf/proto.Marshal+0x67							/opt/gopath/src/github.com/golang/protobuf/proto/wire.go:23
+#	0xa71568	google.golang.org/grpc/encoding/proto.codec.Marshal+0x68					/opt/gopath/src/google.golang.org/grpc/encoding/proto/proto.go:45
+#	0xb037ea	google.golang.org/grpc.encode+0x6a								/opt/gopath/src/google.golang.org/grpc/rpc_util.go:594
+#	0xb289eb	google.golang.org/grpc.prepareMsg+0x1ab								/opt/gopath/src/google.golang.org/grpc/stream.go:1651
+#	0xb1f45e	google.golang.org/grpc.(*clientStream).SendMsg+0x1fe						/opt/gopath/src/google.golang.org/grpc/stream.go:819
+#	0xb3c074	github.com/hyperledger-labs/mirbft/protobufs.(*messengerListenClient).Send+0x54			/opt/gopath/src/github.com/hyperledger-labs/mirbft/protobufs/messenger.pb.go:1052
+#	0xb523ee	github.com/hyperledger-labs/mirbft/messenger.(*BufferedMultiConnection).sendMessages+0x8e	/opt/gopath/src/github.com/hyperledger-labs/mirbft/messenger/peerconnection.go:325
+
+124830 1 @ 0x4a98f5 0x842e2a 0x887254 0x8ae6b0 0x8ae425 0x8bee94 0x7e6762 0x7e674c 0x7e65ea 0x8ef29e 0x8ef073 0xa716d0 0xb04b47 0xb27ae5 0xb3c8a8 0xb50ccb 0xb3c73f 0xb12cf8 0xb14eca 0xb0ab9e 0x49be21
+#	0x4a98f4	sync.(*Mutex).Unlock+0x54								/home/dell/wmj/go/src/sync/mutex.go:190
+#	0x842e29	google.golang.org/protobuf/internal/impl.needsInitCheck+0x149				/opt/gopath/src/google.golang.org/protobuf/internal/impl/checkinit.go:101
+#	0x887253	google.golang.org/protobuf/internal/impl.(*MessageInfo).makeCoderMethods+0x1853		/opt/gopath/src/google.golang.org/protobuf/internal/impl/codec_message.go:176
+#	0x8ae6af	google.golang.org/protobuf/internal/impl.(*MessageInfo).initOnce+0x24f			/opt/gopath/src/google.golang.org/protobuf/internal/impl/message.go:91
+#	0x8ae424	google.golang.org/protobuf/internal/impl.(*MessageInfo).init+0x44			/opt/gopath/src/google.golang.org/protobuf/internal/impl/message.go:72
+#	0x8bee93	google.golang.org/protobuf/internal/impl.(*messageState).ProtoMethods+0x73		/opt/gopath/src/google.golang.org/protobuf/internal/impl/message_reflect_gen.go:30
+#	0x7e6761	google.golang.org/protobuf/proto.protoMethods+0x101					/opt/gopath/src/google.golang.org/protobuf/proto/proto_methods.go:19
+#	0x7e674b	google.golang.org/protobuf/proto.UnmarshalOptions.unmarshal+0xeb			/opt/gopath/src/google.golang.org/protobuf/proto/decode.go:92
+#	0x7e65e9	google.golang.org/protobuf/proto.UnmarshalOptions.UnmarshalState+0xe9			/opt/gopath/src/google.golang.org/protobuf/proto/decode.go:76
+#	0x8ef29d	github.com/golang/protobuf/proto.UnmarshalMerge+0x1bd					/opt/gopath/src/github.com/golang/protobuf/proto/wire.go:67
+#	0x8ef072	github.com/golang/protobuf/proto.Unmarshal+0x72						/opt/gopath/src/github.com/golang/protobuf/proto/wire.go:58
+#	0xa716cf	google.golang.org/grpc/encoding/proto.codec.Unmarshal+0x6f				/opt/gopath/src/google.golang.org/grpc/encoding/proto/proto.go:53
+#	0xb04b46	google.golang.org/grpc.recv+0x106							/opt/gopath/src/google.golang.org/grpc/rpc_util.go:760
+#	0xb27ae4	google.golang.org/grpc.(*serverStream).RecvMsg+0x2c4					/opt/gopath/src/google.golang.org/grpc/stream.go:1604
+#	0xb3c8a7	github.com/hyperledger-labs/mirbft/protobufs.(*messengerBucketsServer).Recv+0x67	/opt/gopath/src/github.com/hyperledger-labs/mirbft/protobufs/messenger.pb.go:1222
+#	0xb50cca	github.com/hyperledger-labs/mirbft/messenger.(*messengerServer).Buckets+0x4a		/opt/gopath/src/github.com/hyperledger-labs/mirbft/messenger/clients.go:91
+#	0xb3c73e	github.com/hyperledger-labs/mirbft/protobufs._Messenger_Buckets_Handler+0xbe		/opt/gopath/src/github.com/hyperledger-labs/mirbft/protobufs/messenger.pb.go:1203
+#	0xb12cf7	google.golang.org/grpc.(*Server).processStreamingRPC+0x1ab7				/opt/gopath/src/google.golang.org/grpc/server.go:1558
+#	0xb14ec9	google.golang.org/grpc.(*Server).handleStream+0xf89					/opt/gopath/src/google.golang.org/grpc/server.go:1640
+#	0xb0ab9d	google.golang.org/grpc.(*Server).serveStreams.func1.2+0xfd				/opt/gopath/src/google.golang.org/grpc/server.go:932
+
+120150 2 @ 0x4a98f5 0x8d6cb8 0x8dafde 0x8db138 0x8d419a 0x8d81f5 0x982143 0x987c34 0xaf24db 0xaecec5 0x9ac442 0xb00b22 0x9abf16 0x9abb45 0xaeb699 0xaeb604 0x49be21
+#	0x4a98f4	sync.(*Mutex).Unlock+0x54										/home/dell/wmj/go/src/sync/mutex.go:190
+#	0x8d6cb7	log.(*Logger).Output+0x477										/home/dell/wmj/go/src/log/log.go:185
+#	0x8dafdd	google.golang.org/grpc/grpclog.(*loggerT).output+0x35d							/opt/gopath/src/google.golang.org/grpc/grpclog/loggerv2.go:174
+#	0x8db137	google.golang.org/grpc/grpclog.(*loggerT).Infoln+0x57							/opt/gopath/src/google.golang.org/grpc/grpclog/loggerv2.go:191
+#	0x8d4199	google.golang.org/grpc/internal/grpclog.InfoDepth+0xb9							/opt/gopath/src/google.golang.org/grpc/internal/grpclog/grpclog.go:37
+#	0x8d81f4	google.golang.org/grpc/grpclog.(*componentData).InfoDepth+0x174						/opt/gopath/src/google.golang.org/grpc/grpclog/component.go:36
+#	0x982142	google.golang.org/grpc/internal/channelz.AddTraceEvent+0x402						/opt/gopath/src/google.golang.org/grpc/internal/channelz/funcs.go:340
+#	0x987c33	google.golang.org/grpc/internal/channelz.Infof+0xd3							/opt/gopath/src/google.golang.org/grpc/internal/channelz/logging.go:43
+#	0xaf24da	google.golang.org/grpc.(*connectivityStateManager).updateState+0x1ba					/opt/gopath/src/google.golang.org/grpc/clientconn.go:418
+#	0xaecec4	google.golang.org/grpc.(*ccBalancerWrapper).UpdateState+0xc4						/opt/gopath/src/google.golang.org/grpc/balancer_conn_wrappers.go:348
+#	0x9ac441	google.golang.org/grpc/internal/balancer/gracefulswitch.(*balancerWrapper).UpdateState+0x2e1		/opt/gopath/src/google.golang.org/grpc/internal/balancer/gracefulswitch/gracefulswitch.go:317
+#	0xb00b21	google.golang.org/grpc.(*pickfirstBalancer).UpdateSubConnState+0x641					/opt/gopath/src/google.golang.org/grpc/pickfirst.go:130
+#	0x9abf15	google.golang.org/grpc/internal/balancer/gracefulswitch.(*balancerWrapper).UpdateSubConnState+0x135	/opt/gopath/src/google.golang.org/grpc/internal/balancer/gracefulswitch/gracefulswitch.go:266
+#	0x9abb44	google.golang.org/grpc/internal/balancer/gracefulswitch.(*Balancer).UpdateSubConnState+0x304		/opt/gopath/src/google.golang.org/grpc/internal/balancer/gracefulswitch/gracefulswitch.go:223
+#	0xaeb698	google.golang.org/grpc.(*ccBalancerWrapper).handleSubConnStateChange+0x438				/opt/gopath/src/google.golang.org/grpc/balancer_conn_wrappers.go:215
+#	0xaeb603	google.golang.org/grpc.(*ccBalancerWrapper).watcher+0x3a3						/opt/gopath/src/google.golang.org/grpc/balancer_conn_wrappers.go:122
+
+93480 4 @ 0x4a98f5 0xa2f66b 0xa30369 0xa5452d 0x49be21
+#	0x4a98f4	sync.(*Mutex).Unlock+0x54							/home/dell/wmj/go/src/sync/mutex.go:190
+#	0xa2f66a	google.golang.org/grpc/internal/transport.(*controlBuffer).get+0x22a		/opt/gopath/src/google.golang.org/grpc/internal/transport/controlbuf.go:403
+#	0xa30368	google.golang.org/grpc/internal/transport.(*loopyWriter).run+0x248		/opt/gopath/src/google.golang.org/grpc/internal/transport/controlbuf.go:548
+#	0xa5452c	google.golang.org/grpc/internal/transport.NewServerTransport.func2+0x1cc	/opt/gopath/src/google.golang.org/grpc/internal/transport/http2_server.go:331
+
+59520 1 @ 0x4a98f5 0xa2f66b 0xa30369 0xa409c6 0x49be21
+#	0x4a98f4	sync.(*Mutex).Unlock+0x54						/home/dell/wmj/go/src/sync/mutex.go:190
+#	0xa2f66a	google.golang.org/grpc/internal/transport.(*controlBuffer).get+0x22a	/opt/gopath/src/google.golang.org/grpc/internal/transport/controlbuf.go:403
+#	0xa30368	google.golang.org/grpc/internal/transport.(*loopyWriter).run+0x248	/opt/gopath/src/google.golang.org/grpc/internal/transport/controlbuf.go:548
+#	0xa409c5	google.golang.org/grpc/internal/transport.newHTTP2Client.func3+0x105	/opt/gopath/src/google.golang.org/grpc/internal/transport/http2_client.go:417
+
+58350 1 @ 0x4a98f5 0x4a7def 0x842d68 0x887254 0x8ae6b0 0x8ae425 0x8bee94 0x7e6762 0x7e674c 0x7e65ea 0x8ef29e 0x8ef073 0xa716d0 0xb04b47 0xb27ae5 0xb3c628 0xb512fc 0xb50a76 0xb3c4bf 0xb12cf8 0xb14eca 0xb0ab9e 0x49be21
+#	0x4a98f4	sync.(*Mutex).Unlock+0x54									/home/dell/wmj/go/src/sync/mutex.go:190
+#	0x4a7dee	sync.(*Map).Load+0x18e										/home/dell/wmj/go/src/sync/map.go:120
+#	0x842d67	google.golang.org/protobuf/internal/impl.needsInitCheck+0x87					/opt/gopath/src/google.golang.org/protobuf/internal/impl/checkinit.go:94
+#	0x887253	google.golang.org/protobuf/internal/impl.(*MessageInfo).makeCoderMethods+0x1853			/opt/gopath/src/google.golang.org/protobuf/internal/impl/codec_message.go:176
+#	0x8ae6af	google.golang.org/protobuf/internal/impl.(*MessageInfo).initOnce+0x24f				/opt/gopath/src/google.golang.org/protobuf/internal/impl/message.go:91
+#	0x8ae424	google.golang.org/protobuf/internal/impl.(*MessageInfo).init+0x44				/opt/gopath/src/google.golang.org/protobuf/internal/impl/message.go:72
+#	0x8bee93	google.golang.org/protobuf/internal/impl.(*messageState).ProtoMethods+0x73			/opt/gopath/src/google.golang.org/protobuf/internal/impl/message_reflect_gen.go:30
+#	0x7e6761	google.golang.org/protobuf/proto.protoMethods+0x101						/opt/gopath/src/google.golang.org/protobuf/proto/proto_methods.go:19
+#	0x7e674b	google.golang.org/protobuf/proto.UnmarshalOptions.unmarshal+0xeb				/opt/gopath/src/google.golang.org/protobuf/proto/decode.go:92
+#	0x7e65e9	google.golang.org/protobuf/proto.UnmarshalOptions.UnmarshalState+0xe9				/opt/gopath/src/google.golang.org/protobuf/proto/decode.go:76
+#	0x8ef29d	github.com/golang/protobuf/proto.UnmarshalMerge+0x1bd						/opt/gopath/src/github.com/golang/protobuf/proto/wire.go:67
+#	0x8ef072	github.com/golang/protobuf/proto.Unmarshal+0x72							/opt/gopath/src/github.com/golang/protobuf/proto/wire.go:58
+#	0xa716cf	google.golang.org/grpc/encoding/proto.codec.Unmarshal+0x6f					/opt/gopath/src/google.golang.org/grpc/encoding/proto/proto.go:53
+#	0xb04b46	google.golang.org/grpc.recv+0x106								/opt/gopath/src/google.golang.org/grpc/rpc_util.go:760
+#	0xb27ae4	google.golang.org/grpc.(*serverStream).RecvMsg+0x2c4						/opt/gopath/src/google.golang.org/grpc/stream.go:1604
+#	0xb3c627	github.com/hyperledger-labs/mirbft/protobufs.(*messengerRequestServer).Recv+0x67		/opt/gopath/src/github.com/hyperledger-labs/mirbft/protobufs/messenger.pb.go:1196
+#	0xb512fb	github.com/hyperledger-labs/mirbft/messenger.(*messengerServer).performClientHandshake+0x3b	/opt/gopath/src/github.com/hyperledger-labs/mirbft/messenger/clients.go:144
+#	0xb50a75	github.com/hyperledger-labs/mirbft/messenger.(*messengerServer).Request+0x155			/opt/gopath/src/github.com/hyperledger-labs/mirbft/messenger/clients.go:69
+#	0xb3c4be	github.com/hyperledger-labs/mirbft/protobufs._Messenger_Request_Handler+0xbe			/opt/gopath/src/github.com/hyperledger-labs/mirbft/protobufs/messenger.pb.go:1177
+#	0xb12cf7	google.golang.org/grpc.(*Server).processStreamingRPC+0x1ab7					/opt/gopath/src/google.golang.org/grpc/server.go:1558
+#	0xb14ec9	google.golang.org/grpc.(*Server).handleStream+0xf89						/opt/gopath/src/google.golang.org/grpc/server.go:1640
+#	0xb0ab9d	google.golang.org/grpc.(*Server).serveStreams.func1.2+0xfd					/opt/gopath/src/google.golang.org/grpc/server.go:932
+
+40680 1 @ 0x4a98f5 0xa2f21b 0xa5a08e 0xa5a00d 0xa58e29 0xa67b58 0x4db51e 0xa679e5 0xa679a9 0xb034bf 0xb04068 0xb04afa 0xb27ae5 0xb3c628 0xb50ad4 0xb3c4bf 0xb12cf8 0xb14eca 0xb0ab9e 0x49be21
+#	0x4a98f4	sync.(*Mutex).Unlock+0x54								/home/dell/wmj/go/src/sync/mutex.go:190
+#	0xa2f21a	google.golang.org/grpc/internal/transport.(*controlBuffer).executeAndPut+0x3fa		/opt/gopath/src/google.golang.org/grpc/internal/transport/controlbuf.go:355
+#	0xa5a08d	google.golang.org/grpc/internal/transport.(*controlBuffer).put+0xed			/opt/gopath/src/google.golang.org/grpc/internal/transport/controlbuf.go:325
+#	0xa5a00c	google.golang.org/grpc/internal/transport.(*http2Server).updateWindow+0x6c		/opt/gopath/src/google.golang.org/grpc/internal/transport/http2_server.go:702
+#	0xa58e28	google.golang.org/grpc/internal/transport.(*http2Server).operateHeaders.func5+0x48	/opt/gopath/src/google.golang.org/grpc/internal/transport/http2_server.go:595
+#	0xa67b57	google.golang.org/grpc/internal/transport.(*transportReader).Read+0xf7			/opt/gopath/src/google.golang.org/grpc/internal/transport/transport.go:490
+#	0x4db51d	io.ReadAtLeast+0xdd									/home/dell/wmj/go/src/io/io.go:328
+#	0xa679e4	io.ReadFull+0x124									/home/dell/wmj/go/src/io/io.go:347
+#	0xa679a8	google.golang.org/grpc/internal/transport.(*Stream).Read+0xe8				/opt/gopath/src/google.golang.org/grpc/internal/transport/transport.go:469
+#	0xb034be	google.golang.org/grpc.(*parser).recvMsg+0x19e						/opt/gopath/src/google.golang.org/grpc/rpc_util.go:578
+#	0xb04067	google.golang.org/grpc.recvAndDecompress+0x87						/opt/gopath/src/google.golang.org/grpc/rpc_util.go:690
+#	0xb04af9	google.golang.org/grpc.recv+0xb9							/opt/gopath/src/google.golang.org/grpc/rpc_util.go:756
+#	0xb27ae4	google.golang.org/grpc.(*serverStream).RecvMsg+0x2c4					/opt/gopath/src/google.golang.org/grpc/stream.go:1604
+#	0xb3c627	github.com/hyperledger-labs/mirbft/protobufs.(*messengerRequestServer).Recv+0x67	/opt/gopath/src/github.com/hyperledger-labs/mirbft/protobufs/messenger.pb.go:1196
+#	0xb50ad3	github.com/hyperledger-labs/mirbft/messenger.(*messengerServer).Request+0x1b3		/opt/gopath/src/github.com/hyperledger-labs/mirbft/messenger/clients.go:72
+#	0xb3c4be	github.com/hyperledger-labs/mirbft/protobufs._Messenger_Request_Handler+0xbe		/opt/gopath/src/github.com/hyperledger-labs/mirbft/protobufs/messenger.pb.go:1177
+#	0xb12cf7	google.golang.org/grpc.(*Server).processStreamingRPC+0x1ab7				/opt/gopath/src/google.golang.org/grpc/server.go:1558
+#	0xb14ec9	google.golang.org/grpc.(*Server).handleStream+0xf89					/opt/gopath/src/google.golang.org/grpc/server.go:1640
+#	0xb0ab9d	google.golang.org/grpc.(*Server).serveStreams.func1.2+0xfd				/opt/gopath/src/google.golang.org/grpc/server.go:932
+
+36090 1 @ 0x4a98f5 0xa369e5 0xa5a71f 0xa592bb 0xb0a50a 0xb09a25 0x49be21
+#	0x4a98f4	sync.(*Mutex).Unlock+0x54							/home/dell/wmj/go/src/sync/mutex.go:190
+#	0xa369e4	google.golang.org/grpc/internal/transport.(*inFlow).onData+0x204		/opt/gopath/src/google.golang.org/grpc/internal/transport/flowcontrol.go:186
+#	0xa5a71e	google.golang.org/grpc/internal/transport.(*http2Server).handleData+0x33e	/opt/gopath/src/google.golang.org/grpc/internal/transport/http2_server.go:774
+#	0xa592ba	google.golang.org/grpc/internal/transport.(*http2Server).HandleStreams+0x35a	/opt/gopath/src/google.golang.org/grpc/internal/transport/http2_server.go:653
+#	0xb0a509	google.golang.org/grpc.(*Server).serveStreams+0x289				/opt/gopath/src/google.golang.org/grpc/server.go:916
+#	0xb09a24	google.golang.org/grpc.(*Server).handleRawConn.func1+0x64			/opt/gopath/src/google.golang.org/grpc/server.go:858
+
+36030 1 @ 0x4a98f5 0xa65d12 0xa66869 0xa6641e 0xa6610e 0xa67ac6 0x4db51e 0xa679e5 0xa679a9 0xb034bf 0xb04068 0xb04afa 0xb27ae5 0xb3c3a8 0xb530c9 0xb3c23f 0xb12cf8 0xb14eca 0xb0ab9e 0x49be21
+#	0x4a98f4	sync.(*Mutex).Unlock+0x54								/home/dell/wmj/go/src/sync/mutex.go:190
+#	0xa65d11	google.golang.org/grpc/internal/transport.(*recvBuffer).load+0x1d1			/opt/gopath/src/google.golang.org/grpc/internal/transport/transport.go:131
+#	0xa66868	google.golang.org/grpc/internal/transport.(*recvBufferReader).readAdditional+0x88	/opt/gopath/src/google.golang.org/grpc/internal/transport/transport.go:215
+#	0xa6641d	google.golang.org/grpc/internal/transport.(*recvBufferReader).read+0x1dd		/opt/gopath/src/google.golang.org/grpc/internal/transport/transport.go:183
+#	0xa6610d	google.golang.org/grpc/internal/transport.(*recvBufferReader).Read+0x3ad		/opt/gopath/src/google.golang.org/grpc/internal/transport/transport.go:173
+#	0xa67ac5	google.golang.org/grpc/internal/transport.(*transportReader).Read+0x65			/opt/gopath/src/google.golang.org/grpc/internal/transport/transport.go:485
+#	0x4db51d	io.ReadAtLeast+0xdd									/home/dell/wmj/go/src/io/io.go:328
+#	0xa679e4	io.ReadFull+0x124									/home/dell/wmj/go/src/io/io.go:347
+#	0xa679a8	google.golang.org/grpc/internal/transport.(*Stream).Read+0xe8				/opt/gopath/src/google.golang.org/grpc/internal/transport/transport.go:469
+#	0xb034be	google.golang.org/grpc.(*parser).recvMsg+0x19e						/opt/gopath/src/google.golang.org/grpc/rpc_util.go:578
+#	0xb04067	google.golang.org/grpc.recvAndDecompress+0x87						/opt/gopath/src/google.golang.org/grpc/rpc_util.go:690
+#	0xb04af9	google.golang.org/grpc.recv+0xb9							/opt/gopath/src/google.golang.org/grpc/rpc_util.go:756
+#	0xb27ae4	google.golang.org/grpc.(*serverStream).RecvMsg+0x2c4					/opt/gopath/src/google.golang.org/grpc/stream.go:1604
+#	0xb3c3a7	github.com/hyperledger-labs/mirbft/protobufs.(*messengerListenServer).Recv+0x67		/opt/gopath/src/github.com/hyperledger-labs/mirbft/protobufs/messenger.pb.go:1170
+#	0xb530c8	github.com/hyperledger-labs/mirbft/messenger.(*messengerServer).Listen+0x128		/opt/gopath/src/github.com/hyperledger-labs/mirbft/messenger/peers.go:87
+#	0xb3c23e	github.com/hyperledger-labs/mirbft/protobufs._Messenger_Listen_Handler+0xbe		/opt/gopath/src/github.com/hyperledger-labs/mirbft/protobufs/messenger.pb.go:1151
+#	0xb12cf7	google.golang.org/grpc.(*Server).processStreamingRPC+0x1ab7				/opt/gopath/src/google.golang.org/grpc/server.go:1558
+#	0xb14ec9	google.golang.org/grpc.(*Server).handleStream+0xf89					/opt/gopath/src/google.golang.org/grpc/server.go:1640
+#	0xb0ab9d	google.golang.org/grpc.(*Server).serveStreams.func1.2+0xfd				/opt/gopath/src/google.golang.org/grpc/server.go:932
+
+5820 1 @ 0x4a98f5 0xa2f546 0xa30245 0xa5452d 0x49be21
+#	0x4a98f4	sync.(*Mutex).Unlock+0x54							/home/dell/wmj/go/src/sync/mutex.go:190
+#	0xa2f545	google.golang.org/grpc/internal/transport.(*controlBuffer).get+0x105		/opt/gopath/src/google.golang.org/grpc/internal/transport/controlbuf.go:407
+#	0xa30244	google.golang.org/grpc/internal/transport.(*loopyWriter).run+0x124		/opt/gopath/src/google.golang.org/grpc/internal/transport/controlbuf.go:535
+#	0xa5452c	google.golang.org/grpc/internal/transport.NewServerTransport.func2+0x1cc	/opt/gopath/src/google.golang.org/grpc/internal/transport/http2_server.go:331
+
+4860 1 @ 0x4a98f5 0x8d6cb8 0x8dafde 0x8db138 0x8d419a 0x8d81f5 0x982143 0x987c34 0xaf7d65 0xafa477 0xa482be 0xa4ff7b 0x49be21
+#	0x4a98f4	sync.(*Mutex).Unlock+0x54						/home/dell/wmj/go/src/sync/mutex.go:190
+#	0x8d6cb7	log.(*Logger).Output+0x477						/home/dell/wmj/go/src/log/log.go:185
+#	0x8dafdd	google.golang.org/grpc/grpclog.(*loggerT).output+0x35d			/opt/gopath/src/google.golang.org/grpc/grpclog/loggerv2.go:174
+#	0x8db137	google.golang.org/grpc/grpclog.(*loggerT).Infoln+0x57			/opt/gopath/src/google.golang.org/grpc/grpclog/loggerv2.go:191
+#	0x8d4199	google.golang.org/grpc/internal/grpclog.InfoDepth+0xb9			/opt/gopath/src/google.golang.org/grpc/internal/grpclog/grpclog.go:37
+#	0x8d81f4	google.golang.org/grpc/grpclog.(*componentData).InfoDepth+0x174		/opt/gopath/src/google.golang.org/grpc/grpclog/component.go:36
+#	0x982142	google.golang.org/grpc/internal/channelz.AddTraceEvent+0x402		/opt/gopath/src/google.golang.org/grpc/internal/channelz/funcs.go:340
+#	0x987c33	google.golang.org/grpc/internal/channelz.Infof+0xd3			/opt/gopath/src/google.golang.org/grpc/internal/channelz/logging.go:43
+#	0xaf7d64	google.golang.org/grpc.(*addrConn).updateConnectivityState+0x144	/opt/gopath/src/google.golang.org/grpc/clientconn.go:1101
+#	0xafa476	google.golang.org/grpc.(*addrConn).createTransport.func1+0x256		/opt/gopath/src/google.golang.org/grpc/clientconn.go:1260
+#	0xa482bd	google.golang.org/grpc/internal/transport.(*http2Client).Close+0xbd	/opt/gopath/src/google.golang.org/grpc/internal/transport/http2_client.go:894
+#	0xa4ff7a	google.golang.org/grpc/internal/transport.(*http2Client).reader+0xf3a	/opt/gopath/src/google.golang.org/grpc/internal/transport/http2_client.go:1530
+

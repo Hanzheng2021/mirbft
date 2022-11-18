@@ -1,0 +1,45 @@
+# Generated deployment file
+# 
+# systemSizes:      2
+# machineType:      cloud-machine-templates/small-machine
+# bandwidths:       1gbit
+# 
+# segmentLengths:   16
+# bucketsPerLeader: 16
+# batchsizes:       4096
+# auths:            true
+# clients8:         
+# clients16:        
+# duration:         
+# peerTag:          peers
+
+machine: cloud-machine-templates/small-machine-fra05.cmt
+deploy 1 1client
+
+
+# Parameters: exp,peers,nlr,failures,crash-timing,vctimeout,datacenters,bandwidth,num-connections,orderer,clients,instances,client-threads,leader-policy,segment,epoch,batchsize,batchtimeout,batchrate,msgbatchperiod,buckets,leader-buckets,authentication,verify-early,throughput-cap,target-throughput,rate-per-client,hard-rate-limit,requests,cl-watermarks,batch-verifier,request-handlers,req-buffer-size
+
+
+# ========================================
+#  Peers: 4
+# Faulty: 2
+#  Reuse: true
+# ========================================
+machine: cloud-machine-templates/small-machine-fra05.cmt
+deploy 4 peers
+
+bandwidth: 1gbit
+# 0000,4,2,60000,1,1gbit,4,Pbft,Signing,1,1,1,64,SimulatedRandomFailures,256,4096,1000,32,1,64,16,true,false,131072000,128,128,false,7680,4194304,external,32,8192
+run 0000 config: config-0000.yml   peers: peers   clients: 1client
+
+# 0001,4,2,60000,1,1gbit,4,Pbft,Signing,1,1,1,64,SimulatedRandomFailures,256,4096,1000,32,1,64,16,true,false,131072000,256,256,false,15360,4194304,external,32,8192
+run 0001 config: config-0001.yml   peers: peers   clients: 1client
+
+# 0002,4,2,60000,1,1gbit,4,Pbft,Signing,1,1,1,64,SimulatedRandomFailures,256,4096,1000,32,1,64,16,true,false,131072000,128,128,false,7680,4194304,external,32,8192
+run 0002 config: config-0002.yml   peers: peers   clients: 1client
+
+# 0003,4,2,60000,1,1gbit,4,Pbft,Signing,1,1,1,64,SimulatedRandomFailures,256,4096,1000,32,1,64,16,true,false,131072000,256,256,false,15360,4194304,external,32,8192
+run 0003 config: config-0003.yml   peers: peers   clients: 1client
+
+bandwidth: 1gbit
+bandwidth: 1gbit

@@ -1,0 +1,113 @@
+{"level":"debug","Logging":"debug","time":"2022-10-24T17:17:56+08:00","message":"Config"}
+{"level":"debug","UseTLS":false,"time":"2022-10-24T17:17:56+08:00","message":"Config"}
+{"level":"debug","CACertFile":"tls-data/ca.pem","time":"2022-10-24T17:17:56+08:00","message":"Config"}
+{"level":"debug","KeyFile":"tls-data/auth.key","time":"2022-10-24T17:17:56+08:00","message":"Config"}
+{"level":"debug","CertFile":"tls-data/auth.pem","time":"2022-10-24T17:17:56+08:00","message":"Config"}
+{"level":"debug","PriorityConnections":2,"time":"2022-10-24T17:17:56+08:00","message":"Config"}
+{"level":"debug","BasicConnections":2,"time":"2022-10-24T17:17:56+08:00","message":"Config"}
+{"level":"debug","TestConnections":false,"time":"2022-10-24T17:17:56+08:00","message":"Config"}
+{"level":"debug","ExcessConnections":1,"time":"2022-10-24T17:17:56+08:00","message":"Config"}
+{"level":"debug","ConnectionTestMsgs":4,"time":"2022-10-24T17:17:56+08:00","message":"Config"}
+{"level":"debug","ConnectionTestPayload":131072,"time":"2022-10-24T17:17:56+08:00","message":"Config"}
+{"level":"debug","OutMessageBufsize":1024,"time":"2022-10-24T17:17:56+08:00","message":"Config"}
+{"level":"debug","OutMessageBufsize":2,"time":"2022-10-24T17:17:56+08:00","message":"Config"}
+{"level":"debug","ThroughputCap":131072000,"time":"2022-10-24T17:17:56+08:00","message":"Config"}
+{"level":"debug","StragglerTolerance":1000,"time":"2022-10-24T17:17:56+08:00","message":"Config"}
+{"level":"debug","BatchSizeIncrement":256,"time":"2022-10-24T17:17:56+08:00","message":"Config"}
+{"level":"debug","Orderer":"Pbft","time":"2022-10-24T17:17:56+08:00","message":"Config"}
+{"level":"debug","Manager":"Mir","time":"2022-10-24T17:17:56+08:00","message":"Config"}
+{"level":"debug","Failures":2,"time":"2022-10-24T17:17:56+08:00","message":"Config"}
+{"level":"debug","CrashTiming":"Straggler","time":"2022-10-24T17:17:56+08:00","message":"Config"}
+{"level":"debug","CheckpointInterval":256,"time":"2022-10-24T17:17:56+08:00","message":"Config"}
+{"level":"debug","WatermarkWindowSize":256,"time":"2022-10-24T17:17:56+08:00","message":"Config"}
+{"level":"debug","EpochLength":256,"time":"2022-10-24T17:17:56+08:00","message":"Config"}
+{"level":"debug","SegmentLength":32,"time":"2022-10-24T17:17:56+08:00","message":"Config"}
+{"level":"debug","WaitForCheckpoints":true,"time":"2022-10-24T17:17:56+08:00","message":"Config"}
+{"level":"debug","ClientWatermarkWindowSize":4194304,"time":"2022-10-24T17:17:56+08:00","message":"Config"}
+{"level":"debug","ClientRequestBacklogSize":4194304,"time":"2022-10-24T17:17:56+08:00","message":"Config"}
+{"level":"debug","RandomSeed":14669,"time":"2022-10-24T17:17:56+08:00","message":"Config"}
+{"level":"debug","NodeToLeaderRatio":1,"time":"2022-10-24T17:17:56+08:00","message":"Config"}
+{"level":"debug","LeaderPolicy":"SimulatedRandomFailures","time":"2022-10-24T17:17:56+08:00","message":"Config"}
+{"level":"debug","DefaultLeaderBan":2,"time":"2022-10-24T17:17:56+08:00","message":"Config"}
+{"level":"debug","NumBuckets":128,"time":"2022-10-24T17:17:56+08:00","message":"Config"}
+{"level":"debug","BatchSize":1000,"time":"2022-10-24T17:17:56+08:00","message":"Config"}
+{"level":"debug","DisabledViewChange":false,"time":"2022-10-24T17:17:56+08:00","message":"Config"}
+{"level":"debug","ViewChangeTimeout":60000,"time":"2022-10-24T17:17:56+08:00","message":"Config"}
+{"level":"debug","ClientTraceSampling":10,"time":"2022-10-24T17:17:56+08:00","message":"Config"}
+{"level":"debug","EventBufferSize":2097152,"time":"2022-10-24T17:17:56+08:00","message":"Config"}
+{"level":"debug","TraceSampling":1,"time":"2022-10-24T17:17:56+08:00","message":"Config"}
+{"level":"debug","ClientsPerProcess":1,"time":"2022-10-24T17:17:56+08:00","message":"Config"}
+{"level":"debug","RequestsPerClient":15360,"time":"2022-10-24T17:17:56+08:00","message":"Config"}
+{"level":"debug","ClientRunTime":30000,"time":"2022-10-24T17:17:56+08:00","message":"Config"}
+{"level":"debug","RequestRate":256,"time":"2022-10-24T17:17:56+08:00","message":"Config"}
+{"level":"debug","HardRequestRateLimit":false,"time":"2022-10-24T17:17:56+08:00","message":"Config"}
+{"level":"debug","RequestPayloadSize":500,"time":"2022-10-24T17:17:56+08:00","message":"Config"}
+{"level":"debug","SignRequests":true,"time":"2022-10-24T17:17:56+08:00","message":"Config"}
+{"level":"debug","ClientPrivKeyFile":"tls-data/client-ecdsa-256.key","time":"2022-10-24T17:17:56+08:00","message":"Config"}
+{"level":"debug","ClientPubKeyFile":"tls-data/client-ecdsa-256.pem","time":"2022-10-24T17:17:56+08:00","message":"Config"}
+{"level":"debug","PrecomputeRequests":false,"time":"2022-10-24T17:17:56+08:00","message":"Config"}
+{"level":"debug","RequestHandlerThreads":32,"time":"2022-10-24T17:17:56+08:00","message":"Config"}
+{"level":"debug","RequestInputChannelBuffer":8192,"time":"2022-10-24T17:17:56+08:00","message":"Config"}
+{"level":"debug","BatchVerifier":"external","time":"2022-10-24T17:17:56+08:00","message":"Config"}
+09:17:56.569 INF Registered with discovery server. numPeers=8 ownID=6
+09:17:56.570 INF Profiling enabled.
+09:17:56.570 INF Setting up profiling.
+09:17:56.570 INF Started Profiler: CPU
+09:17:56.570 INF Started Profiler: BLOCK
+09:17:56.570 INF Started Profiler: MUTEX
+09:17:56.570 INF Profiler will stop on signal. exit=true
+09:17:56.573 INF Tracing will stop on signal. exit=false
+09:17:56.574 INF Started tracing. traceFile=experiment-output/0000/slave-002/peer.trc
+09:17:56.574 DBG Starting backlog.
+09:17:56.574 INF Listening for connections. port=10066 useTLS=false
+09:17:56.575 INF Connecting to peer. addr=127.0.0.1:10066 basicConns=2 priorityConns=2
+09:17:56.575 INF Connecting to peer. addr=127.0.0.1:10077 basicConns=2 priorityConns=2
+09:17:56.575 INF Connecting to peer. addr=127.0.0.1:10000 basicConns=2 priorityConns=2
+09:17:56.576 INF Connecting to peer. addr=127.0.0.1:10011 basicConns=2 priorityConns=2
+09:17:56.582 INF Connecting to peer. addr=127.0.0.1:10044 basicConns=2 priorityConns=2
+09:17:56.582 INF Connecting to peer. addr=127.0.0.1:10055 basicConns=2 priorityConns=2
+09:17:56.583 INF Connecting to peer. addr=127.0.0.1:10022 basicConns=2 priorityConns=2
+09:17:56.583 INF Connecting to peer. addr=127.0.0.1:10033 basicConns=2 priorityConns=2
+09:17:56.610 INF Incoming connection for protocol messages. addr=127.0.0.1:57876
+09:17:56.617 INF Incoming connection for protocol messages. addr=127.0.0.1:57872
+09:17:56.617 INF Incoming connection for protocol messages. addr=127.0.0.1:57884
+09:17:56.620 INF Incoming connection for protocol messages. addr=127.0.0.1:57868
+09:17:56.621 INF Incoming connection for protocol messages. addr=127.0.0.1:57886
+09:17:56.627 INF Incoming connection for protocol messages. addr=127.0.0.1:57900
+09:17:56.630 INF Incoming connection for protocol messages. addr=127.0.0.1:57932
+09:17:56.633 INF Incoming connection for protocol messages. addr=127.0.0.1:57944
+09:17:56.634 INF Incoming connection for protocol messages. addr=127.0.0.1:58042
+09:17:56.634 INF Incoming connection for protocol messages. addr=127.0.0.1:57954
+09:17:56.634 INF Incoming connection for protocol messages. addr=127.0.0.1:57908
+09:17:56.636 INF Incoming connection for protocol messages. addr=127.0.0.1:58066
+09:17:56.637 INF Incoming connection for protocol messages. addr=127.0.0.1:58084
+09:17:56.637 INF Incoming connection for protocol messages. addr=127.0.0.1:58156
+09:17:56.637 INF Incoming connection for protocol messages. addr=127.0.0.1:57898
+09:17:56.637 DBG Connected. peerID=6
+09:17:56.638 INF Incoming connection for protocol messages. addr=127.0.0.1:57946
+09:17:56.639 INF Incoming connection for protocol messages. addr=127.0.0.1:57984
+09:17:56.643 INF Incoming connection for protocol messages. addr=127.0.0.1:58080
+09:17:56.644 INF Incoming connection for protocol messages. addr=127.0.0.1:58216
+09:17:56.644 INF Incoming connection for protocol messages. addr=127.0.0.1:58244
+09:17:56.645 INF Incoming connection for protocol messages. addr=127.0.0.1:58242
+09:17:56.645 INF Incoming connection for protocol messages. addr=127.0.0.1:58158
+09:17:56.645 INF Incoming connection for protocol messages. addr=127.0.0.1:58168
+09:17:56.646 INF Incoming connection for protocol messages. addr=127.0.0.1:58322
+09:17:56.647 DBG Connected. peerID=0
+09:17:56.651 INF Incoming connection for protocol messages. addr=127.0.0.1:58210
+09:17:56.651 DBG Connected. peerID=5
+09:17:56.652 DBG Connected. peerID=2
+09:17:56.652 INF Incoming connection for protocol messages. addr=127.0.0.1:58268
+09:17:56.653 INF Incoming connection for protocol messages. addr=127.0.0.1:58270
+09:17:56.654 INF Incoming connection for protocol messages. addr=127.0.0.1:58352
+09:17:56.654 DBG Connected. peerID=3
+09:17:56.657 DBG Connected. peerID=7
+09:17:56.657 INF Incoming connection for protocol messages. addr=127.0.0.1:58062
+09:17:56.660 DBG Connected. peerID=4
+09:17:56.666 INF Incoming connection for protocol messages. addr=127.0.0.1:58336
+09:17:56.669 INF Incoming connection for protocol messages. addr=127.0.0.1:58212
+09:17:56.673 INF Incoming connection for protocol messages. addr=127.0.0.1:58112
+09:17:56.674 DBG Connected. peerID=1
+09:17:56.674 INF Connected to all peers.
+09:17:56.690 INF All peers finished connecting. Starting ISS.
+09:17:56.690 INF Simulating crashed peer. Exiting.

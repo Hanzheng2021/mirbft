@@ -1,0 +1,27 @@
+6:19AM INF Received own slave ID. ownSlaveId=2
+6:19AM INF OK status=0
+6:19AM INF Received command. cmdId=3
+6:19AM INF Received an ExecStart command args="[-p experiment-output/0000/slave-__id__/config]" cmd=mkdir outFile=/dev/null
+6:19AM INF OK status=0
+6:19AM INF Received command. cmdId=4
+6:19AM INF Received command. cmdType=ExecWait
+6:19AM INF OK status=0
+6:19AM INF Received command. cmdId=7
+6:19AM INF Received an ExecStart command args="[config/config-0000.yml experiment-output/0000/slave-__id__/config/config.yml]" cmd=cp outFile=/dev/null
+6:19AM INF OK status=0
+6:19AM INF Received command. cmdId=8
+6:19AM INF Received command. cmdType=ExecWait
+6:19AM INF OK status=0
+6:19AM INF Received command. cmdId=10
+6:19AM INF Received command. cmdType=Noop
+6:19AM INF Noop. Doing nothing. status=066:19AM INF Received command. cmdId=15
+6:19AM INF Received an ExecStart command args="[experiment-output/0000/slave-__id__/config/config.yml 127.0.0.1:9999 experiment-output/0000/slave-__id__/client experiment-output/0000/slave-__id__/prof-client]" cmd=orderingclient outFile=experiment-output/0000/slave-__id__/clients.log
+6:19AM INF OK status=0
+6:19AM IN6:20AM INF Received command. cmdId=18
+6:20AM INF Received command. cmdType=ExecSignal
+6:20AM INF OK status=0
+6:20AM INF Received command. cmdId=23
+6:20AM INF Received command. cmdType=Stop
+Noop. Doing nothing. status=0
+6:20AM INF Received command. cmdId=23
+6:20AM INF Received command. cmdType=Stop

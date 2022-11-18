@@ -1,0 +1,62 @@
+[90m03:22:52.127[0m [32mINF[0m Processing command. [36mcmdName=[0mwrite-file [36mcontent=[0mREADY [36mfileName=[0mmaster-ready
+[90m03:22:52.127[0m [32mINF[0m Starting server. [36mport=[0m9999
+[90m03:22:52.127[0m [32mINF[0m Processing command. [36mcmdName=[0m"wait for slaves" [36mn=[0m4 [36mtag=[0mpeers
+[90m03:22:52.163[0m [32mINF[0m New slave. [36maddrPort=[0m127.0.0.1:44110 [36mslaveID=[0m0 [36mtag=[0m1client
+[90m03:22:52.165[0m [32mINF[0m New slave. [36maddrPort=[0m127.0.0.1:44112 [36mslaveID=[0m1 [36mtag=[0mpeers
+[90m03:22:52.166[0m [32mINF[0m New slave. [36maddrPort=[0m127.0.0.1:44114 [36mslaveID=[0m2 [36mtag=[0mpeers
+[90m03:22:52.166[0m [32mINF[0m New slave. [36maddrPort=[0m127.0.0.1:44116 [36mslaveID=[0m3 [36mtag=[0mpeers
+[90m03:22:52.166[0m [32mINF[0m New slave. [36maddrPort=[0m127.0.0.1:44118 [36mslaveID=[0m4 [36mtag=[0mpeers
+[90m03:22:52.167[0m [32mINF[0m OK [36maddrPort=[0m127.0.0.1:44110 [36mcmdID=[0m-1 [36mslaveID=[0m0 [36mstatus=[0m0
+[90m03:22:52.167[0m [32mINF[0m OK [36maddrPort=[0m127.0.0.1:44112 [36mcmdID=[0m-1 [36mslaveID=[0m1 [36mstatus=[0m0
+[90m03:22:52.168[0m [32mINF[0m OK [36maddrPort=[0m127.0.0.1:44114 [36mcmdID=[0m-1 [36mslaveID=[0m2 [36mstatus=[0m0
+[90m03:22:52.168[0m [32mINF[0m OK [36maddrPort=[0m127.0.0.1:44118 [36mcmdID=[0m-1 [36mslaveID=[0m4 [36mstatus=[0m0
+[90m03:22:52.168[0m [32mINF[0m OK [36maddrPort=[0m127.0.0.1:44116 [36mcmdID=[0m-1 [36mslaveID=[0m3 [36mstatus=[0m0
+[90m03:22:53.128[0m [32mINF[0m Finished waiting for slaves. [36mnumSlaves=[0m4 [36mtag=[0mpeers
+[90m03:22:53.129[0m [32mINF[0m Processing command. [36mcmdName=[0m"wait for slaves" [36mn=[0m1 [36mtag=[0m1client
+[90m03:22:53.129[0m [32mINF[0m Finished waiting for slaves. [36mnumSlaves=[0m1 [36mtag=[0m1client
+[90m03:22:53.129[0m [32mINF[0m Processing command. [36mcmd=[0m" mkdir -p experiment-output/0000/slave-__id__/config" [36mcmdName=[0mexec-start [36mtag=[0m__all__
+[90m03:22:53.130[0m [32mINF[0m Processing command. [36mcmdName=[0mexec-wait [36mtag=[0m__all__ [36mtimeoutCommands=[0m
+[90m03:22:53.131[0m [32mINF[0m OK [36maddrPort=[0m127.0.0.1:44118 [36mcmdID=[0m3 [36mslaveID=[0m4 [36mstatus=[0m0
+[90m03:22:53.131[0m [32mINF[0m OK [36maddrPort=[0m127.0.0.1:44112 [36mcmdID=[0m3 [36mslaveID=[0m1 [36mstatus=[0m0
+[90m03:22:53.131[0m [32mINF[0m OK [36maddrPort=[0m127.0.0.1:44110 [36mcmdID=[0m3 [36mslaveID=[0m0 [36mstatus=[0m0
+[90m03:22:53.131[0m [32mINF[0m OK [36maddrPort=[0m127.0.0.1:44116 [36mcmdID=[0m3 [36mslaveID=[0m3 [36mstatus=[0m0
+[90m03:22:53.133[0m [32mINF[0m OK [36maddrPort=[0m127.0.0.1:44112 [36mcmdID=[0m4 [36mslaveID=[0m1 [36mstatus=[0m0
+[90m03:22:53.133[0m [32mINF[0m OK [36maddrPort=[0m127.0.0.1:44110 [36mcmdID=[0m4 [36mslaveID=[0m0 [36mstatus=[0m0
+[90m03:22:53.131[0m [32mINF[0m OK [36maddrPort=[0m127.0.0.1:44114 [36mcmdID=[0m3 [36mslaveID=[0m2 [36mstatus=[0m0
+[90m03:22:53.136[0m [32mINF[0m OK [36maddrPort=[0m127.0.0.1:44114 [36mcmdID=[0m4 [36mslaveID=[0m2 [36mstatus=[0m0
+[90m03:22:53.136[0m [32mINF[0m OK [36maddrPort=[0m127.0.0.1:44116 [36mcmdID=[0m4 [36mslaveID=[0m3 [36mstatus=[0m0
+[90m03:22:53.137[0m [32mINF[0m OK [36maddrPort=[0m127.0.0.1:44118 [36mcmdID=[0m4 [36mslaveID=[0m4 [36mstatus=[0m0
+[90m03:22:53.137[0m [32mINF[0m Processing command. [36mcmd=[0m" cp config/config-0000.yml experiment-output/0000/slave-__id__/config/config.yml" [36mcmdName=[0mexec-start [36mtag=[0mpeers
+[90m03:22:53.137[0m [32mINF[0m Processing command. [36mcmdName=[0mexec-wait [36mtag=[0mpeers [36mtimeoutCommands=[0m
+[90m03:22:53.139[0m [32mINF[0m OK [36maddrPort=[0m127.0.0.1:44116 [36mcmdID=[0m5 [36mslaveID=[0m3 [36mstatus=[0m0
+[90m03:22:53.139[0m [32mINF[0m OK [36maddrPort=[0m127.0.0.1:44114 [36mcmdID=[0m5 [36mslaveID=[0m2 [36mstatus=[0m0
+[90m03:22:53.139[0m [32mINF[0m OK [36maddrPort=[0m127.0.0.1:44118 [36mcmdID=[0m5 [36mslaveID=[0m4 [36mstatus=[0m0
+[90m03:22:53.139[0m [32mINF[0m OK [36maddrPort=[0m127.0.0.1:44112 [36mcmdID=[0m5 [36mslaveID=[0m1 [36mstatus=[0m0
+[90m03:22:53.140[0m [32mINF[0m OK [36maddrPort=[0m127.0.0.1:44116 [36mcmdID=[0m6 [36mslaveID=[0m3 [36mstatus=[0m0
+[90m03:22:53.140[0m [32mINF[0m OK [36maddrPort=[0m127.0.0.1:44118 [36mcmdID=[0m6 [36mslaveID=[0m4 [36mstatus=[0m0
+[90m03:22:53.140[0m [32mINF[0m OK [36maddrPort=[0m127.0.0.1:44112 [36mcmdID=[0m6 [36mslaveID=[0m1 [36mstatus=[0m0
+[90m03:22:53.140[0m [32mINF[0m OK [36maddrPort=[0m127.0.0.1:44114 [36mcmdID=[0m6 [36mslaveID=[0m2 [36mstatus=[0m0
+[90m03:22:53.140[0m [32mINF[0m Processing command. [36mcmd=[0m" cp config/config-0000.yml experiment-output/0000/slave-__id__/config/config.yml" [36mcmdName=[0mexec-start [36mtag=[0m1client
+[90m03:22:53.141[0m [32mINF[0m Processing command. [36mcmdName=[0mexec-wait [36mtag=[0m1client [36mtimeoutCommands=[0m
+[90m03:22:53.142[0m [32mINF[0m OK [36maddrPort=[0m127.0.0.1:44110 [36mcmdID=[0m7 [36mslaveID=[0m0 [36mstatus=[0m0
+[90m03:22:53.143[0m [32mINF[0m OK [36maddrPort=[0m127.0.0.1:44110 [36mcmdID=[0m8 [36mslaveID=[0m0 [36mstatus=[0m0
+[90m03:22:53.144[0m [32mINF[0m Processing command. [36mcmdName=[0msync [36mtag=[0mpeers
+[90m03:22:53.145[0m [32mINF[0m Noop. Doing nothing. [36maddrPort=[0m127.0.0.1:44114 [36mcmdID=[0m9 [36mslaveID=[0m2 [36mstatus=[0m0
+[90m03:22:53.145[0m [32mINF[0m Noop. Doing nothing. [36maddrPort=[0m127.0.0.1:44118 [36mcmdID=[0m9 [36mslaveID=[0m4 [36mstatus=[0m0
+[90m03:22:53.145[0m [32mINF[0m Noop. Doing nothing. [36maddrPort=[0m127.0.0.1:44112 [36mcmdID=[0m9 [36mslaveID=[0m1 [36mstatus=[0m0
+[90m03:22:53.145[0m [32mINF[0m Noop. Doing nothing. [36maddrPort=[0m127.0.0.1:44116 [36mcmdID=[0m9 [36mslaveID=[0m3 [36mstatus=[0m0
+[90m03:22:53.145[0m [32mINF[0m Processing command. [36mcmdName=[0msync [36mtag=[0m1client
+[90m03:22:53.146[0m [32mINF[0m Noop. Doing nothing. [36maddrPort=[0m127.0.0.1:44110 [36mcmdID=[0m10 [36mslaveID=[0m0 [36mstatus=[0m0
+[90m03:22:53.147[0m [32mINF[0m Processing command. [36mcmdName=[0mdiscover-reset [36mnPeers=[0m4
+[90m03:22:53.147[0m [32mINF[0m Processing command. [36mcmd=[0m" orderingpeer experiment-output/0000/slave-__id__/config/config.yml 127.0.0.1:9999 127.0.0.1 127.0.0.1 experiment-output/0000/slave-__id__/peer.trc experiment-output/0000/slave-__id__/prof" [36mcmdName=[0mexec-start [36mtag=[0mpeers
+[90m03:22:53.147[0m [32mINF[0m Processing command. [36mcmdName=[0mdiscover-wait
+[90m03:22:53.148[0m [32mINF[0m OK [36maddrPort=[0m127.0.0.1:44112 [36mcmdID=[0m12 [36mslaveID=[0m1 [36mstatus=[0m0
+[90m03:22:53.149[0m [32mINF[0m OK [36maddrPort=[0m127.0.0.1:44116 [36mcmdID=[0m12 [36mslaveID=[0m3 [36mstatus=[0m0
+[90m03:22:53.149[0m [32mINF[0m OK [36maddrPort=[0m127.0.0.1:44114 [36mcmdID=[0m12 [36mslaveID=[0m2 [36mstatus=[0m0
+[90m03:22:53.149[0m [32mINF[0m OK [36maddrPort=[0m127.0.0.1:44118 [36mcmdID=[0m12 [36mslaveID=[0m4 [36mstatus=[0m0
+[90m03:22:53.175[0m [32mINF[0m Discovered node. [36maddrPort=[0m127.0.0.1:44120 [36mid=[0m0 [36mprivateAddr=[0m127.0.0.1 [36mpublicAddr=[0m127.0.0.1
+[90m03:22:53.175[0m [32mINF[0m Discovered node. [36maddrPort=[0m127.0.0.1:44122 [36mid=[0m1 [36mprivateAddr=[0m127.0.0.1 [36mpublicAddr=[0m127.0.0.1
+[90m03:22:53.176[0m [32mINF[0m Discovered node. [36maddrPort=[0m127.0.0.1:44124 [36mid=[0m2 [36mprivateAddr=[0m127.0.0.1 [36mpublicAddr=[0m127.0.0.1
+[90m03:22:53.176[0m [32mINF[0m Discovered node. [36maddrPort=[0m127.0.0.1:44126 [36mid=[0m3 [36mprivateAddr=[0m127.0.0.1 [36mpublicAddr=[0m127.0.0.1
+[90m03:22:53.176[0m [32mINF[0m Generating membership list.
+[90m03:22:53.176[0m [32mINF[0m All peer processes started. Waiting until they connect to each other (discover-wait).

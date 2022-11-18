@@ -2,7 +2,7 @@
 Logging: LOGGINGLEVEL # Zerolog level. One of {trace, debug, info, warning, error}
 
 # Communication channel config
-UseTLS:               true  # Use TLS for both peer-to-peer and client-to-peer communication
+UseTLS:               false  # Use TLS for both peer-to-peer and client-to-peer communication
                             # The 3 options below are ignored if UseTLS is set to false.
 CACertFile:           "tls-data/ca.pem"
 KeyFile:              "tls-data/auth.key"

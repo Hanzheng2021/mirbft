@@ -1,0 +1,1164 @@
+{"level":"debug","Logging":"debug","time":"2022-08-10T11:09:25+08:00","message":"Config"}
+{"level":"debug","UseTLS":false,"time":"2022-08-10T11:09:25+08:00","message":"Config"}
+{"level":"debug","CACertFile":"tls-data/ca.pem","time":"2022-08-10T11:09:25+08:00","message":"Config"}
+{"level":"debug","KeyFile":"tls-data/auth.key","time":"2022-08-10T11:09:25+08:00","message":"Config"}
+{"level":"debug","CertFile":"tls-data/auth.pem","time":"2022-08-10T11:09:25+08:00","message":"Config"}
+{"level":"debug","PriorityConnections":2,"time":"2022-08-10T11:09:25+08:00","message":"Config"}
+{"level":"debug","BasicConnections":4,"time":"2022-08-10T11:09:25+08:00","message":"Config"}
+{"level":"debug","TestConnections":false,"time":"2022-08-10T11:09:25+08:00","message":"Config"}
+{"level":"debug","ExcessConnections":1,"time":"2022-08-10T11:09:25+08:00","message":"Config"}
+{"level":"debug","ConnectionTestMsgs":4,"time":"2022-08-10T11:09:25+08:00","message":"Config"}
+{"level":"debug","ConnectionTestPayload":131072,"time":"2022-08-10T11:09:25+08:00","message":"Config"}
+{"level":"debug","OutMessageBufsize":1024,"time":"2022-08-10T11:09:25+08:00","message":"Config"}
+{"level":"debug","OutMessageBufsize":1,"time":"2022-08-10T11:09:25+08:00","message":"Config"}
+{"level":"debug","ThroughputCap":131072000,"time":"2022-08-10T11:09:25+08:00","message":"Config"}
+{"level":"debug","StragglerTolerance":1000,"time":"2022-08-10T11:09:25+08:00","message":"Config"}
+{"level":"debug","BatchSizeIncrement":256,"time":"2022-08-10T11:09:25+08:00","message":"Config"}
+{"level":"debug","Orderer":"Pbft","time":"2022-08-10T11:09:25+08:00","message":"Config"}
+{"level":"debug","Manager":"Mir","time":"2022-08-10T11:09:25+08:00","message":"Config"}
+{"level":"debug","Failures":0,"time":"2022-08-10T11:09:25+08:00","message":"Config"}
+{"level":"debug","CrashTiming":"EpochStart","time":"2022-08-10T11:09:25+08:00","message":"Config"}
+{"level":"debug","CheckpointInterval":256,"time":"2022-08-10T11:09:25+08:00","message":"Config"}
+{"level":"debug","WatermarkWindowSize":256,"time":"2022-08-10T11:09:25+08:00","message":"Config"}
+{"level":"debug","EpochLength":256,"time":"2022-08-10T11:09:25+08:00","message":"Config"}
+{"level":"debug","SegmentLength":64,"time":"2022-08-10T11:09:25+08:00","message":"Config"}
+{"level":"debug","WaitForCheckpoints":true,"time":"2022-08-10T11:09:25+08:00","message":"Config"}
+{"level":"debug","ClientWatermarkWindowSize":4194304,"time":"2022-08-10T11:09:25+08:00","message":"Config"}
+{"level":"debug","ClientRequestBacklogSize":4194304,"time":"2022-08-10T11:09:25+08:00","message":"Config"}
+{"level":"debug","RandomSeed":17083,"time":"2022-08-10T11:09:25+08:00","message":"Config"}
+{"level":"debug","NodeToLeaderRatio":1,"time":"2022-08-10T11:09:25+08:00","message":"Config"}
+{"level":"debug","LeaderPolicy":"Simple","time":"2022-08-10T11:09:25+08:00","message":"Config"}
+{"level":"debug","DefaultLeaderBan":2,"time":"2022-08-10T11:09:25+08:00","message":"Config"}
+{"level":"debug","NumBuckets":64,"time":"2022-08-10T11:09:25+08:00","message":"Config"}
+{"level":"debug","BatchSize":1000,"time":"2022-08-10T11:09:25+08:00","message":"Config"}
+{"level":"debug","DisabledViewChange":false,"time":"2022-08-10T11:09:25+08:00","message":"Config"}
+{"level":"debug","ViewChangeTimeout":60000,"time":"2022-08-10T11:09:25+08:00","message":"Config"}
+{"level":"debug","ClientTraceSampling":10,"time":"2022-08-10T11:09:25+08:00","message":"Config"}
+{"level":"debug","EventBufferSize":2097152,"time":"2022-08-10T11:09:25+08:00","message":"Config"}
+{"level":"debug","TraceSampling":1,"time":"2022-08-10T11:09:25+08:00","message":"Config"}
+{"level":"debug","ClientsPerProcess":1,"time":"2022-08-10T11:09:25+08:00","message":"Config"}
+{"level":"debug","RequestsPerClient":7680,"time":"2022-08-10T11:09:25+08:00","message":"Config"}
+{"level":"debug","ClientRunTime":30000,"time":"2022-08-10T11:09:25+08:00","message":"Config"}
+{"level":"debug","RequestRate":128,"time":"2022-08-10T11:09:25+08:00","message":"Config"}
+{"level":"debug","HardRequestRateLimit":false,"time":"2022-08-10T11:09:25+08:00","message":"Config"}
+{"level":"debug","RequestPayloadSize":500,"time":"2022-08-10T11:09:25+08:00","message":"Config"}
+{"level":"debug","SignRequests":true,"time":"2022-08-10T11:09:25+08:00","message":"Config"}
+{"level":"debug","ClientPrivKeyFile":"tls-data/client-ecdsa-256.key","time":"2022-08-10T11:09:25+08:00","message":"Config"}
+{"level":"debug","ClientPubKeyFile":"tls-data/client-ecdsa-256.pem","time":"2022-08-10T11:09:25+08:00","message":"Config"}
+{"level":"debug","PrecomputeRequests":false,"time":"2022-08-10T11:09:25+08:00","message":"Config"}
+{"level":"debug","RequestHandlerThreads":32,"time":"2022-08-10T11:09:25+08:00","message":"Config"}
+{"level":"debug","RequestInputChannelBuffer":8192,"time":"2022-08-10T11:09:25+08:00","message":"Config"}
+{"level":"debug","BatchVerifier":"external","time":"2022-08-10T11:09:25+08:00","message":"Config"}
+03:09:25.391 INF Registered with discovery server. numPeers=4 ownID=1
+03:09:25.392 INF Profiling enabled.
+03:09:25.392 INF Setting up profiling.
+03:09:25.392 INF Started Profiler: CPU
+03:09:25.392 INF Started Profiler: BLOCK
+03:09:25.392 INF Started Profiler: MUTEX
+03:09:25.392 INF Profiler will stop on signal. exit=true
+03:09:25.394 INF Tracing will stop on signal. exit=false
+03:09:25.395 INF Started tracing. traceFile=experiment-output/0000/slave-001/peer.trc
+03:09:25.396 DBG Starting backlog.
+03:09:25.396 INF Listening for connections. port=10011 useTLS=false
+03:09:25.396 INF Connecting to peer. addr=127.0.0.1:10022 basicConns=4 priorityConns=2
+03:09:25.396 INF Connecting to peer. addr=127.0.0.1:10011 basicConns=4 priorityConns=2
+03:09:25.396 INF Connecting to peer. addr=127.0.0.1:10000 basicConns=4 priorityConns=2
+03:09:25.396 INF Connecting to peer. addr=127.0.0.1:10033 basicConns=4 priorityConns=2
+03:09:25.416 INF Incoming connection for protocol messages. addr=127.0.0.1:39604
+03:09:25.420 INF Incoming connection for protocol messages. addr=127.0.0.1:39656
+03:09:25.421 INF Incoming connection for protocol messages. addr=127.0.0.1:39642
+03:09:25.422 INF Incoming connection for protocol messages. addr=127.0.0.1:39622
+03:09:25.422 INF Incoming connection for protocol messages. addr=127.0.0.1:39614
+03:09:25.423 INF Incoming connection for protocol messages. addr=127.0.0.1:39650
+03:09:25.424 INF Incoming connection for protocol messages. addr=127.0.0.1:39638
+03:09:25.424 INF Incoming connection for protocol messages. addr=127.0.0.1:39680
+03:09:25.424 INF Incoming connection for protocol messages. addr=127.0.0.1:39632
+03:09:25.424 INF Incoming connection for protocol messages. addr=127.0.0.1:39692
+03:09:25.424 INF Incoming connection for protocol messages. addr=127.0.0.1:39676
+03:09:25.425 INF Incoming connection for protocol messages. addr=127.0.0.1:39696
+03:09:25.427 INF Incoming connection for protocol messages. addr=127.0.0.1:39726
+03:09:25.427 INF Incoming connection for protocol messages. addr=127.0.0.1:39722
+03:09:25.427 DBG Connected. peerID=2
+03:09:25.427 INF Incoming connection for protocol messages. addr=127.0.0.1:39674
+03:09:25.428 INF Incoming connection for protocol messages. addr=127.0.0.1:39758
+03:09:25.429 DBG Connected. peerID=1
+03:09:25.428 INF Incoming connection for protocol messages. addr=127.0.0.1:39764
+03:09:25.429 INF Incoming connection for protocol messages. addr=127.0.0.1:39778
+03:09:25.429 INF Incoming connection for protocol messages. addr=127.0.0.1:39744
+03:09:25.430 INF Incoming connection for protocol messages. addr=127.0.0.1:39790
+03:09:25.430 INF Incoming connection for protocol messages. addr=127.0.0.1:39716
+03:09:25.431 DBG Connected. peerID=3
+03:09:25.431 INF Incoming connection for protocol messages. addr=127.0.0.1:39772
+03:09:25.432 INF Incoming connection for protocol messages. addr=127.0.0.1:39666
+03:09:25.434 INF Incoming connection for protocol messages. addr=127.0.0.1:39794
+03:09:25.436 DBG Connected. peerID=0
+03:09:25.436 INF Connected to all peers.
+03:09:25.443 INF All peers finished connecting. Starting ISS.
+03:09:25.444 DBG Buckets for 0-th leader 0: [0 4 8 12 16 20 24 28 32 36 40 44 48 52 56 60]
+03:09:25.444 DBG Buckets for 1-th leader 1: [1 5 9 13 17 21 25 29 33 37 41 45 49 53 57 61]
+03:09:25.444 DBG Buckets for 2-th leader 2: [2 6 10 14 18 22 26 30 34 38 42 46 50 54 58 62]
+03:09:25.444 DBG Buckets for 3-th leader 3: [3 7 11 15 19 23 27 31 35 39 43 47 51 55 59 63]
+03:09:25.445 INF PbftOrderer received a new segment: [0 4 8 12 16 20 24 28 32 36 40 44 48 52 56 60 64 68 72 76 80 84 88 92 96 100 104 108 112 116 120 124 128 132 136 140 144 148 152 156 160 164 168 172 176 180 184 188 192 196 200 204 208 212 216 220 224 228 232 236 240 244 248 252] first leader=0 firstSN=0 lastSN=252 len=64 length=64 segId=0
+03:09:25.445 INF Starting new view. segID=0 timeout=60000 view=0
+03:09:25.445 DBG Starting timer. sn=0 view=0
+03:09:25.445 INF Starting PBFT instance. first=0 last=252 segID=0
+03:09:25.445 DBG Subscribing to backlog. segID=0
+03:09:25.446 INF Starting serialized message processing. segID=0
+03:09:25.446 INF PbftOrderer received a new segment: [1 5 9 13 17 21 25 29 33 37 41 45 49 53 57 61 65 69 73 77 81 85 89 93 97 101 105 109 113 117 121 125 129 133 137 141 145 149 153 157 161 165 169 173 177 181 185 189 193 197 201 205 209 213 217 221 225 229 233 237 241 245 249 253] first leader=1 firstSN=1 lastSN=253 len=64 length=64 segId=1
+03:09:25.446 INF Starting new view. segID=1 timeout=60000 view=0
+03:09:25.446 DBG Starting timer. sn=1 view=0
+03:09:25.446 INF Starting PBFT instance. first=1 last=253 segID=1
+03:09:25.447 DBG Subscribing to backlog. segID=1
+03:09:25.447 DBG Leading segment. segID=1
+03:09:25.447 DBG Waiting for batch. batchSize=4096
+03:09:25.447 INF Starting serialized message processing. segID=1
+03:09:25.447 INF PbftOrderer received a new segment: [2 6 10 14 18 22 26 30 34 38 42 46 50 54 58 62 66 70 74 78 82 86 90 94 98 102 106 110 114 118 122 126 130 134 138 142 146 150 154 158 162 166 170 174 178 182 186 190 194 198 202 206 210 214 218 222 226 230 234 238 242 246 250 254] first leader=2 firstSN=2 lastSN=254 len=64 length=64 segId=2
+03:09:25.447 INF Starting new view. segID=2 timeout=60000 view=0
+03:09:25.447 DBG Starting timer. sn=2 view=0
+03:09:25.448 INF Starting PBFT instance. first=2 last=254 segID=2
+03:09:25.448 DBG Subscribing to backlog. segID=2
+03:09:25.448 INF Starting serialized message processing. segID=2
+03:09:25.448 INF PbftOrderer received a new segment: [3 7 11 15 19 23 27 31 35 39 43 47 51 55 59 63 67 71 75 79 83 87 91 95 99 103 107 111 115 119 123 127 131 135 139 143 147 151 155 159 163 167 171 175 179 183 187 191 195 199 203 207 211 215 219 223 227 231 235 239 243 247 251 255] first leader=3 firstSN=3 lastSN=255 len=64 length=64 segId=3
+03:09:25.448 INF Starting new view. segID=3 timeout=60000 view=0
+03:09:25.448 DBG Starting timer. sn=3 view=0
+03:09:25.449 INF Starting PBFT instance. first=3 last=255 segID=3
+03:09:25.449 DBG Subscribing to backlog. segID=3
+03:09:25.449 INF Starting serialized message processing. segID=3
+03:09:26.447 DBG Batch ready. batchSize=4096
+03:09:26.447 DBG Batch cut. left=0 nBuckets=16 nReq=0 next=0
+03:09:26.448 INF Sending PREPREPARE. nReq=0 senderID=1 sn=1 view=0
+03:09:26.448 DBG Waiting for batch. batchSize=4096
+03:09:26.451 INF Handling PREPREPARE. nReq=0 senderID=3 sn=3
+03:09:26.451 INF Handling PREPREPARE. nReq=0 senderID=0 sn=0
+03:09:26.451 DBG Creating new Batch. nReq=0
+03:09:26.451 DBG Creating new Batch. nReq=0
+03:09:26.451 DBG Sending PREPARE. senderID=1 sn=3 view=0
+03:09:26.451 DBG Sending PREPARE. senderID=1 sn=0 view=0
+03:09:26.452 DBG Sending COMMIT. senderID=1 sn=3 view=0
+03:09:26.452 INF Handling PREPREPARE. nReq=0 senderID=2 sn=2
+03:09:26.452 DBG Sending COMMIT. senderID=1 sn=0 view=0
+03:09:26.452 DBG Creating new Batch. nReq=0
+03:09:26.452 DBG Sending PREPARE. senderID=1 sn=2 view=0
+03:09:26.453 DBG Sending COMMIT. senderID=1 sn=1 view=0
+03:09:26.454 INF Committed entry. latency=0 nReq=0 sn=1
+03:09:26.454 DBG Sending COMMIT. senderID=1 sn=2 view=0
+03:09:26.454 DBG Starting timer. sn=5 view=0
+03:09:26.455 INF Committed entry. latency=0 nReq=0 sn=0
+03:09:26.455 INF Committed entry. latency=0 nReq=0 sn=3
+03:09:26.455 INF Committed entry. latency=0 nReq=0 sn=2
+03:09:26.455 INF Delivered batch. nReq=0 sn=0
+03:09:26.455 INF Delivered batch. nReq=0 sn=1
+03:09:26.455 INF Delivered batch. nReq=0 sn=2
+03:09:26.455 INF Delivered batch. nReq=0 sn=3
+03:09:26.456 DBG Starting timer. sn=4 view=0
+03:09:26.456 DBG Starting timer. sn=7 view=0
+03:09:26.456 DBG Starting timer. sn=6 view=0
+03:09:27.449 DBG Batch ready. batchSize=4096
+03:09:27.449 INF Handling PREPREPARE. nReq=0 senderID=0 sn=4
+03:09:27.449 INF Handling PREPREPARE. nReq=0 senderID=3 sn=7
+03:09:27.449 DBG Batch cut. left=0 nBuckets=16 nReq=0 next=0
+03:09:27.449 DBG Creating new Batch. nReq=0
+03:09:27.449 DBG Creating new Batch. nReq=0
+03:09:27.449 INF Sending PREPREPARE. nReq=0 senderID=1 sn=5 view=0
+03:09:27.449 DBG Waiting for batch. batchSize=4096
+03:09:27.449 DBG Sending PREPARE. senderID=1 sn=4 view=0
+03:09:27.449 DBG Sending PREPARE. senderID=1 sn=7 view=0
+03:09:27.450 DBG Sending COMMIT. senderID=1 sn=7 view=0
+03:09:27.451 INF Handling PREPREPARE. nReq=0 senderID=2 sn=6
+03:09:27.451 DBG Sending COMMIT. senderID=1 sn=4 view=0
+03:09:27.451 DBG Creating new Batch. nReq=0
+03:09:27.451 DBG Sending PREPARE. senderID=1 sn=6 view=0
+03:09:27.452 DBG Sending COMMIT. senderID=1 sn=5 view=0
+03:09:27.452 INF Committed entry. latency=0 nReq=0 sn=7
+03:09:27.452 DBG Starting timer. sn=11 view=0
+03:09:27.452 DBG Sending COMMIT. senderID=1 sn=6 view=0
+03:09:27.452 INF Committed entry. latency=0 nReq=0 sn=4
+03:09:27.453 INF Delivered batch. nReq=0 sn=4
+03:09:27.453 INF Delivered batch. nReq=0 sn=5
+03:09:27.453 INF Committed entry. latency=0 nReq=0 sn=5
+03:09:27.453 DBG Starting timer. sn=8 view=0
+03:09:27.453 DBG Starting timer. sn=9 view=0
+03:09:27.454 INF Committed entry. latency=0 nReq=0 sn=6
+03:09:27.454 INF Delivered batch. nReq=0 sn=6
+03:09:27.454 INF Delivered batch. nReq=0 sn=7
+03:09:27.454 DBG Starting timer. sn=10 view=0
+03:09:27.480 INF Incoming connection for requests. addr=127.0.0.1:39810
+03:09:28.450 DBG Batch ready. batchSize=4096
+03:09:28.451 DBG Batch cut. left=0 nBuckets=16 nReq=31 next=0
+03:09:28.451 DBG Waiting for batch. batchSize=4096
+03:09:28.452 INF Sending PREPREPARE. nReq=31 senderID=1 sn=9 view=0
+03:09:28.457 INF Handling PREPREPARE. nReq=30 senderID=3 sn=11
+03:09:28.457 DBG Creating new Batch. nReq=30
+03:09:28.459 INF Handling PREPREPARE. nReq=31 senderID=0 sn=8
+03:09:28.459 DBG Creating new Batch. nReq=31
+03:09:28.460 INF Handling PREPREPARE. nReq=30 senderID=2 sn=10
+03:09:28.460 DBG Creating new Batch. nReq=30
+03:09:28.465 DBG Sending COMMIT. senderID=1 sn=9 view=0
+03:09:28.465 DBG Sending PREPARE. senderID=1 sn=11 view=0
+03:09:28.465 DBG Sending COMMIT. senderID=1 sn=11 view=0
+03:09:28.466 INF Committed entry. latency=0 nReq=31 sn=9
+03:09:28.466 DBG Starting timer. sn=13 view=0
+03:09:28.467 INF Committed entry. latency=0 nReq=30 sn=11
+03:09:28.467 DBG Starting timer. sn=15 view=0
+03:09:28.467 DBG Sending PREPARE. senderID=1 sn=8 view=0
+03:09:28.467 DBG Sending PREPARE. senderID=1 sn=10 view=0
+03:09:28.467 DBG Sending COMMIT. senderID=1 sn=8 view=0
+03:09:28.468 DBG Sending COMMIT. senderID=1 sn=10 view=0
+03:09:28.469 INF Committed entry. latency=0 nReq=31 sn=8
+03:09:28.469 INF Delivered batch. nReq=31 sn=8
+03:09:28.469 INF Delivered batch. nReq=31 sn=9
+03:09:28.470 INF Delivered batch. nReq=30 sn=10
+03:09:28.470 INF Committed entry. latency=0 nReq=30 sn=10
+03:09:28.470 INF Delivered batch. nReq=30 sn=11
+03:09:28.470 DBG Starting timer. sn=12 view=0
+03:09:28.470 DBG Starting timer. sn=14 view=0
+03:09:29.452 DBG Batch ready. batchSize=4096
+03:09:29.453 DBG Batch cut. left=0 nBuckets=16 nReq=32 next=0
+03:09:29.453 DBG Waiting for batch. batchSize=4096
+03:09:29.454 INF Sending PREPREPARE. nReq=32 senderID=1 sn=13 view=0
+03:09:29.456 INF Handling PREPREPARE. nReq=32 senderID=3 sn=15
+03:09:29.456 DBG Creating new Batch. nReq=32
+03:09:29.457 INF Handling PREPREPARE. nReq=32 senderID=0 sn=12
+03:09:29.457 DBG Creating new Batch. nReq=32
+03:09:29.459 INF Handling PREPREPARE. nReq=33 senderID=2 sn=14
+03:09:29.460 DBG Creating new Batch. nReq=33
+03:09:29.461 DBG Sending PREPARE. senderID=1 sn=15 view=0
+03:09:29.462 DBG Sending COMMIT. senderID=1 sn=15 view=0
+03:09:29.463 DBG Sending PREPARE. senderID=1 sn=12 view=0
+03:09:29.463 INF Committed entry. latency=0 nReq=32 sn=15
+03:09:29.464 DBG Starting timer. sn=19 view=0
+03:09:29.464 DBG Sending PREPARE. senderID=1 sn=14 view=0
+03:09:29.464 DBG Sending COMMIT. senderID=1 sn=12 view=0
+03:09:29.466 DBG Sending COMMIT. senderID=1 sn=14 view=0
+03:09:29.466 DBG Sending COMMIT. senderID=1 sn=13 view=0
+03:09:29.467 INF Committed entry. latency=0 nReq=32 sn=12
+03:09:29.467 INF Committed entry. latency=0 nReq=33 sn=14
+03:09:29.467 INF Delivered batch. nReq=32 sn=12
+03:09:29.467 INF Committed entry. latency=0 nReq=32 sn=13
+03:09:29.467 INF Delivered batch. nReq=32 sn=13
+03:09:29.467 INF Delivered batch. nReq=33 sn=14
+03:09:29.468 INF Delivered batch. nReq=32 sn=15
+03:09:29.468 DBG Starting timer. sn=16 view=0
+03:09:29.468 DBG Starting timer. sn=18 view=0
+03:09:29.468 DBG Starting timer. sn=17 view=0
+03:09:30.454 DBG Batch ready. batchSize=4096
+03:09:30.455 DBG Batch cut. left=0 nBuckets=16 nReq=32 next=0
+03:09:30.455 DBG Waiting for batch. batchSize=4096
+03:09:30.456 INF Sending PREPREPARE. nReq=32 senderID=1 sn=17 view=0
+03:09:30.457 INF Handling PREPREPARE. nReq=32 senderID=3 sn=19
+03:09:30.457 DBG Creating new Batch. nReq=32
+03:09:30.458 INF Handling PREPREPARE. nReq=32 senderID=0 sn=16
+03:09:30.459 DBG Creating new Batch. nReq=32
+03:09:30.460 INF Handling PREPREPARE. nReq=32 senderID=2 sn=18
+03:09:30.460 DBG Creating new Batch. nReq=32
+03:09:30.464 DBG Sending PREPARE. senderID=1 sn=19 view=0
+03:09:30.464 DBG Sending PREPARE. senderID=1 sn=16 view=0
+03:09:30.465 DBG Sending COMMIT. senderID=1 sn=16 view=0
+03:09:30.466 DBG Sending PREPARE. senderID=1 sn=18 view=0
+03:09:30.466 DBG Sending COMMIT. senderID=1 sn=19 view=0
+03:09:30.467 DBG Sending COMMIT. senderID=1 sn=18 view=0
+03:09:30.467 DBG Sending COMMIT. senderID=1 sn=17 view=0
+03:09:30.467 INF Committed entry. latency=0 nReq=32 sn=16
+03:09:30.468 INF Committed entry. latency=0 nReq=32 sn=19
+03:09:30.468 INF Delivered batch. nReq=32 sn=16
+03:09:30.468 DBG Starting timer. sn=20 view=0
+03:09:30.468 DBG Starting timer. sn=23 view=0
+03:09:30.468 INF Committed entry. latency=0 nReq=32 sn=18
+03:09:30.469 INF Delivered batch. nReq=32 sn=17
+03:09:30.469 INF Committed entry. latency=0 nReq=32 sn=17
+03:09:30.469 INF Delivered batch. nReq=32 sn=18
+03:09:30.469 INF Delivered batch. nReq=32 sn=19
+03:09:30.469 DBG Starting timer. sn=22 view=0
+03:09:30.469 DBG Starting timer. sn=21 view=0
+03:09:31.456 DBG Batch ready. batchSize=4096
+03:09:31.456 DBG Batch cut. left=0 nBuckets=16 nReq=32 next=0
+03:09:31.456 DBG Waiting for batch. batchSize=4096
+03:09:31.458 INF Sending PREPREPARE. nReq=32 senderID=1 sn=21 view=0
+03:09:31.459 INF Handling PREPREPARE. nReq=32 senderID=3 sn=23
+03:09:31.459 DBG Creating new Batch. nReq=32
+03:09:31.461 INF Handling PREPREPARE. nReq=32 senderID=0 sn=20
+03:09:31.461 DBG Creating new Batch. nReq=32
+03:09:31.463 INF Handling PREPREPARE. nReq=32 senderID=2 sn=22
+03:09:31.463 DBG Creating new Batch. nReq=32
+03:09:31.464 DBG Sending PREPARE. senderID=1 sn=23 view=0
+03:09:31.465 DBG Sending COMMIT. senderID=1 sn=23 view=0
+03:09:31.467 INF Committed entry. latency=0 nReq=32 sn=23
+03:09:31.467 DBG Starting timer. sn=27 view=0
+03:09:31.468 DBG Sending PREPARE. senderID=1 sn=20 view=0
+03:09:31.468 DBG Sending COMMIT. senderID=1 sn=20 view=0
+03:09:31.469 DBG Sending PREPARE. senderID=1 sn=22 view=0
+03:09:31.469 DBG Sending COMMIT. senderID=1 sn=22 view=0
+03:09:31.470 INF Committed entry. latency=0 nReq=32 sn=20
+03:09:31.470 INF Delivered batch. nReq=32 sn=20
+03:09:31.470 DBG Starting timer. sn=24 view=0
+03:09:31.471 DBG Sending COMMIT. senderID=1 sn=21 view=0
+03:09:31.471 INF Committed entry. latency=0 nReq=32 sn=22
+03:09:31.471 INF Committed entry. latency=0 nReq=32 sn=21
+03:09:31.471 INF Delivered batch. nReq=32 sn=21
+03:09:31.471 INF Delivered batch. nReq=32 sn=22
+03:09:31.472 INF Delivered batch. nReq=32 sn=23
+03:09:31.472 DBG Starting timer. sn=26 view=0
+03:09:31.472 DBG Starting timer. sn=25 view=0
+03:09:32.457 DBG Batch ready. batchSize=4096
+03:09:32.458 DBG Batch cut. left=0 nBuckets=16 nReq=32 next=0
+03:09:32.458 DBG Waiting for batch. batchSize=4096
+03:09:32.459 INF Sending PREPREPARE. nReq=32 senderID=1 sn=25 view=0
+03:09:32.461 INF Handling PREPREPARE. nReq=32 senderID=3 sn=27
+03:09:32.462 DBG Creating new Batch. nReq=32
+03:09:32.462 INF Handling PREPREPARE. nReq=32 senderID=0 sn=24
+03:09:32.462 DBG Creating new Batch. nReq=32
+03:09:32.465 INF Handling PREPREPARE. nReq=32 senderID=2 sn=26
+03:09:32.465 DBG Creating new Batch. nReq=32
+03:09:32.467 DBG Sending PREPARE. senderID=1 sn=27 view=0
+03:09:32.467 DBG Sending COMMIT. senderID=1 sn=27 view=0
+03:09:32.467 DBG Sending PREPARE. senderID=1 sn=24 view=0
+03:09:32.469 DBG Sending COMMIT. senderID=1 sn=24 view=0
+03:09:32.469 INF Committed entry. latency=0 nReq=32 sn=27
+03:09:32.470 DBG Starting timer. sn=31 view=0
+03:09:32.470 DBG Sending PREPARE. senderID=1 sn=26 view=0
+03:09:32.470 INF Committed entry. latency=0 nReq=32 sn=24
+03:09:32.470 INF Delivered batch. nReq=32 sn=24
+03:09:32.471 DBG Starting timer. sn=28 view=0
+03:09:32.471 DBG Sending COMMIT. senderID=1 sn=26 view=0
+03:09:32.471 DBG Sending COMMIT. senderID=1 sn=25 view=0
+03:09:32.472 INF Committed entry. latency=0 nReq=32 sn=25
+03:09:32.472 INF Delivered batch. nReq=32 sn=25
+03:09:32.472 DBG Starting timer. sn=29 view=0
+03:09:32.472 INF Committed entry. latency=0 nReq=32 sn=26
+03:09:32.473 INF Delivered batch. nReq=32 sn=26
+03:09:32.473 INF Delivered batch. nReq=32 sn=27
+03:09:32.473 DBG Starting timer. sn=30 view=0
+03:09:33.459 DBG Batch ready. batchSize=4096
+03:09:33.460 DBG Batch cut. left=0 nBuckets=16 nReq=32 next=0
+03:09:33.460 DBG Waiting for batch. batchSize=4096
+03:09:33.461 INF Sending PREPREPARE. nReq=32 senderID=1 sn=29 view=0
+03:09:33.463 INF Handling PREPREPARE. nReq=32 senderID=3 sn=31
+03:09:33.464 DBG Creating new Batch. nReq=32
+03:09:33.465 INF Handling PREPREPARE. nReq=32 senderID=0 sn=28
+03:09:33.466 DBG Creating new Batch. nReq=32
+03:09:33.465 INF Handling PREPREPARE. nReq=32 senderID=2 sn=30
+03:09:33.466 DBG Creating new Batch. nReq=32
+03:09:33.469 DBG Sending PREPARE. senderID=1 sn=31 view=0
+03:09:33.470 DBG Sending COMMIT. senderID=1 sn=31 view=0
+03:09:33.471 DBG Sending PREPARE. senderID=1 sn=30 view=0
+03:09:33.472 DBG Sending PREPARE. senderID=1 sn=28 view=0
+03:09:33.472 DBG Sending COMMIT. senderID=1 sn=28 view=0
+03:09:33.472 DBG Sending COMMIT. senderID=1 sn=30 view=0
+03:09:33.473 INF Committed entry. latency=0 nReq=32 sn=31
+03:09:33.473 DBG Starting timer. sn=35 view=0
+03:09:33.474 DBG Sending COMMIT. senderID=1 sn=29 view=0
+03:09:33.474 INF Committed entry. latency=0 nReq=32 sn=28
+03:09:33.474 INF Delivered batch. nReq=32 sn=28
+03:09:33.474 DBG Starting timer. sn=32 view=0
+03:09:33.474 INF Committed entry. latency=0 nReq=32 sn=30
+03:09:33.474 INF Delivered batch. nReq=32 sn=29
+03:09:33.474 INF Committed entry. latency=0 nReq=32 sn=29
+03:09:33.475 INF Delivered batch. nReq=32 sn=30
+03:09:33.475 INF Delivered batch. nReq=32 sn=31
+03:09:33.475 DBG Starting timer. sn=34 view=0
+03:09:33.475 DBG Starting timer. sn=33 view=0
+03:09:34.461 DBG Batch ready. batchSize=4096
+03:09:34.461 DBG Batch cut. left=0 nBuckets=16 nReq=32 next=0
+03:09:34.462 DBG Waiting for batch. batchSize=4096
+03:09:34.462 INF Sending PREPREPARE. nReq=32 senderID=1 sn=33 view=0
+03:09:34.463 INF Handling PREPREPARE. nReq=32 senderID=3 sn=35
+03:09:34.464 DBG Creating new Batch. nReq=32
+03:09:34.465 INF Handling PREPREPARE. nReq=32 senderID=0 sn=32
+03:09:34.466 DBG Creating new Batch. nReq=32
+03:09:34.468 DBG Sending PREPARE. senderID=1 sn=35 view=0
+03:09:34.468 INF Handling PREPREPARE. nReq=32 senderID=2 sn=34
+03:09:34.468 DBG Creating new Batch. nReq=32
+03:09:34.470 DBG Sending PREPARE. senderID=1 sn=32 view=0
+03:09:34.472 DBG Sending COMMIT. senderID=1 sn=35 view=0
+03:09:34.473 DBG Sending COMMIT. senderID=1 sn=32 view=0
+03:09:34.474 INF Committed entry. latency=0 nReq=32 sn=35
+03:09:34.474 DBG Starting timer. sn=39 view=0
+03:09:34.474 INF Committed entry. latency=0 nReq=32 sn=32
+03:09:34.474 INF Delivered batch. nReq=32 sn=32
+03:09:34.474 DBG Starting timer. sn=36 view=0
+03:09:34.475 DBG Sending COMMIT. senderID=1 sn=33 view=0
+03:09:34.475 DBG Sending PREPARE. senderID=1 sn=34 view=0
+03:09:34.475 DBG Sending COMMIT. senderID=1 sn=34 view=0
+03:09:34.476 INF Committed entry. latency=0 nReq=32 sn=34
+03:09:34.476 DBG Starting timer. sn=38 view=0
+03:09:34.477 INF Committed entry. latency=0 nReq=32 sn=33
+03:09:34.477 INF Delivered batch. nReq=32 sn=33
+03:09:34.477 INF Delivered batch. nReq=32 sn=34
+03:09:34.477 INF Delivered batch. nReq=32 sn=35
+03:09:34.477 DBG Starting timer. sn=37 view=0
+03:09:35.463 DBG Batch ready. batchSize=4096
+03:09:35.463 DBG Batch cut. left=0 nBuckets=16 nReq=32 next=0
+03:09:35.464 DBG Waiting for batch. batchSize=4096
+03:09:35.465 INF Sending PREPREPARE. nReq=32 senderID=1 sn=37 view=0
+03:09:35.466 INF Handling PREPREPARE. nReq=33 senderID=3 sn=39
+03:09:35.466 DBG Creating new Batch. nReq=33
+03:09:35.468 INF Handling PREPREPARE. nReq=32 senderID=0 sn=36
+03:09:35.468 DBG Creating new Batch. nReq=32
+03:09:35.469 INF Handling PREPREPARE. nReq=32 senderID=2 sn=38
+03:09:35.469 DBG Creating new Batch. nReq=32
+03:09:35.473 DBG Sending PREPARE. senderID=1 sn=39 view=0
+03:09:35.474 DBG Sending COMMIT. senderID=1 sn=39 view=0
+03:09:35.474 INF Committed entry. latency=0 nReq=33 sn=39
+03:09:35.474 DBG Starting timer. sn=43 view=0
+03:09:35.474 DBG Sending PREPARE. senderID=1 sn=36 view=0
+03:09:35.475 DBG Sending COMMIT. senderID=1 sn=36 view=0
+03:09:35.476 DBG Sending PREPARE. senderID=1 sn=38 view=0
+03:09:35.476 DBG Sending COMMIT. senderID=1 sn=38 view=0
+03:09:35.476 INF Committed entry. latency=0 nReq=32 sn=36
+03:09:35.476 INF Delivered batch. nReq=32 sn=36
+03:09:35.477 DBG Starting timer. sn=40 view=0
+03:09:35.477 DBG Sending COMMIT. senderID=1 sn=37 view=0
+03:09:35.478 INF Committed entry. latency=0 nReq=32 sn=38
+03:09:35.478 DBG Starting timer. sn=42 view=0
+03:09:35.479 INF Committed entry. latency=0 nReq=32 sn=37
+03:09:35.479 INF Delivered batch. nReq=32 sn=37
+03:09:35.479 INF Delivered batch. nReq=32 sn=38
+03:09:35.479 INF Delivered batch. nReq=33 sn=39
+03:09:35.479 DBG Starting timer. sn=41 view=0
+03:09:36.464 DBG Batch ready. batchSize=4096
+03:09:36.464 DBG Batch cut. left=0 nBuckets=16 nReq=32 next=0
+03:09:36.465 DBG Waiting for batch. batchSize=4096
+03:09:36.466 INF Sending PREPREPARE. nReq=32 senderID=1 sn=41 view=0
+03:09:36.468 INF Handling PREPREPARE. nReq=32 senderID=3 sn=43
+03:09:36.468 DBG Creating new Batch. nReq=32
+03:09:36.469 INF Handling PREPREPARE. nReq=32 senderID=0 sn=40
+03:09:36.469 DBG Creating new Batch. nReq=32
+03:09:36.470 INF Handling PREPREPARE. nReq=32 senderID=2 sn=42
+03:09:36.470 DBG Creating new Batch. nReq=32
+03:09:36.474 DBG Sending PREPARE. senderID=1 sn=40 view=0
+03:09:36.475 DBG Sending PREPARE. senderID=1 sn=43 view=0
+03:09:36.476 DBG Sending PREPARE. senderID=1 sn=42 view=0
+03:09:36.476 DBG Sending COMMIT. senderID=1 sn=42 view=0
+03:09:36.476 DBG Sending COMMIT. senderID=1 sn=43 view=0
+03:09:36.478 DBG Sending COMMIT. senderID=1 sn=40 view=0
+03:09:36.477 DBG Sending COMMIT. senderID=1 sn=41 view=0
+03:09:36.478 INF Committed entry. latency=0 nReq=32 sn=43
+03:09:36.478 DBG Starting timer. sn=47 view=0
+03:09:36.478 INF Committed entry. latency=0 nReq=32 sn=40
+03:09:36.478 INF Delivered batch. nReq=32 sn=40
+03:09:36.478 DBG Starting timer. sn=44 view=0
+03:09:36.479 INF Committed entry. latency=0 nReq=32 sn=41
+03:09:36.479 INF Committed entry. latency=0 nReq=32 sn=42
+03:09:36.479 INF Delivered batch. nReq=32 sn=41
+03:09:36.479 INF Delivered batch. nReq=32 sn=42
+03:09:36.479 INF Delivered batch. nReq=32 sn=43
+03:09:36.479 DBG Starting timer. sn=45 view=0
+03:09:36.479 DBG Starting timer. sn=46 view=0
+03:09:37.466 DBG Batch ready. batchSize=4096
+03:09:37.467 DBG Batch cut. left=0 nBuckets=16 nReq=32 next=0
+03:09:37.467 DBG Waiting for batch. batchSize=4096
+03:09:37.468 INF Sending PREPREPARE. nReq=32 senderID=1 sn=45 view=0
+03:09:37.469 INF Handling PREPREPARE. nReq=32 senderID=3 sn=47
+03:09:37.469 DBG Creating new Batch. nReq=32
+03:09:37.470 INF Handling PREPREPARE. nReq=32 senderID=0 sn=44
+03:09:37.470 DBG Creating new Batch. nReq=32
+03:09:37.473 INF Handling PREPREPARE. nReq=32 senderID=2 sn=46
+03:09:37.473 DBG Creating new Batch. nReq=32
+03:09:37.474 DBG Sending PREPARE. senderID=1 sn=47 view=0
+03:09:37.475 DBG Sending COMMIT. senderID=1 sn=47 view=0
+03:09:37.476 DBG Sending PREPARE. senderID=1 sn=44 view=0
+03:09:37.476 DBG Sending COMMIT. senderID=1 sn=44 view=0
+03:09:37.477 INF Committed entry. latency=0 nReq=32 sn=47
+03:09:37.478 DBG Starting timer. sn=51 view=0
+03:09:37.478 DBG Sending PREPARE. senderID=1 sn=46 view=0
+03:09:37.479 INF Committed entry. latency=0 nReq=32 sn=44
+03:09:37.479 INF Delivered batch. nReq=32 sn=44
+03:09:37.479 DBG Starting timer. sn=48 view=0
+03:09:37.480 DBG Sending COMMIT. senderID=1 sn=46 view=0
+03:09:37.481 DBG Sending COMMIT. senderID=1 sn=45 view=0
+03:09:37.481 INF Committed entry. latency=0 nReq=32 sn=46
+03:09:37.481 INF Committed entry. latency=0 nReq=32 sn=45
+03:09:37.481 INF Delivered batch. nReq=32 sn=45
+03:09:37.481 INF Delivered batch. nReq=32 sn=46
+03:09:37.481 INF Delivered batch. nReq=32 sn=47
+03:09:37.482 DBG Starting timer. sn=50 view=0
+03:09:37.482 DBG Starting timer. sn=49 view=0
+03:09:38.468 DBG Batch ready. batchSize=4096
+03:09:38.468 DBG Batch cut. left=0 nBuckets=16 nReq=32 next=0
+03:09:38.468 DBG Waiting for batch. batchSize=4096
+03:09:38.469 INF Sending PREPREPARE. nReq=32 senderID=1 sn=49 view=0
+03:09:38.470 INF Handling PREPREPARE. nReq=32 senderID=3 sn=51
+03:09:38.470 DBG Creating new Batch. nReq=32
+03:09:38.471 INF Handling PREPREPARE. nReq=32 senderID=0 sn=48
+03:09:38.471 DBG Creating new Batch. nReq=32
+03:09:38.474 INF Handling PREPREPARE. nReq=32 senderID=2 sn=50
+03:09:38.474 DBG Creating new Batch. nReq=32
+03:09:38.475 DBG Sending PREPARE. senderID=1 sn=51 view=0
+03:09:38.476 DBG Sending COMMIT. senderID=1 sn=51 view=0
+03:09:38.476 DBG Sending PREPARE. senderID=1 sn=48 view=0
+03:09:38.478 DBG Sending COMMIT. senderID=1 sn=48 view=0
+03:09:38.478 INF Committed entry. latency=0 nReq=32 sn=51
+03:09:38.478 DBG Starting timer. sn=55 view=0
+03:09:38.479 INF Committed entry. latency=0 nReq=32 sn=48
+03:09:38.479 INF Delivered batch. nReq=32 sn=48
+03:09:38.479 DBG Starting timer. sn=52 view=0
+03:09:38.480 DBG Sending PREPARE. senderID=1 sn=50 view=0
+03:09:38.480 DBG Sending COMMIT. senderID=1 sn=50 view=0
+03:09:38.481 DBG Sending COMMIT. senderID=1 sn=49 view=0
+03:09:38.482 INF Committed entry. latency=0 nReq=32 sn=49
+03:09:38.482 INF Committed entry. latency=0 nReq=32 sn=50
+03:09:38.483 INF Delivered batch. nReq=32 sn=49
+03:09:38.483 INF Delivered batch. nReq=32 sn=50
+03:09:38.483 INF Delivered batch. nReq=32 sn=51
+03:09:38.483 DBG Starting timer. sn=53 view=0
+03:09:38.483 DBG Starting timer. sn=54 view=0
+03:09:39.469 DBG Batch ready. batchSize=4096
+03:09:39.470 DBG Batch cut. left=0 nBuckets=16 nReq=32 next=0
+03:09:39.470 DBG Waiting for batch. batchSize=4096
+03:09:39.471 INF Handling PREPREPARE. nReq=32 senderID=3 sn=55
+03:09:39.471 INF Sending PREPREPARE. nReq=32 senderID=1 sn=53 view=0
+03:09:39.471 DBG Creating new Batch. nReq=32
+03:09:39.472 INF Handling PREPREPARE. nReq=33 senderID=0 sn=52
+03:09:39.472 DBG Creating new Batch. nReq=33
+03:09:39.476 DBG Sending PREPARE. senderID=1 sn=55 view=0
+03:09:39.477 DBG Sending COMMIT. senderID=1 sn=55 view=0
+03:09:39.477 INF Handling PREPREPARE. nReq=32 senderID=2 sn=54
+03:09:39.478 DBG Creating new Batch. nReq=32
+03:09:39.478 DBG Sending PREPARE. senderID=1 sn=52 view=0
+03:09:39.479 DBG Sending COMMIT. senderID=1 sn=52 view=0
+03:09:39.480 INF Committed entry. latency=0 nReq=32 sn=55
+03:09:39.480 DBG Starting timer. sn=59 view=0
+03:09:39.481 INF Committed entry. latency=0 nReq=33 sn=52
+03:09:39.481 INF Delivered batch. nReq=33 sn=52
+03:09:39.481 DBG Starting timer. sn=56 view=0
+03:09:39.482 DBG Sending PREPARE. senderID=1 sn=54 view=0
+03:09:39.482 DBG Sending COMMIT. senderID=1 sn=53 view=0
+03:09:39.484 DBG Sending COMMIT. senderID=1 sn=54 view=0
+03:09:39.484 INF Committed entry. latency=0 nReq=32 sn=53
+03:09:39.484 INF Delivered batch. nReq=32 sn=53
+03:09:39.485 DBG Starting timer. sn=57 view=0
+03:09:39.485 INF Committed entry. latency=0 nReq=32 sn=54
+03:09:39.485 INF Delivered batch. nReq=32 sn=54
+03:09:39.485 INF Delivered batch. nReq=32 sn=55
+03:09:39.485 DBG Starting timer. sn=58 view=0
+03:09:40.471 DBG Batch ready. batchSize=4096
+03:09:40.472 DBG Batch cut. left=0 nBuckets=16 nReq=32 next=0
+03:09:40.472 DBG Waiting for batch. batchSize=4096
+03:09:40.473 INF Sending PREPREPARE. nReq=32 senderID=1 sn=57 view=0
+03:09:40.474 INF Handling PREPREPARE. nReq=32 senderID=3 sn=59
+03:09:40.474 DBG Creating new Batch. nReq=32
+03:09:40.474 INF Handling PREPREPARE. nReq=32 senderID=0 sn=56
+03:09:40.475 DBG Creating new Batch. nReq=32
+03:09:40.478 INF Handling PREPREPARE. nReq=32 senderID=2 sn=58
+03:09:40.478 DBG Creating new Batch. nReq=32
+03:09:40.480 DBG Sending PREPARE. senderID=1 sn=59 view=0
+03:09:40.480 DBG Sending PREPARE. senderID=1 sn=56 view=0
+03:09:40.480 DBG Sending COMMIT. senderID=1 sn=59 view=0
+03:09:40.481 DBG Sending COMMIT. senderID=1 sn=56 view=0
+03:09:40.481 INF Committed entry. latency=0 nReq=32 sn=59
+03:09:40.481 DBG Starting timer. sn=63 view=0
+03:09:40.482 INF Committed entry. latency=0 nReq=32 sn=56
+03:09:40.482 INF Delivered batch. nReq=32 sn=56
+03:09:40.483 DBG Starting timer. sn=60 view=0
+03:09:40.483 DBG Sending PREPARE. senderID=1 sn=58 view=0
+03:09:40.483 DBG Sending COMMIT. senderID=1 sn=58 view=0
+03:09:40.485 DBG Sending COMMIT. senderID=1 sn=57 view=0
+03:09:40.486 INF Committed entry. latency=0 nReq=32 sn=58
+03:09:40.486 INF Committed entry. latency=0 nReq=32 sn=57
+03:09:40.486 INF Delivered batch. nReq=32 sn=57
+03:09:40.486 INF Delivered batch. nReq=32 sn=58
+03:09:40.486 INF Delivered batch. nReq=32 sn=59
+03:09:40.486 DBG Starting timer. sn=62 view=0
+03:09:40.486 DBG Starting timer. sn=61 view=0
+03:09:41.473 DBG Batch ready. batchSize=4096
+03:09:41.473 DBG Batch cut. left=0 nBuckets=16 nReq=32 next=0
+03:09:41.473 DBG Waiting for batch. batchSize=4096
+03:09:41.475 INF Sending PREPREPARE. nReq=32 senderID=1 sn=61 view=0
+03:09:41.475 INF Handling PREPREPARE. nReq=32 senderID=3 sn=63
+03:09:41.475 DBG Creating new Batch. nReq=32
+03:09:41.477 INF Handling PREPREPARE. nReq=32 senderID=0 sn=60
+03:09:41.477 DBG Creating new Batch. nReq=32
+03:09:41.481 DBG Sending PREPARE. senderID=1 sn=63 view=0
+03:09:41.482 INF Handling PREPREPARE. nReq=32 senderID=2 sn=62
+03:09:41.482 DBG Creating new Batch. nReq=32
+03:09:41.482 DBG Sending COMMIT. senderID=1 sn=63 view=0
+03:09:41.483 DBG Sending PREPARE. senderID=1 sn=60 view=0
+03:09:41.484 DBG Sending COMMIT. senderID=1 sn=60 view=0
+03:09:41.484 INF Committed entry. latency=0 nReq=32 sn=63
+03:09:41.484 DBG Starting timer. sn=67 view=0
+03:09:41.485 INF Committed entry. latency=0 nReq=32 sn=60
+03:09:41.485 INF Delivered batch. nReq=32 sn=60
+03:09:41.486 DBG Starting timer. sn=64 view=0
+03:09:41.487 DBG Sending COMMIT. senderID=1 sn=61 view=0
+03:09:41.487 INF Committed entry. latency=0 nReq=32 sn=61
+03:09:41.487 DBG Sending PREPARE. senderID=1 sn=62 view=0
+03:09:41.487 INF Delivered batch. nReq=32 sn=61
+03:09:41.488 DBG Starting timer. sn=65 view=0
+03:09:41.488 DBG Sending COMMIT. senderID=1 sn=62 view=0
+03:09:41.489 INF Committed entry. latency=0 nReq=32 sn=62
+03:09:41.489 INF Delivered batch. nReq=32 sn=62
+03:09:41.489 INF Delivered batch. nReq=32 sn=63
+03:09:41.489 DBG Starting timer. sn=66 view=0
+03:09:42.474 DBG Batch ready. batchSize=4096
+03:09:42.474 DBG Batch cut. left=0 nBuckets=16 nReq=33 next=0
+03:09:42.475 DBG Waiting for batch. batchSize=4096
+03:09:42.475 INF Sending PREPREPARE. nReq=33 senderID=1 sn=65 view=0
+03:09:42.476 INF Handling PREPREPARE. nReq=32 senderID=3 sn=67
+03:09:42.477 DBG Creating new Batch. nReq=32
+03:09:42.477 INF Handling PREPREPARE. nReq=32 senderID=0 sn=64
+03:09:42.478 DBG Creating new Batch. nReq=32
+03:09:42.483 DBG Sending PREPARE. senderID=1 sn=67 view=0
+03:09:42.483 DBG Sending COMMIT. senderID=1 sn=67 view=0
+03:09:42.483 DBG Sending PREPARE. senderID=1 sn=64 view=0
+03:09:42.484 INF Handling PREPREPARE. nReq=32 senderID=2 sn=66
+03:09:42.484 DBG Creating new Batch. nReq=32
+03:09:42.485 DBG Sending COMMIT. senderID=1 sn=64 view=0
+03:09:42.485 INF Committed entry. latency=0 nReq=32 sn=67
+03:09:42.485 DBG Starting timer. sn=71 view=0
+03:09:42.486 INF Committed entry. latency=0 nReq=32 sn=64
+03:09:42.486 INF Delivered batch. nReq=32 sn=64
+03:09:42.486 DBG Starting timer. sn=68 view=0
+03:09:42.488 DBG Sending PREPARE. senderID=1 sn=66 view=0
+03:09:42.489 DBG Sending COMMIT. senderID=1 sn=65 view=0
+03:09:42.489 DBG Sending COMMIT. senderID=1 sn=66 view=0
+03:09:42.491 INF Committed entry. latency=0 nReq=33 sn=65
+03:09:42.491 INF Delivered batch. nReq=33 sn=65
+03:09:42.491 INF Committed entry. latency=0 nReq=32 sn=66
+03:09:42.491 INF Delivered batch. nReq=32 sn=66
+03:09:42.491 INF Delivered batch. nReq=32 sn=67
+03:09:42.491 DBG Starting timer. sn=69 view=0
+03:09:42.491 DBG Starting timer. sn=70 view=0
+03:09:43.475 DBG Batch ready. batchSize=4096
+03:09:43.476 DBG Batch cut. left=0 nBuckets=16 nReq=32 next=0
+03:09:43.476 DBG Waiting for batch. batchSize=4096
+03:09:43.477 INF Sending PREPREPARE. nReq=32 senderID=1 sn=69 view=0
+03:09:43.479 INF Handling PREPREPARE. nReq=32 senderID=3 sn=71
+03:09:43.479 INF Handling PREPREPARE. nReq=32 senderID=0 sn=68
+03:09:43.479 DBG Creating new Batch. nReq=32
+03:09:43.479 DBG Creating new Batch. nReq=32
+03:09:43.484 DBG Sending PREPARE. senderID=1 sn=68 view=0
+03:09:43.485 DBG Sending PREPARE. senderID=1 sn=71 view=0
+03:09:43.485 INF Handling PREPREPARE. nReq=32 senderID=2 sn=70
+03:09:43.485 DBG Sending COMMIT. senderID=1 sn=71 view=0
+03:09:43.485 DBG Creating new Batch. nReq=32
+03:09:43.488 DBG Sending COMMIT. senderID=1 sn=69 view=0
+03:09:43.488 DBG Sending COMMIT. senderID=1 sn=68 view=0
+03:09:43.489 INF Committed entry. latency=0 nReq=32 sn=71
+03:09:43.489 INF Committed entry. latency=0 nReq=32 sn=69
+03:09:43.489 DBG Starting timer. sn=75 view=0
+03:09:43.489 DBG Starting timer. sn=73 view=0
+03:09:43.489 DBG Sending PREPARE. senderID=1 sn=70 view=0
+03:09:43.489 DBG Sending COMMIT. senderID=1 sn=70 view=0
+03:09:43.490 INF Committed entry. latency=0 nReq=32 sn=68
+03:09:43.490 INF Delivered batch. nReq=32 sn=68
+03:09:43.490 INF Delivered batch. nReq=32 sn=69
+03:09:43.490 DBG Starting timer. sn=72 view=0
+03:09:43.491 INF Committed entry. latency=0 nReq=32 sn=70
+03:09:43.491 INF Delivered batch. nReq=32 sn=70
+03:09:43.491 INF Delivered batch. nReq=32 sn=71
+03:09:43.491 DBG Starting timer. sn=74 view=0
+03:09:44.477 DBG Batch ready. batchSize=4096
+03:09:44.477 DBG Batch cut. left=0 nBuckets=16 nReq=32 next=0
+03:09:44.477 DBG Waiting for batch. batchSize=4096
+03:09:44.478 INF Sending PREPREPARE. nReq=32 senderID=1 sn=73 view=0
+03:09:44.481 INF Handling PREPREPARE. nReq=32 senderID=3 sn=75
+03:09:44.481 DBG Creating new Batch. nReq=32
+03:09:44.482 INF Handling PREPREPARE. nReq=32 senderID=0 sn=72
+03:09:44.482 DBG Creating new Batch. nReq=32
+03:09:44.484 INF Handling PREPREPARE. nReq=32 senderID=2 sn=74
+03:09:44.484 DBG Creating new Batch. nReq=32
+03:09:44.485 DBG Sending PREPARE. senderID=1 sn=75 view=0
+03:09:44.488 DBG Sending COMMIT. senderID=1 sn=75 view=0
+03:09:44.488 DBG Sending PREPARE. senderID=1 sn=72 view=0
+03:09:44.489 DBG Sending PREPARE. senderID=1 sn=74 view=0
+03:09:44.489 INF Committed entry. latency=0 nReq=32 sn=75
+03:09:44.489 DBG Starting timer. sn=79 view=0
+03:09:44.490 DBG Sending COMMIT. senderID=1 sn=73 view=0
+03:09:44.490 DBG Sending COMMIT. senderID=1 sn=72 view=0
+03:09:44.491 INF Committed entry. latency=0 nReq=32 sn=72
+03:09:44.491 INF Committed entry. latency=0 nReq=32 sn=73
+03:09:44.491 INF Delivered batch. nReq=32 sn=72
+03:09:44.491 INF Delivered batch. nReq=32 sn=73
+03:09:44.491 DBG Starting timer. sn=76 view=0
+03:09:44.491 DBG Sending COMMIT. senderID=1 sn=74 view=0
+03:09:44.491 DBG Starting timer. sn=77 view=0
+03:09:44.492 INF Committed entry. latency=0 nReq=32 sn=74
+03:09:44.492 INF Delivered batch. nReq=32 sn=74
+03:09:44.492 INF Delivered batch. nReq=32 sn=75
+03:09:44.492 DBG Starting timer. sn=78 view=0
+03:09:45.478 DBG Batch ready. batchSize=4096
+03:09:45.478 DBG Batch cut. left=0 nBuckets=16 nReq=32 next=0
+03:09:45.479 DBG Waiting for batch. batchSize=4096
+03:09:45.480 INF Sending PREPREPARE. nReq=32 senderID=1 sn=77 view=0
+03:09:45.482 INF Handling PREPREPARE. nReq=32 senderID=0 sn=76
+03:09:45.483 DBG Creating new Batch. nReq=32
+03:09:45.483 INF Handling PREPREPARE. nReq=32 senderID=3 sn=79
+03:09:45.483 DBG Creating new Batch. nReq=32
+03:09:45.485 INF Handling PREPREPARE. nReq=32 senderID=2 sn=78
+03:09:45.485 DBG Creating new Batch. nReq=32
+03:09:45.488 DBG Sending PREPARE. senderID=1 sn=79 view=0
+03:09:45.489 DBG Sending PREPARE. senderID=1 sn=76 view=0
+03:09:45.490 DBG Sending PREPARE. senderID=1 sn=78 view=0
+03:09:45.491 DBG Sending COMMIT. senderID=1 sn=76 view=0
+03:09:45.491 DBG Sending COMMIT. senderID=1 sn=77 view=0
+03:09:45.491 DBG Sending COMMIT. senderID=1 sn=79 view=0
+03:09:45.492 INF Committed entry. latency=0 nReq=32 sn=79
+03:09:45.492 INF Delivered batch. nReq=32 sn=76
+03:09:45.492 INF Committed entry. latency=0 nReq=32 sn=76
+03:09:45.492 INF Delivered batch. nReq=32 sn=77
+03:09:45.492 INF Committed entry. latency=0 nReq=32 sn=77
+03:09:45.492 DBG Starting timer. sn=83 view=0
+03:09:45.492 DBG Starting timer. sn=81 view=0
+03:09:45.492 DBG Sending COMMIT. senderID=1 sn=78 view=0
+03:09:45.493 DBG Starting timer. sn=80 view=0
+03:09:45.494 INF Committed entry. latency=0 nReq=32 sn=78
+03:09:45.494 INF Delivered batch. nReq=32 sn=78
+03:09:45.494 INF Delivered batch. nReq=32 sn=79
+03:09:45.494 DBG Starting timer. sn=82 view=0
+03:09:46.480 DBG Batch ready. batchSize=4096
+03:09:46.480 DBG Batch cut. left=0 nBuckets=16 nReq=32 next=0
+03:09:46.480 DBG Waiting for batch. batchSize=4096
+03:09:46.481 INF Sending PREPREPARE. nReq=32 senderID=1 sn=81 view=0
+03:09:46.484 INF Handling PREPREPARE. nReq=32 senderID=0 sn=80
+03:09:46.484 DBG Creating new Batch. nReq=32
+03:09:46.484 INF Handling PREPREPARE. nReq=32 senderID=3 sn=83
+03:09:46.484 DBG Creating new Batch. nReq=32
+03:09:46.488 INF Handling PREPREPARE. nReq=32 senderID=2 sn=82
+03:09:46.488 DBG Creating new Batch. nReq=32
+03:09:46.490 DBG Sending PREPARE. senderID=1 sn=83 view=0
+03:09:46.491 DBG Sending PREPARE. senderID=1 sn=80 view=0
+03:09:46.492 DBG Sending COMMIT. senderID=1 sn=80 view=0
+03:09:46.492 DBG Sending COMMIT. senderID=1 sn=83 view=0
+03:09:46.492 DBG Sending PREPARE. senderID=1 sn=82 view=0
+03:09:46.492 DBG Sending COMMIT. senderID=1 sn=81 view=0
+03:09:46.493 INF Committed entry. latency=0 nReq=32 sn=80
+03:09:46.493 INF Delivered batch. nReq=32 sn=80
+03:09:46.493 INF Committed entry. latency=0 nReq=32 sn=81
+03:09:46.493 INF Committed entry. latency=0 nReq=32 sn=83
+03:09:46.493 INF Delivered batch. nReq=32 sn=81
+03:09:46.494 DBG Starting timer. sn=84 view=0
+03:09:46.494 DBG Starting timer. sn=85 view=0
+03:09:46.494 DBG Starting timer. sn=87 view=0
+03:09:46.494 DBG Sending COMMIT. senderID=1 sn=82 view=0
+03:09:46.495 INF Committed entry. latency=0 nReq=32 sn=82
+03:09:46.495 INF Delivered batch. nReq=32 sn=82
+03:09:46.495 INF Delivered batch. nReq=32 sn=83
+03:09:46.496 DBG Starting timer. sn=86 view=0
+03:09:47.481 DBG Batch ready. batchSize=4096
+03:09:47.481 DBG Batch cut. left=0 nBuckets=16 nReq=32 next=0
+03:09:47.481 DBG Waiting for batch. batchSize=4096
+03:09:47.482 INF Sending PREPREPARE. nReq=32 senderID=1 sn=85 view=0
+03:09:47.485 INF Handling PREPREPARE. nReq=32 senderID=0 sn=84
+03:09:47.485 INF Handling PREPREPARE. nReq=32 senderID=3 sn=87
+03:09:47.486 DBG Creating new Batch. nReq=32
+03:09:47.486 DBG Creating new Batch. nReq=32
+03:09:47.490 INF Handling PREPREPARE. nReq=33 senderID=2 sn=86
+03:09:47.490 DBG Creating new Batch. nReq=33
+03:09:47.492 DBG Sending PREPARE. senderID=1 sn=87 view=0
+03:09:47.493 DBG Sending COMMIT. senderID=1 sn=87 view=0
+03:09:47.495 DBG Sending COMMIT. senderID=1 sn=85 view=0
+03:09:47.496 INF Committed entry. latency=0 nReq=32 sn=85
+03:09:47.496 DBG Starting timer. sn=89 view=0
+03:09:47.496 DBG Sending PREPARE. senderID=1 sn=86 view=0
+03:09:47.496 INF Committed entry. latency=0 nReq=32 sn=87
+03:09:47.496 DBG Sending COMMIT. senderID=1 sn=86 view=0
+03:09:47.497 DBG Starting timer. sn=91 view=0
+03:09:47.497 DBG Sending PREPARE. senderID=1 sn=84 view=0
+03:09:47.497 DBG Sending COMMIT. senderID=1 sn=84 view=0
+03:09:47.498 INF Committed entry. latency=0 nReq=32 sn=84
+03:09:47.498 INF Delivered batch. nReq=32 sn=84
+03:09:47.498 INF Delivered batch. nReq=32 sn=85
+03:09:47.498 DBG Starting timer. sn=88 view=0
+03:09:47.498 INF Committed entry. latency=0 nReq=33 sn=86
+03:09:47.499 INF Delivered batch. nReq=33 sn=86
+03:09:47.499 INF Delivered batch. nReq=32 sn=87
+03:09:47.499 DBG Starting timer. sn=90 view=0
+03:09:48.482 DBG Batch ready. batchSize=4096
+03:09:48.482 DBG Batch cut. left=0 nBuckets=16 nReq=32 next=0
+03:09:48.483 DBG Waiting for batch. batchSize=4096
+03:09:48.484 INF Sending PREPREPARE. nReq=32 senderID=1 sn=89 view=0
+03:09:48.486 INF Handling PREPREPARE. nReq=32 senderID=0 sn=88
+03:09:48.486 DBG Creating new Batch. nReq=32
+03:09:48.486 INF Handling PREPREPARE. nReq=32 senderID=3 sn=91
+03:09:48.487 DBG Creating new Batch. nReq=32
+03:09:48.490 INF Handling PREPREPARE. nReq=32 senderID=2 sn=90
+03:09:48.491 DBG Sending PREPARE. senderID=1 sn=91 view=0
+03:09:48.493 DBG Creating new Batch. nReq=32
+03:09:48.491 DBG Sending PREPARE. senderID=1 sn=88 view=0
+03:09:48.493 DBG Sending COMMIT. senderID=1 sn=88 view=0
+03:09:48.494 DBG Sending COMMIT. senderID=1 sn=91 view=0
+03:09:48.496 INF Committed entry. latency=0 nReq=32 sn=91
+03:09:48.496 DBG Starting timer. sn=95 view=0
+03:09:48.497 INF Committed entry. latency=0 nReq=32 sn=88
+03:09:48.497 DBG Sending COMMIT. senderID=1 sn=89 view=0
+03:09:48.497 INF Delivered batch. nReq=32 sn=88
+03:09:48.497 DBG Starting timer. sn=92 view=0
+03:09:48.497 DBG Sending PREPARE. senderID=1 sn=90 view=0
+03:09:48.498 INF Committed entry. latency=0 nReq=32 sn=89
+03:09:48.498 DBG Sending COMMIT. senderID=1 sn=90 view=0
+03:09:48.498 INF Delivered batch. nReq=32 sn=89
+03:09:48.498 DBG Starting timer. sn=93 view=0
+03:09:48.499 INF Committed entry. latency=0 nReq=32 sn=90
+03:09:48.500 INF Delivered batch. nReq=32 sn=90
+03:09:48.500 INF Delivered batch. nReq=32 sn=91
+03:09:48.500 DBG Starting timer. sn=94 view=0
+03:09:49.483 DBG Batch ready. batchSize=4096
+03:09:49.484 DBG Batch cut. left=0 nBuckets=16 nReq=32 next=0
+03:09:49.484 DBG Waiting for batch. batchSize=4096
+03:09:49.485 INF Sending PREPREPARE. nReq=32 senderID=1 sn=93 view=0
+03:09:49.488 INF Handling PREPREPARE. nReq=32 senderID=3 sn=95
+03:09:49.488 DBG Creating new Batch. nReq=32
+03:09:49.488 INF Handling PREPREPARE. nReq=32 senderID=0 sn=92
+03:09:49.488 DBG Creating new Batch. nReq=32
+03:09:49.492 DBG Sending PREPARE. senderID=1 sn=95 view=0
+03:09:49.493 DBG Sending PREPARE. senderID=1 sn=92 view=0
+03:09:49.493 INF Handling PREPREPARE. nReq=32 senderID=2 sn=94
+03:09:49.493 DBG Creating new Batch. nReq=32
+03:09:49.496 DBG Sending COMMIT. senderID=1 sn=92 view=0
+03:09:49.496 DBG Sending COMMIT. senderID=1 sn=93 view=0
+03:09:49.497 DBG Sending COMMIT. senderID=1 sn=95 view=0
+03:09:49.497 INF Committed entry. latency=0 nReq=32 sn=92
+03:09:49.497 INF Delivered batch. nReq=32 sn=92
+03:09:49.497 INF Committed entry. latency=0 nReq=32 sn=95
+03:09:49.497 DBG Starting timer. sn=99 view=0
+03:09:49.497 DBG Starting timer. sn=96 view=0
+03:09:49.497 DBG Sending PREPARE. senderID=1 sn=94 view=0
+03:09:49.498 DBG Sending COMMIT. senderID=1 sn=94 view=0
+03:09:49.498 INF Committed entry. latency=0 nReq=32 sn=93
+03:09:49.498 INF Delivered batch. nReq=32 sn=93
+03:09:49.498 DBG Starting timer. sn=97 view=0
+03:09:49.500 INF Committed entry. latency=0 nReq=32 sn=94
+03:09:49.500 INF Delivered batch. nReq=32 sn=94
+03:09:49.500 INF Delivered batch. nReq=32 sn=95
+03:09:49.500 DBG Starting timer. sn=98 view=0
+03:09:50.485 DBG Batch ready. batchSize=4096
+03:09:50.485 DBG Batch cut. left=0 nBuckets=16 nReq=32 next=0
+03:09:50.485 DBG Waiting for batch. batchSize=4096
+03:09:50.486 INF Sending PREPREPARE. nReq=32 senderID=1 sn=97 view=0
+03:09:50.490 INF Handling PREPREPARE. nReq=32 senderID=3 sn=99
+03:09:50.490 DBG Creating new Batch. nReq=32
+03:09:50.490 INF Handling PREPREPARE. nReq=32 senderID=0 sn=96
+03:09:50.490 DBG Creating new Batch. nReq=32
+03:09:50.494 INF Handling PREPREPARE. nReq=32 senderID=2 sn=98
+03:09:50.495 DBG Sending PREPARE. senderID=1 sn=96 view=0
+03:09:50.495 DBG Creating new Batch. nReq=32
+03:09:50.495 DBG Sending PREPARE. senderID=1 sn=99 view=0
+03:09:50.497 DBG Sending COMMIT. senderID=1 sn=99 view=0
+03:09:50.499 DBG Sending COMMIT. senderID=1 sn=97 view=0
+03:09:50.499 DBG Sending COMMIT. senderID=1 sn=96 view=0
+03:09:50.499 INF Committed entry. latency=0 nReq=32 sn=99
+03:09:50.499 DBG Starting timer. sn=103 view=0
+03:09:50.500 DBG Sending PREPARE. senderID=1 sn=98 view=0
+03:09:50.500 DBG Sending COMMIT. senderID=1 sn=98 view=0
+03:09:50.500 INF Committed entry. latency=0 nReq=32 sn=96
+03:09:50.500 INF Committed entry. latency=0 nReq=32 sn=97
+03:09:50.500 INF Delivered batch. nReq=32 sn=96
+03:09:50.501 INF Delivered batch. nReq=32 sn=97
+03:09:50.501 DBG Starting timer. sn=100 view=0
+03:09:50.501 DBG Starting timer. sn=101 view=0
+03:09:50.502 INF Committed entry. latency=0 nReq=32 sn=98
+03:09:50.502 INF Delivered batch. nReq=32 sn=98
+03:09:50.502 INF Delivered batch. nReq=32 sn=99
+03:09:50.502 DBG Starting timer. sn=102 view=0
+03:09:51.487 DBG Batch ready. batchSize=4096
+03:09:51.487 DBG Batch cut. left=0 nBuckets=16 nReq=32 next=0
+03:09:51.487 DBG Waiting for batch. batchSize=4096
+03:09:51.488 INF Sending PREPREPARE. nReq=32 senderID=1 sn=101 view=0
+03:09:51.491 INF Handling PREPREPARE. nReq=32 senderID=3 sn=103
+03:09:51.491 DBG Creating new Batch. nReq=32
+03:09:51.492 INF Handling PREPREPARE. nReq=32 senderID=0 sn=100
+03:09:51.492 DBG Creating new Batch. nReq=32
+03:09:51.495 INF Handling PREPREPARE. nReq=32 senderID=2 sn=102
+03:09:51.495 DBG Creating new Batch. nReq=32
+03:09:51.497 DBG Sending PREPARE. senderID=1 sn=103 view=0
+03:09:51.498 DBG Sending COMMIT. senderID=1 sn=103 view=0
+03:09:51.498 DBG Sending PREPARE. senderID=1 sn=100 view=0
+03:09:51.499 DBG Sending COMMIT. senderID=1 sn=100 view=0
+03:09:51.499 INF Committed entry. latency=0 nReq=32 sn=103
+03:09:51.499 DBG Starting timer. sn=107 view=0
+03:09:51.499 DBG Sending PREPARE. senderID=1 sn=102 view=0
+03:09:51.500 DBG Sending COMMIT. senderID=1 sn=101 view=0
+03:09:51.501 INF Committed entry. latency=0 nReq=32 sn=100
+03:09:51.501 DBG Sending COMMIT. senderID=1 sn=102 view=0
+03:09:51.501 INF Delivered batch. nReq=32 sn=100
+03:09:51.501 DBG Starting timer. sn=104 view=0
+03:09:51.502 INF Committed entry. latency=0 nReq=32 sn=101
+03:09:51.502 INF Delivered batch. nReq=32 sn=101
+03:09:51.502 DBG Starting timer. sn=105 view=0
+03:09:51.502 INF Committed entry. latency=0 nReq=32 sn=102
+03:09:51.503 INF Delivered batch. nReq=32 sn=102
+03:09:51.503 INF Delivered batch. nReq=32 sn=103
+03:09:51.503 DBG Starting timer. sn=106 view=0
+03:09:52.488 DBG Batch ready. batchSize=4096
+03:09:52.489 DBG Batch cut. left=0 nBuckets=16 nReq=32 next=0
+03:09:52.489 DBG Waiting for batch. batchSize=4096
+03:09:52.490 INF Sending PREPREPARE. nReq=32 senderID=1 sn=105 view=0
+03:09:52.493 INF Handling PREPREPARE. nReq=32 senderID=3 sn=107
+03:09:52.493 DBG Creating new Batch. nReq=32
+03:09:52.494 INF Handling PREPREPARE. nReq=32 senderID=0 sn=104
+03:09:52.494 DBG Creating new Batch. nReq=32
+03:09:52.495 INF Handling PREPREPARE. nReq=32 senderID=2 sn=106
+03:09:52.496 DBG Creating new Batch. nReq=32
+03:09:52.497 DBG Sending PREPARE. senderID=1 sn=107 view=0
+03:09:52.500 DBG Sending COMMIT. senderID=1 sn=107 view=0
+03:09:52.501 DBG Sending PREPARE. senderID=1 sn=104 view=0
+03:09:52.501 DBG Sending COMMIT. senderID=1 sn=104 view=0
+03:09:52.501 DBG Sending PREPARE. senderID=1 sn=106 view=0
+03:09:52.501 INF Committed entry. latency=0 nReq=32 sn=107
+03:09:52.502 DBG Starting timer. sn=111 view=0
+03:09:52.502 DBG Sending COMMIT. senderID=1 sn=105 view=0
+03:09:52.502 DBG Sending COMMIT. senderID=1 sn=106 view=0
+03:09:52.504 INF Committed entry. latency=0 nReq=32 sn=104
+03:09:52.504 INF Committed entry. latency=0 nReq=32 sn=105
+03:09:52.504 INF Delivered batch. nReq=32 sn=104
+03:09:52.504 INF Committed entry. latency=0 nReq=32 sn=106
+03:09:52.504 INF Delivered batch. nReq=32 sn=105
+03:09:52.504 INF Delivered batch. nReq=32 sn=106
+03:09:52.504 INF Delivered batch. nReq=32 sn=107
+03:09:52.504 DBG Starting timer. sn=108 view=0
+03:09:52.505 DBG Starting timer. sn=109 view=0
+03:09:52.505 DBG Starting timer. sn=110 view=0
+03:09:53.489 DBG Batch ready. batchSize=4096
+03:09:53.490 DBG Batch cut. left=0 nBuckets=16 nReq=32 next=0
+03:09:53.490 DBG Waiting for batch. batchSize=4096
+03:09:53.491 INF Sending PREPREPARE. nReq=32 senderID=1 sn=109 view=0
+03:09:53.495 INF Handling PREPREPARE. nReq=33 senderID=3 sn=111
+03:09:53.496 DBG Creating new Batch. nReq=33
+03:09:53.496 INF Handling PREPREPARE. nReq=32 senderID=0 sn=108
+03:09:53.496 DBG Creating new Batch. nReq=32
+03:09:53.498 INF Handling PREPREPARE. nReq=32 senderID=2 sn=110
+03:09:53.499 DBG Creating new Batch. nReq=32
+03:09:53.501 DBG Sending PREPARE. senderID=1 sn=111 view=0
+03:09:53.502 DBG Sending PREPARE. senderID=1 sn=108 view=0
+03:09:53.503 DBG Sending PREPARE. senderID=1 sn=110 view=0
+03:09:53.503 DBG Sending COMMIT. senderID=1 sn=111 view=0
+03:09:53.504 DBG Sending COMMIT. senderID=1 sn=108 view=0
+03:09:53.504 INF Committed entry. latency=0 nReq=33 sn=111
+03:09:53.505 DBG Starting timer. sn=115 view=0
+03:09:53.505 DBG Sending COMMIT. senderID=1 sn=110 view=0
+03:09:53.505 DBG Sending COMMIT. senderID=1 sn=109 view=0
+03:09:53.505 INF Committed entry. latency=0 nReq=32 sn=108
+03:09:53.506 INF Delivered batch. nReq=32 sn=108
+03:09:53.506 INF Committed entry. latency=0 nReq=32 sn=109
+03:09:53.506 INF Delivered batch. nReq=32 sn=109
+03:09:53.506 DBG Starting timer. sn=112 view=0
+03:09:53.506 DBG Starting timer. sn=113 view=0
+03:09:53.507 INF Committed entry. latency=0 nReq=32 sn=110
+03:09:53.507 INF Delivered batch. nReq=32 sn=110
+03:09:53.507 INF Delivered batch. nReq=33 sn=111
+03:09:53.507 DBG Starting timer. sn=114 view=0
+03:09:54.491 DBG Batch ready. batchSize=4096
+03:09:54.491 DBG Batch cut. left=0 nBuckets=16 nReq=32 next=0
+03:09:54.491 DBG Waiting for batch. batchSize=4096
+03:09:54.492 INF Sending PREPREPARE. nReq=32 senderID=1 sn=113 view=0
+03:09:54.496 INF Handling PREPREPARE. nReq=32 senderID=3 sn=115
+03:09:54.496 DBG Creating new Batch. nReq=32
+03:09:54.498 INF Handling PREPREPARE. nReq=32 senderID=0 sn=112
+03:09:54.498 DBG Creating new Batch. nReq=32
+03:09:54.501 DBG Sending PREPARE. senderID=1 sn=115 view=0
+03:09:54.503 INF Handling PREPREPARE. nReq=32 senderID=2 sn=114
+03:09:54.503 DBG Creating new Batch. nReq=32
+03:09:54.503 DBG Sending COMMIT. senderID=1 sn=115 view=0
+03:09:54.504 DBG Sending PREPARE. senderID=1 sn=112 view=0
+03:09:54.504 DBG Sending COMMIT. senderID=1 sn=112 view=0
+03:09:54.505 DBG Sending COMMIT. senderID=1 sn=113 view=0
+03:09:54.505 INF Committed entry. latency=0 nReq=32 sn=115
+03:09:54.505 DBG Starting timer. sn=119 view=0
+03:09:54.506 INF Committed entry. latency=0 nReq=32 sn=113
+03:09:54.506 DBG Starting timer. sn=117 view=0
+03:09:54.507 INF Committed entry. latency=0 nReq=32 sn=112
+03:09:54.507 DBG Sending PREPARE. senderID=1 sn=114 view=0
+03:09:54.507 INF Delivered batch. nReq=32 sn=112
+03:09:54.507 DBG Sending COMMIT. senderID=1 sn=114 view=0
+03:09:54.507 INF Delivered batch. nReq=32 sn=113
+03:09:54.507 DBG Starting timer. sn=116 view=0
+03:09:54.509 INF Committed entry. latency=0 nReq=32 sn=114
+03:09:54.509 INF Delivered batch. nReq=32 sn=114
+03:09:54.509 INF Delivered batch. nReq=32 sn=115
+03:09:54.510 DBG Starting timer. sn=118 view=0
+03:09:55.492 DBG Batch ready. batchSize=4096
+03:09:55.492 DBG Batch cut. left=0 nBuckets=16 nReq=32 next=0
+03:09:55.493 DBG Waiting for batch. batchSize=4096
+03:09:55.493 INF Sending PREPREPARE. nReq=32 senderID=1 sn=117 view=0
+03:09:55.498 INF Handling PREPREPARE. nReq=32 senderID=3 sn=119
+03:09:55.498 DBG Creating new Batch. nReq=32
+03:09:55.499 INF Handling PREPREPARE. nReq=32 senderID=0 sn=116
+03:09:55.499 DBG Creating new Batch. nReq=32
+03:09:55.502 INF Handling PREPREPARE. nReq=32 senderID=2 sn=118
+03:09:55.502 DBG Creating new Batch. nReq=32
+03:09:55.504 DBG Sending PREPARE. senderID=1 sn=119 view=0
+03:09:55.505 DBG Sending COMMIT. senderID=1 sn=119 view=0
+03:09:55.506 DBG Sending PREPARE. senderID=1 sn=116 view=0
+03:09:55.506 DBG Sending PREPARE. senderID=1 sn=118 view=0
+03:09:55.507 DBG Sending COMMIT. senderID=1 sn=116 view=0
+03:09:55.507 DBG Sending COMMIT. senderID=1 sn=117 view=0
+03:09:55.508 INF Committed entry. latency=0 nReq=32 sn=119
+03:09:55.508 DBG Starting timer. sn=123 view=0
+03:09:55.508 DBG Sending COMMIT. senderID=1 sn=118 view=0
+03:09:55.508 INF Committed entry. latency=0 nReq=32 sn=117
+03:09:55.508 INF Committed entry. latency=0 nReq=32 sn=116
+03:09:55.508 INF Delivered batch. nReq=32 sn=116
+03:09:55.509 INF Delivered batch. nReq=32 sn=117
+03:09:55.509 DBG Starting timer. sn=121 view=0
+03:09:55.509 DBG Starting timer. sn=120 view=0
+03:09:55.509 INF Committed entry. latency=0 nReq=32 sn=118
+03:09:55.509 INF Delivered batch. nReq=32 sn=118
+03:09:55.510 INF Delivered batch. nReq=32 sn=119
+03:09:55.510 DBG Starting timer. sn=122 view=0
+03:09:56.494 DBG Batch ready. batchSize=4096
+03:09:56.495 DBG Batch cut. left=0 nBuckets=16 nReq=32 next=0
+03:09:56.495 DBG Waiting for batch. batchSize=4096
+03:09:56.496 INF Sending PREPREPARE. nReq=32 senderID=1 sn=121 view=0
+03:09:56.499 INF Handling PREPREPARE. nReq=32 senderID=3 sn=123
+03:09:56.499 DBG Creating new Batch. nReq=32
+03:09:56.500 INF Handling PREPREPARE. nReq=32 senderID=0 sn=120
+03:09:56.501 DBG Creating new Batch. nReq=32
+03:09:56.505 INF Handling PREPREPARE. nReq=32 senderID=2 sn=122
+03:09:56.505 DBG Sending PREPARE. senderID=1 sn=123 view=0
+03:09:56.505 DBG Creating new Batch. nReq=32
+03:09:56.505 DBG Sending COMMIT. senderID=1 sn=123 view=0
+03:09:56.506 DBG Sending PREPARE. senderID=1 sn=120 view=0
+03:09:56.507 DBG Sending COMMIT. senderID=1 sn=121 view=0
+03:09:56.508 INF Committed entry. latency=0 nReq=32 sn=123
+03:09:56.508 DBG Sending COMMIT. senderID=1 sn=120 view=0
+03:09:56.508 DBG Starting timer. sn=127 view=0
+03:09:56.508 INF Committed entry. latency=0 nReq=32 sn=121
+03:09:56.509 DBG Starting timer. sn=125 view=0
+03:09:56.509 DBG Sending PREPARE. senderID=1 sn=122 view=0
+03:09:56.510 INF Committed entry. latency=0 nReq=32 sn=120
+03:09:56.510 INF Delivered batch. nReq=32 sn=120
+03:09:56.510 INF Delivered batch. nReq=32 sn=121
+03:09:56.510 DBG Starting timer. sn=124 view=0
+03:09:56.512 DBG Sending COMMIT. senderID=1 sn=122 view=0
+03:09:56.512 INF Committed entry. latency=0 nReq=32 sn=122
+03:09:56.512 INF Delivered batch. nReq=32 sn=122
+03:09:56.512 INF Delivered batch. nReq=32 sn=123
+03:09:56.512 DBG Starting timer. sn=126 view=0
+03:09:57.496 DBG Batch ready. batchSize=4096
+03:09:57.496 DBG Batch cut. left=0 nBuckets=16 nReq=32 next=0
+03:09:57.496 DBG Waiting for batch. batchSize=4096
+03:09:57.497 INF Sending PREPREPARE. nReq=32 senderID=1 sn=125 view=0
+03:09:57.501 INF Handling PREPREPARE. nReq=32 senderID=0 sn=124
+03:09:57.501 INF Handling PREPREPARE. nReq=32 senderID=3 sn=127
+03:09:57.501 DBG Creating new Batch. nReq=32
+03:09:57.501 DBG Creating new Batch. nReq=32
+03:09:57.507 DBG Sending PREPARE. senderID=1 sn=124 view=0
+03:09:57.507 DBG Sending PREPARE. senderID=1 sn=127 view=0
+03:09:57.507 DBG Sending COMMIT. senderID=1 sn=127 view=0
+03:09:57.508 INF Handling PREPREPARE. nReq=32 senderID=2 sn=126
+03:09:57.508 DBG Sending COMMIT. senderID=1 sn=124 view=0
+03:09:57.508 DBG Creating new Batch. nReq=32
+03:09:57.508 DBG Sending COMMIT. senderID=1 sn=125 view=0
+03:09:57.512 INF Committed entry. latency=0 nReq=32 sn=124
+03:09:57.512 INF Committed entry. latency=0 nReq=32 sn=127
+03:09:57.511 INF Committed entry. latency=0 nReq=32 sn=125
+03:09:57.512 INF Delivered batch. nReq=32 sn=124
+03:09:57.512 INF Delivered batch. nReq=32 sn=125
+03:09:57.512 DBG Starting timer. sn=128 view=0
+03:09:57.512 DBG Starting timer. sn=131 view=0
+03:09:57.512 DBG Sending PREPARE. senderID=1 sn=126 view=0
+03:09:57.512 DBG Starting timer. sn=129 view=0
+03:09:57.514 DBG Sending COMMIT. senderID=1 sn=126 view=0
+03:09:57.515 INF Committed entry. latency=0 nReq=32 sn=126
+03:09:57.515 INF Delivered batch. nReq=32 sn=126
+03:09:57.515 INF Delivered batch. nReq=32 sn=127
+03:09:57.515 DBG Starting timer. sn=130 view=0
+03:09:58.497 INF Handling PREPREPARE. nReq=0 senderID=3 sn=131
+03:09:58.497 DBG Batch ready. batchSize=4096
+03:09:58.497 DBG Creating new Batch. nReq=0
+03:09:58.497 DBG Batch cut. left=0 nBuckets=16 nReq=1 next=0
+03:09:58.497 DBG Sending PREPARE. senderID=1 sn=131 view=0
+03:09:58.498 DBG Waiting for batch. batchSize=4096
+03:09:58.498 INF Sending PREPREPARE. nReq=1 senderID=1 sn=129 view=0
+03:09:58.498 DBG Sending COMMIT. senderID=1 sn=131 view=0
+03:09:58.498 INF Handling PREPREPARE. nReq=1 senderID=0 sn=128
+03:09:58.498 DBG Creating new Batch. nReq=1
+03:09:58.499 DBG Sending PREPARE. senderID=1 sn=128 view=0
+03:09:58.499 INF Committed entry. latency=0 nReq=0 sn=131
+03:09:58.500 DBG Starting timer. sn=135 view=0
+03:09:58.500 DBG Sending COMMIT. senderID=1 sn=128 view=0
+03:09:58.500 DBG Sending COMMIT. senderID=1 sn=129 view=0
+03:09:58.501 INF Handling PREPREPARE. nReq=0 senderID=2 sn=130
+03:09:58.502 DBG Creating new Batch. nReq=0
+03:09:58.502 DBG Sending PREPARE. senderID=1 sn=130 view=0
+03:09:58.502 INF Committed entry. latency=0 nReq=1 sn=129
+03:09:58.502 INF Committed entry. latency=0 nReq=1 sn=128
+03:09:58.502 INF Delivered batch. nReq=1 sn=128
+03:09:58.502 INF Delivered batch. nReq=1 sn=129
+03:09:58.502 DBG Starting timer. sn=133 view=0
+03:09:58.502 DBG Starting timer. sn=132 view=0
+03:09:58.503 DBG Sending COMMIT. senderID=1 sn=130 view=0
+03:09:58.505 INF Committed entry. latency=0 nReq=0 sn=130
+03:09:58.505 INF Delivered batch. nReq=0 sn=130
+03:09:58.505 INF Delivered batch. nReq=0 sn=131
+03:09:58.505 DBG Starting timer. sn=134 view=0
+03:09:58.506 INF Connection terminated. error="rpc error: code = Canceled desc = context canceled" address=127.0.0.1:39810
+03:09:58.507 INF Finished sending bucket assignments to client. clId=0
+03:09:58.849 INF Stopping profiler.
+03:09:58.849 INF Stopping Tracer. events=238 fileName=experiment-output/0000/slave-001/peer.trc
+==================
+WARNING: DATA RACE
+Read at 0x00c000936000 by goroutine 115:
+  runtime.racereadrange()
+      <autogenerated>:1 +0x1b
+  github.com/hyperledger-labs/mirbft/tracing.(*BufferedTrace).StopOnSignal.func1()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/tracing/bufferedtrace.go:298 +0x4e
+
+Previous write at 0x00c000936000 by goroutine 414:
+  github.com/hyperledger-labs/mirbft/tracing.(*BufferedTrace).Event()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/tracing/bufferedtrace.go:105 +0x2d9
+  github.com/hyperledger-labs/mirbft/manager.(*MirManager).handleLogEntries()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/manager/mirmanager.go:139 +0x1d8
+  github.com/hyperledger-labs/mirbft/manager.(*MirManager).Start·dwrap·7()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/manager/mirmanager.go:101 +0x47
+
+Goroutine 115 (running) created at:
+  github.com/hyperledger-labs/mirbft/tracing.(*BufferedTrace).StopOnSignal()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/tracing/bufferedtrace.go:292 +0x172
+  main.setUpTracing()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/cmd/orderingpeer/main.go:204 +0xf5
+  main.main()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/cmd/orderingpeer/main.go:98 +0x9d6
+
+Goroutine 414 (running) created at:
+  github.com/hyperledger-labs/mirbft/manager.(*MirManager).Start()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/manager/mirmanager.go:101 +0x19e
+  main.main·dwrap·4()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/cmd/orderingpeer/main.go:168 +0x59
+==================
+==================
+WARNING: DATA RACE
+Read at 0x00c000938508 by goroutine 115:
+  runtime.racereadrange()
+      <autogenerated>:1 +0x1b
+  github.com/hyperledger-labs/mirbft/tracing.(*BufferedTrace).StopOnSignal.func1()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/tracing/bufferedtrace.go:298 +0x4e
+
+Previous write at 0x00c000938508 by goroutine 114:
+  github.com/hyperledger-labs/mirbft/tracing.(*BufferedTrace).Event()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/tracing/bufferedtrace.go:105 +0x2d9
+  github.com/hyperledger-labs/mirbft/profiling.StartCPUTracing.func1()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/profiling/cpuusage.go:31 +0x95
+
+Goroutine 115 (running) created at:
+  github.com/hyperledger-labs/mirbft/tracing.(*BufferedTrace).StopOnSignal()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/tracing/bufferedtrace.go:292 +0x172
+  main.setUpTracing()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/cmd/orderingpeer/main.go:204 +0xf5
+  main.main()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/cmd/orderingpeer/main.go:98 +0x9d6
+
+Goroutine 114 (running) created at:
+  github.com/hyperledger-labs/mirbft/profiling.StartCPUTracing()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/profiling/cpuusage.go:28 +0xb6
+  main.setUpTracing()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/cmd/orderingpeer/main.go:196 +0x85
+  main.main()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/cmd/orderingpeer/main.go:98 +0x9d6
+==================
+03:09:58.852 INF Trace data written.
+03:09:59.010 INF Profile data written. filename=experiment-output/0000/slave-001/prof.cpu name=cpu
+03:09:59.010 INF Connection terminated. error="rpc error: code = Canceled desc = context canceled" address=127.0.0.1:39758
+03:09:59.010 INF Connection terminated. error="rpc error: code = Canceled desc = context canceled" address=127.0.0.1:39794
+03:09:59.010 INF Connection terminated. error="rpc error: code = Canceled desc = context canceled" address=127.0.0.1:39778
+03:09:59.010 INF Connection terminated. error="rpc error: code = Canceled desc = context canceled" address=127.0.0.1:39744
+03:09:59.010 INF Connection terminated. error="rpc error: code = Canceled desc = context canceled" address=127.0.0.1:39764
+03:09:59.011 INF Connection terminated. error="rpc error: code = Canceled desc = context canceled" address=127.0.0.1:39674
+03:09:59.067 INF Profile data written. filename=experiment-output/0000/slave-001/prof.block name=block
+03:09:59.073 INF Connection terminated. error="rpc error: code = Canceled desc = context canceled" address=127.0.0.1:39726
+03:09:59.073 INF Connection terminated. error="rpc error: code = Canceled desc = context canceled" address=127.0.0.1:39696
+03:09:59.074 INF Connection terminated. error="rpc error: code = Canceled desc = context canceled" address=127.0.0.1:39676
+03:09:59.074 INF Connection terminated. error="rpc error: code = Canceled desc = context canceled" address=127.0.0.1:39680
+03:09:59.074 INF Connection terminated. error="rpc error: code = Canceled desc = context canceled" address=127.0.0.1:39642
+03:09:59.074 INF Connection terminated. error="rpc error: code = Canceled desc = context canceled" address=127.0.0.1:39614
+03:09:59.086 INF Profile data written. filename=experiment-output/0000/slave-001/prof.mutex name=mutex

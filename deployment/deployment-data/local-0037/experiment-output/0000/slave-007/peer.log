@@ -1,0 +1,483 @@
+{"level":"debug","Logging":"debug","time":"2022-10-24T13:30:20+08:00","message":"Config"}
+{"level":"debug","UseTLS":false,"time":"2022-10-24T13:30:20+08:00","message":"Config"}
+{"level":"debug","CACertFile":"tls-data/ca.pem","time":"2022-10-24T13:30:20+08:00","message":"Config"}
+{"level":"debug","KeyFile":"tls-data/auth.key","time":"2022-10-24T13:30:20+08:00","message":"Config"}
+{"level":"debug","CertFile":"tls-data/auth.pem","time":"2022-10-24T13:30:20+08:00","message":"Config"}
+{"level":"debug","PriorityConnections":2,"time":"2022-10-24T13:30:20+08:00","message":"Config"}
+{"level":"debug","BasicConnections":2,"time":"2022-10-24T13:30:20+08:00","message":"Config"}
+{"level":"debug","TestConnections":false,"time":"2022-10-24T13:30:20+08:00","message":"Config"}
+{"level":"debug","ExcessConnections":1,"time":"2022-10-24T13:30:20+08:00","message":"Config"}
+{"level":"debug","ConnectionTestMsgs":4,"time":"2022-10-24T13:30:20+08:00","message":"Config"}
+{"level":"debug","ConnectionTestPayload":131072,"time":"2022-10-24T13:30:20+08:00","message":"Config"}
+{"level":"debug","OutMessageBufsize":1024,"time":"2022-10-24T13:30:20+08:00","message":"Config"}
+{"level":"debug","OutMessageBufsize":2,"time":"2022-10-24T13:30:20+08:00","message":"Config"}
+{"level":"debug","ThroughputCap":131072000,"time":"2022-10-24T13:30:20+08:00","message":"Config"}
+{"level":"debug","StragglerTolerance":1000,"time":"2022-10-24T13:30:20+08:00","message":"Config"}
+{"level":"debug","BatchSizeIncrement":256,"time":"2022-10-24T13:30:20+08:00","message":"Config"}
+{"level":"debug","Orderer":"Pbft","time":"2022-10-24T13:30:20+08:00","message":"Config"}
+{"level":"debug","Manager":"Mir","time":"2022-10-24T13:30:20+08:00","message":"Config"}
+{"level":"debug","Failures":2,"time":"2022-10-24T13:30:20+08:00","message":"Config"}
+{"level":"debug","CrashTiming":"Straggler","time":"2022-10-24T13:30:20+08:00","message":"Config"}
+{"level":"debug","CheckpointInterval":256,"time":"2022-10-24T13:30:20+08:00","message":"Config"}
+{"level":"debug","WatermarkWindowSize":256,"time":"2022-10-24T13:30:20+08:00","message":"Config"}
+{"level":"debug","EpochLength":256,"time":"2022-10-24T13:30:20+08:00","message":"Config"}
+{"level":"debug","SegmentLength":32,"time":"2022-10-24T13:30:20+08:00","message":"Config"}
+{"level":"debug","WaitForCheckpoints":true,"time":"2022-10-24T13:30:20+08:00","message":"Config"}
+{"level":"debug","ClientWatermarkWindowSize":4194304,"time":"2022-10-24T13:30:20+08:00","message":"Config"}
+{"level":"debug","ClientRequestBacklogSize":4194304,"time":"2022-10-24T13:30:20+08:00","message":"Config"}
+{"level":"debug","RandomSeed":14924,"time":"2022-10-24T13:30:20+08:00","message":"Config"}
+{"level":"debug","NodeToLeaderRatio":1,"time":"2022-10-24T13:30:20+08:00","message":"Config"}
+{"level":"debug","LeaderPolicy":"SimulatedRandomFailures","time":"2022-10-24T13:30:20+08:00","message":"Config"}
+{"level":"debug","DefaultLeaderBan":2,"time":"2022-10-24T13:30:20+08:00","message":"Config"}
+{"level":"debug","NumBuckets":128,"time":"2022-10-24T13:30:20+08:00","message":"Config"}
+{"level":"debug","BatchSize":1000,"time":"2022-10-24T13:30:20+08:00","message":"Config"}
+{"level":"debug","DisabledViewChange":false,"time":"2022-10-24T13:30:20+08:00","message":"Config"}
+{"level":"debug","ViewChangeTimeout":60000,"time":"2022-10-24T13:30:20+08:00","message":"Config"}
+{"level":"debug","ClientTraceSampling":10,"time":"2022-10-24T13:30:20+08:00","message":"Config"}
+{"level":"debug","EventBufferSize":2097152,"time":"2022-10-24T13:30:20+08:00","message":"Config"}
+{"level":"debug","TraceSampling":1,"time":"2022-10-24T13:30:20+08:00","message":"Config"}
+{"level":"debug","ClientsPerProcess":1,"time":"2022-10-24T13:30:20+08:00","message":"Config"}
+{"level":"debug","RequestsPerClient":15360,"time":"2022-10-24T13:30:20+08:00","message":"Config"}
+{"level":"debug","ClientRunTime":30000,"time":"2022-10-24T13:30:20+08:00","message":"Config"}
+{"level":"debug","RequestRate":256,"time":"2022-10-24T13:30:20+08:00","message":"Config"}
+{"level":"debug","HardRequestRateLimit":false,"time":"2022-10-24T13:30:20+08:00","message":"Config"}
+{"level":"debug","RequestPayloadSize":500,"time":"2022-10-24T13:30:20+08:00","message":"Config"}
+{"level":"debug","SignRequests":true,"time":"2022-10-24T13:30:20+08:00","message":"Config"}
+{"level":"debug","ClientPrivKeyFile":"tls-data/client-ecdsa-256.key","time":"2022-10-24T13:30:20+08:00","message":"Config"}
+{"level":"debug","ClientPubKeyFile":"tls-data/client-ecdsa-256.pem","time":"2022-10-24T13:30:20+08:00","message":"Config"}
+{"level":"debug","PrecomputeRequests":false,"time":"2022-10-24T13:30:20+08:00","message":"Config"}
+{"level":"debug","RequestHandlerThreads":32,"time":"2022-10-24T13:30:20+08:00","message":"Config"}
+{"level":"debug","RequestInputChannelBuffer":8192,"time":"2022-10-24T13:30:20+08:00","message":"Config"}
+{"level":"debug","BatchVerifier":"external","time":"2022-10-24T13:30:20+08:00","message":"Config"}
+05:30:20.869 INF Registered with discovery server. numPeers=8 ownID=1
+05:30:20.869 INF Profiling enabled.
+05:30:20.869 INF Setting up profiling.
+05:30:20.870 INF Started Profiler: CPU
+05:30:20.870 INF Started Profiler: BLOCK
+05:30:20.870 INF Started Profiler: MUTEX
+05:30:20.870 INF Profiler will stop on signal. exit=true
+05:30:20.873 INF Tracing will stop on signal. exit=false
+05:30:20.874 INF Started tracing. traceFile=experiment-output/0000/slave-007/peer.trc
+05:30:20.874 DBG Starting backlog.
+05:30:20.874 INF Listening for connections. port=10011 useTLS=false
+05:30:20.875 INF Connecting to peer. addr=127.0.0.1:10011 basicConns=2 priorityConns=2
+05:30:20.875 INF Connecting to peer. addr=127.0.0.1:10033 basicConns=2 priorityConns=2
+05:30:20.875 INF Connecting to peer. addr=127.0.0.1:10022 basicConns=2 priorityConns=2
+05:30:20.875 INF Connecting to peer. addr=127.0.0.1:10044 basicConns=2 priorityConns=2
+05:30:20.875 INF Connecting to peer. addr=127.0.0.1:10055 basicConns=2 priorityConns=2
+05:30:20.876 INF Connecting to peer. addr=127.0.0.1:10066 basicConns=2 priorityConns=2
+05:30:20.876 INF Connecting to peer. addr=127.0.0.1:10077 basicConns=2 priorityConns=2
+05:30:20.878 INF Connecting to peer. addr=127.0.0.1:10000 basicConns=2 priorityConns=2
+05:30:20.916 INF Incoming connection for protocol messages. addr=127.0.0.1:52460
+05:30:20.920 INF Incoming connection for protocol messages. addr=127.0.0.1:52516
+05:30:20.923 INF Incoming connection for protocol messages. addr=127.0.0.1:52448
+05:30:20.926 INF Incoming connection for protocol messages. addr=127.0.0.1:52450
+05:30:20.935 INF Incoming connection for protocol messages. addr=127.0.0.1:52506
+05:30:20.935 INF Incoming connection for protocol messages. addr=127.0.0.1:52496
+05:30:20.945 INF Incoming connection for protocol messages. addr=127.0.0.1:52654
+05:30:20.945 INF Incoming connection for protocol messages. addr=127.0.0.1:52650
+05:30:20.946 INF Incoming connection for protocol messages. addr=127.0.0.1:52634
+05:30:20.946 DBG Connected. peerID=0
+05:30:20.948 INF Incoming connection for protocol messages. addr=127.0.0.1:52540
+05:30:20.948 DBG Connected. peerID=6
+05:30:20.948 INF Incoming connection for protocol messages. addr=127.0.0.1:52598
+05:30:20.948 INF Incoming connection for protocol messages. addr=127.0.0.1:52552
+05:30:20.950 INF Incoming connection for protocol messages. addr=127.0.0.1:52660
+05:30:20.950 INF Incoming connection for protocol messages. addr=127.0.0.1:52622
+05:30:20.950 DBG Connected. peerID=1
+05:30:20.952 INF Incoming connection for protocol messages. addr=127.0.0.1:52736
+05:30:20.953 INF Incoming connection for protocol messages. addr=127.0.0.1:52722
+05:30:20.953 DBG Connected. peerID=5
+05:30:20.953 DBG Connected. peerID=7
+05:30:20.953 INF Incoming connection for protocol messages. addr=127.0.0.1:52690
+05:30:20.966 INF Incoming connection for protocol messages. addr=127.0.0.1:52812
+05:30:20.966 INF Incoming connection for protocol messages. addr=127.0.0.1:52790
+05:30:20.966 INF Incoming connection for protocol messages. addr=127.0.0.1:52780
+05:30:20.966 INF Incoming connection for protocol messages. addr=127.0.0.1:52830
+05:30:20.973 INF Incoming connection for protocol messages. addr=127.0.0.1:52814
+05:30:20.973 INF Incoming connection for protocol messages. addr=127.0.0.1:52834
+05:30:20.974 INF Incoming connection for protocol messages. addr=127.0.0.1:52596
+05:30:20.974 DBG Connected. peerID=4
+05:30:20.976 INF Incoming connection for protocol messages. addr=127.0.0.1:52890
+05:30:20.978 DBG Connected. peerID=2
+05:30:20.979 INF Incoming connection for protocol messages. addr=127.0.0.1:52764
+05:30:20.999 INF Incoming connection for protocol messages. addr=127.0.0.1:52928
+05:30:21.001 INF Incoming connection for protocol messages. addr=127.0.0.1:52930
+05:30:21.002 INF Incoming connection for protocol messages. addr=127.0.0.1:52712
+05:30:21.002 INF Incoming connection for protocol messages. addr=127.0.0.1:52944
+05:30:21.002 INF Incoming connection for protocol messages. addr=127.0.0.1:52934
+05:30:21.004 DBG Connected. peerID=3
+05:30:21.004 INF Connected to all peers.
+05:30:21.005 INF Incoming connection for protocol messages. addr=127.0.0.1:52684
+05:30:21.017 INF All peers finished connecting. Starting ISS.
+05:30:21.018 DBG Buckets for 0-th leader 0: [0 8 16 24 32 40 48 56 64 72 80 88 96 104 112 120]
+05:30:21.018 DBG Buckets for 1-th leader 1: [1 9 17 25 33 41 49 57 65 73 81 89 97 105 113 121 19 43 67 91 115 7 31 55 79 103 127]
+05:30:21.019 DBG Buckets for 2-th leader 2: [2 10 18 26 34 42 50 58 66 74 82 90 98 106 114 122]
+05:30:21.019 DBG Buckets for 3-th leader 4: [4 12 20 28 36 44 52 60 68 76 84 92 100 108 116 124 3 27 51 75 99 123 15 39 63 87 111]
+05:30:21.019 DBG Buckets for 4-th leader 5: [5 13 21 29 37 45 53 61 69 77 85 93 101 109 117 125]
+05:30:21.019 DBG Buckets for 5-th leader 6: [6 14 22 30 38 46 54 62 70 78 86 94 102 110 118 126 11 35 59 83 107 23 47 71 95 119]
+05:30:21.019 INF PbftOrderer received a new segment: [1 7 13 19 25 31 37 43 49 55 61 67 73 79 85 91 97 103 109 115 121 127 133 139 145 151 157 163 169 175 181 187] first leader=1 firstSN=1 lastSN=187 len=32 length=32 segId=1
+05:30:21.019 INF Starting new view. segID=1 timeout=60000 view=0
+05:30:21.020 DBG Starting timer. sn=1 view=0
+05:30:21.020 INF Starting PBFT instance. first=1 last=187 segID=1
+05:30:21.020 DBG Subscribing to backlog. segID=1
+05:30:21.020 INF Starting serialized message processing. segID=1
+05:30:21.020 DBG Leading segment. segID=1
+05:30:21.020 INF PbftOrderer received a new segment: [2 8 14 20 26 32 38 44 50 56 62 68 74 80 86 92 98 104 110 116 122 128 134 140 146 152 158 164 170 176 182 188] first leader=2 firstSN=2 lastSN=188 len=32 length=32 segId=2
+05:30:21.021 DBG Waiting for batch. batchSize=4096
+05:30:21.021 INF Starting new view. segID=2 timeout=60000 view=0
+05:30:21.021 DBG Starting timer. sn=2 view=0
+05:30:21.021 INF Starting PBFT instance. first=2 last=188 segID=2
+05:30:21.022 DBG Subscribing to backlog. segID=2
+05:30:21.022 INF Starting serialized message processing. segID=2
+05:30:21.022 INF PbftOrderer received a new segment: [3 9 15 21 27 33 39 45 51 57 63 69 75 81 87 93 99 105 111 117 123 129 135 141 147 153 159 165 171 177 183 189] first leader=4 firstSN=3 lastSN=189 len=32 length=32 segId=3
+05:30:21.022 INF Starting new view. segID=3 timeout=60000 view=0
+05:30:21.022 DBG Starting timer. sn=3 view=0
+05:30:21.022 INF Starting PBFT instance. first=3 last=189 segID=3
+05:30:21.023 DBG Subscribing to backlog. segID=3
+05:30:21.023 INF Starting serialized message processing. segID=3
+05:30:21.023 INF PbftOrderer received a new segment: [4 10 16 22 28 34 40 46 52 58 64 70 76 82 88 94 100 106 112 118 124 130 136 142 148 154 160 166 172 178 184 190] first leader=5 firstSN=4 lastSN=190 len=32 length=32 segId=4
+05:30:21.023 INF Starting new view. segID=4 timeout=60000 view=0
+05:30:21.023 DBG Starting timer. sn=4 view=0
+05:30:21.023 INF Starting PBFT instance. first=4 last=190 segID=4
+05:30:21.024 DBG Subscribing to backlog. segID=4
+05:30:21.024 INF Starting serialized message processing. segID=4
+05:30:21.024 INF PbftOrderer received a new segment: [5 11 17 23 29 35 41 47 53 59 65 71 77 83 89 95 101 107 113 119 125 131 137 143 149 155 161 167 173 179 185 191] first leader=6 firstSN=5 lastSN=191 len=32 length=32 segId=5
+05:30:21.024 INF Starting new view. segID=5 timeout=60000 view=0
+05:30:21.024 DBG Starting timer. sn=5 view=0
+05:30:21.025 INF Starting PBFT instance. first=5 last=191 segID=5
+05:30:21.025 DBG Subscribing to backlog. segID=5
+05:30:21.025 INF Starting serialized message processing. segID=5
+05:30:21.025 INF PbftOrderer received a new segment: [0 6 12 18 24 30 36 42 48 54 60 66 72 78 84 90 96 102 108 114 120 126 132 138 144 150 156 162 168 174 180 186] first leader=0 firstSN=0 lastSN=186 len=32 length=32 segId=0
+05:30:21.025 INF Starting new view. segID=0 timeout=60000 view=0
+05:30:21.025 DBG Starting timer. sn=0 view=0
+05:30:21.025 INF Starting PBFT instance. first=0 last=186 segID=0
+05:30:21.026 DBG Subscribing to backlog. segID=0
+05:30:21.026 INF Starting serialized message processing. segID=0
+05:30:21.042 INF Connection terminated. error="rpc error: code = Canceled desc = context canceled" address=127.0.0.1:52834
+05:30:21.043 INF Connection terminated. error="rpc error: code = Canceled desc = context canceled" address=127.0.0.1:52812
+05:30:21.043 INF Connection terminated. error="rpc error: code = Canceled desc = context canceled" address=127.0.0.1:52790
+05:30:21.043 INF Connection terminated. error="rpc error: code = Canceled desc = context canceled" address=127.0.0.1:52780
+05:30:21.044 INF Connection terminated. error="rpc error: code = Canceled desc = context canceled" address=127.0.0.1:52944
+05:30:21.044 INF Connection terminated. error="rpc error: code = Canceled desc = context canceled" address=127.0.0.1:52930
+05:30:21.045 INF Connection terminated. error="rpc error: code = Canceled desc = context canceled" address=127.0.0.1:52928
+05:30:21.045 INF Connection terminated. error="rpc error: code = Canceled desc = context canceled" address=127.0.0.1:52934
+05:30:23.055 INF Incoming connection for requests. addr=127.0.0.1:52976
+05:30:51.022 DBG Batch ready. batchSize=4096
+05:30:51.024 DBG Batch cut. left=0 nBuckets=27 nReq=1508 next=0
+05:30:51.025 DBG Waiting for batch. batchSize=4096
+05:30:51.083 INF Sending PREPREPARE. nReq=1508 senderID=1 sn=1 view=0
+05:30:51.189 INF Handling PREPREPARE. nReq=894 senderID=5 sn=4
+05:30:51.189 INF Handling PREPREPARE. nReq=895 senderID=0 sn=0
+05:30:51.190 DBG Creating new Batch. nReq=894
+05:30:51.190 DBG Creating new Batch. nReq=895
+05:30:51.222 INF Handling PREPREPARE. nReq=894 senderID=2 sn=2
+05:30:51.225 DBG Creating new Batch. nReq=894
+05:30:51.462 ERR Failed to send protocol message. Dropping all future outgoing protocol messages. error=EOF
+05:30:51.468 INF Handling PREPREPARE. nReq=1509 senderID=4 sn=3
+05:30:51.469 DBG Creating new Batch. nReq=1509
+05:30:51.471 INF Handling PREPREPARE. nReq=1453 senderID=6 sn=5
+05:30:51.471 DBG Creating new Batch. nReq=1453
+05:30:51.494 ERR Failed to send protocol message. Dropping all future outgoing protocol messages. error=EOF
+05:30:51.541 DBG Sending PREPARE. senderID=1 sn=4 view=0
+05:30:51.541 DBG func sendPrepare prepare Tn. sn=4 tn=4
+05:30:51.544 DBG Sending COMMIT. senderID=1 sn=4 view=0
+05:30:51.544 DBG func sendCommit commit Tn. sn=4 tn=4
+05:30:51.545 DBG Sending Htn. sn=4 view=0
+05:30:51.598 DBG func handleCommit commit Tn. tn=4
+05:30:51.598 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:4  htn:4}" senderID=0 sn=4
+05:30:51.601 DBG func handleCommit commit Tn. tn=4
+05:30:51.601 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:4  htn:4}" senderID=4 sn=4
+05:30:51.604 DBG func handleCommit commit Tn. tn=4
+05:30:51.605 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:4  htn:4}" senderID=2 sn=4
+05:30:51.629 DBG func handleCommit commit Tn. tn=4
+05:30:51.631 INF Committed entry. latency=0 nReq=894 sn=4
+05:30:51.631 DBG Starting timer. sn=10 view=0
+05:30:51.631 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:4  htn:4}" senderID=5 sn=4
+05:30:51.689 DBG Sending PREPARE. senderID=1 sn=2 view=0
+05:30:51.689 DBG func sendPrepare prepare Tn. sn=2 tn=2
+05:30:51.689 DBG Sending COMMIT. senderID=1 sn=2 view=0
+05:30:51.690 DBG func sendCommit commit Tn. sn=2 tn=2
+05:30:51.690 DBG Sending Htn. sn=2 view=0
+05:30:51.690 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:2  htn:2}" senderID=4 sn=2
+05:30:51.691 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:2  htn:2}" senderID=0 sn=2
+05:30:51.691 DBG func handleCommit commit Tn. tn=2
+05:30:51.691 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:2  htn:2}" senderID=5 sn=2
+05:30:51.691 DBG func handleCommit commit Tn. tn=2
+05:30:51.691 DBG func handleCommit commit Tn. tn=2
+05:30:51.692 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:2  htn:2}" senderID=6 sn=2
+05:30:51.692 DBG func handleCommit commit Tn. tn=2
+05:30:51.694 INF Committed entry. latency=0 nReq=894 sn=2
+05:30:51.694 DBG Starting timer. sn=8 view=0
+05:30:51.694 DBG func handleCommit commit Tn. tn=2
+05:30:51.694 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:2  htn:2}" senderID=2 sn=2
+05:30:51.697 DBG Sending PREPARE. senderID=1 sn=0 view=0
+05:30:51.697 DBG func sendPrepare prepare Tn. sn=0 tn=0
+05:30:51.697 DBG Sending COMMIT. senderID=1 sn=0 view=0
+05:30:51.698 DBG func sendCommit commit Tn. sn=0 tn=0
+05:30:51.698 DBG Sending Htn. sn=0 view=0
+05:30:51.698 DBG func handleCommit commit Tn. tn=0
+05:30:51.698 ERR PbftOrderer cannot handle message. Unknown message type. msg=&{} senderID=6 sn=0
+05:30:51.698 DBG func handleCommit commit Tn. tn=0
+05:30:51.699 ERR PbftOrderer cannot handle message. Unknown message type. msg=&{} senderID=0 sn=0
+05:30:51.699 DBG func handleCommit commit Tn. tn=0
+05:30:51.699 ERR PbftOrderer cannot handle message. Unknown message type. msg=&{} senderID=4 sn=0
+05:30:51.699 DBG func handleCommit commit Tn. tn=0
+05:30:51.701 INF Committed entry. latency=0 nReq=895 sn=0
+05:30:51.701 INF Delivered batch. nReq=895 sn=0
+05:30:51.701 DBG Starting timer. sn=6 view=0
+05:30:51.701 ERR PbftOrderer cannot handle message. Unknown message type. msg=&{} senderID=5 sn=0
+05:30:51.701 DBG func handleCommit commit Tn. tn=0
+05:30:51.702 ERR PbftOrderer cannot handle message. Unknown message type. msg=&{} senderID=2 sn=0
+05:30:51.718 DBG func handleCommit commit Tn. tn=4
+05:30:51.718 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:4  htn:4}" senderID=6 sn=4
+05:30:51.799 DBG Sending PREPARE. senderID=1 sn=5 view=0
+05:30:51.799 DBG func sendPrepare prepare Tn. sn=5 tn=5
+05:30:51.799 DBG Sending COMMIT. senderID=1 sn=5 view=0
+05:30:51.799 DBG func sendCommit commit Tn. sn=5 tn=5
+05:30:51.800 DBG Sending Htn. sn=5 view=0
+05:30:51.800 DBG func handleCommit commit Tn. tn=5
+05:30:51.800 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:5  htn:5}" senderID=0 sn=5
+05:30:51.800 DBG func handleCommit commit Tn. tn=5
+05:30:51.800 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:5  htn:5}" senderID=2 sn=5
+05:30:51.801 DBG func handleCommit commit Tn. tn=5
+05:30:51.801 DBG func handleCommit commit Tn. tn=5
+05:30:51.803 INF Committed entry. latency=0 nReq=1453 sn=5
+05:30:51.803 DBG Starting timer. sn=11 view=0
+05:30:51.804 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:5  htn:5}" senderID=5 sn=5
+05:30:51.804 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:5  htn:5}" senderID=4 sn=5
+05:30:51.804 DBG func handleCommit commit Tn. tn=5
+05:30:51.804 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:5  htn:5}" senderID=6 sn=5
+05:30:51.818 DBG Sending PREPARE. senderID=1 sn=3 view=0
+05:30:51.818 DBG func sendPrepare prepare Tn. sn=3 tn=3
+05:30:51.818 DBG Sending COMMIT. senderID=1 sn=3 view=0
+05:30:51.819 DBG func sendCommit commit Tn. sn=3 tn=3
+05:30:51.819 DBG Sending Htn. sn=3 view=0
+05:30:51.820 DBG func handleCommit commit Tn. tn=3
+05:30:51.821 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:3  htn:3}" senderID=4 sn=3
+05:30:51.823 DBG func handleCommit commit Tn. tn=3
+05:30:51.823 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:3  htn:3}" senderID=6 sn=3
+05:30:51.823 DBG func handleCommit commit Tn. tn=3
+05:30:51.823 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:3  htn:3}" senderID=0 sn=3
+05:30:51.824 DBG func handleCommit commit Tn. tn=3
+05:30:51.826 INF Committed entry. latency=0 nReq=1509 sn=3
+05:30:51.826 DBG Starting timer. sn=9 view=0
+05:30:51.826 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:3  htn:3}" senderID=2 sn=3
+05:30:51.827 DBG func handleCommit commit Tn. tn=3
+05:30:51.827 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:3  htn:3}" senderID=5 sn=3
+05:30:51.842 DBG func handleCommit commit Tn. tn=1
+05:30:51.843 DBG Sending COMMIT. senderID=1 sn=1 view=0
+05:30:51.843 DBG func sendCommit commit Tn. sn=1 tn=1
+05:30:51.843 DBG Sending Htn. sn=1 view=0
+05:30:51.843 DBG func handleCommit commit Tn. tn=1
+05:30:51.843 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:1  htn:1}" senderID=4 sn=1
+05:30:51.845 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:1  htn:1}" senderID=0 sn=1
+05:30:51.845 DBG func handleCommit commit Tn. tn=1
+05:30:51.845 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:1  htn:1}" senderID=2 sn=1
+05:30:51.846 DBG func handleCommit commit Tn. tn=1
+05:30:51.848 INF Committed entry. latency=0 nReq=1508 sn=1
+05:30:51.848 INF Delivered batch. nReq=1508 sn=1
+05:30:51.849 INF Delivered batch. nReq=894 sn=2
+05:30:51.849 INF Delivered batch. nReq=1509 sn=3
+05:30:51.849 INF Delivered batch. nReq=894 sn=4
+05:30:51.849 INF Delivered batch. nReq=1453 sn=5
+05:30:51.849 DBG Starting timer. sn=7 view=0
+05:30:51.849 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:1  htn:1}" senderID=6 sn=1
+05:30:51.849 DBG func handleCommit commit Tn. tn=1
+05:30:51.850 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:1  htn:1}" senderID=5 sn=1
+05:31:21.026 DBG Batch ready. batchSize=4096
+05:31:21.027 DBG Batch cut. left=0 nBuckets=27 nReq=113 next=0
+05:31:21.027 DBG Waiting for batch. batchSize=4096
+05:31:21.030 INF Sending PREPREPARE. nReq=113 senderID=1 sn=7 view=0
+05:31:21.039 INF Handling PREPREPARE. nReq=66 senderID=5 sn=10
+05:31:21.039 DBG Creating new Batch. nReq=66
+05:31:21.040 INF Handling PREPREPARE. nReq=66 senderID=0 sn=6
+05:31:21.041 DBG Creating new Batch. nReq=66
+05:31:21.048 INF Handling PREPREPARE. nReq=66 senderID=2 sn=8
+05:31:21.048 DBG Creating new Batch. nReq=66
+05:31:21.058 INF Handling PREPREPARE. nReq=107 senderID=6 sn=11
+05:31:21.058 DBG Creating new Batch. nReq=107
+05:31:21.060 INF Handling PREPREPARE. nReq=111 senderID=4 sn=9
+05:31:21.060 DBG Creating new Batch. nReq=111
+05:31:21.064 DBG Sending PREPARE. senderID=1 sn=6 view=0
+05:31:21.064 DBG func sendPrepare prepare Tn. sn=6 tn=6
+05:31:21.070 DBG Sending COMMIT. senderID=1 sn=6 view=0
+05:31:21.070 DBG func sendCommit commit Tn. sn=6 tn=6
+05:31:21.070 DBG Sending Htn. sn=6 view=0
+05:31:21.073 DBG func handleCommit commit Tn. tn=6
+05:31:21.073 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:6  htn:6}" senderID=5 sn=6
+05:31:21.074 DBG func handleCommit commit Tn. tn=6
+05:31:21.075 DBG func handleCommit commit Tn. tn=6
+05:31:21.076 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:6  htn:6}" senderID=2 sn=6
+05:31:21.077 DBG func handleCommit commit Tn. tn=6
+05:31:21.077 INF Committed entry. latency=0 nReq=66 sn=6
+05:31:21.077 INF Delivered batch. nReq=66 sn=6
+05:31:21.077 DBG Starting timer. sn=12 view=0
+05:31:21.078 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:6  htn:6}" senderID=6 sn=6
+05:31:21.080 DBG Sending PREPARE. senderID=1 sn=10 view=0
+05:31:21.080 DBG func sendPrepare prepare Tn. sn=10 tn=10
+05:31:21.080 DBG Sending COMMIT. senderID=1 sn=10 view=0
+05:31:21.080 DBG func sendCommit commit Tn. sn=10 tn=10
+05:31:21.081 DBG Sending Htn. sn=10 view=0
+05:31:21.082 DBG func handleCommit commit Tn. tn=6
+05:31:21.082 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:6  htn:6}" senderID=0 sn=6
+05:31:21.083 DBG Sending PREPARE. senderID=1 sn=9 view=0
+05:31:21.083 DBG func sendPrepare prepare Tn. sn=9 tn=9
+05:31:21.086 DBG func handleCommit commit Tn. tn=10
+05:31:21.086 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:10  htn:10}" senderID=0 sn=10
+05:31:21.087 DBG func handleCommit commit Tn. tn=10
+05:31:21.087 DBG func handleCommit commit Tn. tn=10
+05:31:21.088 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:10  htn:10}" senderID=2 sn=10
+05:31:21.088 DBG func handleCommit commit Tn. tn=10
+05:31:21.088 INF Committed entry. latency=0 nReq=66 sn=10
+05:31:21.089 DBG Starting timer. sn=16 view=0
+05:31:21.089 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:10  htn:10}" senderID=6 sn=10
+05:31:21.089 DBG Sending PREPARE. senderID=1 sn=11 view=0
+05:31:21.090 DBG func sendPrepare prepare Tn. sn=11 tn=11
+05:31:21.090 DBG Sending COMMIT. senderID=1 sn=11 view=0
+05:31:21.090 DBG func sendCommit commit Tn. sn=11 tn=11
+05:31:21.090 DBG Sending Htn. sn=11 view=0
+05:31:21.091 DBG Sending PREPARE. senderID=1 sn=8 view=0
+05:31:21.091 DBG func sendPrepare prepare Tn. sn=8 tn=8
+05:31:21.091 DBG Sending COMMIT. senderID=1 sn=8 view=0
+05:31:21.092 DBG func sendCommit commit Tn. sn=8 tn=8
+05:31:21.092 DBG Sending Htn. sn=8 view=0
+05:31:21.093 DBG func handleCommit commit Tn. tn=11
+05:31:21.093 DBG Sending COMMIT. senderID=1 sn=7 view=0
+05:31:21.093 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:11  htn:11}" senderID=6 sn=11
+05:31:21.093 DBG func sendCommit commit Tn. sn=7 tn=7
+05:31:21.093 DBG func handleCommit commit Tn. tn=11
+05:31:21.093 DBG Sending COMMIT. senderID=1 sn=9 view=0
+05:31:21.093 DBG Sending Htn. sn=7 view=0
+05:31:21.093 DBG func sendCommit commit Tn. sn=9 tn=9
+05:31:21.094 DBG Sending Htn. sn=9 view=0
+05:31:21.094 DBG func handleCommit commit Tn. tn=11
+05:31:21.094 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:10  htn:10}" senderID=5 sn=10
+05:31:21.095 DBG func handleCommit commit Tn. tn=8
+05:31:21.095 DBG func handleCommit commit Tn. tn=7
+05:31:21.095 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:11  htn:11}" senderID=0 sn=11
+05:31:21.095 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:7  htn:7}" senderID=0 sn=7
+05:31:21.095 DBG func handleCommit commit Tn. tn=9
+05:31:21.095 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:6  htn:6}" senderID=4 sn=6
+05:31:21.096 DBG func handleCommit commit Tn. tn=10
+05:31:21.096 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:9  htn:9}" senderID=0 sn=9
+05:31:21.096 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:11  htn:11}" senderID=5 sn=11
+05:31:21.096 DBG func handleCommit commit Tn. tn=7
+05:31:21.096 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:10  htn:10}" senderID=4 sn=10
+05:31:21.096 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:7  htn:7}" senderID=5 sn=7
+05:31:21.097 DBG func handleCommit commit Tn. tn=8
+05:31:21.097 DBG func handleCommit commit Tn. tn=7
+05:31:21.097 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:8  htn:8}" senderID=0 sn=8
+05:31:21.097 DBG func handleCommit commit Tn. tn=11
+05:31:21.101 DBG func handleCommit commit Tn. tn=8
+05:31:21.101 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:7  htn:7}" senderID=2 sn=7
+05:31:21.097 DBG func handleCommit commit Tn. tn=9
+05:31:21.101 DBG func handleCommit commit Tn. tn=7
+05:31:21.101 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:8  htn:8}" senderID=2 sn=8
+05:31:21.101 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:9  htn:9}" senderID=2 sn=9
+05:31:21.101 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:8  htn:8}" senderID=6 sn=8
+05:31:21.101 INF Committed entry. latency=0 nReq=107 sn=11
+05:31:21.101 DBG func handleCommit commit Tn. tn=9
+05:31:21.101 DBG func handleCommit commit Tn. tn=8
+05:31:21.102 INF Committed entry. latency=0 nReq=113 sn=7
+05:31:21.102 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:9  htn:9}" senderID=6 sn=9
+05:31:21.102 INF Delivered batch. nReq=113 sn=7
+05:31:21.102 DBG func handleCommit commit Tn. tn=9
+05:31:21.102 DBG Starting timer. sn=13 view=0
+05:31:21.101 DBG Starting timer. sn=17 view=0
+05:31:21.102 INF Committed entry. latency=0 nReq=66 sn=8
+05:31:21.102 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:7  htn:7}" senderID=6 sn=7
+05:31:21.102 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:11  htn:11}" senderID=2 sn=11
+05:31:21.102 INF Delivered batch. nReq=66 sn=8
+05:31:21.102 INF Committed entry. latency=0 nReq=111 sn=9
+05:31:21.104 INF Delivered batch. nReq=111 sn=9
+05:31:21.104 INF Delivered batch. nReq=66 sn=10
+05:31:21.104 INF Delivered batch. nReq=107 sn=11
+05:31:21.104 DBG Starting timer. sn=14 view=0
+05:31:21.104 DBG Starting timer. sn=15 view=0
+05:31:21.104 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:8  htn:8}" senderID=4 sn=8
+05:31:21.105 DBG func handleCommit commit Tn. tn=8
+05:31:21.105 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:9  htn:9}" senderID=4 sn=9
+05:31:21.105 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:8  htn:8}" senderID=5 sn=8
+05:31:21.105 DBG func handleCommit commit Tn. tn=9
+05:31:21.105 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:9  htn:9}" senderID=5 sn=9
+05:31:21.110 DBG func handleCommit commit Tn. tn=11
+05:31:21.110 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:11  htn:11}" senderID=4 sn=11
+05:31:21.112 DBG func handleCommit commit Tn. tn=7
+05:31:21.112 ERR PbftOrderer cannot handle message. Unknown message type. msg="&{sn:7  htn:7}" senderID=4 sn=7
+05:31:22.094 INF Connection terminated. error="rpc error: code = Canceled desc = context canceled" address=127.0.0.1:52976
+05:31:22.095 INF Finished sending bucket assignments to client. clId=0
+05:31:22.498 INF Stopping profiler.
+05:31:22.498 INF Stopping Tracer. events=144 fileName=experiment-output/0000/slave-007/peer.trc
+==================
+WARNING: DATA RACE
+Read at 0x00c0009be000 by goroutine 115:
+  runtime.racereadrange()
+      <autogenerated>:1 +0x1b
+  github.com/hyperledger-labs/mirbft/tracing.(*BufferedTrace).StopOnSignal.func1()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/tracing/bufferedtrace.go:298 +0x4e
+
+Previous write at 0x00c0009be000 by goroutine 498:
+  github.com/hyperledger-labs/mirbft/tracing.(*BufferedTrace).Event()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/tracing/bufferedtrace.go:105 +0x2d9
+  github.com/hyperledger-labs/mirbft/manager.(*MirManager).handleLogEntries()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/manager/mirmanager.go:139 +0x1d8
+  github.com/hyperledger-labs/mirbft/manager.(*MirManager).Start·dwrap·7()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/manager/mirmanager.go:101 +0x47
+
+Goroutine 115 (running) created at:
+  github.com/hyperledger-labs/mirbft/tracing.(*BufferedTrace).StopOnSignal()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/tracing/bufferedtrace.go:292 +0x172
+  main.setUpTracing()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/cmd/orderingpeer/main.go:204 +0xf5
+  main.main()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/cmd/orderingpeer/main.go:98 +0x9d6
+
+Goroutine 498 (running) created at:
+  github.com/hyperledger-labs/mirbft/manager.(*MirManager).Start()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/manager/mirmanager.go:101 +0x19e
+  main.main·dwrap·4()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/cmd/orderingpeer/main.go:168 +0x59
+==================
+==================
+WARNING: DATA RACE
+Read at 0x00c0009bf658 by goroutine 115:
+  runtime.racereadrange()
+      <autogenerated>:1 +0x1b
+  github.com/hyperledger-labs/mirbft/tracing.(*BufferedTrace).StopOnSignal.func1()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/tracing/bufferedtrace.go:298 +0x4e
+
+Previous write at 0x00c0009bf658 by goroutine 114:
+  github.com/hyperledger-labs/mirbft/tracing.(*BufferedTrace).Event()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/tracing/bufferedtrace.go:105 +0x2d9
+  github.com/hyperledger-labs/mirbft/profiling.StartCPUTracing.func1()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/profiling/cpuusage.go:31 +0x95
+
+Goroutine 115 (running) created at:
+  github.com/hyperledger-labs/mirbft/tracing.(*BufferedTrace).StopOnSignal()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/tracing/bufferedtrace.go:292 +0x172
+  main.setUpTracing()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/cmd/orderingpeer/main.go:204 +0xf5
+  main.main()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/cmd/orderingpeer/main.go:98 +0x9d6
+
+Goroutine 114 (running) created at:
+  github.com/hyperledger-labs/mirbft/profiling.StartCPUTracing()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/profiling/cpuusage.go:28 +0xb6
+  main.setUpTracing()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/cmd/orderingpeer/main.go:196 +0x85
+  main.main()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/cmd/orderingpeer/main.go:98 +0x9d6
+==================
+05:31:22.501 INF Trace data written.
+05:31:22.543 INF Profile data written. filename=experiment-output/0000/slave-007/prof.mutex name=mutex
+05:31:22.675 INF Connection terminated. error="rpc error: code = Canceled desc = context canceled" address=127.0.0.1:52814
+05:31:22.675 INF Connection terminated. error="rpc error: code = Canceled desc = context canceled" address=127.0.0.1:52890
+05:31:22.676 INF Connection terminated. error="rpc error: code = Canceled desc = context canceled" address=127.0.0.1:52552
+05:31:22.676 INF Connection terminated. error="rpc error: code = Canceled desc = context canceled" address=127.0.0.1:52540
+05:31:22.709 INF Profile data written. filename=experiment-output/0000/slave-007/prof.cpu name=cpu
+05:31:22.735 INF Connection terminated. error="rpc error: code = Canceled desc = context canceled" address=127.0.0.1:52764
+05:31:22.735 INF Connection terminated. error="rpc error: code = Canceled desc = context canceled" address=127.0.0.1:52650
+05:31:22.735 INF Connection terminated. error="rpc error: code = Canceled desc = context canceled" address=127.0.0.1:52506
+05:31:22.735 INF Connection terminated. error="rpc error: code = Canceled desc = context canceled" address=127.0.0.1:52634
+05:31:22.762 INF Profile data written. filename=experiment-output/0000/slave-007/prof.block name=block
