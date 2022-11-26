@@ -252,11 +252,11 @@ func (pi *pbftInstance) lead() {
 				},
 			},
 		}
-		///1116
-		//if htnssn[sn]==true {
-		//	pi.serializer.serialize(msg)
-		//}
-		pi.serializer.serialize(msg)
+		///1116收集了足够的tn才能propose，这里需要优化，如果没有收集齐怎么继续
+		if htnssn[sn]==true {
+			pi.serializer.serialize(msg)
+		}
+		//pi.serializer.serialize(msg)
 
 		// Wait until the batch is actually cut. Otherwise this goroutine would just loop quickly through
 		// all sequence numbers as soon as there is more than BatchSize requests in the buckets.
@@ -631,6 +631,7 @@ func (pi *pbftInstance) sendCommit(batch *pbftBatch) {
 func (pi *pbftInstance) handleHtnmsg(htnmsg *pb.HtnMessage, msg *pb.ProtocolMessage) error {
 	//logger.Debug().Int32("prelocalhtn", htnlog[pi.segment.SegID()]).
 	//	Msg("previous localhtn.")
+	sn := msg.Sn
 	prehtn := htnlog[pi.segment.SegID()]
 	htn := htnmsg.Htn
 	///1116
@@ -649,8 +650,13 @@ func (pi *pbftInstance) handleHtnmsg(htnmsg *pb.HtnMessage, msg *pb.ProtocolMess
 	if batch.CheckCommits() && batch.CheckHtns(){
 		htnssn[sn+int32(membership.NumNodes())] = true
 		logger.Info().Int32("sn", sn+int32(membership.NumNodes())).
-		//Int32("senderID", senderID).
+		//[]Int32("validHtnMsgs", batch.validHtnMsgs.Htn).
 		Msg("Set TRUE.")
+		for _,x := range batch.validHtnMsgs {
+			logger.Info().Int32("validHtnMsgs", x.Htn).
+			Msg("validHtnMsgs sets.")
+		}
+
 	}
 	return nil
 }
@@ -2175,6 +2181,7 @@ func (pi *pbftInstance) startView(view int32) {
 			pi.batches[view][sn] = &pbftBatch{
 				prepareMsgs: make(map[int32]*pb.PbftPrepare),
 				commitMsgs:  make(map[int32]*pb.PbftCommit),
+				htnMsgs:     make(map[int32]*pb.HtnMessage),
 				preprepared: false,
 				prepared:    false,
 				committed:   false,
