@@ -41,6 +41,7 @@ Manager: "Mir"      # Manager type. One of {Dummy, Mir}
 Checkpointer: CHECKPOINTER # Checkpointer type. One of {Simple, Signing}
 Failures: FAILURES
 Faulty: FAULTY
+StragglerCnt: STRAGGLERCNT
 CrashTiming: CRASHTIMING # EpochStart EpochEnd
                          # For peers that are supposed to simulate a crash, CrashTiming decides whether the crash
                          # happens at the start or at the end of the first epoch.
