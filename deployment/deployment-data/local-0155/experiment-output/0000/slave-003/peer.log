@@ -1,0 +1,289 @@
+{"level":"debug","Logging":"debug","time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","UseTLS":false,"time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","CACertFile":"tls-data/ca.pem","time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","KeyFile":"tls-data/auth.key","time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","CertFile":"tls-data/auth.pem","time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","PriorityConnections":2,"time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","BasicConnections":4,"time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","TestConnections":false,"time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","ExcessConnections":1,"time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","ConnectionTestMsgs":4,"time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","ConnectionTestPayload":131072,"time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","OutMessageBufsize":1024,"time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","OutMessageBufsize":1,"time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","ThroughputCap":131072000,"time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","StragglerTolerance":1000,"time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","BatchSizeIncrement":256,"time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","Orderer":"Pbft","time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","Manager":"Mir","time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","Failures":0,"time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","StragglerCnt":1,"time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","CrashTiming":"Straggler","time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","CheckpointInterval":256,"time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","WatermarkWindowSize":256,"time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","EpochLength":256,"time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","SegmentLength":64,"time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","WaitForCheckpoints":true,"time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","ClientWatermarkWindowSize":4194304,"time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","ClientRequestBacklogSize":4194304,"time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","RandomSeed":2879,"time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","NodeToLeaderRatio":1,"time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","LeaderPolicy":"Blacklist","time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","DefaultLeaderBan":2,"time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","NumBuckets":64,"time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","BatchSize":1000,"time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","DisabledViewChange":false,"time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","ViewChangeTimeout":60000,"time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","ClientTraceSampling":10,"time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","EventBufferSize":2097152,"time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","TraceSampling":1,"time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","ClientsPerProcess":1,"time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","RequestsPerClient":15360,"time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","ClientRunTime":30000,"time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","RequestRate":256,"time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","HardRequestRateLimit":false,"time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","RequestPayloadSize":500,"time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","SignRequests":true,"time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","ClientPrivKeyFile":"tls-data/client-ecdsa-256.key","time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","ClientPubKeyFile":"tls-data/client-ecdsa-256.pem","time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","PrecomputeRequests":false,"time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","RequestHandlerThreads":32,"time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","RequestInputChannelBuffer":8192,"time":"2022-11-29T10:05:46+08:00","message":"Config"}
+{"level":"debug","BatchVerifier":"external","time":"2022-11-29T10:05:46+08:00","message":"Config"}
+02:05:46.624 INF Registered with discovery server. numPeers=4 ownID=1
+02:05:46.625 INF Profiling enabled.
+02:05:46.625 INF Setting up profiling.
+02:05:46.625 INF Started Profiler: CPU
+02:05:46.625 INF Started Profiler: BLOCK
+02:05:46.625 INF Started Profiler: MUTEX
+02:05:46.625 INF Profiler will stop on signal. exit=true
+02:05:46.628 INF Tracing will stop on signal. exit=false
+02:05:46.629 INF Started tracing. traceFile=experiment-output/0000/slave-003/peer.trc
+02:05:46.630 DBG Starting backlog.
+02:05:46.630 INF Listening for connections. port=10011 useTLS=false
+02:05:46.630 INF Connecting to peer. addr=127.0.0.1:10022 basicConns=4 priorityConns=2
+02:05:46.630 INF Connecting to peer. addr=127.0.0.1:10011 basicConns=4 priorityConns=2
+02:05:46.630 INF Connecting to peer. addr=127.0.0.1:10033 basicConns=4 priorityConns=2
+02:05:46.630 INF Connecting to peer. addr=127.0.0.1:10000 basicConns=4 priorityConns=2
+02:05:46.693 INF Incoming connection for protocol messages. addr=127.0.0.1:50092
+02:05:46.698 INF Incoming connection for protocol messages. addr=127.0.0.1:50096
+02:05:46.702 INF Incoming connection for protocol messages. addr=127.0.0.1:50076
+02:05:46.704 INF Incoming connection for protocol messages. addr=127.0.0.1:50114
+02:05:46.705 INF Incoming connection for protocol messages. addr=127.0.0.1:50102
+02:05:46.711 INF Incoming connection for protocol messages. addr=127.0.0.1:50136
+02:05:46.711 INF Incoming connection for protocol messages. addr=127.0.0.1:50150
+02:05:46.713 INF Incoming connection for protocol messages. addr=127.0.0.1:50104
+02:05:46.713 INF Incoming connection for protocol messages. addr=127.0.0.1:50162
+02:05:46.714 INF Incoming connection for protocol messages. addr=127.0.0.1:50154
+02:05:46.714 DBG Connected. peerID=0
+02:05:46.714 INF Incoming connection for protocol messages. addr=127.0.0.1:50186
+02:05:46.714 INF Incoming connection for protocol messages. addr=127.0.0.1:50120
+02:05:46.716 INF Incoming connection for protocol messages. addr=127.0.0.1:50198
+02:05:46.719 INF Incoming connection for protocol messages. addr=127.0.0.1:50172
+02:05:46.720 INF Incoming connection for protocol messages. addr=127.0.0.1:50212
+02:05:46.720 INF Incoming connection for protocol messages. addr=127.0.0.1:50202
+02:05:46.721 INF Incoming connection for protocol messages. addr=127.0.0.1:50230
+02:05:46.723 INF Incoming connection for protocol messages. addr=127.0.0.1:50220
+02:05:46.723 INF Incoming connection for protocol messages. addr=127.0.0.1:50242
+02:05:46.724 INF Incoming connection for protocol messages. addr=127.0.0.1:50272
+02:05:46.724 INF Incoming connection for protocol messages. addr=127.0.0.1:50254
+02:05:46.725 INF Incoming connection for protocol messages. addr=127.0.0.1:50264
+02:05:46.725 INF Incoming connection for protocol messages. addr=127.0.0.1:50284
+02:05:46.725 INF Incoming connection for protocol messages. addr=127.0.0.1:50278
+02:05:46.726 DBG Connected. peerID=3
+02:05:46.726 DBG Connected. peerID=1
+02:05:46.726 DBG Connected. peerID=2
+02:05:46.727 INF Connected to all peers.
+02:05:46.732 INF All peers finished connecting. Starting ISS.
+02:05:46.733 DBG Buckets for 0-th leader 0: [0 4 8 12 16 20 24 28 32 36 40 44 48 52 56 60]
+02:05:46.733 DBG Buckets for 1-th leader 1: [1 5 9 13 17 21 25 29 33 37 41 45 49 53 57 61]
+02:05:46.734 DBG Buckets for 2-th leader 2: [2 6 10 14 18 22 26 30 34 38 42 46 50 54 58 62]
+02:05:46.734 DBG Buckets for 3-th leader 3: [3 7 11 15 19 23 27 31 35 39 43 47 51 55 59 63]
+02:05:46.734 INF PbftOrderer received a new segment: [0 4 8 12 16 20 24 28 32 36 40 44 48 52 56 60 64 68 72 76 80 84 88 92 96 100 104 108 112 116 120 124 128 132 136 140 144 148 152 156 160 164 168 172 176 180 184 188 192 196 200 204 208 212 216 220 224 228 232 236 240 244 248 252] first leader=0 firstSN=0 lastSN=252 len=64 length=64 segId=0
+02:05:46.735 INF Starting new view. segID=0 timeout=60000 view=0
+02:05:46.735 DBG Starting timer. sn=0 view=0
+02:05:46.735 INF Starting PBFT instance. first=0 last=252 segID=0
+02:05:46.735 DBG Subscribing to backlog. segID=0
+02:05:46.736 INF Starting serialized message processing. segID=0
+02:05:46.736 INF PbftOrderer received a new segment: [1 5 9 13 17 21 25 29 33 37 41 45 49 53 57 61 65 69 73 77 81 85 89 93 97 101 105 109 113 117 121 125 129 133 137 141 145 149 153 157 161 165 169 173 177 181 185 189 193 197 201 205 209 213 217 221 225 229 233 237 241 245 249 253] first leader=1 firstSN=1 lastSN=253 len=64 length=64 segId=1
+02:05:46.737 INF Starting new view. segID=1 timeout=60000 view=0
+02:05:46.737 DBG Starting timer. sn=1 view=0
+02:05:46.737 INF Starting PBFT instance. first=1 last=253 segID=1
+02:05:46.737 DBG Leading segment. segID=1
+02:05:46.738 DBG Waiting for batch. batchSize=4096
+02:05:46.738 DBG Subscribing to backlog. segID=1
+02:05:47.739 DBG Batch ready. batchSize=4096
+02:05:48.772 INF Incoming connection for requests. addr=127.0.0.1:50298
+02:06:46.736 WRN Timeout segId=0 sn=0 view=0
+02:06:46.736 INF Starting new view. segID=0 timeout=120000 view=1
+02:06:46.736 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=0 toView=1
+02:06:46.736 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=4 toView=1
+02:06:46.737 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=8 toView=1
+02:06:46.737 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=12 toView=1
+02:06:46.737 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=16 toView=1
+02:06:46.737 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=20 toView=1
+02:06:46.737 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=24 toView=1
+02:06:46.738 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=28 toView=1
+02:06:46.738 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=32 toView=1
+02:06:46.738 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=36 toView=1
+02:06:46.738 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=40 toView=1
+02:06:46.738 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=44 toView=1
+02:06:46.738 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=48 toView=1
+02:06:46.739 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=52 toView=1
+02:06:46.739 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=56 toView=1
+02:06:46.739 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=60 toView=1
+02:06:46.739 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=64 toView=1
+02:06:46.739 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=68 toView=1
+02:06:46.739 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=72 toView=1
+02:06:46.740 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=76 toView=1
+02:06:46.740 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=80 toView=1
+02:06:46.740 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=84 toView=1
+02:06:46.740 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=88 toView=1
+02:06:46.740 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=92 toView=1
+02:06:46.740 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=96 toView=1
+02:06:46.741 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=100 toView=1
+02:06:46.741 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=104 toView=1
+02:06:46.741 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=108 toView=1
+02:06:46.741 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=112 toView=1
+02:06:46.741 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=116 toView=1
+02:06:46.742 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=120 toView=1
+02:06:46.742 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=124 toView=1
+02:06:46.742 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=128 toView=1
+02:06:46.742 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=132 toView=1
+02:06:46.742 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=136 toView=1
+02:06:46.742 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=140 toView=1
+02:06:46.743 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=144 toView=1
+02:06:46.743 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=148 toView=1
+02:06:46.743 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=152 toView=1
+02:06:46.743 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=156 toView=1
+02:06:46.743 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=160 toView=1
+02:06:46.743 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=164 toView=1
+02:06:46.744 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=168 toView=1
+02:06:46.744 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=172 toView=1
+02:06:46.744 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=176 toView=1
+02:06:46.744 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=180 toView=1
+02:06:46.744 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=184 toView=1
+02:06:46.744 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=188 toView=1
+02:06:46.745 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=192 toView=1
+02:06:46.745 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=196 toView=1
+02:06:46.745 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=200 toView=1
+02:06:46.745 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=204 toView=1
+02:06:46.745 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=208 toView=1
+02:06:46.745 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=212 toView=1
+02:06:46.746 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=216 toView=1
+02:06:46.746 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=220 toView=1
+02:06:46.746 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=224 toView=1
+02:06:46.746 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=228 toView=1
+02:06:46.746 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=232 toView=1
+02:06:46.746 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=236 toView=1
+02:06:46.747 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=240 toView=1
+02:06:46.747 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=244 toView=1
+02:06:46.747 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=248 toView=1
+02:06:46.747 DBG Batch not preprepared. Not resurrecting. fromView=0 segId=0 sn=252 toView=1
+02:06:46.748 INF Requesting VIEWCHANGE. receiverID=1 segID=0 senderID=1 view=1
+02:06:46.748 DBG Adding view change message. currentView=1 msgView=1 numViewChanges=1
+02:06:46.754 INF Handling VIEWCHANGE. msgView=1 ownView=1 segID=0 senderID=2
+02:06:46.754 INF Adding view change message. currentView=1 msgView=1 numViewChanges=2
+02:08:46.749 WRN Timeout segId=0 sn=-1 view=1
+02:08:46.749 INF Starting new view. segID=0 timeout=240000 view=2
+02:08:46.749 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=0 toView=2
+02:08:46.750 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=4 toView=2
+02:08:46.750 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=8 toView=2
+02:08:46.750 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=12 toView=2
+02:08:46.750 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=16 toView=2
+02:08:46.750 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=20 toView=2
+02:08:46.750 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=24 toView=2
+02:08:46.751 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=28 toView=2
+02:08:46.751 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=32 toView=2
+02:08:46.751 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=36 toView=2
+02:08:46.751 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=40 toView=2
+02:08:46.751 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=44 toView=2
+02:08:46.752 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=48 toView=2
+02:08:46.752 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=52 toView=2
+02:08:46.752 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=56 toView=2
+02:08:46.752 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=60 toView=2
+02:08:46.752 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=64 toView=2
+02:08:46.752 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=68 toView=2
+02:08:46.753 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=72 toView=2
+02:08:46.753 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=76 toView=2
+02:08:46.753 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=80 toView=2
+02:08:46.753 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=84 toView=2
+02:08:46.753 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=88 toView=2
+02:08:46.754 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=92 toView=2
+02:08:46.754 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=96 toView=2
+02:08:46.754 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=100 toView=2
+02:08:46.754 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=104 toView=2
+02:08:46.754 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=108 toView=2
+02:08:46.754 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=112 toView=2
+02:08:46.755 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=116 toView=2
+02:08:46.755 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=120 toView=2
+02:08:46.755 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=124 toView=2
+02:08:46.755 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=128 toView=2
+02:08:46.755 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=132 toView=2
+02:08:46.755 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=136 toView=2
+02:08:46.756 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=140 toView=2
+02:08:46.756 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=144 toView=2
+02:08:46.756 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=148 toView=2
+02:08:46.756 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=152 toView=2
+02:08:46.756 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=156 toView=2
+02:08:46.756 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=160 toView=2
+02:08:46.757 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=164 toView=2
+02:08:46.757 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=168 toView=2
+02:08:46.757 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=172 toView=2
+02:08:46.757 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=176 toView=2
+02:08:46.757 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=180 toView=2
+02:08:46.757 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=184 toView=2
+02:08:46.758 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=188 toView=2
+02:08:46.758 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=192 toView=2
+02:08:46.758 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=196 toView=2
+02:08:46.758 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=200 toView=2
+02:08:46.758 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=204 toView=2
+02:08:46.758 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=208 toView=2
+02:08:46.759 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=212 toView=2
+02:08:46.759 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=216 toView=2
+02:08:46.759 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=220 toView=2
+02:08:46.759 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=224 toView=2
+02:08:46.759 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=228 toView=2
+02:08:46.759 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=232 toView=2
+02:08:46.759 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=236 toView=2
+02:08:46.760 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=240 toView=2
+02:08:46.760 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=244 toView=2
+02:08:46.760 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=248 toView=2
+02:08:46.760 DBG Batch not preprepared. Not resurrecting. fromView=1 segId=0 sn=252 toView=2
+02:08:46.760 INF Requesting VIEWCHANGE. receiverID=2 segID=0 senderID=1 view=2
+02:08:47.398 INF Stopping profiler.
+02:08:47.398 INF Stopping Tracer. events=359 fileName=experiment-output/0000/slave-003/peer.trc
+==================
+WARNING: DATA RACE
+Read at 0x00c0009237f0 by goroutine 115:
+  runtime.racereadrange()
+      <autogenerated>:1 +0x1b
+  github.com/hyperledger-labs/mirbft/tracing.(*BufferedTrace).StopOnSignal.func1()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/tracing/bufferedtrace.go:298 +0x4e
+
+Previous write at 0x00c0009237f0 by goroutine 114:
+  github.com/hyperledger-labs/mirbft/tracing.(*BufferedTrace).Event()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/tracing/bufferedtrace.go:105 +0x2d9
+  github.com/hyperledger-labs/mirbft/profiling.StartCPUTracing.func1()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/profiling/cpuusage.go:31 +0x95
+
+Goroutine 115 (running) created at:
+  github.com/hyperledger-labs/mirbft/tracing.(*BufferedTrace).StopOnSignal()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/tracing/bufferedtrace.go:292 +0x172
+  main.setUpTracing()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/cmd/orderingpeer/main.go:204 +0xf5
+  main.main()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/cmd/orderingpeer/main.go:98 +0x9d6
+
+Goroutine 114 (running) created at:
+  github.com/hyperledger-labs/mirbft/profiling.StartCPUTracing()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/profiling/cpuusage.go:28 +0xb6
+  main.setUpTracing()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/cmd/orderingpeer/main.go:196 +0x85
+  main.main()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/cmd/orderingpeer/main.go:98 +0x9d6
+==================
+02:08:47.403 INF Trace data written.
+02:08:47.449 INF Profile data written. filename=experiment-output/0000/slave-003/prof.block name=block
+02:08:47.467 INF Profile data written. filename=experiment-output/0000/slave-003/prof.mutex name=mutex
+02:08:47.637 INF Profile data written. filename=experiment-output/0000/slave-003/prof.cpu name=cpu
