@@ -1,0 +1,3492 @@
+SELECT *
+FROM ethereum
+Query time: 0.000 seconds
+Rows returned: 0
+
+Total running time: 0.000 seconds
+-- Truncate request table to include only rows with timestamps between:
+--   the first response obtained by the last client to obtain a response
+--   and
+--   the last response obtained by the client first to finish obtaining responses
+-- Then, cut off 5 seconds from each end.
+-- We could use a view here too, but a physical table is much faster to access.
+-- The script processing this file normally makes sure that
+-- changes made by this script to the database are rolled back and are not persisted.
+CREATE TABLE request_truncated as
+SELECT *
+FROM request
+WHERE
+  ts - 5000000 >= (SELECT max(t)
+    FROM (SELECT min(ts) as t
+      FROM request
+      WHERE event = 'REQ_FINISHED'
+      GROUP BY nodeId))
+  AND ts + 5000000 <= (SELECT min(t)
+    FROM (SELECT max(ts) as t
+      FROM request
+      WHERE event = 'REQ_SEND'
+      GROUP BY nodeId))
+Query time: 0.001 seconds
+Rows returned: 0
+
+-- Do the same as above with the protocol table.
+-- Note that the truncation times are still taken from the request table.
+CREATE TABLE protocol_truncated as
+SELECT *
+FROM protocol
+WHERE
+  ts - 5000000 >= (SELECT max(t)
+    FROM (SELECT min(ts) as t
+      FROM request
+      WHERE event = 'REQ_FINISHED'
+      GROUP BY nodeId))
+  AND ts + 5000000 <= (SELECT min(t)
+    FROM (SELECT max(ts) as t
+      FROM request
+      WHERE event = 'REQ_SEND'
+      GROUP BY nodeId))
+Query time: 0.001 seconds
+Rows returned: 0
+
+-- Do the same as above with the CPU usage table.
+-- Note that the truncation times are still taken from the request table.
+CREATE TABLE cpuusage_truncated as
+SELECT *
+FROM cpuusage
+WHERE
+            ts - 5000000 >= (SELECT max(t)
+                             FROM (SELECT min(ts) as t
+                                   FROM request
+                                   WHERE event = 'REQ_FINISHED'
+                                   GROUP BY nodeId))
+  AND ts + 5000000 <= (SELECT min(t)
+                       FROM (SELECT max(ts) as t
+                             FROM request
+                             WHERE event = 'REQ_SEND'
+                             GROUP BY nodeId))
+Query time: 0.000 seconds
+Rows returned: 0
+
+-- Total CPU usage (average over all peers), truncated data
+-- export cpu-total.val
+SELECT avg(total)
+from cpuusage_truncated
+WHERE event = 'CPU_USAGE'
+-- (totalcpu[%])
+Query time: 0.000 seconds
+None
+Rows returned: 1
+
+-- System CPU usage (average over all peers), truncated data
+-- (This is the CPU usage reported under "System" in /proc/stat)
+-- export cpu-system.val
+SELECT avg(system)
+from cpuusage_truncated
+WHERE event = 'CPU_USAGE'
+-- (systemcpu[%])
+Query time: 0.000 seconds
+None
+Rows returned: 1
+
+-- End-to-end average request latency, all requests
+-- export latency-avg-shortened-raw.val
+--
+SELECT avg(r2.latency)  / 1000.0
+FROM request r1 JOIN request r2 ON r1.nodeId = r2.nodeId
+                                AND r1.clSn = r2.clSn
+                                AND r1.event = 'REQ_SEND'
+                                AND r2.event = 'REQ_FINISHED'
+   WHERE r1.ts - 30000000 < (SELECT min(r1.ts)
+                            FROM request r1
+                            WHERE event = 'REQ_SEND')
+-- (avg[ms])
+Query time: 0.001 seconds
+954.6343190661479
+Rows returned: 1
+
+-- End-to-end average request latency, all requests
+-- export latency-95pctile-shortened-raw.val
+--
+SELECT r2.latency  / 1000.0
+FROM request r1 JOIN request r2 ON r1.nodeId = r2.nodeId
+                                AND r1.clSn = r2.clSn
+                                AND r1.event = 'REQ_SEND'
+                                AND r2.event = 'REQ_FINISHED'
+   WHERE r1.ts - 30000000 < (SELECT min(r1.ts)
+                            FROM request r1
+                            WHERE event = 'REQ_SEND')
+ORDER BY r2.latency ASC
+LIMIT 1
+    OFFSET (SELECT count()
+            FROM request r1 JOIN request r2 ON r1.nodeId = r2.nodeId
+                                AND r1.clSn = r2.clSn
+                                AND r1.event = 'REQ_SEND'
+                                AND r2.event = 'REQ_FINISHED'
+            WHERE r1.ts - 30000000 < (SELECT min(r1.ts)
+                            FROM request r1
+                            WHERE event = 'REQ_SEND'))* 95 / 100;
+Query time: 0.001 seconds
+1987.853
+Rows returned: 1
+
+-- (latency[ms])
+Query time: 0.000 seconds
+Rows returned: 0
+
+-- End-to-end average request latency, all requests
+-- export latency-avg-raw.val
+--
+SELECT avg(latency) / 1000.0
+FROM request
+WHERE event = 'REQ_FINISHED'
+-- (avg[ms])
+Query time: 0.000 seconds
+954.6343190661479
+Rows returned: 1
+
+-- Latency standard deviation, all requests
+-- export latency-stdev-raw.val
+--
+SELECT stdev(latency) / 1000.0
+FROM request
+WHERE event = 'REQ_FINISHED'
+-- (stdev[ms])
+Query time: 0.000 seconds
+574.5963956687468
+Rows returned: 1
+
+-- End-to-end average request latency, truncated requests
+-- export latency-avg-trunc.val
+--
+SELECT avg(latency) / 1000.0
+FROM request_truncated
+WHERE event = 'REQ_FINISHED'
+-- (avg[ms])
+Query time: 0.000 seconds
+None
+Rows returned: 1
+
+-- Latency standard deviation, truncated requests
+-- export latency-stdev-trunc.val
+--
+SELECT stdev(latency) / 1000.0
+FROM request_truncated
+WHERE event = 'REQ_FINISHED'
+-- (stdev[ms])
+Query time: 0.000 seconds
+None
+Rows returned: 1
+
+-- 95th percentile request latency, all requests
+-- export latency-95pctile-raw.val
+--
+SELECT latency / 1000.0
+FROM request
+WHERE event = 'REQ_FINISHED'
+ORDER BY latency ASC
+LIMIT 1
+    OFFSET (SELECT count()
+            FROM request
+            WHERE event = 'REQ_FINISHED') * 95 / 100;
+-- (latency[ms])
+Query time: 0.000 seconds
+1987.853
+Rows returned: 1
+
+-- 95th percentile request latency, truncated requests
+-- export latency-95pctile-trunc.val
+--
+SELECT latency / 1000.0
+FROM request_truncated
+WHERE event = 'REQ_FINISHED'
+ORDER BY latency ASC
+LIMIT 1
+    OFFSET (SELECT count()
+            FROM request_truncated
+            WHERE event = 'REQ_FINISHED') * 95 / 100;
+-- (latency[ms])
+Query time: 0.000 seconds
+Rows returned: 0
+
+-- End-to-end average request latency, all requests
+-- export latency-avg-raw-nowm.val
+--
+SELECT avg(latency) / 1000.0
+FROM request
+WHERE event = 'ENOUGH_RESP'
+-- (avg[ms])
+Query time: 0.000 seconds
+954.3523035019456
+Rows returned: 1
+
+-- Latency standard deviation, all requests
+-- export latency-stdev-raw-nowm.val
+--
+SELECT stdev(latency) / 1000.0
+FROM request
+WHERE event = 'ENOUGH_RESP'
+-- (stdev[ms])
+Query time: 0.000 seconds
+574.3359484616382
+Rows returned: 1
+
+-- End-to-end average request latency, truncated requests
+-- export latency-avg-trunc-nowm.val
+--
+SELECT avg(latency) / 1000.0
+FROM request_truncated
+WHERE event = 'ENOUGH_RESP'
+-- (avg[ms])
+Query time: 0.000 seconds
+None
+Rows returned: 1
+
+-- Latency standard deviation, truncated requests
+-- export latency-stdev-trunc-nowm.val
+--
+SELECT stdev(latency) / 1000.0
+FROM request_truncated
+WHERE event = 'ENOUGH_RESP'
+-- (stdev[ms])
+Query time: 0.000 seconds
+None
+Rows returned: 1
+
+-- 95th percentile request latency, all requests
+-- export latency-95pctile-raw-nowm.val
+--
+SELECT latency / 1000.0
+FROM request
+WHERE event = 'ENOUGH_RESP'
+ORDER BY latency ASC
+LIMIT 1
+    OFFSET (SELECT count()
+            FROM request
+            WHERE event = 'ENOUGH_RESP') * 95 / 100;
+-- (latency[ms])
+Query time: 0.000 seconds
+1982.157
+Rows returned: 1
+
+-- 95th percentile request latency, truncated requests
+-- export latency-95pctile-trunc-nowm.val
+--
+SELECT latency / 1000.0
+FROM request_truncated
+WHERE event = 'ENOUGH_RESP'
+ORDER BY latency ASC
+LIMIT 1
+    OFFSET (SELECT count()
+            FROM request_truncated
+            WHERE event = 'ENOUGH_RESP') * 95 / 100;
+-- (latency[ms])
+Query time: 0.000 seconds
+Rows returned: 0
+
+-- Average client slack per request, all clients
+-- export client-slack-avg-raw.val
+--
+SELECT avg(latency)
+FROM request
+WHERE event = 'CLIENT_SLACK'
+-- (avg[us])
+Query time: 0.000 seconds
+2387.280155642023
+Rows returned: 1
+
+-- Average client slack, truncated requests
+-- export client-slack-avg-trunc.val
+--
+SELECT avg(latency)
+FROM request_truncated
+WHERE event = 'CLIENT_SLACK'
+-- (avg[us])
+Query time: 0.000 seconds
+None
+Rows returned: 1
+
+-- Client slack standard deviation, all requests
+-- export client-slack-stdev-raw.val
+--
+SELECT stdev(latency)
+FROM request
+WHERE event = 'CLIENT_SLACK'
+-- (avg[us])
+Query time: 0.000 seconds
+4341.32976632232
+Rows returned: 1
+
+-- Client slack standard deviation, all requests
+-- export client-slack-stdev-trunc.val
+--
+SELECT stdev(latency)
+FROM request_truncated
+WHERE event = 'CLIENT_SLACK'
+-- (avg[us])
+Query time: 0.000 seconds
+None
+Rows returned: 1
+
+-- 1st percentile client slack, all requests
+-- export client-slack-1pctile-raw.val
+--
+SELECT latency
+FROM request
+WHERE event = 'CLIENT_SLACK'
+ORDER BY latency ASC
+LIMIT 1
+    OFFSET (SELECT count()
+            FROM request
+            WHERE event = 'CLIENT_SLACK') * 1 / 100;
+-- (slack[us])
+Query time: 0.000 seconds
+-16613
+Rows returned: 1
+
+-- 1st percentile client slack, truncated requests
+-- export client-slack-1pctile-trunc.val
+--
+SELECT latency
+FROM request_truncated
+WHERE event = 'CLIENT_SLACK'
+ORDER BY latency ASC
+LIMIT 1
+    OFFSET (SELECT count()
+            FROM request
+            WHERE event = 'CLIENT_SLACK') * 1 / 100;
+-- (slack[us])
+Query time: 0.000 seconds
+Rows returned: 0
+
+-- Experiment duration in seconds
+-- export duration-raw.val
+--
+SELECT (max(ts) - min(ts))/1000000.0
+FROM request
+WHERE event = 'REQ_FINISHED'
+-- (duration[sec])
+Query time: 0.000 seconds
+11.031077
+Rows returned: 1
+
+-- Experiment duration in seconds, truncated data
+-- export duration-trunc.val
+--
+SELECT (max(ts) - min(ts))/1000000.0
+FROM request_truncated
+WHERE event = 'REQ_FINISHED'
+-- (duration[sec])
+Query time: 0.000 seconds
+None
+Rows returned: 1
+
+-- Total number of requests (good for sanity checks whether everything has been delivered)
+-- export nreq-raw.val
+--
+SELECT count()
+FROM request
+WHERE event = 'REQ_FINISHED'
+-- (count[req])
+Query time: 0.000 seconds
+257
+Rows returned: 1
+
+-- Number of requests, using truncated request data
+-- export nreq-trunc.val
+--
+SELECT count()
+FROM request_truncated
+WHERE event = 'REQ_FINISHED'
+-- (count[req])
+Query time: 0.000 seconds
+0
+Rows returned: 1
+
+-- Throughput (without cutting off start and end)
+-- export throughput-raw.val
+--
+-- !!!!! Multiplying by 10 for sampling
+-- TODO parametrize the sumpling multiplier
+SELECT 10 * 1000000.0 * count() / (max(ts) - min(ts))
+FROM request
+WHERE event = 'REQ_FINISHED'
+-- (throughput[req/sec])
+Query time: 0.000 seconds
+232.97815798040392
+Rows returned: 1
+
+-- Throughput, using truncated request data
+-- export throughput-trunc.val
+--
+-- !!!!! Multiplying by 10 for sampling
+-- TODO parametrize the sumpling multiplier
+SELECT 10 * 1000000.0 * count() / (max(ts) - min(ts))
+FROM request_truncated
+WHERE event = 'REQ_FINISHED'
+-- (throughput[req/sec])
+Query time: 0.000 seconds
+None
+Rows returned: 1
+
+-- Average batch size
+-- export batch-size-avg-trunc.val
+--
+SELECT avg(val)
+FROM protocol_truncated
+WHERE event = 'PROPOSE'
+-- (avg-batch-size[req])
+Query time: 0.000 seconds
+None
+Rows returned: 1
+
+-- 10th percentile batch size
+-- export batch-size-10pctile-trunc.val
+--
+SELECT val
+FROM protocol_truncated
+WHERE event = 'PROPOSE'
+ORDER BY val ASC
+LIMIT 1
+OFFSET (SELECT count() from protocol_truncated WHERE event = 'PROPOSE') * 10 / 100
+-- (10th-pctile[req])
+Query time: 0.000 seconds
+Rows returned: 0
+
+-- 90th percentile batch size
+-- export batch-size-90pctile-trunc.val
+--
+SELECT val
+FROM protocol_truncated
+WHERE event = 'PROPOSE'
+ORDER BY val ASC
+LIMIT 1
+    OFFSET (SELECT count() from protocol_truncated WHERE event = 'PROPOSE') * 90 / 100
+-- (90th-pctile[req])
+Query time: 0.000 seconds
+Rows returned: 0
+
+-- average proposal rate
+-- export propose-rate-raw.val
+SELECT count(*) / ((max(ts) - min(ts))/1000000.0)
+FROM protocol
+WHERE event = 'PROPOSE'
+-- (rate[batches/sec])
+Query time: 0.000 seconds
+7.961927767542988
+Rows returned: 1
+
+-- average proposal rate, truncated data
+-- export propose-rate-trunc.val
+SELECT count(*) / ((max(ts) - min(ts))/1000000.00)
+FROM protocol_truncated
+WHERE event = 'PROPOSE'
+-- (rate[batches/sec])
+Query time: 0.000 seconds
+None
+Rows returned: 1
+
+-- average commit rate
+-- export commit-rate-raw.val
+SELECT count(*) / ((max(ts) - min(ts))/1000000.0)
+FROM protocol
+WHERE event = 'COMMIT'
+-- (rate[batches/sec])
+Query time: 0.000 seconds
+125.17934964633633
+Rows returned: 1
+
+-- average commit rate, truncated data
+-- export commit-rate-trunc.val
+SELECT count(*) / ((max(ts) - min(ts))/1000000.0)
+FROM protocol_truncated
+WHERE event = 'COMMIT'
+-- (rate[batches/sec])
+Query time: 0.000 seconds
+None
+Rows returned: 1
+
+-- average message batch, truncated data
+-- export msg-batch-avg-trunc.val
+SELECT avg(val)
+FROM protocol_truncated
+where event = 'MSG_BATCH'
+-- (batchsize[msg])
+Query time: 0.000 seconds
+None
+Rows returned: 1
+
+-- minimal number of epochs
+-- this is the number of epochs the node with the fewest epochs went through (ideally same for all nodes)
+-- export epochs-min.val
+SELECT min(lastEpoch)
+FROM (SELECT max(seqNr) as lastEpoch
+      FROM protocol
+      WHERE event = 'NEW_EPOCH'
+      GROUP BY nodeId)
+Query time: 0.000 seconds
+0
+Rows returned: 1
+
+-- maximal number of epochs
+-- this is the number of epochs the node with the fewest epochs went through (ideally same for all nodes)
+-- export epochs-max.val
+SELECT max(lastEpoch)
+FROM (SELECT max(seqNr) as lastEpoch
+      FROM protocol
+      WHERE event = 'NEW_EPOCH'
+      GROUP BY nodeId)
+Query time: 0.000 seconds
+0
+Rows returned: 1
+
+-- maximal number of epochs
+-- this is the number of epochs the node with the fewest epochs went through (ideally same for all nodes)
+-- export epochs-avg.val
+SELECT avg(lastEpoch)
+FROM (SELECT max(seqNr) as lastEpoch
+      FROM protocol
+      WHERE event = 'NEW_EPOCH'
+      GROUP BY nodeId)
+Query time: 0.000 seconds
+0.0
+Rows returned: 1
+
+-- Total number of view changes at all nodes
+-- export viewchanges-total.val
+SELECT count()
+FROM protocol
+WHERE event = 'VIEW_CHANGE'
+Query time: 0.000 seconds
+0
+Rows returned: 1
+
+-- Average number of view changes (should be the total number of actual view changes, if every node completes each view change)
+-- export viewchanges-avg.val
+SELECT count()*1.0 / (SELECT count() from (SELECT DISTINCT nodeId FROM protocol))
+FROM protocol
+WHERE event = 'VIEW_CHANGE'
+Query time: 0.000 seconds
+0.0
+Rows returned: 1
+
+Total running time: 0.007 seconds
+-- Truncate request table to include only rows with timestamps between:
+--   the first response obtained by the last client to obtain a response
+--   and
+--   the last request obtained by the client first to finish sending requests
+-- Then, cut off 5 second from each end.
+-- We could use a view here too, but a physical table is much faster to access.
+-- The script processing this file normally makes sure that
+-- changes made by this script to the database are rolled back and are not persisted.
+CREATE TABLE request_truncated as
+SELECT *
+FROM request
+WHERE
+  ts - 5000000 >= (SELECT max(t)
+    FROM (SELECT min(ts) as t
+      FROM request
+      WHERE event = 'REQ_FINISHED'
+      GROUP BY nodeId))
+  AND ts + 5000000 <= (SELECT min(t)
+    FROM (SELECT max(ts) as t
+      FROM request
+      WHERE event = 'REQ_SEND'
+      GROUP BY nodeId))
+Query time: 0.001 seconds
+Rows returned: 0
+
+-- Do the same as above with the protocol table.
+-- Note that the truncation times are still taken from the request table.
+CREATE TABLE protocol_truncated as
+SELECT *
+FROM protocol
+WHERE
+  ts - 5000000 >= (SELECT max(t)
+    FROM (SELECT min(ts) as t
+      FROM request
+      WHERE event = 'REQ_FINISHED'
+      GROUP BY nodeId))
+  AND ts + 5000000 <= (SELECT min(t)
+    FROM (SELECT max(ts) as t
+      FROM request
+      WHERE event = 'REQ_SEND'
+      GROUP BY nodeId))
+Query time: 0.001 seconds
+Rows returned: 0
+
+-- Do the same as above with the CPU usage table.
+-- Note that the truncation times are still taken from the request table.
+CREATE TABLE cpuusage_truncated as
+SELECT *
+FROM cpuusage
+WHERE
+  ts - 5000000 >= (SELECT max(t)
+    FROM (SELECT min(ts) as t
+      FROM request
+      WHERE event = 'REQ_FINISHED'
+      GROUP BY nodeId))
+  AND ts + 5000000 <= (SELECT min(t)
+    FROM (SELECT max(ts) as t
+      FROM request
+      WHERE event = 'REQ_SEND'
+      GROUP BY nodeId))
+Query time: 0.000 seconds
+Rows returned: 0
+
+-- Total CPU usage in time (peer 0)
+-- export timeline-cpu-usage-total-peer-0.csv
+SELECT (ts - (SELECT min(ts) FROM cpuusage WHERE event = 'CPU_USAGE' AND nodeId = 0))/1000 as msec, total
+from cpuusage
+WHERE event = 'CPU_USAGE' AND nodeId = 0
+-- (msec, totalcpu[%])
+Query time: 0.000 seconds
+0, 21
+502, 4
+1003, 9
+1506, 3
+2007, 16
+2510, 4
+3011, 16
+3512, 6
+4013, 24
+4515, 5
+5017, 16
+5519, 5
+6020, 25
+6523, 5
+7024, 21
+7527, 5
+8028, 25
+8530, 5
+9032, 17
+9534, 6
+10037, 23
+10538, 5
+11040, 16
+11542, 5
+12044, 22
+12546, 4
+13048, 10
+13550, 5
+14051, 13
+14553, 3
+15055, 9
+Rows returned: 31
+
+-- Total CPU usage in time (peer 1)
+-- export timeline-cpu-usage-total-peer-1.csv
+SELECT (ts - (SELECT min(ts) FROM cpuusage WHERE event = 'CPU_USAGE' AND nodeId = 1))/1000 as msec, total
+from cpuusage
+WHERE event = 'CPU_USAGE' AND nodeId = 1
+-- (msec, totalcpu[%])
+Query time: 0.000 seconds
+0, 20
+502, 4
+1004, 9
+1506, 3
+2007, 16
+2509, 4
+3010, 16
+3512, 6
+4013, 24
+4514, 5
+5016, 16
+5518, 5
+6020, 25
+6522, 5
+7024, 21
+7526, 5
+8027, 25
+8529, 5
+9030, 17
+9532, 6
+10033, 23
+10535, 5
+11037, 17
+11539, 5
+12041, 22
+12543, 4
+13046, 10
+13547, 5
+14049, 13
+14550, 3
+15052, 9
+Rows returned: 31
+
+-- Total CPU usage in time (average over all peers)
+-- export timeline-cpu-usage-total.csv
+SELECT (ts - (SELECT min(ts) FROM cpuusage WHERE event = 'CPU_USAGE'))/1000 as msec, avg(total)
+from cpuusage
+WHERE event = 'CPU_USAGE'
+GROUP BY msec
+-- (msec, totalcpu[%])
+Query time: 0.000 seconds
+0, 20.333333333333332
+1, 20.5
+2, 20.0
+501, 4.0
+502, 4.0
+503, 4.0
+504, 4.0
+1003, 9.0
+1004, 9.0
+1005, 9.0
+1006, 9.0
+1505, 3.0
+1506, 3.0
+1507, 3.0
+1508, 3.0
+2007, 16.0
+2008, 16.0
+2009, 16.0
+2010, 16.0
+2508, 4.0
+2509, 4.0
+2511, 4.0
+2512, 4.0
+3010, 16.0
+3011, 16.0
+3012, 16.0
+3013, 16.0
+3014, 16.0
+3511, 6.0
+3512, 6.0
+3513, 6.0
+3514, 6.0
+3515, 6.0
+4013, 24.0
+4014, 24.0
+4015, 24.0
+4016, 24.0
+4017, 24.0
+4514, 5.0
+4515, 5.0
+4516, 5.0
+4517, 5.0
+4518, 5.0
+5016, 16.0
+5017, 16.0
+5018, 16.0
+5019, 16.0
+5020, 16.0
+5518, 5.0
+5519, 5.0
+5520, 5.0
+5521, 5.0
+5522, 5.0
+6020, 25.0
+6021, 25.0
+6022, 25.0
+6023, 25.0
+6024, 25.0
+6522, 5.0
+6524, 5.0
+6525, 5.0
+6526, 5.0
+7024, 21.0
+7025, 21.0
+7026, 21.0
+7027, 21.0
+7028, 21.0
+7526, 5.0
+7527, 5.0
+7528, 5.0
+7529, 5.0
+7531, 4.0
+8027, 25.0
+8029, 25.0
+8030, 25.0
+8032, 25.0
+8529, 5.0
+8530, 5.0
+8531, 5.0
+8533, 5.0
+9030, 17.0
+9031, 17.0
+9032, 17.0
+9033, 17.0
+9034, 17.0
+9035, 17.0
+9532, 6.0
+9533, 6.0
+9535, 6.0
+9536, 6.0
+10033, 23.0
+10034, 23.0
+10035, 23.0
+10037, 23.0
+10038, 23.0
+10039, 23.0
+10535, 5.0
+10536, 5.0
+10537, 5.0
+10539, 5.0
+10540, 5.0
+11037, 17.0
+11038, 17.0
+11039, 17.0
+11041, 16.666666666666668
+11043, 16.0
+11539, 5.0
+11541, 5.0
+11542, 5.0
+11543, 5.0
+11544, 5.0
+12040, 22.0
+12041, 22.0
+12042, 22.0
+12044, 22.0
+12046, 22.0
+12542, 4.0
+12543, 4.0
+12544, 4.0
+12545, 4.0
+12546, 4.0
+12547, 4.0
+12548, 4.0
+13043, 10.0
+13044, 10.0
+13046, 10.0
+13047, 10.0
+13049, 10.0
+13050, 10.0
+13545, 5.0
+13546, 5.0
+13547, 5.0
+13548, 5.0
+13549, 5.0
+13551, 5.0
+14047, 13.0
+14049, 13.0
+14050, 13.0
+14051, 13.0
+14052, 13.0
+14053, 13.0
+14549, 3.0
+14550, 3.0
+14551, 3.0
+14553, 3.0
+14554, 3.0
+15051, 9.0
+15052, 9.0
+15053, 9.0
+15055, 9.0
+15056, 9.0
+Rows returned: 151
+
+-- System CPU usage in time (peer 0). This is the CPU usage reported under "System" in /proc/stat
+-- export timeline-cpu-usage-system-peer-0.csv
+SELECT (ts - (SELECT min(ts) FROM cpuusage WHERE event = 'CPU_USAGE' AND nodeId = 0))/1000 as msec, system
+from cpuusage
+WHERE event = 'CPU_USAGE' AND nodeId = 0
+-- (msec, systemcpu[%])
+Query time: 0.000 seconds
+0, 9
+502, 0
+1003, 2
+1506, 0
+2007, 4
+2510, 1
+3011, 3
+3512, 1
+4013, 4
+4515, 1
+5017, 2
+5519, 1
+6020, 6
+6523, 0
+7024, 6
+7527, 0
+8028, 4
+8530, 1
+9032, 2
+9534, 1
+10037, 3
+10538, 1
+11040, 3
+11542, 1
+12044, 3
+12546, 0
+13048, 2
+13550, 0
+14051, 3
+14553, 0
+15055, 2
+Rows returned: 31
+
+-- System CPU usage in time (peer 1). This is the CPU usage reported under "System" in /proc/stat
+-- export timeline-cpu-usage-system-peer-1.csv
+SELECT (ts - (SELECT min(ts) FROM cpuusage WHERE event = 'CPU_USAGE' AND nodeId = 1))/1000 as msec, system
+from cpuusage
+WHERE event = 'CPU_USAGE' AND nodeId = 1
+-- (msec, systemcpu[%])
+Query time: 0.000 seconds
+0, 9
+502, 0
+1004, 2
+1506, 0
+2007, 4
+2509, 1
+3010, 3
+3512, 1
+4013, 4
+4514, 1
+5016, 2
+5518, 1
+6020, 6
+6522, 0
+7024, 6
+7526, 0
+8027, 4
+8529, 1
+9030, 2
+9532, 1
+10033, 3
+10535, 1
+11037, 3
+11539, 0
+12041, 3
+12543, 0
+13046, 2
+13547, 0
+14049, 3
+14550, 0
+15052, 2
+Rows returned: 31
+
+-- System CPU usage in time (average over all peers). This is the CPU usage reported under "System" in /proc/stat
+-- export timeline-cpu-usage-system.csv
+SELECT (ts - (SELECT min(ts) FROM cpuusage WHERE event = 'CPU_USAGE'))/1000 as msec, avg(system)
+from cpuusage
+WHERE event = 'CPU_USAGE'
+GROUP BY msec
+-- (msec, systemcpu[%])
+Query time: 0.000 seconds
+0, 9.0
+1, 9.0
+2, 9.0
+501, 0.0
+502, 0.0
+503, 0.0
+504, 0.0
+1003, 2.0
+1004, 2.0
+1005, 2.0
+1006, 2.0
+1505, 0.0
+1506, 0.0
+1507, 0.0
+1508, 0.0
+2007, 4.0
+2008, 4.0
+2009, 4.0
+2010, 4.0
+2508, 1.0
+2509, 1.0
+2511, 1.0
+2512, 1.0
+3010, 3.0
+3011, 3.0
+3012, 3.0
+3013, 3.0
+3014, 3.0
+3511, 1.0
+3512, 1.0
+3513, 1.0
+3514, 1.0
+3515, 1.0
+4013, 4.0
+4014, 4.0
+4015, 4.0
+4016, 4.0
+4017, 4.0
+4514, 1.0
+4515, 1.0
+4516, 1.0
+4517, 1.0
+4518, 1.0
+5016, 2.0
+5017, 2.0
+5018, 2.0
+5019, 2.0
+5020, 3.0
+5518, 1.0
+5519, 1.0
+5520, 1.0
+5521, 1.0
+5522, 1.0
+6020, 6.0
+6021, 6.0
+6022, 6.0
+6023, 6.0
+6024, 6.0
+6522, 0.0
+6524, 0.0
+6525, 0.0
+6526, 0.0
+7024, 6.0
+7025, 6.0
+7026, 6.0
+7027, 6.0
+7028, 6.0
+7526, 0.0
+7527, 0.0
+7528, 0.0
+7529, 0.0
+7531, 0.0
+8027, 4.0
+8029, 4.0
+8030, 4.0
+8032, 4.0
+8529, 1.0
+8530, 1.0
+8531, 1.0
+8533, 1.0
+9030, 2.0
+9031, 2.0
+9032, 2.0
+9033, 2.0
+9034, 2.0
+9035, 2.0
+9532, 1.0
+9533, 1.0
+9535, 1.0
+9536, 1.0
+10033, 3.0
+10034, 3.0
+10035, 3.0
+10037, 3.0
+10038, 3.0
+10039, 3.0
+10535, 1.0
+10536, 1.0
+10537, 1.0
+10539, 1.0
+10540, 1.0
+11037, 3.0
+11038, 3.0
+11039, 3.0
+11041, 3.0
+11043, 3.0
+11539, 0.0
+11541, 1.0
+11542, 1.0
+11543, 1.0
+11544, 1.0
+12040, 3.0
+12041, 3.0
+12042, 3.0
+12044, 3.0
+12046, 3.0
+12542, 0.0
+12543, 0.0
+12544, 0.0
+12545, 0.0
+12546, 0.0
+12547, 0.0
+12548, 0.0
+13043, 2.0
+13044, 2.0
+13046, 2.0
+13047, 2.0
+13049, 2.0
+13050, 2.0
+13545, 0.0
+13546, 0.0
+13547, 0.0
+13548, 0.0
+13549, 0.0
+13551, 0.0
+14047, 2.0
+14049, 3.0
+14050, 3.0
+14051, 3.0
+14052, 3.0
+14053, 3.0
+14549, 0.0
+14550, 0.0
+14551, 0.0
+14553, 0.0
+14554, 0.0
+15051, 2.0
+15052, 2.0
+15053, 2.0
+15055, 2.0
+15056, 2.0
+Rows returned: 151
+
+-- Batches committed in time (peer 0)
+-- export timeline-commit-peer-0.csv
+--
+SELECT (ts - (SELECT min(ts) FROM protocol WHERE event = 'COMMIT' AND nodeId = 0))/1000 as msec, count()
+FROM protocol
+WHERE event = 'COMMIT' AND nodeId = 0
+GROUP BY msec
+-- (msec, count[req])
+Query time: 0.001 seconds
+0, 1
+1, 1
+2, 2
+6, 1
+7, 2
+998, 1
+1005, 2
+1006, 1
+1007, 2
+1015, 1
+1017, 1
+1021, 1
+2025, 3
+2027, 1
+2028, 1
+2040, 1
+2049, 1
+3024, 1
+3032, 1
+3035, 1
+3037, 2
+3038, 1
+3042, 1
+3058, 1
+3059, 1
+4020, 1
+4028, 1
+4029, 2
+4032, 1
+4046, 1
+4047, 1
+5028, 1
+5032, 2
+5033, 1
+5065, 2
+5067, 1
+5068, 1
+5077, 1
+6024, 1
+6025, 1
+6026, 1
+6045, 1
+6058, 1
+6066, 2
+6071, 1
+7023, 2
+7025, 1
+7026, 2
+7032, 2
+7033, 1
+7034, 1
+7046, 1
+7047, 1
+7051, 2
+7068, 2
+7070, 1
+7071, 1
+8019, 2
+8030, 1
+8031, 1
+8044, 1
+8050, 2
+8051, 2
+8052, 1
+8053, 1
+8054, 1
+8061, 2
+9012, 1
+9014, 1
+9027, 4
+9045, 3
+9047, 1
+9051, 1
+9052, 1
+9055, 1
+9060, 2
+9065, 1
+9066, 1
+9073, 1
+9075, 1
+10026, 1
+10027, 1
+10035, 1
+10039, 1
+10040, 2
+10049, 1
+10051, 1
+10054, 1
+10065, 1
+10066, 1
+10072, 2
+11008, 1
+11009, 1
+11010, 2
+11035, 1
+11041, 1
+11056, 2
+11057, 2
+11058, 1
+11059, 1
+11060, 3
+11061, 2
+11064, 2
+11065, 1
+11076, 1
+11078, 2
+12013, 1
+12014, 2
+12024, 1
+12025, 1
+12026, 2
+12027, 1
+12028, 2
+12029, 1
+12032, 3
+12033, 1
+12034, 2
+12056, 1
+12057, 2
+12991, 1
+12994, 1
+12995, 1
+12996, 3
+13013, 4
+13021, 1
+13022, 1
+13023, 1
+13024, 1
+13026, 1
+13027, 2
+13028, 2
+13029, 1
+13030, 2
+13035, 2
+13036, 2
+13037, 1
+13038, 1
+13039, 2
+13057, 1
+13058, 1
+13059, 2
+14013, 1
+14014, 2
+14021, 2
+14022, 1
+14025, 1
+14026, 1
+14027, 2
+14031, 2
+14032, 1
+14033, 1
+14034, 5
+14035, 1
+14058, 1
+14059, 3
+Rows returned: 155
+
+-- Batches committed in time (all peers)
+-- export timeline-commit-all.csv
+--
+SELECT (ts - (SELECT min(ts) FROM protocol WHERE event = 'COMMIT'))/1000 as msec, count()
+FROM protocol
+WHERE event = 'COMMIT'
+GROUP BY msec
+-- (msec, count[req])
+Query time: 0.001 seconds
+0, 1
+1, 4
+2, 3
+3, 3
+5, 1
+6, 4
+7, 6
+8, 1
+9, 5
+10, 3
+11, 3
+12, 3
+13, 4
+14, 4
+15, 2
+16, 6
+17, 3
+998, 3
+1001, 2
+1002, 3
+1003, 2
+1004, 2
+1005, 4
+1006, 4
+1007, 3
+1008, 2
+1010, 1
+1011, 1
+1012, 1
+1013, 1
+1014, 3
+1015, 4
+1016, 5
+1017, 6
+1018, 2
+1019, 5
+1020, 2
+1021, 4
+1022, 4
+1023, 2
+1024, 4
+1025, 1
+1026, 1
+2024, 1
+2025, 7
+2026, 2
+2027, 9
+2028, 9
+2029, 1
+2030, 2
+2032, 1
+2033, 2
+2034, 1
+2036, 1
+2037, 1
+2038, 2
+2039, 4
+2040, 4
+2042, 1
+2049, 2
+2050, 6
+3023, 3
+3024, 1
+3025, 1
+3026, 1
+3027, 5
+3028, 1
+3029, 1
+3030, 1
+3031, 2
+3032, 3
+3033, 1
+3034, 1
+3035, 4
+3036, 3
+3037, 8
+3038, 5
+3039, 1
+3040, 2
+3041, 3
+3042, 3
+3044, 1
+3051, 1
+3054, 1
+3055, 1
+3056, 1
+3057, 1
+3058, 2
+3059, 3
+3060, 2
+3061, 4
+3062, 1
+3063, 2
+3065, 1
+3069, 1
+4018, 1
+4019, 3
+4020, 1
+4021, 1
+4022, 1
+4024, 1
+4027, 2
+4028, 1
+4029, 3
+4030, 2
+4031, 7
+4032, 6
+4033, 1
+4034, 3
+4035, 1
+4037, 1
+4038, 1
+4041, 1
+4043, 1
+4045, 1
+4046, 6
+4047, 7
+4048, 1
+4049, 1
+4052, 1
+4053, 1
+5027, 2
+5028, 3
+5031, 1
+5032, 5
+5033, 9
+5034, 1
+5035, 1
+5036, 5
+5037, 1
+5038, 2
+5039, 1
+5040, 3
+5042, 1
+5044, 1
+5045, 3
+5046, 4
+5047, 1
+5049, 1
+5053, 1
+5059, 1
+5062, 3
+5063, 1
+5065, 2
+5067, 1
+5068, 2
+5069, 2
+5071, 1
+5072, 1
+5073, 2
+5074, 2
+5075, 3
+5076, 1
+5077, 1
+5082, 1
+5083, 1
+5089, 1
+6021, 1
+6022, 1
+6023, 1
+6024, 4
+6025, 1
+6026, 2
+6028, 1
+6033, 1
+6034, 1
+6036, 1
+6040, 3
+6041, 1
+6042, 1
+6043, 2
+6045, 1
+6052, 1
+6056, 1
+6057, 1
+6058, 3
+6059, 2
+6060, 1
+6062, 2
+6063, 4
+6065, 2
+6066, 7
+6067, 1
+6068, 1
+6070, 3
+6071, 4
+6072, 3
+6073, 1
+6074, 3
+6075, 1
+6076, 1
+7020, 1
+7021, 1
+7022, 6
+7023, 10
+7024, 3
+7025, 1
+7026, 6
+7027, 2
+7028, 1
+7029, 2
+7032, 3
+7033, 5
+7034, 3
+7035, 4
+7036, 4
+7038, 2
+7039, 2
+7041, 1
+7042, 2
+7043, 1
+7044, 1
+7045, 3
+7046, 5
+7047, 5
+7048, 6
+7049, 4
+7050, 4
+7051, 5
+7052, 1
+7054, 1
+7055, 2
+7056, 1
+7059, 3
+7060, 1
+7061, 1
+7062, 3
+7063, 2
+7064, 4
+7066, 3
+7067, 1
+7068, 2
+7070, 6
+7071, 4
+7072, 5
+7073, 3
+8018, 2
+8019, 6
+8020, 2
+8021, 2
+8022, 3
+8023, 1
+8030, 2
+8031, 4
+8032, 1
+8033, 1
+8034, 2
+8035, 5
+8036, 5
+8037, 3
+8038, 1
+8040, 3
+8041, 5
+8042, 3
+8043, 4
+8044, 6
+8045, 1
+8046, 2
+8047, 1
+8048, 2
+8049, 4
+8050, 4
+8051, 5
+8052, 10
+8053, 2
+8054, 2
+8055, 2
+8060, 6
+8061, 7
+8062, 3
+9012, 1
+9013, 3
+9014, 1
+9015, 6
+9016, 4
+9017, 2
+9019, 3
+9020, 4
+9024, 1
+9026, 2
+9027, 5
+9028, 4
+9029, 5
+9030, 1
+9031, 2
+9039, 2
+9040, 2
+9041, 1
+9042, 2
+9044, 3
+9045, 11
+9046, 4
+9047, 4
+9048, 1
+9049, 1
+9050, 1
+9051, 3
+9052, 1
+9053, 3
+9054, 3
+9055, 2
+9056, 2
+9057, 4
+9058, 4
+9059, 2
+9060, 4
+9061, 5
+9062, 4
+9064, 2
+9065, 5
+9066, 8
+9067, 3
+9068, 4
+9069, 1
+9071, 4
+9072, 5
+9073, 4
+9074, 2
+9075, 1
+10026, 9
+10027, 5
+10028, 2
+10032, 2
+10033, 4
+10034, 5
+10035, 5
+10037, 5
+10038, 7
+10039, 3
+10040, 5
+10041, 1
+10042, 2
+10043, 1
+10044, 2
+10046, 1
+10049, 2
+10051, 1
+10053, 2
+10054, 3
+10055, 1
+10056, 2
+10057, 1
+10061, 1
+10062, 6
+10063, 3
+10064, 3
+10065, 3
+10066, 1
+10071, 1
+10072, 8
+10073, 5
+10074, 2
+11007, 3
+11008, 3
+11009, 3
+11010, 7
+11011, 3
+11012, 1
+11013, 1
+11014, 6
+11015, 2
+11016, 1
+11017, 2
+11032, 1
+11033, 3
+11034, 4
+11035, 2
+11036, 1
+11037, 2
+11041, 1
+11043, 2
+11044, 4
+11045, 3
+11046, 1
+11048, 1
+11049, 1
+11050, 2
+11051, 2
+11052, 2
+11053, 3
+11054, 7
+11055, 2
+11056, 6
+11057, 4
+11058, 3
+11059, 2
+11060, 6
+11061, 3
+11062, 5
+11063, 8
+11064, 12
+11065, 7
+11066, 10
+11067, 3
+11068, 6
+11069, 4
+11071, 1
+11072, 3
+11073, 1
+11076, 3
+11077, 5
+11078, 11
+11079, 5
+12012, 4
+12013, 10
+12014, 4
+12015, 1
+12016, 2
+12017, 3
+12020, 2
+12021, 1
+12022, 3
+12023, 5
+12024, 7
+12025, 5
+12026, 12
+12027, 4
+12028, 9
+12029, 4
+12030, 2
+12031, 6
+12032, 10
+12033, 2
+12034, 15
+12035, 4
+12036, 6
+12037, 8
+12038, 1
+12039, 4
+12040, 2
+12056, 13
+12057, 11
+12991, 2
+12992, 2
+12993, 4
+12994, 5
+12995, 10
+12996, 9
+12997, 10
+12998, 4
+12999, 2
+13012, 1
+13013, 13
+13014, 8
+13015, 3
+13016, 1
+13017, 2
+13019, 1
+13020, 4
+13021, 9
+13022, 8
+13023, 3
+13024, 1
+13025, 1
+13026, 8
+13027, 11
+13028, 10
+13029, 9
+13030, 10
+13031, 5
+13032, 8
+13033, 5
+13034, 5
+13035, 10
+13036, 5
+13037, 9
+13038, 11
+13039, 10
+13040, 9
+13041, 5
+13042, 7
+13057, 5
+13058, 7
+13059, 11
+13060, 6
+13061, 2
+13062, 1
+14013, 1
+14014, 14
+14015, 9
+14019, 7
+14020, 11
+14021, 5
+14022, 1
+14025, 5
+14026, 12
+14027, 24
+14028, 8
+14029, 4
+14031, 2
+14032, 1
+14033, 5
+14034, 19
+14035, 25
+14036, 7
+14058, 12
+14059, 20
+Rows returned: 497
+
+-- Client 0 request sending in time
+-- export timeline-submit-client-1.csv
+--
+SELECT (ts - (SELECT min(ts) FROM request WHERE event = 'REQ_SEND' AND nodeId = -1))/1000 as msec, count()
+FROM request
+WHERE event = 'REQ_SEND' AND nodeId = -1
+GROUP BY msec
+-- (msec, count[req])
+Query time: 0.000 seconds
+Rows returned: 0
+
+-- Client 1 request sending in time
+-- export timeline-submit-client-2.csv
+--
+SELECT (ts - (SELECT min(ts) FROM request WHERE event = 'REQ_SEND' AND nodeId = -2))/1000 as msec, count()
+FROM request
+WHERE event = 'REQ_SEND' AND nodeId = -2
+GROUP BY msec
+-- (msec, count[req])
+Query time: 0.000 seconds
+Rows returned: 0
+
+-- Client request sending in time (all clients)
+-- export timeline-submit-all.csv
+--
+SELECT (ts - (SELECT min(ts) FROM request WHERE event = 'REQ_SEND'))/1000 as msec, count()
+FROM request
+WHERE event = 'REQ_SEND'
+GROUP BY msec
+-- (msec, count[req])
+Query time: 0.000 seconds
+0, 1
+36, 1
+74, 1
+114, 1
+152, 1
+192, 1
+231, 1
+270, 1
+308, 1
+348, 1
+387, 1
+426, 1
+465, 1
+504, 1
+543, 1
+582, 1
+621, 1
+661, 1
+699, 1
+738, 1
+777, 1
+817, 1
+855, 1
+895, 1
+935, 1
+972, 1
+1012, 1
+1051, 1
+1090, 1
+1129, 1
+1168, 1
+1207, 1
+1246, 1
+1285, 1
+1324, 1
+1363, 1
+1402, 1
+1442, 1
+1480, 1
+1572, 1
+1575, 1
+1597, 1
+1637, 1
+1676, 1
+1715, 1
+1754, 1
+1793, 1
+1832, 1
+1871, 1
+1911, 1
+1949, 1
+1990, 1
+2027, 1
+2066, 1
+2108, 1
+2158, 1
+2183, 1
+2223, 1
+2261, 1
+2301, 1
+2340, 1
+2379, 1
+2418, 1
+2458, 1
+2496, 1
+2535, 1
+2574, 1
+2613, 1
+2653, 1
+2691, 1
+2730, 1
+2770, 1
+2808, 1
+2848, 1
+2887, 1
+2934, 1
+2965, 1
+3003, 1
+3043, 1
+3082, 1
+3121, 1
+3161, 1
+3199, 1
+3238, 1
+3278, 1
+3316, 1
+3356, 1
+3395, 1
+3433, 1
+3472, 1
+3512, 1
+3551, 1
+3590, 1
+3629, 1
+3668, 1
+3707, 1
+3746, 1
+3785, 1
+3824, 1
+3863, 1
+3902, 1
+3943, 1
+3996, 1
+4020, 1
+4058, 1
+4116, 1
+4136, 1
+4175, 1
+4215, 1
+4254, 1
+4293, 1
+4332, 1
+4371, 1
+4410, 1
+4449, 1
+4488, 1
+4527, 1
+4566, 1
+4605, 1
+4644, 1
+4684, 1
+4722, 1
+4762, 1
+4801, 1
+4840, 1
+4879, 1
+4918, 1
+4957, 1
+4996, 1
+5035, 1
+5074, 1
+5113, 1
+5152, 1
+5191, 1
+5230, 1
+5270, 1
+5309, 1
+5347, 1
+5386, 1
+5425, 1
+5465, 1
+5504, 1
+5542, 1
+5582, 1
+5621, 1
+5660, 1
+5699, 1
+5738, 1
+5777, 1
+5816, 1
+5855, 1
+5895, 1
+5934, 1
+5974, 1
+6011, 1
+6051, 1
+6108, 1
+6128, 1
+6167, 1
+6206, 1
+6264, 1
+6285, 1
+6324, 1
+6363, 1
+6402, 1
+6441, 1
+6480, 1
+6519, 1
+6558, 1
+6598, 1
+6637, 1
+6675, 1
+6714, 1
+6754, 1
+6793, 1
+6831, 1
+6871, 1
+6910, 1
+6949, 1
+7006, 1
+7027, 1
+7066, 1
+7106, 1
+7144, 1
+7184, 1
+7223, 1
+7262, 1
+7300, 1
+7340, 1
+7378, 1
+7418, 1
+7457, 1
+7495, 1
+7535, 1
+7573, 1
+7613, 1
+7652, 1
+7691, 1
+7730, 1
+7769, 1
+7808, 1
+7848, 1
+7886, 1
+7926, 1
+7976, 1
+8003, 1
+8042, 1
+8081, 1
+8120, 1
+8160, 1
+8199, 1
+8238, 1
+8277, 1
+8316, 1
+8355, 1
+8394, 1
+8433, 1
+8473, 1
+8512, 1
+8550, 1
+8589, 1
+8628, 1
+8667, 1
+8706, 1
+8746, 1
+8784, 1
+8824, 1
+8863, 1
+8902, 1
+8940, 1
+8980, 1
+9027, 1
+9059, 1
+9097, 1
+9136, 1
+9175, 1
+9214, 1
+9254, 1
+9293, 1
+9332, 1
+9370, 1
+9410, 1
+9449, 1
+9488, 1
+9527, 1
+9566, 1
+9605, 1
+9644, 1
+9683, 1
+9723, 1
+9761, 1
+9800, 1
+9840, 1
+9879, 1
+9918, 1
+9959, 1
+9997, 1
+Rows returned: 257
+
+-- Latency histogram (by millisecond buckets) for client 0
+-- export histogram-latency-client-1.csv
+--
+SELECT latency/1000 as lat, count()
+FROM request
+WHERE event = 'REQ_FINISHED' AND nodeId = -1
+GROUP BY lat
+--(latency[ms], count[req])
+Query time: 0.000 seconds
+Rows returned: 0
+
+-- Latency histogram (by millisecond buckets), all clients combined
+-- export histogram-latency-all.csv
+--
+SELECT latency/1000 as lat, count()
+FROM request
+WHERE event = 'REQ_FINISHED'
+GROUP BY lat
+--(latency[ms], count[req])
+Query time: 0.000 seconds
+117, 1
+129, 1
+131, 1
+136, 1
+143, 1
+145, 1
+149, 1
+162, 2
+168, 1
+173, 1
+188, 1
+203, 1
+204, 1
+217, 1
+219, 1
+223, 1
+238, 1
+241, 1
+243, 1
+255, 1
+262, 1
+268, 1
+269, 1
+270, 2
+281, 1
+282, 1
+288, 1
+289, 1
+295, 1
+297, 2
+303, 1
+311, 1
+315, 1
+320, 1
+327, 1
+342, 1
+357, 2
+370, 1
+371, 1
+376, 1
+392, 1
+394, 1
+395, 1
+407, 1
+415, 1
+420, 1
+421, 2
+422, 1
+433, 1
+434, 1
+435, 1
+441, 2
+447, 1
+448, 1
+455, 1
+463, 1
+467, 1
+473, 1
+481, 1
+497, 1
+510, 2
+522, 1
+524, 1
+528, 1
+541, 1
+545, 1
+546, 1
+560, 1
+566, 1
+572, 1
+575, 2
+586, 1
+588, 1
+598, 1
+599, 1
+601, 1
+605, 1
+613, 1
+614, 1
+619, 1
+631, 1
+632, 1
+635, 1
+636, 1
+651, 1
+663, 1
+674, 1
+686, 1
+687, 1
+693, 1
+708, 1
+710, 1
+712, 1
+724, 1
+730, 1
+737, 1
+738, 1
+739, 1
+740, 1
+751, 1
+752, 1
+757, 1
+758, 1
+765, 2
+766, 1
+771, 1
+782, 1
+784, 1
+789, 2
+805, 1
+817, 1
+826, 1
+838, 1
+840, 1
+844, 1
+861, 1
+863, 1
+865, 1
+875, 1
+884, 1
+890, 2
+891, 2
+900, 1
+903, 2
+907, 1
+910, 1
+917, 1
+918, 1
+925, 1
+932, 1
+936, 1
+942, 1
+944, 1
+960, 1
+967, 1
+978, 1
+992, 2
+998, 1
+1014, 1
+1015, 1
+1017, 1
+1029, 1
+1036, 1
+1043, 1
+1044, 2
+1052, 1
+1055, 1
+1060, 1
+1064, 1
+1069, 2
+1074, 1
+1080, 1
+1082, 1
+1094, 1
+1100, 2
+1109, 1
+1154, 1
+1157, 1
+1159, 1
+1162, 1
+1166, 1
+1167, 1
+1192, 1
+1193, 1
+1194, 1
+1204, 1
+1209, 2
+1212, 1
+1233, 1
+1246, 1
+1250, 1
+1253, 1
+1304, 1
+1310, 1
+1319, 1
+1340, 1
+1345, 1
+1353, 1
+1360, 1
+1362, 1
+1385, 1
+1393, 1
+1398, 1
+1404, 1
+1456, 1
+1472, 1
+1485, 1
+1498, 1
+1510, 1
+1512, 1
+1530, 1
+1533, 1
+1551, 1
+1556, 1
+1564, 1
+1578, 1
+1624, 1
+1635, 1
+1636, 1
+1662, 1
+1663, 1
+1674, 1
+1677, 1
+1681, 1
+1703, 1
+1709, 2
+1714, 1
+1773, 1
+1783, 1
+1788, 1
+1809, 1
+1814, 1
+1817, 1
+1823, 1
+1830, 1
+1854, 1
+1855, 1
+1862, 1
+1863, 1
+1925, 1
+1930, 1
+1941, 1
+1961, 1
+1968, 1
+1981, 1
+1987, 1
+1999, 1
+2001, 1
+2007, 1
+2031, 1
+2039, 1
+2046, 1
+2127, 1
+2279, 1
+2446, 1
+2596, 1
+2749, 1
+2893, 1
+Rows returned: 238
+
+-- Latency histogram (by millisecond buckets) for client 0, not considering watermark blocking
+-- export histogram-latency-client-1.csv
+--
+SELECT latency/1000 as lat, count()
+FROM request
+WHERE event = 'ENOUGH_RESP' AND nodeId = -1
+GROUP BY lat
+--(latency[ms], count[req])
+Query time: 0.000 seconds
+Rows returned: 0
+
+-- Latency histogram (by millisecond buckets), all clients combined, not considering watermark blocking
+-- export histogram-latency-all.csv
+--
+SELECT latency/1000 as lat, count()
+FROM request
+WHERE event = 'ENOUGH_RESP'
+GROUP BY lat
+--(latency[ms], count[req])
+Query time: 0.000 seconds
+117, 1
+129, 1
+131, 1
+136, 1
+143, 1
+145, 1
+149, 1
+161, 1
+162, 1
+167, 1
+173, 1
+188, 1
+203, 1
+204, 1
+217, 1
+219, 1
+223, 1
+238, 1
+241, 1
+243, 1
+255, 1
+262, 1
+268, 1
+269, 2
+270, 1
+281, 1
+282, 1
+288, 1
+289, 1
+295, 1
+297, 2
+303, 1
+311, 1
+315, 1
+320, 1
+327, 1
+342, 1
+357, 2
+370, 1
+371, 1
+375, 1
+392, 1
+393, 1
+395, 1
+407, 1
+415, 1
+420, 1
+421, 2
+422, 1
+433, 2
+435, 1
+441, 2
+447, 1
+448, 1
+455, 1
+463, 1
+467, 1
+472, 1
+481, 1
+497, 1
+509, 1
+510, 1
+522, 1
+524, 1
+528, 1
+541, 1
+545, 1
+546, 1
+560, 1
+566, 1
+572, 1
+574, 1
+575, 1
+586, 1
+588, 1
+598, 1
+599, 1
+601, 1
+605, 1
+613, 1
+614, 1
+619, 1
+631, 2
+635, 1
+636, 1
+651, 1
+663, 1
+674, 1
+686, 1
+687, 1
+693, 1
+708, 1
+710, 1
+712, 1
+724, 1
+730, 1
+737, 1
+738, 1
+739, 1
+740, 1
+751, 1
+752, 1
+757, 1
+758, 1
+765, 3
+771, 1
+782, 1
+784, 1
+789, 2
+805, 1
+817, 1
+826, 1
+838, 1
+840, 1
+844, 1
+861, 1
+863, 1
+864, 1
+875, 1
+884, 1
+890, 2
+891, 2
+899, 1
+903, 2
+906, 1
+910, 1
+916, 1
+918, 1
+925, 1
+932, 1
+936, 1
+942, 1
+944, 1
+959, 1
+967, 1
+978, 1
+991, 1
+992, 1
+997, 1
+1014, 1
+1015, 1
+1017, 1
+1029, 1
+1036, 1
+1043, 1
+1044, 2
+1051, 1
+1054, 1
+1060, 1
+1063, 1
+1067, 1
+1069, 1
+1074, 1
+1080, 1
+1082, 1
+1094, 1
+1099, 1
+1100, 1
+1108, 1
+1154, 1
+1157, 1
+1159, 1
+1161, 1
+1166, 1
+1167, 1
+1191, 1
+1193, 1
+1194, 1
+1203, 1
+1208, 2
+1212, 1
+1233, 1
+1246, 1
+1250, 1
+1253, 1
+1304, 1
+1310, 1
+1319, 1
+1340, 1
+1345, 1
+1353, 1
+1360, 1
+1362, 1
+1385, 1
+1393, 1
+1398, 1
+1403, 1
+1456, 1
+1472, 1
+1485, 1
+1498, 1
+1510, 1
+1512, 1
+1529, 1
+1533, 1
+1550, 1
+1556, 1
+1564, 1
+1578, 1
+1624, 1
+1635, 2
+1661, 1
+1663, 1
+1674, 1
+1677, 1
+1681, 1
+1703, 1
+1709, 2
+1714, 1
+1773, 1
+1783, 1
+1788, 1
+1808, 1
+1814, 1
+1817, 1
+1821, 1
+1830, 1
+1853, 1
+1855, 1
+1862, 2
+1925, 1
+1929, 1
+1940, 1
+1958, 1
+1967, 1
+1981, 1
+1982, 1
+1996, 2
+2006, 1
+2019, 1
+2037, 1
+2046, 1
+2127, 1
+2279, 1
+2446, 1
+2596, 1
+2749, 1
+2893, 1
+Rows returned: 238
+
+-- Throughput in time (per millisecond)
+-- export timeline-throughput-commit.csv
+--
+SELECT (ts - (SELECT min(ts) FROM request WHERE event = 'REQ_FINISHED'))/1000 as msec, count()
+FROM request
+WHERE event = 'REQ_FINISHED'
+GROUP BY msec
+-- (msec, count[req])
+Query time: 0.000 seconds
+0, 1
+3, 1
+5, 1
+8, 1
+11, 1
+13, 1
+28, 1
+30, 1
+32, 1
+34, 1
+36, 1
+37, 1
+51, 1
+53, 1
+55, 1
+57, 1
+59, 1
+61, 1
+1009, 1
+1011, 1
+1015, 1
+1018, 1
+1021, 1
+1027, 1
+1041, 2
+1045, 2
+1049, 2
+1050, 1
+1065, 2
+1069, 2
+1073, 1
+1074, 2
+1088, 1
+1092, 2
+1096, 2
+1101, 1
+1147, 2
+1150, 2
+1154, 2
+1992, 2
+1997, 1
+1998, 1
+2003, 1
+2005, 1
+2023, 1
+2024, 1
+2027, 2
+2030, 1
+2031, 1
+2048, 2
+2051, 1
+2052, 1
+2056, 2
+2057, 1
+3008, 2
+3014, 1
+3015, 1
+3024, 2
+3043, 1
+3044, 1
+3047, 1
+3048, 1
+3051, 1
+3052, 2
+3066, 1
+3069, 2
+3073, 2
+3077, 1
+3091, 2
+3094, 1
+3095, 1
+3098, 1
+3099, 1
+3150, 1
+3151, 1
+3155, 2
+3158, 2
+3159, 1
+4033, 2
+4037, 2
+4040, 1
+4041, 1
+4048, 2
+4052, 2
+4055, 1
+4056, 2
+4072, 2
+4076, 2
+4080, 1
+4081, 1
+4082, 1
+4983, 1
+4988, 1
+4991, 1
+5000, 2
+5006, 1
+5047, 1
+5049, 1
+5050, 1
+5053, 1
+5054, 1
+5058, 1
+5059, 2
+5062, 1
+5063, 1
+5066, 1
+5067, 1
+5085, 2
+5089, 2
+5093, 2
+5143, 2
+5147, 2
+5150, 1
+5151, 1
+5152, 1
+6989, 1
+6994, 1
+7000, 1
+7006, 1
+7012, 2
+7013, 1
+7023, 1
+7024, 1
+7032, 1
+7033, 1
+7037, 1
+7038, 2
+7051, 1
+7055, 2
+7059, 2
+7063, 1
+7064, 1
+7065, 1
+7069, 2
+7073, 2
+7103, 2
+7106, 1
+7107, 1
+7111, 2
+7130, 2
+7134, 2
+7138, 2
+7139, 1
+7190, 1
+7191, 1
+7194, 2
+7197, 1
+7198, 2
+8024, 2
+8028, 1
+8029, 1
+8035, 2
+8975, 1
+8976, 1
+8983, 2
+8995, 1
+8996, 2
+8997, 1
+9001, 1
+9002, 1
+9011, 1
+9012, 1
+9016, 1
+9042, 1
+9043, 1
+9045, 1
+9046, 1
+9049, 1
+9050, 1
+9055, 2
+9058, 1
+9059, 1
+9062, 1
+9063, 1
+9105, 2
+9109, 2
+9112, 1
+9113, 2
+9160, 1
+9161, 1
+9163, 1
+9164, 1
+9168, 2
+9173, 2
+9177, 2
+9181, 2
+9182, 1
+10952, 1
+10956, 1
+10957, 1
+10960, 1
+10961, 1
+10967, 1
+11029, 1
+11031, 1
+Rows returned: 195
+
+-- Throughput in time (per millisecond), in order
+-- export timeline-throughput-deliver.csv
+--
+SELECT (ts - (SELECT min(ts) FROM request WHERE event = 'REQ_DELIVERED'))/1000 as msec, count()
+FROM request
+WHERE event = 'REQ_DELIVERED'
+GROUP BY msec
+-- (msec, count[req])
+Query time: 0.000 seconds
+0, 1
+3159, 1
+9182, 3
+9183, 1
+Rows returned: 4
+
+-- Batch size histogram
+-- export batch-sizes.csv
+--
+SELECT val, count()
+FROM protocol
+WHERE event = 'PROPOSE'
+GROUP BY val
+-- (batch-size[req], num-batches)
+Query time: 0.000 seconds
+0, 29
+1, 1
+2, 5
+3, 2
+29, 4
+30, 3
+32, 58
+33, 5
+61, 1
+64, 4
+Rows returned: 10
+
+-- Batch size in time (per millisecond), all peers
+-- export timeline-batch-size.csv
+--
+SELECT (ts - (SELECT min(ts) FROM protocol WHERE event = 'PROPOSE'))/1000 as msec, avg(val)
+FROM protocol
+WHERE event = 'PROPOSE'
+GROUP BY msec
+-- (msec, avg[req])
+Query time: 0.000 seconds
+0, 0.0
+1, 0.0
+2, 0.0
+1001, 0.0
+1002, 0.0
+1003, 0.0
+2009, 29.2
+2023, 30.0
+2048, 30.0
+3007, 46.5
+3008, 32.0
+3009, 32.0
+3012, 32.0
+3044, 32.0
+3050, 32.0
+4009, 32.0
+4010, 33.0
+4011, 32.0
+4012, 32.0
+4013, 32.0
+4036, 32.0
+4037, 32.0
+5006, 64.0
+5011, 32.0
+5012, 32.0
+5014, 32.0
+5016, 32.0
+5039, 32.0
+5060, 32.0
+6012, 32.0
+6013, 33.0
+6014, 32.0
+6016, 32.0
+6027, 32.0
+6046, 33.0
+6057, 32.0
+7005, 64.0
+7014, 32.0
+7018, 32.0
+7021, 32.0
+7032, 32.0
+7054, 32.0
+7060, 32.0
+8015, 32.0
+8018, 32.0
+8021, 32.0
+8024, 33.0
+8028, 32.0
+8039, 32.0
+8058, 32.0
+9005, 64.0
+9018, 32.0
+9024, 32.0
+9025, 32.0
+9032, 33.0
+9036, 32.0
+9066, 32.0
+10019, 32.0
+10024, 32.0
+10025, 32.0
+10027, 32.0
+10043, 32.0
+10050, 32.0
+10070, 32.0
+11005, 64.0
+11022, 32.0
+11030, 32.0
+11033, 32.0
+11034, 32.0
+11038, 32.0
+11045, 32.0
+11073, 32.0
+12020, 2.0
+12025, 2.5
+12029, 2.0
+12034, 2.0
+12036, 2.0
+12065, 1.0
+13000, 3.0
+13021, 0.0
+13026, 0.0
+13030, 0.0
+13031, 0.0
+13037, 0.0
+13038, 0.0
+13065, 0.0
+14023, 0.0
+14027, 0.0
+14032, 0.0
+14038, 0.0
+14039, 0.0
+14066, 0.0
+Rows returned: 92
+
+-- Proposals in time (per millisecond), all peers
+-- export timeline-propose.csv
+--
+SELECT (ts - (SELECT min(ts) FROM protocol WHERE event = 'PROPOSE'))/1000 as msec, count()
+FROM protocol
+WHERE event = 'PROPOSE'
+GROUP BY msec
+-- (msec, avg[req])
+Query time: 0.000 seconds
+0, 3
+1, 2
+2, 2
+1001, 2
+1002, 3
+1003, 3
+2009, 5
+2023, 1
+2048, 1
+3007, 2
+3008, 1
+3009, 1
+3012, 2
+3044, 1
+3050, 1
+4009, 1
+4010, 1
+4011, 1
+4012, 1
+4013, 1
+4036, 1
+4037, 1
+5006, 1
+5011, 1
+5012, 1
+5014, 2
+5016, 1
+5039, 1
+5060, 1
+6012, 1
+6013, 1
+6014, 1
+6016, 1
+6027, 1
+6046, 1
+6057, 1
+7005, 1
+7014, 1
+7018, 1
+7021, 2
+7032, 1
+7054, 1
+7060, 1
+8015, 1
+8018, 1
+8021, 1
+8024, 1
+8028, 1
+8039, 1
+8058, 1
+9005, 1
+9018, 1
+9024, 2
+9025, 1
+9032, 1
+9036, 1
+9066, 1
+10019, 1
+10024, 1
+10025, 1
+10027, 1
+10043, 1
+10050, 1
+10070, 1
+11005, 1
+11022, 1
+11030, 1
+11033, 1
+11034, 1
+11038, 1
+11045, 1
+11073, 1
+12020, 1
+12025, 2
+12029, 1
+12034, 1
+12036, 1
+12065, 1
+13000, 1
+13021, 1
+13026, 1
+13030, 1
+13031, 1
+13037, 1
+13038, 1
+13065, 1
+14023, 1
+14027, 1
+14032, 2
+14038, 1
+14039, 1
+14066, 1
+Rows returned: 92
+
+-- Proposals in time (per millisecond), all peers
+-- export timeline-propose-peer-0.csv
+--
+SELECT (ts - (SELECT min(ts) FROM protocol WHERE event = 'PROPOSE'))/1000 as msec, count()
+FROM protocol
+WHERE event = 'PROPOSE' AND nodeId = 0
+GROUP BY msec
+-- (msec, avg[req])
+Query time: 0.000 seconds
+2, 1
+1003, 1
+2023, 1
+3012, 1
+4013, 1
+5016, 1
+6057, 1
+7021, 1
+8021, 1
+9024, 1
+10025, 1
+11030, 1
+12025, 1
+13026, 1
+14027, 1
+Rows returned: 15
+
+-- Batch size in time (per millisecond), peer 0
+-- export timeline-batch-size-peer-0.csv
+--
+SELECT (ts - (SELECT min(ts) FROM protocol WHERE event = 'PROPOSE'))/1000 as msec, avg(val)
+FROM protocol
+WHERE event = 'PROPOSE' AND nodeId = 0
+GROUP BY msec
+-- (msec, avg[req])
+Query time: 0.000 seconds
+2, 0.0
+1003, 0.0
+2023, 30.0
+3012, 32.0
+4013, 32.0
+5016, 32.0
+6057, 32.0
+7021, 32.0
+8021, 32.0
+9024, 32.0
+10025, 32.0
+11030, 32.0
+12025, 3.0
+13026, 0.0
+14027, 0.0
+Rows returned: 15
+
+-- Client slack over time, all clients
+-- export client-slack.csv
+SELECT (ts - (SELECT min(ts) FROM request WHERE event = 'CLIENT_SLACK'))/1000 as msec, sum(latency)/1000
+FROM request
+WHERE event = 'CLIENT_SLACK'
+GROUP BY msec
+-- (msec, slack[ms])
+Query time: 0.000 seconds
+0, 0
+35, 3
+75, 2
+113, 3
+153, 2
+191, 3
+231, 3
+270, 2
+309, 3
+348, 3
+387, 2
+427, 2
+465, 2
+505, 2
+543, 3
+582, 3
+622, 2
+660, 3
+699, 3
+739, 3
+778, 2
+816, 3
+856, 3
+895, 3
+934, 3
+974, 1
+1012, 3
+1051, 3
+1090, 2
+1129, 3
+1168, 3
+1207, 3
+1246, 3
+1285, 3
+1324, 3
+1363, 3
+1403, 2
+1442, 2
+1481, 3
+1576, -53
+1579, -16
+1598, 3
+1637, 3
+1676, 2
+1715, 3
+1754, 2
+1794, 2
+1833, 2
+1871, 3
+1910, 3
+1950, 2
+1988, 3
+2027, 3
+2067, 2
+2112, -3
+2162, -14
+2184, 2
+2222, 3
+2262, 3
+2301, 2
+2340, 3
+2379, 2
+2418, 3
+2457, 3
+2496, 3
+2535, 2
+2575, 2
+2614, 2
+2652, 3
+2692, 2
+2731, 2
+2770, 2
+2809, 2
+2847, 3
+2887, 2
+2937, -8
+2965, 3
+3004, 3
+3043, 2
+3082, 2
+3122, 2
+3160, 3
+3199, 3
+3239, 2
+3277, 3
+3316, 3
+3356, 2
+3394, 3
+3434, 3
+3473, 2
+3511, 3
+3550, 3
+3590, 3
+3629, 3
+3668, 2
+3707, 2
+3746, 3
+3785, 3
+3825, 2
+3864, 2
+3902, 3
+3947, -2
+3980, 3
+4019, 3
+4059, 3
+4099, 2
+4137, 2
+4176, 3
+4214, 3
+4254, 2
+4293, 2
+4332, 2
+4371, 3
+4410, 2
+4450, 2
+4488, 3
+4528, 2
+4566, 3
+4606, 2
+4645, 2
+4683, 3
+4723, 3
+4762, 2
+4801, 3
+4839, 3
+4879, 3
+4918, 2
+4957, 3
+4996, 3
+5035, 3
+5075, 2
+5113, 3
+5153, 2
+5192, 2
+5230, 3
+5270, 2
+5308, 3
+5348, 3
+5387, 2
+5426, 2
+5465, 2
+5504, 2
+5543, 3
+5582, 2
+5621, 3
+5660, 3
+5699, 2
+5739, 2
+5777, 3
+5817, 2
+5856, 2
+5894, 3
+5934, 3
+5974, 1
+6012, 2
+6050, 3
+6089, 3
+6128, 3
+6168, 3
+6207, 3
+6268, -18
+6285, 3
+6324, 3
+6364, 2
+6402, 3
+6441, 2
+6480, 3
+6520, 2
+6559, 2
+6597, 3
+6636, 3
+6676, 2
+6715, 3
+6754, 2
+6792, 3
+6832, 3
+6871, 2
+6910, 3
+6951, 1
+6988, 3
+7027, 3
+7066, 3
+7105, 3
+7144, 3
+7183, 3
+7222, 3
+7261, 3
+7301, 2
+7339, 3
+7379, 3
+7418, 2
+7456, 3
+7496, 3
+7535, 2
+7574, 3
+7613, 3
+7653, 2
+7692, 2
+7730, 3
+7769, 3
+7809, 2
+7847, 3
+7887, 2
+7925, 3
+7979, -11
+8003, 3
+8042, 3
+8082, 3
+8120, 3
+8161, 2
+8199, 3
+8239, 2
+8277, 3
+8316, 3
+8356, 2
+8394, 3
+8434, 2
+8472, 3
+8511, 3
+8550, 3
+8590, 3
+8629, 3
+8668, 3
+8707, 3
+8746, 3
+8785, 3
+8824, 2
+8863, 2
+8902, 3
+8944, 0
+8982, 0
+9030, -7
+9058, 3
+9097, 3
+9136, 3
+9175, 3
+9215, 2
+9254, 2
+9293, 2
+9331, 3
+9371, 3
+9410, 2
+9449, 3
+9488, 3
+9527, 3
+9566, 3
+9605, 3
+9645, 2
+9684, 2
+9722, 3
+9761, 3
+9801, 2
+9839, 3
+9878, 3
+9918, 2
+9958, 1
+9996, 2
+Rows returned: 257
+
+-- Client slack over time, client 1
+-- export client-slack-client-1.csv
+SELECT (ts - (SELECT min(ts) FROM request WHERE event = 'CLIENT_SLACK' AND nodeId = -1)) as usec, latency
+FROM request
+WHERE event = 'CLIENT_SLACK' AND nodeId = -1
+-- (usec, slack[us])
+Query time: 0.000 seconds
+Rows returned: 0
+
+-- Client slack over time, client 2
+-- export client-slack-client-2.csv
+SELECT (ts - (SELECT min(ts) FROM request WHERE event = 'CLIENT_SLACK' AND nodeId = -2)) as usec, latency
+FROM request
+WHERE event = 'CLIENT_SLACK' AND nodeId = -2
+-- (usec, slack[us])
+Query time: 0.000 seconds
+Rows returned: 0
+
+-- Message batch size histogram
+-- export histogram-msg-batch-size.csv
+--
+SELECT val, count()
+FROM protocol_truncated
+WHERE event = 'MSG_BATCH'
+GROUP BY val
+--(batchsize[req], count[batches])
+Query time: 0.000 seconds
+Rows returned: 0
+
+-- Message batch sizes over time
+-- export timeline-avg-msg-batch.csv
+SELECT (ts - (SELECT min(ts) FROM protocol WHERE event = 'MSG_BATCH'))/1000 as msec, avg(val)
+from protocol
+WHERE event = 'MSG_BATCH'
+GROUP BY msec
+-- (msec, avgbatch[req])
+Query time: 0.000 seconds
+0, 2.0
+1, 2.3333333333333335
+2, 3.3076923076923075
+3, 2.5
+4, 3.0
+5, 3.5
+6, 6.142857142857143
+7, 6.166666666666667
+8, 3.0
+9, 1.0
+10, 1.0
+13, 1.0
+14, 1.0
+18, 1.0
+28, 1.0
+1012, 1.0
+13048, 1.0
+13067, 1.5
+14029, 1.0
+14031, 1.0
+14032, 2.0
+14033, 1.0
+14034, 1.0
+14035, 2.3333333333333335
+14036, 3.0
+14037, 1.0
+14039, 1.0
+14040, 1.5
+14041, 1.0
+14042, 1.0
+14043, 3.0
+14044, 2.3333333333333335
+14045, 1.0
+14064, 1.0
+14066, 1.4
+14068, 1.0
+14069, 1.0
+Rows returned: 37
+
+-- Bandwidths between all pairs of peers.
+-- The output of this query is meant for further processing by another scripts that formats the data as a table.
+-- export bandwidths-list.csv
+SELECT nodeId as sender, seqNr as receiver, val as bandwidth
+FROM protocol
+WHERE event = 'BANDWIDTH'
+-- (sender, receiver, bandwidth[kB/s])
+Query time: 0.000 seconds
+Rows returned: 0
+
+-- Leaders in epochs.
+-- export epoch-leaders.csv
+SELECT seqNr as epoch, avg(val) as leaders
+FROM protocol
+WHERE event = 'NEW_EPOCH'
+group by epoch
+Query time: 0.000 seconds
+0, 8.0
+Rows returned: 1
+
+-- View changes, from view 0 to view 1 only.
+-- export timeline-view-change-first.csv
+SELECT (ts - (SELECT min(ts) FROM protocol WHERE event = 'NEW_EPOCH'))/1000 as msec, count()
+from protocol
+WHERE event = 'VIEW_CHANGE' AND val = 1
+GROUP BY msec
+Query time: 0.000 seconds
+Rows returned: 0
+
+-- Cascading view changes.
+-- export timeline-view-change-cascade.csv
+SELECT (ts - (SELECT min(ts) FROM protocol WHERE event = 'NEW_EPOCH'))/1000 as msec, count()
+from protocol
+WHERE event = 'VIEW_CHANGE' AND val > 1
+GROUP BY msec
+Query time: 0.000 seconds
+Rows returned: 0
+
+-- All view changes.
+-- export timeline-view-change-all.csv
+SELECT (ts - (SELECT min(ts) FROM protocol WHERE event = 'NEW_EPOCH'))/1000 as msec, count()
+from protocol
+WHERE event = 'VIEW_CHANGE'
+GROUP BY msec
+Query time: 0.000 seconds
+Rows returned: 0
+
+Total running time: 0.011 seconds
