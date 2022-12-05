@@ -43,7 +43,7 @@ var (
 	///1103
 	//htnmember = make(map[int]int32)
 	htnlog = make(map[int]int32)
-	vhtnsn = make(map[int32]bool)
+	//vhtnsn = make(map[int32]bool)
 	//htnssn = make(map[int32][]int32)
 )
 // TODO: Consolidate the segment-internal and the global checkpoints.
@@ -72,6 +72,7 @@ type pbftInstance struct {
 	//localhtn int32///1024
 	hnsn map[int32]int32
 	htnssn map[int32][]*pb.HtnMessage///1116 more than 2f hns for a sn
+	vhtnsn map[int32]bool
 	//tnmsgsn map[int32][]*pb.HtnMessage///*pb.PbftCommit///1116 to be revised, more than 2f hn messages for a sn &pb.HtnMessage
 }
 
@@ -172,6 +173,7 @@ func (pi *pbftInstance) init(seg manager.Segment, orderer *PbftOrderer) {
 //1103
 	pi.hnsn = make(map[int32]int32)
 	pi.htnssn = make(map[int32][]*pb.HtnMessage)
+	pi.vhtnsn = make(map[int32]bool)
 	// Initialise protocol state
 	pi.batches = make(map[int32]map[int32]*pbftBatch)
 	pi.checkpointMsgs = make(map[int32]*pb.PbftCheckpoint)
@@ -185,7 +187,7 @@ func (pi *pbftInstance) init(seg manager.Segment, orderer *PbftOrderer) {
 	/// 1024///1116///1201
 	//htnmember[pi.segment.SegID()] = 0
 	htnlog[pi.segment.SegID()] = 0
-	vhtnsn[int32(pi.segment.SegID())] = true
+	pi.vhtnsn[int32(pi.segment.SegID())] = true
 
 	pi.htnssn[int32(pi.segment.SegID())] = append(pi.htnssn[int32(pi.segment.SegID())],htnmsg0)///1201
 
@@ -269,7 +271,7 @@ func (pi *pbftInstance) lead() {
 			},
 		}
 		///1116收集了足够的tn才能propose，这里需要优化，如果没有收集齐怎么继续
-		if vhtnsn[sn]==true {
+		if pi.vhtnsn[sn]==true {
 			pi.serializer.serialize(msg)
 		}
 		//pi.serializer.serialize(msg)
@@ -625,9 +627,9 @@ func (pi *pbftInstance) sendCommit(batch *pbftBatch) {
 		Int32("senderID", membership.OwnID).
 		Msg("Sending Htn.")
 
-	if commit.Tn > htnlog[pi.segment.SegID()] {
-		htnlog[pi.segment.SegID()] = commit.Tn
-	}
+	//if commit.Tn > htnlog[pi.segment.SegID()] {
+	//	htnlog[pi.segment.SegID()] = commit.Tn
+	//}
 ///1201///////1212121212
 	if commit.Tn > htnlog[int(membership.OwnID)] {
 		htnlog[int(membership.OwnID)] = commit.Tn
@@ -697,8 +699,8 @@ func (pi *pbftInstance) handleHtnmsg(htnmsg *pb.HtnMessage, msg *pb.ProtocolMess
 		Msg("func handleHtnmsg.")
 
 	    ///1116
-	if batch.CheckCommits() && batch.CheckHtns(){
-		vhtnsn[sn+int32(membership.NumNodes())] = true
+	if pi.vhtnsn[sn+int32(membership.NumNodes())] != true && batch.CheckCommits() && batch.CheckHtns() {
+		pi.vhtnsn[sn+int32(membership.NumNodes())] = true
 		logger.Info().Int32("sn", sn+int32(membership.NumNodes())).
 		//[]Int32("validHtnMsgs", batch.validHtnMsgs.Htn).
 		Msg("Set TRUE.")
@@ -762,8 +764,8 @@ func (pi *pbftInstance) handleCommit(commit *pb.PbftCommit, msg *pb.ProtocolMess
 		//pi.announce(batch, sn, batch.preprepareMsg.Batch, batch.preprepareMsg.Aborted, batch.preprepareMsg.Ts, batch.lastCommitTs)
 	}
     ///1116
-	if batch.CheckCommits() && batch.CheckHtns(){
-		vhtnsn[sn+int32(membership.NumNodes())] = true
+	if pi.vhtnsn[sn+int32(membership.NumNodes())] != true && batch.CheckCommits() && batch.CheckHtns() {
+		pi.vhtnsn[sn+int32(membership.NumNodes())] = true
 		logger.Info().Int32("sn", sn+int32(membership.NumNodes())).
 		//Int32("senderID", senderID).
 		Msg("Set TRUE.")
@@ -847,11 +849,11 @@ func (pi *pbftInstance) announce(batch *pbftBatch, sn int32, tn int32, reqBatch 
 		for i := int32(pi.segment.SegID()); i < pi.hnsn[hn]; i=i+int32(membership.NumNodes()) {	
 			logEntry1 := &log.Entry{
 				Sn:        i,///1103
-				Batch:     reqBatch,
+				Batch:     nil,///1205
 				ProposeTs: proposeTs,
 				CommitTs:  commitTs,
 				Aborted:   aborted,
-				Digest:    batch.digest,
+				//Digest:    batch.digest,
 			}
 			announcer.Announce(logEntry1)
 			logger.Info().
@@ -865,11 +867,11 @@ func (pi *pbftInstance) announce(batch *pbftBatch, sn int32, tn int32, reqBatch 
 		for i := pi.hnsn[hn-1]+int32(membership.NumNodes()); i < pi.hnsn[hn]; i=i+int32(membership.NumNodes()) {	
 			logEntry1 := &log.Entry{
 				Sn:        i,///1103
-				Batch:     reqBatch,
+				Batch:     nil,///1205
 				ProposeTs: proposeTs,
 				CommitTs:  commitTs,
 				Aborted:   aborted,
-				Digest:    batch.digest,
+				//Digest:    batch.digest,
 			}
 			announcer.Announce(logEntry1)
 			logger.Info().
