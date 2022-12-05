@@ -1,6 +1,6 @@
 # Generated deployment file
 # 
-# systemSizes:      8
+# systemSizes:      4
 # machineType:      cloud-machine-templates/small-machine
 # bandwidths:       1gbit
 # 
@@ -21,15 +21,16 @@ deploy 1 1client
 
 
 # ========================================
-#  Peers: 8
+#  Peers: 4
 # Faulty: 0
+# Straggler: 1
 #  Reuse: true
 # ========================================
 machine: cloud-machine-templates/small-machine-fra05.cmt
-deploy 8 peers
+deploy 4 peers
 
 bandwidth: 1gbit
-# 0000,8,0,60000,1,1gbit,2,Pbft,Signing,1,1,1,32,Simple,256,4096,1000,32,2,128,16,true,false,131072000,256,256,false,15360,4194304,external,32,8192
+# 0000,4,0,1,60000,1,1gbit,4,Pbft,Signing,1,1,1,64,Blacklist,256,4096,1000,32,1,64,16,true,false,131072000,256,256,false,15360,4194304,external,32,8192
 run 0000 config: config-0000.yml   peers: peers   clients: 1client
 
 bandwidth: 1gbit

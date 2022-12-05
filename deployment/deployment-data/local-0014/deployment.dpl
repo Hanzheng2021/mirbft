@@ -1,6 +1,6 @@
 # Generated deployment file
 # 
-# systemSizes:      3
+# systemSizes:      8
 # machineType:      cloud-machine-templates/small-machine
 # bandwidths:       1gbit
 # 
@@ -21,25 +21,17 @@ deploy 1 1client
 
 
 # ========================================
-#  Peers: 4
-# Faulty: 1
+#  Peers: 8
+# Faulty: 0
+# Straggler: 1
 #  Reuse: true
 # ========================================
 machine: cloud-machine-templates/small-machine-fra05.cmt
-deploy 4 peers
+deploy 8 peers
 
 bandwidth: 1gbit
-# 0000,4,1,60000,1,1gbit,4,Pbft,Signing,1,1,1,64,SimulatedRandomFailures,256,4096,1000,32,1,64,16,true,false,131072000,128,128,false,7680,4194304,external,32,8192
+# 0000,8,0,1,60000,1,1gbit,2,Pbft,Signing,1,1,1,32,Blacklist,256,4096,1000,32,2,128,16,true,false,131072000,256,256,false,7680,4194304,external,32,8192
 run 0000 config: config-0000.yml   peers: peers   clients: 1client
-
-# 0001,4,1,60000,1,1gbit,4,Pbft,Signing,1,1,1,64,SimulatedRandomFailures,256,4096,1000,32,1,64,16,true,false,131072000,256,256,false,15360,4194304,external,32,8192
-run 0001 config: config-0001.yml   peers: peers   clients: 1client
-
-# 0002,4,1,60000,1,1gbit,4,Pbft,Signing,1,1,1,64,SimulatedRandomFailures,256,4096,1000,32,1,64,16,true,false,131072000,128,128,false,7680,4194304,external,32,8192
-run 0002 config: config-0002.yml   peers: peers   clients: 1client
-
-# 0003,4,1,60000,1,1gbit,4,Pbft,Signing,1,1,1,64,SimulatedRandomFailures,256,4096,1000,32,1,64,16,true,false,131072000,256,256,false,15360,4194304,external,32,8192
-run 0003 config: config-0003.yml   peers: peers   clients: 1client
 
 bandwidth: 1gbit
 bandwidth: 1gbit

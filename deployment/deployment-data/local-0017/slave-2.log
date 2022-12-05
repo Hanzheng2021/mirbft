@@ -1,88 +1,20 @@
-7:15AM INF Received own slave ID. ownSlaveId=1
-7:15AM INF OK status=0
-7:15AM INF Received command. cmdId=3
-7:15AM INF Received an ExecStart command args="[-p experiment-output/0000/slave-__id__/config]" cmd=mkdir outFile=/dev/null
-7:15AM INF OK status=0
-7:15AM INF Received command. cmdId=4
-7:15AM INF Received command. cmdType=ExecWait
-7:15AM INF OK status=0
-7:15AM INF Received command. cmdId=5
-7:15AM INF Received an ExecStart command args="[config/config-0000.yml experiment-output/0000/slave-__id__/config/config.yml]" cmd=cp outFile=/dev/null
-7:15AM INF OK status=0
-7:15AM INF Received command. cmdId=6
-7:15AM INF Received command. cmdType=ExecWait
-7:15AM INF OK status=0
-7:15AM INF Received command. cmdId=9
-7:15AM INF Received command. cmdType=Noop
-7:15AM INF Noop. Doing nothing. status=0
-7:15AM INF Received command. cmdId=12
-7:15AM INF Received an ExecStart command args="[experiment-output/0000/slave-__id__/config/config.yml 127.0.0.1:9999 127.0.0.1 127.0.0.1 experiment-output/0000/slave-__id__/peer.trc experiment-output/0000/slave-__id__/prof]" cmd=orderingpeer outFile=experiment-output/0000/slave-__id__/peer.log
-7:15AM INF OK status=0
-7:16AM INF Received command. cmdId=18
-7:16AM INF Received command. cmdType=ExecSignal
-7:16AM INF OK status=0
-7:16AM INF Received command. cmdId=23
-7:16AM INF Received an ExecStart command args="[-p experiment-output/0001/slave-__id__/config]" cmd=mkdir outFile=/dev/null
-7:16AM INF OK status=0
-7:16AM INF Received command. cmdId=24
-7:16AM INF Received command. cmdType=ExecWait
-7:16AM INF OK status=0
-7:16AM INF Received command. cmdId=25
-7:16AM INF Received an ExecStart command args="[config/config-0001.yml experiment-output/0001/slave-__id__/config/config.yml]" cmd=cp outFile=/dev/null
-7:16AM INF OK status=0
-7:16AM INF Received command. cmdId=26
-7:16AM INF Received command. cmdType=ExecWait
-7:16AM INF OK status=0
-7:16AM INF Received command. cmdId=29
-7:16AM INF Received command. cmdType=Noop
-7:16AM INF Noop. Doing nothing. status=0
-7:16AM INF Received command. cmdId=32
-7:16AM INF Received an ExecStart command args="[experiment-output/0001/slave-__id__/config/config.yml 127.0.0.1:9999 127.0.0.1 127.0.0.1 experiment-output/0001/slave-__id__/peer.trc experiment-output/0001/slave-__id__/prof]" cmd=orderingpeer outFile=experiment-output/0001/slave-__id__/peer.log
-7:16AM INF OK status=0
-7:17AM INF Received command. cmdId=38
-7:17AM INF Received command. cmdType=ExecSignal
-7:17AM INF OK status=0
-7:17AM INF Received command. cmdId=43
-7:17AM INF Received an ExecStart command args="[-p experiment-output/0002/slave-__id__/config]" cmd=mkdir outFile=/dev/null
-7:17AM INF OK status=0
-7:17AM INF Received command. cmdId=44
-7:17AM INF Received command. cmdType=ExecWait
-7:17AM INF OK status=0
-7:17AM INF Received command. cmdId=45
-7:17AM INF Received an ExecStart command args="[config/config-0002.yml experiment-output/0002/slave-__id__/config/config.yml]" cmd=cp outFile=/dev/null
-7:17AM INF OK status=0
-7:17AM INF Received command. cmdId=46
-7:17AM INF Received command. cmdType=ExecWait
-7:17AM INF OK status=0
-7:17AM INF Received command. cmdId=49
-7:17AM INF Received command. cmdType=Noop
-7:17AM INF Noop. Doing nothing. status=0
-7:17AM INF Received command. cmdId=52
-7:17AM INF Received an ExecStart command args="[experiment-output/0002/slave-__id__/config/config.yml 127.0.0.1:9999 127.0.0.1 127.0.0.1 experiment-output/0002/slave-__id__/peer.trc experiment-output/0002/slave-__id__/prof]" cmd=orderingpeer outFile=experiment-output/0002/slave-__id__/peer.log
-7:17AM INF OK status=0
-7:18AM INF Received command. cmdId=58
-7:18AM INF Received command. cmdType=ExecSignal
-7:18AM INF OK status=0
-7:18AM INF Received command. cmdId=63
-7:18AM INF Received an ExecStart command args="[-p experiment-output/0003/slave-__id__/config]" cmd=mkdir outFile=/dev/null
-7:18AM INF OK status=0
-7:18AM INF Received command. cmdId=64
-7:18AM INF Received command. cmdType=ExecWait
-7:18AM INF OK status=0
-7:18AM INF Received command. cmdId=65
-7:18AM INF Received an ExecStart command args="[config/config-0003.yml experiment-output/0003/slave-__id__/config/config.yml]" cmd=cp outFile=/dev/null
-7:18AM INF OK status=0
-7:18AM INF Received command. cmdId=66
-7:18AM INF Received command. cmdType=ExecWait
-7:18AM INF OK status=0
-7:18AM INF Received command. cmdId=69
-7:18AM INF Received command. cmdType=Noop
-7:18AM INF Noop. Doing nothing. status=0
-7:18AM INF Received command. cmdId=72
-7:18AM INF Received an ExecStart command args="[experiment-output/0003/slave-__id__/config/config.yml 127.0.0.1:9999 127.0.0.1 127.0.0.1 experiment-output/0003/slave-__id__/peer.trc experiment-output/0003/slave-__id__/prof]" cmd=orderingpeer outFile=experiment-output/0003/slave-__id__/peer.log
-7:18AM INF OK status=0
-7:19AM INF Received command. cmdId=78
-7:19AM INF Received command. cmdType=ExecSignal
-7:19AM INF OK status=0
-7:20AM INF Received command. cmdId=83
-7:20AM INF Received command. cmdType=Stop
+9:08AM INF Received own slave ID. ownSlaveId=8
+9:08AM INF OK status=0
+9:08AM INF Received command. cmdId=3
+9:08AM INF Received an ExecStart command args="[-p experiment-output/0000/slave-__id__/config]" cmd=mkdir outFile=/dev/null
+9:08AM INF OK status=0
+9:08AM INF Received command. cmdId=4
+9:08AM INF Received command. cmdType=ExecWait
+9:08AM INF OK status=0
+9:08AM INF Received command. cmdId=5
+9:08AM INF Received an ExecStart command args="[config/config-0000.yml experiment-output/0000/slave-__id__/config/config.yml]" cmd=cp outFile=/dev/null
+9:08AM INF OK status=0
+9:08AM INF Received command. cmdId=6
+9:08AM INF Received command. cmdType=ExecWait
+9:08AM INF OK status=0
+9:08AM INF Received command. cmdId=9
+9:08AM INF Received command. cmdType=Noop
+9:08AM INF Noop. Doing nothing. status=0
+9:08AM INF Received command. cmdId=12
+9:08AM INF Received an ExecStart command args="[experiment-output/0000/slave-__id__/config/config.yml 127.0.0.1:9999 127.0.0.1 127.0.0.1 experiment-output/0000/slave-__id__/peer.trc experiment-output/0000/slave-__id__/prof]" cmd=orderingpeer outFile=experiment-output/0000/slave-__id__/peer.log
+9:08AM INF OK status=0

@@ -1,19 +1,21 @@
-1:32AM INF Received own slave ID. ownSlaveId=3
-1:32AM INF OK status=0
-1:32AM INF Received command. cmdId=3
-1:32AM INF Received an ExecStart command args="[-p experiment-output/0000/slave-__id__/config]" cmd=mkdir outFile=/dev/null
-1:32AM INF OK status=0
-1:32AM INF Received command. cmdId=4
-1:32AM INF Received command. cmdType=ExecWait
-1:32AM INF OK status=0
-1:32AM INF Received command. cmdId=7
-1:32AM INF Received an ExecStart command args="[config/config-0000.yml experiment-output/0000/slave-__id__/config/config.yml]" cmd=cp outFile=/dev/null
-1:32AM INF OK status=0
-1:32AM INF Received command. cmdId=8
-1:32AM INF Received command. cmdType=ExecWait
-1:32AM INF OK status=0
-1:32AM INF Received command. cmdId=10
-1:32AM INF Received command. cmdType=Noop
-1:32AM INF Noop. Doing nothing. status=01:32AM INF Received command. cmdId=12
-1:32AM INF Received an ExecStart command args="[experiment-output/0000/slave-__id__/config/config.yml 127.0.0.1:9999 127.0.0.1 127.0.0.1 experiment-output/0000/slave-__id__/peer.trc experiment-output/0000/slave-__id__/prof]" cmd=orderingpeer outFile=experiment-output/0000/slave-__id__/peer.log
-1:32AM INF OK status=0
+8:20AM INF Received own slave ID. ownSlaveId=1
+8:20AM INF OK status=0
+8:20AM INF Received command. cmdId=3
+8:20AM INF Received an ExecStart command args="[-p experiment-output/0000/slave-__id__/config]" cmd=mkdir outFile=/dev/null
+8:20AM INF OK status=0
+8:20AM INF Received command. cmdId=4
+8:20AM INF Received command. cmdType=ExecWait
+8:20AM INF OK status=0
+8:20AM INF Received command. cmdId=7
+8:20AM INF Received an ExecStart command args="[config/config-0000.yml experiment-output/0000/slave-__id__/config/config.yml]" cmd=cp outFile=/dev/null
+8:20AM INF OK status=0
+8:20AM INF Received command. cmdId=8
+8:20AM INF Received command. cmdType=ExecWait
+8:20AM INF OK status=0
+8:20AM INF Received command. cmdId=10
+8:20AM INF Received command. cmdType=Noop
+8:20AM INF Noop. Doing nothing. status=088:20AM INF Received command. cmdId=15
+8:20AM INF Received an ExecStart command args="[experiment-output/0000/slave-__id__/config/config.yml 127.0.0.1:9999 experiment-output/0000/slave-__id__/client experiment-output/0000/slave-__id__/prof-client]" cmd=orderingclient outFile=experiment-output/0000/slave-__id__/clients.log
+8:20AM INF OK status=0
+8:20AM INF Received command. cmdId=16
+8:20AM INF Received command. cmdType=ExecWait

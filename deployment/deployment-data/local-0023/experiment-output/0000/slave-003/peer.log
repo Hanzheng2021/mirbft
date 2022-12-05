@@ -1,301 +1,956 @@
-{"level":"debug","Logging":"debug","time":"2022-08-17T16:02:32+08:00","message":"Config"}
-{"level":"debug","UseTLS":false,"time":"2022-08-17T16:02:32+08:00","message":"Config"}
-{"level":"debug","CACertFile":"tls-data/ca.pem","time":"2022-08-17T16:02:32+08:00","message":"Config"}
-{"level":"debug","KeyFile":"tls-data/auth.key","time":"2022-08-17T16:02:32+08:00","message":"Config"}
-{"level":"debug","CertFile":"tls-data/auth.pem","time":"2022-08-17T16:02:32+08:00","message":"Config"}
-{"level":"debug","PriorityConnections":2,"time":"2022-08-17T16:02:32+08:00","message":"Config"}
-{"level":"debug","BasicConnections":2,"time":"2022-08-17T16:02:32+08:00","message":"Config"}
-{"level":"debug","TestConnections":false,"time":"2022-08-17T16:02:32+08:00","message":"Config"}
-{"level":"debug","ExcessConnections":1,"time":"2022-08-17T16:02:32+08:00","message":"Config"}
-{"level":"debug","ConnectionTestMsgs":4,"time":"2022-08-17T16:02:32+08:00","message":"Config"}
-{"level":"debug","ConnectionTestPayload":131072,"time":"2022-08-17T16:02:32+08:00","message":"Config"}
-{"level":"debug","OutMessageBufsize":1024,"time":"2022-08-17T16:02:32+08:00","message":"Config"}
-{"level":"debug","OutMessageBufsize":2,"time":"2022-08-17T16:02:32+08:00","message":"Config"}
-{"level":"debug","ThroughputCap":131072000,"time":"2022-08-17T16:02:32+08:00","message":"Config"}
-{"level":"debug","StragglerTolerance":1000,"time":"2022-08-17T16:02:32+08:00","message":"Config"}
-{"level":"debug","BatchSizeIncrement":256,"time":"2022-08-17T16:02:32+08:00","message":"Config"}
-{"level":"debug","Orderer":"Pbft","time":"2022-08-17T16:02:32+08:00","message":"Config"}
-{"level":"debug","Manager":"Mir","time":"2022-08-17T16:02:32+08:00","message":"Config"}
-{"level":"debug","Failures":0,"time":"2022-08-17T16:02:32+08:00","message":"Config"}
-{"level":"debug","CrashTiming":"Straggler","time":"2022-08-17T16:02:32+08:00","message":"Config"}
-{"level":"debug","CheckpointInterval":256,"time":"2022-08-17T16:02:32+08:00","message":"Config"}
-{"level":"debug","WatermarkWindowSize":256,"time":"2022-08-17T16:02:32+08:00","message":"Config"}
-{"level":"debug","EpochLength":256,"time":"2022-08-17T16:02:32+08:00","message":"Config"}
-{"level":"debug","SegmentLength":32,"time":"2022-08-17T16:02:32+08:00","message":"Config"}
-{"level":"debug","WaitForCheckpoints":true,"time":"2022-08-17T16:02:32+08:00","message":"Config"}
-{"level":"debug","ClientWatermarkWindowSize":4194304,"time":"2022-08-17T16:02:32+08:00","message":"Config"}
-{"level":"debug","ClientRequestBacklogSize":4194304,"time":"2022-08-17T16:02:32+08:00","message":"Config"}
-{"level":"debug","RandomSeed":32231,"time":"2022-08-17T16:02:32+08:00","message":"Config"}
-{"level":"debug","NodeToLeaderRatio":1,"time":"2022-08-17T16:02:32+08:00","message":"Config"}
-{"level":"debug","LeaderPolicy":"Simple","time":"2022-08-17T16:02:32+08:00","message":"Config"}
-{"level":"debug","DefaultLeaderBan":2,"time":"2022-08-17T16:02:32+08:00","message":"Config"}
-{"level":"debug","NumBuckets":128,"time":"2022-08-17T16:02:32+08:00","message":"Config"}
-{"level":"debug","BatchSize":1000,"time":"2022-08-17T16:02:32+08:00","message":"Config"}
-{"level":"debug","DisabledViewChange":false,"time":"2022-08-17T16:02:32+08:00","message":"Config"}
-{"level":"debug","ViewChangeTimeout":60000,"time":"2022-08-17T16:02:32+08:00","message":"Config"}
-{"level":"debug","ClientTraceSampling":10,"time":"2022-08-17T16:02:32+08:00","message":"Config"}
-{"level":"debug","EventBufferSize":2097152,"time":"2022-08-17T16:02:32+08:00","message":"Config"}
-{"level":"debug","TraceSampling":1,"time":"2022-08-17T16:02:32+08:00","message":"Config"}
-{"level":"debug","ClientsPerProcess":1,"time":"2022-08-17T16:02:32+08:00","message":"Config"}
-{"level":"debug","RequestsPerClient":15360,"time":"2022-08-17T16:02:32+08:00","message":"Config"}
-{"level":"debug","ClientRunTime":30000,"time":"2022-08-17T16:02:32+08:00","message":"Config"}
-{"level":"debug","RequestRate":256,"time":"2022-08-17T16:02:32+08:00","message":"Config"}
-{"level":"debug","HardRequestRateLimit":false,"time":"2022-08-17T16:02:32+08:00","message":"Config"}
-{"level":"debug","RequestPayloadSize":500,"time":"2022-08-17T16:02:32+08:00","message":"Config"}
-{"level":"debug","SignRequests":true,"time":"2022-08-17T16:02:32+08:00","message":"Config"}
-{"level":"debug","ClientPrivKeyFile":"tls-data/client-ecdsa-256.key","time":"2022-08-17T16:02:32+08:00","message":"Config"}
-{"level":"debug","ClientPubKeyFile":"tls-data/client-ecdsa-256.pem","time":"2022-08-17T16:02:32+08:00","message":"Config"}
-{"level":"debug","PrecomputeRequests":false,"time":"2022-08-17T16:02:32+08:00","message":"Config"}
-{"level":"debug","RequestHandlerThreads":32,"time":"2022-08-17T16:02:32+08:00","message":"Config"}
-{"level":"debug","RequestInputChannelBuffer":8192,"time":"2022-08-17T16:02:32+08:00","message":"Config"}
-{"level":"debug","BatchVerifier":"external","time":"2022-08-17T16:02:32+08:00","message":"Config"}
-08:02:32.134 INF Registered with discovery server. numPeers=8 ownID=6
-08:02:32.135 INF Profiling enabled.
-08:02:32.135 INF Setting up profiling.
-08:02:32.136 INF Started Profiler: CPU
-08:02:32.136 INF Started Profiler: BLOCK
-08:02:32.136 INF Started Profiler: MUTEX
-08:02:32.136 INF Profiler will stop on signal. exit=true
-08:02:32.138 INF Tracing will stop on signal. exit=false
-08:02:32.139 INF Started tracing. traceFile=experiment-output/0000/slave-003/peer.trc
-08:02:32.141 INF Connecting to peer. addr=127.0.0.1:10055 basicConns=2 priorityConns=2
-08:02:32.141 INF Connecting to peer. addr=127.0.0.1:10077 basicConns=2 priorityConns=2
-08:02:32.141 INF Connecting to peer. addr=127.0.0.1:10011 basicConns=2 priorityConns=2
-08:02:32.141 INF Connecting to peer. addr=127.0.0.1:10066 basicConns=2 priorityConns=2
-08:02:32.141 DBG Starting backlog.
-08:02:32.141 INF Connecting to peer. addr=127.0.0.1:10000 basicConns=2 priorityConns=2
-08:02:32.141 INF Connecting to peer. addr=127.0.0.1:10022 basicConns=2 priorityConns=2
-08:02:32.141 INF Listening for connections. port=10066 useTLS=false
-08:02:32.142 INF Connecting to peer. addr=127.0.0.1:10044 basicConns=2 priorityConns=2
-08:02:32.142 INF Connecting to peer. addr=127.0.0.1:10033 basicConns=2 priorityConns=2
-08:02:32.204 INF Incoming connection for protocol messages. addr=127.0.0.1:41428
-08:02:32.207 INF Incoming connection for protocol messages. addr=127.0.0.1:41390
-08:02:32.207 INF Incoming connection for protocol messages. addr=127.0.0.1:41424
-08:02:32.211 INF Incoming connection for protocol messages. addr=127.0.0.1:41442
-08:02:32.211 INF Incoming connection for protocol messages. addr=127.0.0.1:41348
-08:02:32.217 INF Incoming connection for protocol messages. addr=127.0.0.1:41468
-08:02:32.217 INF Incoming connection for protocol messages. addr=127.0.0.1:41414
-08:02:32.218 INF Incoming connection for protocol messages. addr=127.0.0.1:41422
-08:02:32.219 INF Incoming connection for protocol messages. addr=127.0.0.1:41416
-08:02:32.220 INF Incoming connection for protocol messages. addr=127.0.0.1:41446
-08:02:32.224 INF Incoming connection for protocol messages. addr=127.0.0.1:41454
-08:02:32.228 INF Incoming connection for protocol messages. addr=127.0.0.1:41604
-08:02:32.229 DBG Connected. peerID=2
-08:02:32.229 INF Incoming connection for protocol messages. addr=127.0.0.1:41432
-08:02:32.229 INF Incoming connection for protocol messages. addr=127.0.0.1:41644
-08:02:32.229 INF Incoming connection for protocol messages. addr=127.0.0.1:41580
-08:02:32.230 DBG Connected. peerID=6
-08:02:32.231 INF Incoming connection for protocol messages. addr=127.0.0.1:41514
-08:02:32.231 INF Incoming connection for protocol messages. addr=127.0.0.1:41456
-08:02:32.231 INF Incoming connection for protocol messages. addr=127.0.0.1:41472
-08:02:32.232 DBG Connected. peerID=5
-08:02:32.232 INF Incoming connection for protocol messages. addr=127.0.0.1:41626
-08:02:32.232 DBG Connected. peerID=3
-08:02:32.235 INF Incoming connection for protocol messages. addr=127.0.0.1:41660
-08:02:32.235 INF Incoming connection for protocol messages. addr=127.0.0.1:41676
-08:02:32.236 INF Incoming connection for protocol messages. addr=127.0.0.1:41486
-08:02:32.237 DBG Connected. peerID=0
-08:02:32.241 INF Incoming connection for protocol messages. addr=127.0.0.1:41642
-08:02:32.241 INF Incoming connection for protocol messages. addr=127.0.0.1:41688
-08:02:32.242 DBG Connected. peerID=1
-08:02:32.242 DBG Connected. peerID=4
-08:02:32.250 INF Incoming connection for protocol messages. addr=127.0.0.1:41774
-08:02:32.252 INF Incoming connection for protocol messages. addr=127.0.0.1:41726
-08:02:32.252 INF Incoming connection for protocol messages. addr=127.0.0.1:41784
-08:02:32.254 INF Incoming connection for protocol messages. addr=127.0.0.1:41786
-08:02:32.255 INF Incoming connection for protocol messages. addr=127.0.0.1:41798
-08:02:32.256 INF Incoming connection for protocol messages. addr=127.0.0.1:41736
-08:02:32.258 INF Incoming connection for protocol messages. addr=127.0.0.1:41826
-08:02:32.259 INF Incoming connection for protocol messages. addr=127.0.0.1:41752
-08:02:32.267 DBG Connected. peerID=7
-08:02:32.267 INF Connected to all peers.
-08:02:32.276 INF All peers finished connecting. Starting ISS.
-08:02:32.277 DBG Buckets for 0-th leader 0: [0 8 16 24 32 40 48 56 64 72 80 88 96 104 112 120]
-08:02:32.277 DBG Buckets for 1-th leader 1: [1 9 17 25 33 41 49 57 65 73 81 89 97 105 113 121]
-08:02:32.278 DBG Buckets for 2-th leader 2: [2 10 18 26 34 42 50 58 66 74 82 90 98 106 114 122]
-08:02:32.278 DBG Buckets for 3-th leader 3: [3 11 19 27 35 43 51 59 67 75 83 91 99 107 115 123]
-08:02:32.278 DBG Buckets for 4-th leader 4: [4 12 20 28 36 44 52 60 68 76 84 92 100 108 116 124]
-08:02:32.278 DBG Buckets for 5-th leader 5: [5 13 21 29 37 45 53 61 69 77 85 93 101 109 117 125]
-08:02:32.278 DBG Buckets for 6-th leader 6: [6 14 22 30 38 46 54 62 70 78 86 94 102 110 118 126]
-08:02:32.278 DBG Buckets for 7-th leader 7: [7 15 23 31 39 47 55 63 71 79 87 95 103 111 119 127]
-08:02:32.279 INF PbftOrderer received a new segment: [5 13 21 29 37 45 53 61 69 77 85 93 101 109 117 125 133 141 149 157 165 173 181 189 197 205 213 221 229 237 245 253] first leader=5 firstSN=5 lastSN=253 len=32 length=32 segId=5
-08:02:32.279 INF Starting new view. segID=5 timeout=60000 view=0
-08:02:32.279 DBG Starting timer. sn=5 view=0
-08:02:32.279 INF Starting PBFT instance. first=5 last=253 segID=5
-08:02:32.279 DBG Subscribing to backlog. segID=5
-08:02:32.279 INF Starting serialized message processing. segID=5
-08:02:32.280 INF PbftOrderer received a new segment: [6 14 22 30 38 46 54 62 70 78 86 94 102 110 118 126 134 142 150 158 166 174 182 190 198 206 214 222 230 238 246 254] first leader=6 firstSN=6 lastSN=254 len=32 length=32 segId=6
-08:02:32.280 INF Starting new view. segID=6 timeout=60000 view=0
-08:02:32.280 DBG Starting timer. sn=6 view=0
-08:02:32.280 INF Starting PBFT instance. first=6 last=254 segID=6
-08:02:32.280 DBG Subscribing to backlog. segID=6
-08:02:32.281 DBG Leading segment. segID=6
-08:02:32.281 INF Starting serialized message processing. segID=6
-08:02:32.281 DBG Waiting for batch. batchSize=4096
-08:02:32.281 INF PbftOrderer received a new segment: [7 15 23 31 39 47 55 63 71 79 87 95 103 111 119 127 135 143 151 159 167 175 183 191 199 207 215 223 231 239 247 255] first leader=7 firstSN=7 lastSN=255 len=32 length=32 segId=7
-08:02:32.281 INF Starting new view. segID=7 timeout=60000 view=0
-08:02:32.281 DBG Starting timer. sn=7 view=0
-08:02:32.282 INF Starting PBFT instance. first=7 last=255 segID=7
-08:02:32.282 DBG Subscribing to backlog. segID=7
-08:02:32.282 INF Starting serialized message processing. segID=7
-08:02:32.282 INF PbftOrderer received a new segment: [0 8 16 24 32 40 48 56 64 72 80 88 96 104 112 120 128 136 144 152 160 168 176 184 192 200 208 216 224 232 240 248] first leader=0 firstSN=0 lastSN=248 len=32 length=32 segId=0
-08:02:32.282 INF Starting new view. segID=0 timeout=60000 view=0
-08:02:32.283 DBG Starting timer. sn=0 view=0
-08:02:32.283 INF Starting PBFT instance. first=0 last=248 segID=0
-08:02:32.283 DBG Subscribing to backlog. segID=0
-08:02:32.283 INF Starting serialized message processing. segID=0
-08:02:32.283 INF PbftOrderer received a new segment: [1 9 17 25 33 41 49 57 65 73 81 89 97 105 113 121 129 137 145 153 161 169 177 185 193 201 209 217 225 233 241 249] first leader=1 firstSN=1 lastSN=249 len=32 length=32 segId=1
-08:02:32.284 INF Starting new view. segID=1 timeout=60000 view=0
-08:02:32.284 DBG Starting timer. sn=1 view=0
-08:02:32.284 INF Starting PBFT instance. first=1 last=249 segID=1
-08:02:32.284 INF PbftOrderer received a new segment: [2 10 18 26 34 42 50 58 66 74 82 90 98 106 114 122 130 138 146 154 162 170 178 186 194 202 210 218 226 234 242 250] first leader=2 firstSN=2 lastSN=250 len=32 length=32 segId=2
-08:02:32.285 INF Starting new view. segID=2 timeout=60000 view=0
-08:02:32.285 DBG Starting timer. sn=2 view=0
-08:02:32.285 INF Starting serialized message processing. segID=1
-08:02:32.285 INF Starting PBFT instance. first=2 last=250 segID=2
-08:02:32.285 DBG Subscribing to backlog. segID=1
-08:02:32.285 DBG Subscribing to backlog. segID=2
-08:02:32.286 INF Starting serialized message processing. segID=2
-08:02:32.286 INF PbftOrderer received a new segment: [3 11 19 27 35 43 51 59 67 75 83 91 99 107 115 123 131 139 147 155 163 171 179 187 195 203 211 219 227 235 243 251] first leader=3 firstSN=3 lastSN=251 len=32 length=32 segId=3
-08:02:32.286 INF Starting new view. segID=3 timeout=60000 view=0
-08:02:32.286 DBG Starting timer. sn=3 view=0
-08:02:32.286 INF Starting PBFT instance. first=3 last=251 segID=3
-08:02:32.287 DBG Subscribing to backlog. segID=3
-08:02:32.287 INF Starting serialized message processing. segID=3
-08:02:32.287 INF PbftOrderer received a new segment: [4 12 20 28 36 44 52 60 68 76 84 92 100 108 116 124 132 140 148 156 164 172 180 188 196 204 212 220 228 236 244 252] first leader=4 firstSN=4 lastSN=252 len=32 length=32 segId=4
-08:02:32.287 INF Starting new view. segID=4 timeout=60000 view=0
-08:02:32.287 DBG Starting timer. sn=4 view=0
-08:02:32.288 INF Starting PBFT instance. first=4 last=252 segID=4
-08:02:32.288 DBG Subscribing to backlog. segID=4
-08:02:32.288 INF Starting serialized message processing. segID=4
-08:02:34.321 INF Incoming connection for requests. addr=127.0.0.1:41862
-08:03:02.282 DBG Batch ready. batchSize=4096
-08:03:02.283 DBG Batch cut. left=0 nBuckets=16 nReq=894 next=0
-08:03:02.284 DBG Waiting for batch. batchSize=4096
-08:03:02.342 INF Sending PREPREPARE. nReq=894 senderID=6 sn=6 view=0
-08:03:02.455 INF Handling PREPREPARE. nReq=894 senderID=5 sn=5
-08:03:02.455 DBG Creating new Batch. nReq=894
-08:03:02.598 INF Handling PREPREPARE. nReq=894 senderID=4 sn=4
-08:03:02.598 DBG Creating new Batch. nReq=894
-08:03:02.607 INF Handling PREPREPARE. nReq=894 senderID=2 sn=2
-08:03:02.613 DBG Creating new Batch. nReq=894
-08:03:02.627 INF Handling PREPREPARE. nReq=894 senderID=0 sn=0
-08:03:02.627 DBG Creating new Batch. nReq=894
-08:03:02.642 INF Handling PREPREPARE. nReq=893 senderID=7 sn=7
-08:03:02.642 DBG Creating new Batch. nReq=893
-08:03:02.655 INF Handling PREPREPARE. nReq=894 senderID=3 sn=3
-08:03:02.655 DBG Creating new Batch. nReq=894
-08:03:02.729 INF Handling PREPREPARE. nReq=894 senderID=1 sn=1
-08:03:02.729 DBG Creating new Batch. nReq=894
-08:03:03.141 DBG Sending PREPARE. senderID=6 sn=5 view=0
-08:03:03.182 DBG Sending PREPARE. senderID=6 sn=4 view=0
-08:03:03.190 DBG Sending PREPARE. senderID=6 sn=2 view=0
-08:03:03.192 DBG Sending PREPARE. senderID=6 sn=7 view=0
-08:03:03.208 DBG Sending PREPARE. senderID=6 sn=0 view=0
-08:03:03.210 DBG Sending PREPARE. senderID=6 sn=1 view=0
-08:03:03.218 DBG Sending COMMIT. senderID=6 sn=4 view=0
-08:03:03.211 DBG Sending PREPARE. senderID=6 sn=3 view=0
-08:03:03.218 DBG Sending COMMIT. senderID=6 sn=7 view=0
-08:03:03.223 DBG Sending COMMIT. senderID=6 sn=3 view=0
-08:03:03.223 DBG Sending COMMIT. senderID=6 sn=5 view=0
-08:03:03.224 DBG Sending COMMIT. senderID=6 sn=2 view=0
-08:03:03.224 DBG Sending COMMIT. senderID=6 sn=1 view=0
-08:03:03.224 DBG Sending COMMIT. senderID=6 sn=0 view=0
-08:03:03.224 DBG Sending COMMIT. senderID=6 sn=6 view=0
-08:03:03.228 INF Committed entry. latency=0 nReq=893 sn=7
-08:03:03.228 DBG Starting timer. sn=15 view=0
-08:03:03.228 INF Committed entry. latency=0 nReq=894 sn=4
-08:03:03.228 INF Committed entry. latency=0 nReq=894 sn=5
-08:03:03.228 DBG Starting timer. sn=12 view=0
-08:03:03.228 INF Delivered batch. nReq=894 sn=0
-08:03:03.228 INF Committed entry. latency=0 nReq=894 sn=0
-08:03:03.228 INF Committed entry. latency=0 nReq=894 sn=1
-08:03:03.229 INF Committed entry. latency=0 nReq=894 sn=3
-08:03:03.229 INF Delivered batch. nReq=894 sn=1
-08:03:03.229 DBG Starting timer. sn=13 view=0
-08:03:03.229 DBG Starting timer. sn=8 view=0
-08:03:03.230 INF Committed entry. latency=0 nReq=894 sn=6
-08:03:03.230 DBG Starting timer. sn=14 view=0
-08:03:03.230 DBG Starting timer. sn=11 view=0
-08:03:03.230 DBG Starting timer. sn=9 view=0
-08:03:03.232 INF Committed entry. latency=0 nReq=894 sn=2
-08:03:03.232 INF Delivered batch. nReq=894 sn=2
-08:03:03.233 INF Delivered batch. nReq=894 sn=3
-08:03:03.233 INF Delivered batch. nReq=894 sn=4
-08:03:03.233 INF Delivered batch. nReq=894 sn=5
-08:03:03.233 INF Delivered batch. nReq=894 sn=6
-08:03:03.233 INF Delivered batch. nReq=893 sn=7
-08:03:03.233 DBG Starting timer. sn=10 view=0
-08:03:32.285 DBG Batch ready. batchSize=4096
-08:03:32.286 DBG Batch cut. left=0 nBuckets=16 nReq=66 next=0
-08:03:32.286 DBG Waiting for batch. batchSize=4096
-08:03:32.289 INF Sending PREPREPARE. nReq=66 senderID=6 sn=14 view=0
-08:03:32.297 INF Handling PREPREPARE. nReq=66 senderID=2 sn=10
-08:03:32.297 DBG Creating new Batch. nReq=66
-08:03:32.299 INF Handling PREPREPARE. nReq=66 senderID=4 sn=12
-08:03:32.299 DBG Creating new Batch. nReq=66
-08:03:32.308 DBG Sending PREPARE. senderID=6 sn=10 view=0
-08:03:32.314 INF Handling PREPREPARE. nReq=67 senderID=7 sn=15
-08:03:32.314 DBG Creating new Batch. nReq=67
-08:03:32.315 INF Handling PREPREPARE. nReq=66 senderID=5 sn=13
-08:03:32.316 DBG Sending PREPARE. senderID=6 sn=12 view=0
-08:03:32.316 DBG Creating new Batch. nReq=66
-08:03:32.328 INF Handling PREPREPARE. nReq=67 senderID=1 sn=9
-08:03:32.328 DBG Creating new Batch. nReq=67
-08:03:32.332 DBG Sending COMMIT. senderID=6 sn=10 view=0
-08:03:32.339 INF Committed entry. latency=0 nReq=66 sn=10
-08:03:32.340 DBG Starting timer. sn=18 view=0
-08:03:32.342 DBG Sending COMMIT. senderID=6 sn=14 view=0
-08:03:32.344 INF Handling PREPREPARE. nReq=66 senderID=3 sn=11
-08:03:32.344 DBG Creating new Batch. nReq=66
-08:03:32.348 INF Committed entry. latency=0 nReq=66 sn=14
-08:03:32.348 DBG Starting timer. sn=22 view=0
-08:03:32.349 DBG Sending PREPARE. senderID=6 sn=15 view=0
-08:03:32.349 DBG Sending COMMIT. senderID=6 sn=15 view=0
-08:03:32.355 DBG Sending COMMIT. senderID=6 sn=12 view=0
-08:03:32.355 DBG Sending PREPARE. senderID=6 sn=13 view=0
-08:03:32.359 DBG Sending PREPARE. senderID=6 sn=11 view=0
-08:03:32.361 INF Committed entry. latency=0 nReq=67 sn=15
-08:03:32.361 INF Committed entry. latency=0 nReq=66 sn=12
-08:03:32.361 DBG Starting timer. sn=20 view=0
-08:03:32.363 DBG Sending COMMIT. senderID=6 sn=13 view=0
-08:03:32.361 DBG Starting timer. sn=23 view=0
-08:03:32.364 INF Committed entry. latency=0 nReq=66 sn=13
-08:03:32.364 DBG Starting timer. sn=21 view=0
-08:03:32.365 DBG Sending PREPARE. senderID=6 sn=9 view=0
-08:03:32.366 DBG Sending COMMIT. senderID=6 sn=9 view=0
-08:03:32.371 DBG Sending COMMIT. senderID=6 sn=11 view=0
-08:03:32.371 INF Committed entry. latency=0 nReq=67 sn=9
-08:03:32.371 DBG Starting timer. sn=17 view=0
-08:03:32.374 INF Committed entry. latency=0 nReq=66 sn=11
-08:03:32.374 DBG Starting timer. sn=19 view=0
-08:03:32.380 INF Handling PREPREPARE. nReq=67 senderID=0 sn=8
-08:03:32.380 DBG Creating new Batch. nReq=67
-08:03:32.391 DBG Sending PREPARE. senderID=6 sn=8 view=0
-08:03:32.392 DBG Sending COMMIT. senderID=6 sn=8 view=0
-08:03:32.394 INF Committed entry. latency=0 nReq=67 sn=8
-08:03:32.395 INF Delivered batch. nReq=67 sn=8
-08:03:32.395 INF Delivered batch. nReq=67 sn=9
-08:03:32.395 INF Delivered batch. nReq=66 sn=10
-08:03:32.395 INF Delivered batch. nReq=66 sn=11
-08:03:32.395 INF Delivered batch. nReq=66 sn=12
-08:03:32.395 INF Delivered batch. nReq=66 sn=13
-08:03:32.396 INF Delivered batch. nReq=66 sn=14
-08:03:32.396 INF Delivered batch. nReq=67 sn=15
-08:03:32.396 DBG Starting timer. sn=16 view=0
-08:03:33.365 INF Connection terminated. error="rpc error: code = Canceled desc = context canceled" address=127.0.0.1:41862
-08:03:33.366 INF Finished sending bucket assignments to client. clId=0
-08:03:33.785 INF Stopping profiler.
-08:03:33.785 INF Stopping Tracer. events=148 fileName=experiment-output/0000/slave-003/peer.trc
+{"level":"debug","Logging":"debug","time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","UseTLS":false,"time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","CACertFile":"tls-data/ca.pem","time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","KeyFile":"tls-data/auth.key","time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","CertFile":"tls-data/auth.pem","time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","PriorityConnections":2,"time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","BasicConnections":4,"time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","TestConnections":false,"time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","ExcessConnections":1,"time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","ConnectionTestMsgs":4,"time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","ConnectionTestPayload":131072,"time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","OutMessageBufsize":1024,"time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","OutMessageBufsize":1,"time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","ThroughputCap":131072000,"time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","StragglerTolerance":1000,"time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","BatchSizeIncrement":256,"time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","Orderer":"Pbft","time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","Manager":"Mir","time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","Failures":0,"time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","StragglerCnt":1,"time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","CrashTiming":"Straggler","time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","CheckpointInterval":256,"time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","WatermarkWindowSize":256,"time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","EpochLength":256,"time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","SegmentLength":64,"time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","WaitForCheckpoints":true,"time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","ClientWatermarkWindowSize":4194304,"time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","ClientRequestBacklogSize":4194304,"time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","RandomSeed":26330,"time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","NodeToLeaderRatio":1,"time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","LeaderPolicy":"Blacklist","time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","DefaultLeaderBan":2,"time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","NumBuckets":64,"time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","BatchSize":1000,"time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","DisabledViewChange":false,"time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","ViewChangeTimeout":60000,"time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","ClientTraceSampling":10,"time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","EventBufferSize":2097152,"time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","TraceSampling":1,"time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","ClientsPerProcess":1,"time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","RequestsPerClient":15360,"time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","ClientRunTime":30000,"time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","RequestRate":256,"time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","HardRequestRateLimit":false,"time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","RequestPayloadSize":500,"time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","SignRequests":true,"time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","ClientPrivKeyFile":"tls-data/client-ecdsa-256.key","time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","ClientPubKeyFile":"tls-data/client-ecdsa-256.pem","time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","PrecomputeRequests":false,"time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","RequestHandlerThreads":32,"time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","RequestInputChannelBuffer":8192,"time":"2022-12-05T17:26:58+08:00","message":"Config"}
+{"level":"debug","BatchVerifier":"external","time":"2022-12-05T17:26:58+08:00","message":"Config"}
+09:26:58.885 INF Registered with discovery server. numPeers=4 ownID=0
+09:26:58.886 INF Profiling enabled.
+09:26:58.886 INF Setting up profiling.
+09:26:58.886 INF Started Profiler: CPU
+09:26:58.886 INF Started Profiler: BLOCK
+09:26:58.886 INF Started Profiler: MUTEX
+09:26:58.886 INF Profiler will stop on signal. exit=true
+09:26:58.888 INF Tracing will stop on signal. exit=false
+09:26:58.889 INF Started tracing. traceFile=experiment-output/0000/slave-003/peer.trc
+09:26:58.889 DBG Starting backlog.
+09:26:58.889 INF Listening for connections. port=10000 useTLS=false
+09:26:58.889 INF Connecting to peer. addr=127.0.0.1:10000 basicConns=4 priorityConns=2
+09:26:58.890 INF Connecting to peer. addr=127.0.0.1:10011 basicConns=4 priorityConns=2
+09:26:58.890 INF Connecting to peer. addr=127.0.0.1:10033 basicConns=4 priorityConns=2
+09:26:58.890 INF Connecting to peer. addr=127.0.0.1:10022 basicConns=4 priorityConns=2
+09:26:58.912 INF Incoming connection for protocol messages. addr=127.0.0.1:36924
+09:26:58.913 INF Incoming connection for protocol messages. addr=127.0.0.1:36922
+09:26:58.914 INF Incoming connection for protocol messages. addr=127.0.0.1:36934
+09:26:58.916 INF Incoming connection for protocol messages. addr=127.0.0.1:36962
+09:26:58.916 INF Incoming connection for protocol messages. addr=127.0.0.1:36944
+09:26:58.918 INF Incoming connection for protocol messages. addr=127.0.0.1:37016
+09:26:58.919 INF Incoming connection for protocol messages. addr=127.0.0.1:36968
+09:26:58.919 INF Incoming connection for protocol messages. addr=127.0.0.1:37036
+09:26:58.919 INF Incoming connection for protocol messages. addr=127.0.0.1:37038
+09:26:58.919 INF Incoming connection for protocol messages. addr=127.0.0.1:36974
+09:26:58.919 INF Incoming connection for protocol messages. addr=127.0.0.1:36940
+09:26:58.919 INF Incoming connection for protocol messages. addr=127.0.0.1:37020
+09:26:58.920 INF Incoming connection for protocol messages. addr=127.0.0.1:37044
+09:26:58.920 INF Incoming connection for protocol messages. addr=127.0.0.1:37022
+09:26:58.920 INF Incoming connection for protocol messages. addr=127.0.0.1:36938
+09:26:58.922 INF Incoming connection for protocol messages. addr=127.0.0.1:37010
+09:26:58.922 INF Incoming connection for protocol messages. addr=127.0.0.1:37046
+09:26:58.922 INF Incoming connection for protocol messages. addr=127.0.0.1:37052
+09:26:58.923 INF Incoming connection for protocol messages. addr=127.0.0.1:37068
+09:26:58.923 DBG Connected. peerID=2
+09:26:58.923 INF Incoming connection for protocol messages. addr=127.0.0.1:37078
+09:26:58.923 INF Incoming connection for protocol messages. addr=127.0.0.1:37086
+09:26:58.923 DBG Connected. peerID=0
+09:26:58.924 INF Incoming connection for protocol messages. addr=127.0.0.1:37090
+09:26:58.929 DBG Connected. peerID=3
+09:26:58.931 INF Incoming connection for protocol messages. addr=127.0.0.1:37070
+09:26:58.931 INF Incoming connection for protocol messages. addr=127.0.0.1:37072
+09:26:58.935 DBG Connected. peerID=1
+09:26:58.935 INF Connected to all peers.
+09:26:58.941 INF All peers finished connecting. Starting ISS.
+09:26:58.942 DBG Buckets for 0-th leader 0: [0 4 8 12 16 20 24 28 32 36 40 44 48 52 56 60]
+09:26:58.942 DBG Buckets for 1-th leader 1: [1 5 9 13 17 21 25 29 33 37 41 45 49 53 57 61]
+09:26:58.942 DBG Buckets for 2-th leader 2: [2 6 10 14 18 22 26 30 34 38 42 46 50 54 58 62]
+09:26:58.942 DBG Buckets for 3-th leader 3: [3 7 11 15 19 23 27 31 35 39 43 47 51 55 59 63]
+09:26:58.942 INF PbftOrderer received a new segment: [0 4 8 12 16 20 24 28 32 36 40 44 48 52 56 60 64 68 72 76 80 84 88 92 96 100 104 108 112 116 120 124 128 132 136 140 144 148 152 156 160 164 168 172 176 180 184 188 192 196 200 204 208 212 216 220 224 228 232 236 240 244 248 252] first leader=0 firstSN=0 lastSN=252 len=64 length=64 segId=0
+09:26:58.943 INF Starting new view. segID=0 timeout=60000 view=0
+09:26:58.943 DBG Starting timer. sn=0 view=0
+09:26:58.943 INF Starting PBFT instance. first=0 last=252 segID=0
+09:26:58.943 DBG Subscribing to backlog. segID=0
+09:26:58.943 DBG Leading segment. segID=0
+09:26:58.943 INF byzantine effected ! batchTimeout=1998 byzantine=Straggler
+09:26:58.943 INF Starting serialized message processing. segID=0
+09:26:58.944 INF Simulating Straggler. batchTimeout=1998 crashTiming=Straggler
+09:26:58.944 INF PbftOrderer received a new segment: [1 5 9 13 17 21 25 29 33 37 41 45 49 53 57 61 65 69 73 77 81 85 89 93 97 101 105 109 113 117 121 125 129 133 137 141 145 149 153 157 161 165 169 173 177 181 185 189 193 197 201 205 209 213 217 221 225 229 233 237 241 245 249 253] first leader=1 firstSN=1 lastSN=253 len=64 length=64 segId=1
+09:26:58.944 DBG Waiting for batch. batchSize=4096
+09:26:58.944 INF Starting new view. segID=1 timeout=60000 view=0
+09:26:58.944 DBG Starting timer. sn=1 view=0
+09:26:58.944 INF Starting PBFT instance. first=1 last=253 segID=1
+09:26:58.945 DBG Subscribing to backlog. segID=1
+09:26:58.945 INF Starting serialized message processing. segID=1
+09:26:58.945 INF PbftOrderer received a new segment: [2 6 10 14 18 22 26 30 34 38 42 46 50 54 58 62 66 70 74 78 82 86 90 94 98 102 106 110 114 118 122 126 130 134 138 142 146 150 154 158 162 166 170 174 178 182 186 190 194 198 202 206 210 214 218 222 226 230 234 238 242 246 250 254] first leader=2 firstSN=2 lastSN=254 len=64 length=64 segId=2
+09:26:58.945 INF Starting new view. segID=2 timeout=60000 view=0
+09:26:58.945 DBG Starting timer. sn=2 view=0
+09:26:58.945 INF Starting PBFT instance. first=2 last=254 segID=2
+09:26:58.946 DBG Subscribing to backlog. segID=2
+09:26:58.946 INF Starting serialized message processing. segID=2
+09:26:58.946 INF PbftOrderer received a new segment: [3 7 11 15 19 23 27 31 35 39 43 47 51 55 59 63 67 71 75 79 83 87 91 95 99 103 107 111 115 119 123 127 131 135 139 143 147 151 155 159 163 167 171 175 179 183 187 191 195 199 203 207 211 215 219 223 227 231 235 239 243 247 251 255] first leader=3 firstSN=3 lastSN=255 len=64 length=64 segId=3
+09:26:58.946 INF Starting new view. segID=3 timeout=60000 view=0
+09:26:58.946 DBG Starting timer. sn=3 view=0
+09:26:58.947 INF Starting PBFT instance. first=3 last=255 segID=3
+09:26:58.947 DBG Subscribing to backlog. segID=3
+09:26:58.947 INF Starting serialized message processing. segID=3
+09:26:59.953 INF Handling PREPREPARE. nReq=0 senderID=1 sn=1
+09:26:59.953 INF Handling PREPREPARE. nReq=0 senderID=3 sn=3
+09:26:59.953 INF Handling PREPREPARE. nReq=0 senderID=2 sn=2
+09:26:59.953 INF Hset. i=0 sn=3 tn=0
+09:26:59.953 INF Hset. i=0 sn=2 tn=0
+09:26:59.953 INF Hset. i=0 sn=1 tn=0
+09:26:59.953 DBG Creating new Batch. nReq=0
+09:26:59.953 DBG Creating new Batch. nReq=0
+09:26:59.953 DBG Creating new Batch. nReq=0
+09:26:59.954 DBG Sending PREPARE. senderID=0 sn=3 view=0
+09:26:59.954 DBG Sending PREPARE. senderID=0 sn=2 view=0
+09:26:59.954 DBG Sending PREPARE. senderID=0 sn=1 view=0
+09:26:59.954 DBG func sendPrepare prepare Tn. sn=3 tn=1
+09:26:59.954 DBG func sendPrepare prepare Tn. sn=2 tn=1
+09:26:59.954 DBG func sendPrepare prepare Tn. sn=1 tn=1
+09:26:59.954 DBG Sending COMMIT. senderID=0 sn=3 tn=1 view=0
+09:26:59.954 DBG Sending COMMIT. senderID=0 sn=2 tn=1 view=0
+09:26:59.954 DBG Sending COMMIT. senderID=0 sn=1 tn=1 view=0
+09:26:59.954 DBG func sendCommit commit Tn. sn=3 tn=1
+09:26:59.954 DBG func sendCommit commit Tn. sn=2 tn=1
+09:26:59.955 DBG func sendCommit commit Tn. sn=1 tn=1
+09:26:59.955 DBG Sending Htn. senderID=0 sn=3 view=0
+09:26:59.955 DBG Sending Htn. senderID=0 sn=2 view=0
+09:26:59.955 DBG Sending Htn. senderID=0 sn=1 view=0
 ==================
 WARNING: DATA RACE
-Read at 0x00c000980000 by goroutine 115:
+Read at 0x00c0001fb5f0 by goroutine 420:
+  runtime.mapaccess1_fast64()
+      /home/dell/wmj/go/src/runtime/map_fast64.go:12 +0x0
+  github.com/hyperledger-labs/mirbft/orderer.(*pbftInstance).sendCommit()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftinstance.go:632 +0x929
+  github.com/hyperledger-labs/mirbft/orderer.(*pbftInstance).handlePreprepare()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftinstance.go:461 +0xc3d
+  github.com/hyperledger-labs/mirbft/orderer.(*pbftInstance).handleMessage()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftinstance.go:1948 +0x724
+  github.com/hyperledger-labs/mirbft/orderer.(*pbftInstance).processSerializedMessages()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftinstance.go:1920 +0xdb
+  github.com/hyperledger-labs/mirbft/orderer.(*PbftOrderer).runSegment·dwrap·12()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftorderer.go:200 +0x39
+
+Previous write at 0x00c0001fb5f0 by goroutine 422:
+  runtime.mapassign_fast64()
+      /home/dell/wmj/go/src/runtime/map_fast64.go:92 +0x0
+  github.com/hyperledger-labs/mirbft/orderer.(*pbftInstance).sendCommit()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftinstance.go:633 +0x9c4
+  github.com/hyperledger-labs/mirbft/orderer.(*pbftInstance).handlePrepare()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftinstance.go:560 +0x69a
+  github.com/hyperledger-labs/mirbft/orderer.(*pbftInstance).handleMessage()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftinstance.go:1957 +0x2d4
+  github.com/hyperledger-labs/mirbft/orderer.(*pbftInstance).processSerializedMessages()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftinstance.go:1920 +0xdb
+  github.com/hyperledger-labs/mirbft/orderer.(*PbftOrderer).runSegment·dwrap·12()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftorderer.go:200 +0x39
+
+Goroutine 420 (running) created at:
+  github.com/hyperledger-labs/mirbft/orderer.(*PbftOrderer).runSegment()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftorderer.go:200 +0x3f0
+  github.com/hyperledger-labs/mirbft/orderer.(*PbftOrderer).Start()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftorderer.go:176 +0x355
+  main.main·dwrap·5()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/cmd/orderingpeer/main.go:169 +0x59
+
+Goroutine 422 (running) created at:
+  github.com/hyperledger-labs/mirbft/orderer.(*PbftOrderer).runSegment()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftorderer.go:200 +0x3f0
+  github.com/hyperledger-labs/mirbft/orderer.(*PbftOrderer).Start()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftorderer.go:176 +0x355
+  main.main·dwrap·5()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/cmd/orderingpeer/main.go:169 +0x59
+==================
+==================
+WARNING: DATA RACE
+Read at 0x00c005f64128 by goroutine 418:
+  github.com/hyperledger-labs/mirbft/orderer.(*pbftInstance).sendCommit()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftinstance.go:632 +0x936
+  github.com/hyperledger-labs/mirbft/orderer.(*pbftInstance).handlePreprepare()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftinstance.go:461 +0xc3d
+  github.com/hyperledger-labs/mirbft/orderer.(*pbftInstance).handleMessage()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftinstance.go:1948 +0x724
+  github.com/hyperledger-labs/mirbft/orderer.(*pbftInstance).processSerializedMessages()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftinstance.go:1920 +0xdb
+  github.com/hyperledger-labs/mirbft/orderer.(*PbftOrderer).runSegment·dwrap·12()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftorderer.go:200 +0x39
+
+Previous write at 0x00c005f64128 by goroutine 422:
+  github.com/hyperledger-labs/mirbft/orderer.(*pbftInstance).sendCommit()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftinstance.go:633 +0x9d3
+  github.com/hyperledger-labs/mirbft/orderer.(*pbftInstance).handlePrepare()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftinstance.go:560 +0x69a
+  github.com/hyperledger-labs/mirbft/orderer.(*pbftInstance).handleMessage()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftinstance.go:1957 +0x2d4
+  github.com/hyperledger-labs/mirbft/orderer.(*pbftInstance).processSerializedMessages()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftinstance.go:1920 +0xdb
+  github.com/hyperledger-labs/mirbft/orderer.(*PbftOrderer).runSegment·dwrap·12()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftorderer.go:200 +0x39
+
+Goroutine 418 (running) created at:
+  github.com/hyperledger-labs/mirbft/orderer.(*PbftOrderer).runSegment()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftorderer.go:200 +0x3f0
+  github.com/hyperledger-labs/mirbft/orderer.(*PbftOrderer).Start()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftorderer.go:176 +0x355
+  main.main·dwrap·5()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/cmd/orderingpeer/main.go:169 +0x59
+
+Goroutine 422 (running) created at:
+  github.com/hyperledger-labs/mirbft/orderer.(*PbftOrderer).runSegment()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftorderer.go:200 +0x3f0
+  github.com/hyperledger-labs/mirbft/orderer.(*PbftOrderer).Start()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftorderer.go:176 +0x355
+  main.main·dwrap·5()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/cmd/orderingpeer/main.go:169 +0x59
+==================
+09:26:59.955 DBG func handleCommit commit Tn. tn=1
+09:26:59.955 DBG func handleCommit commit Tn. tn=1
+09:26:59.955 DBG func handleCommit commit Tn. tn=1
+09:26:59.955 DBG func handleCommit commit Tn. tn=1
+09:26:59.955 DBG func handleCommit commit Tn. tn=1
+09:26:59.955 DBG func handleCommit commit Tn. tn=1
+09:26:59.956 INF Get logEntry.Sn from tn. Hn=1 SegID=1 Tn=1 logEntry.Sn=1
+09:26:59.956 INF Get logEntry.Sn from tn. Hn=1 SegID=3 Tn=1 logEntry.Sn=3
+09:26:59.956 INF Get logEntry.Sn from tn. Hn=1 SegID=2 Tn=1 logEntry.Sn=2
+09:26:59.956 INF Committed entry. latency=0 sn=1
+09:26:59.956 INF Committed entry. latency=0 sn=3
+09:26:59.956 DBG Starting timer. sn=5 view=0
+09:26:59.956 INF Committed entry. latency=0 sn=2
+09:26:59.956 DBG Starting timer. sn=7 view=0
+09:26:59.956 DBG func handleCommit commit Tn. tn=1
+09:26:59.956 DBG Starting timer. sn=6 view=0
+09:26:59.956 DBG func handleCommit commit Tn. tn=1
+09:26:59.957 DBG func handleCommit commit Tn. tn=1
+09:27:00.943 DBG Batch ready. batchSize=4096
+09:27:00.943 DBG Batch cut. left=0 nBuckets=16 nReq=0 next=0
+09:27:00.943 DBG Waiting for batch. batchSize=4096
+09:27:00.943 INF Sending PREPREPARE. nReq=0 senderID=0 sn=0 view=0
+09:27:00.946 DBG Sending COMMIT. senderID=0 sn=0 tn=2 view=0
+09:27:00.946 DBG func sendCommit commit Tn. sn=0 tn=2
+09:27:00.946 DBG Sending Htn. senderID=0 sn=0 view=0
+09:27:00.947 DBG func handleCommit commit Tn. tn=2
+09:27:00.947 DBG func handleCommit commit Tn. tn=2
+09:27:00.947 INF Get logEntry.Sn from tn. Hn=1 SegID=0 Tn=2 logEntry.Sn=4
+09:27:00.948 INF Committed entry. latency=0 sn=0
+09:27:00.948 INF Delivered batch. sn=0
+09:27:00.948 INF Delivered batch. sn=1
+09:27:00.948 INF Delivered batch. sn=2
+09:27:00.948 WRN PbftOrderer handles message from self. sn=0
+09:27:00.948 INF Delivered batch. sn=3
+09:27:00.948 INF Get logEntry.Sn from tn. Nil Blocks. SegID=0 logEntry.Sn=0
+09:27:00.948 INF Handling PREPREPARE. nReq=0 senderID=1 sn=5
+09:27:00.948 INF Committed entry. latency=0 sn=4
+09:27:00.949 INF Hset. i=0 sn=5 tn=1
+09:27:00.949 INF Delivered batch. sn=4
+09:27:00.949 INF Hset. i=1 sn=5 tn=1
+09:27:00.949 DBG Starting timer. sn=4 view=0
+09:27:00.949 INF Hset. i=2 sn=5 tn=1
+09:27:00.949 DBG func handleHtnmsg. newhtn=2 prelocalhtn=2 segment=0
+09:27:00.949 INF Hset. i=3 sn=5 tn=1
+09:27:00.949 DBG func handleCommit commit Tn. tn=2
+09:27:00.949 DBG Creating new Batch. nReq=0
+09:27:00.949 INF Handling PREPREPARE. nReq=0 senderID=2 sn=6
+09:27:00.949 DBG func handleHtnmsg. newhtn=2 prelocalhtn=2 segment=0
+09:27:00.950 INF Hset. i=0 sn=6 tn=1
+09:27:00.950 DBG func handleHtnmsg. newhtn=2 prelocalhtn=2 segment=0
+09:27:00.950 DBG Sending PREPARE. senderID=0 sn=5 view=0
+09:27:00.950 INF Hset. i=1 sn=6 tn=1
+09:27:00.950 DBG func sendPrepare prepare Tn. sn=5 tn=3
+09:27:00.950 INF Set TRUE. sn=4
+09:27:00.950 INF Hset. i=2 sn=6 tn=1
+09:27:00.950 INF validHtnMsgs sets. validHtnMsgs=2
+09:27:00.950 INF Handling PREPREPARE. nReq=0 senderID=3 sn=7
+09:27:00.950 INF Hset. i=3 sn=6 tn=1
+09:27:00.950 INF Hset. i=0 sn=7 tn=1
+09:27:00.950 DBG Creating new Batch. nReq=0
+09:27:00.950 INF Hset. i=1 sn=7 tn=1
+09:27:00.950 INF validHtnMsgs sets. validHtnMsgs=2
+09:27:00.950 INF Hset. i=2 sn=7 tn=1
+09:27:00.951 INF validHtnMsgs sets. validHtnMsgs=2
+09:27:00.951 INF Hset. i=3 sn=7 tn=1
+09:27:00.951 DBG func handleHtnmsg. newhtn=2 prelocalhtn=2 segment=0
+09:27:00.951 DBG Sending PREPARE. senderID=0 sn=6 view=0
+09:27:00.951 DBG Creating new Batch. nReq=0
+09:27:00.951 DBG Sending COMMIT. senderID=0 sn=5 tn=3 view=0
+09:27:00.951 DBG func sendPrepare prepare Tn. sn=6 tn=3
+09:27:00.951 DBG func sendCommit commit Tn. sn=5 tn=3
+09:27:00.951 DBG Sending PREPARE. senderID=0 sn=7 view=0
+09:27:00.951 DBG Sending Htn. senderID=0 sn=5 view=0
+09:27:00.951 DBG func sendPrepare prepare Tn. sn=7 tn=3
+09:27:00.951 DBG func handleCommit commit Tn. tn=3
+09:27:00.952 DBG Sending COMMIT. senderID=0 sn=6 tn=3 view=0
+09:27:00.952 DBG func sendCommit commit Tn. sn=6 tn=3
+09:27:00.952 DBG Sending COMMIT. senderID=0 sn=7 tn=3 view=0
+09:27:00.952 DBG Sending Htn. senderID=0 sn=6 view=0
+09:27:00.952 DBG func sendCommit commit Tn. sn=7 tn=3
+09:27:00.952 DBG Sending Htn. senderID=0 sn=7 view=0
+09:27:00.953 DBG func handleCommit commit Tn. tn=3
+09:27:00.953 INF Get logEntry.Sn from tn. Hn=2 SegID=1 Tn=3 logEntry.Sn=9
+09:27:00.953 INF Committed entry. latency=0 sn=5
+09:27:00.953 INF Delivered batch. sn=5
+09:27:00.953 INF Get logEntry.Sn from tn. Nil Blocks. SegID=1 logEntry.Sn=5
+09:27:00.953 DBG func handleCommit commit Tn. tn=3
+09:27:00.953 INF Committed entry. latency=0 sn=9
+09:27:00.954 DBG Starting timer. sn=9 view=0
+09:27:00.954 DBG func handleCommit commit Tn. tn=3
+09:27:00.954 DBG func handleCommit commit Tn. tn=3
+09:27:00.954 DBG func handleCommit commit Tn. tn=3
+09:27:00.954 INF Get logEntry.Sn from tn. Hn=2 SegID=2 Tn=3 logEntry.Sn=10
+09:27:00.954 DBG func handleCommit commit Tn. tn=3
+09:27:00.954 INF Committed entry. latency=0 sn=6
+09:27:00.954 INF Delivered batch. sn=6
+09:27:00.954 INF Get logEntry.Sn from tn. Hn=2 SegID=3 Tn=3 logEntry.Sn=11
+09:27:00.954 INF Get logEntry.Sn from tn. Nil Blocks. SegID=2 logEntry.Sn=6
+09:27:00.955 INF Committed entry. latency=0 sn=7
+09:27:00.955 INF Committed entry. latency=0 sn=10
+09:27:00.955 INF Delivered batch. sn=7
+09:27:00.955 INF Get logEntry.Sn from tn. Nil Blocks. SegID=3 logEntry.Sn=7
+09:27:00.955 DBG Starting timer. sn=10 view=0
+09:27:00.955 INF Committed entry. latency=0 sn=11
+09:27:00.955 DBG func handleCommit commit Tn. tn=3
+09:27:00.955 DBG Starting timer. sn=11 view=0
+09:27:00.955 DBG func handleCommit commit Tn. tn=3
+09:27:00.978 INF Incoming connection for requests. addr=127.0.0.1:37108
+09:27:01.959 INF Handling PREPREPARE. nReq=61 senderID=1 sn=9
+09:27:01.959 INF Hset. i=0 sn=9 tn=3
+09:27:01.959 INF Hset. i=1 sn=9 tn=3
+09:27:01.959 INF Hset. i=2 sn=9 tn=3
+09:27:01.960 INF Hset. i=3 sn=9 tn=3
+09:27:01.960 INF Handling PREPREPARE. nReq=61 senderID=2 sn=10
+09:27:01.960 DBG Creating new Batch. nReq=61
+09:27:01.960 INF Hset. i=0 sn=10 tn=3
+09:27:01.960 INF Hset. i=1 sn=10 tn=3
+09:27:01.960 INF Hset. i=2 sn=10 tn=3
+09:27:01.960 INF Hset. i=3 sn=10 tn=3
+09:27:01.960 DBG Creating new Batch. nReq=61
+09:27:01.961 INF Handling PREPREPARE. nReq=61 senderID=3 sn=11
+09:27:01.961 INF Hset. i=0 sn=11 tn=3
+09:27:01.961 INF Hset. i=1 sn=11 tn=3
+09:27:01.961 INF Hset. i=2 sn=11 tn=3
+09:27:01.961 INF Hset. i=3 sn=11 tn=3
+09:27:01.962 DBG Creating new Batch. nReq=61
+09:27:01.971 DBG Sending PREPARE. senderID=0 sn=10 view=0
+09:27:01.972 DBG func sendPrepare prepare Tn. sn=10 tn=4
+09:27:01.972 DBG Sending COMMIT. senderID=0 sn=10 tn=4 view=0
+09:27:01.972 DBG Sending PREPARE. senderID=0 sn=9 view=0
+09:27:01.972 DBG func sendCommit commit Tn. sn=10 tn=4
+09:27:01.972 DBG func sendPrepare prepare Tn. sn=9 tn=4
+09:27:01.972 DBG Sending Htn. senderID=0 sn=10 view=0
+09:27:01.972 DBG Sending PREPARE. senderID=0 sn=11 view=0
+09:27:01.973 DBG Sending COMMIT. senderID=0 sn=9 tn=4 view=0
+09:27:01.973 DBG func sendPrepare prepare Tn. sn=11 tn=4
+09:27:01.973 DBG func sendCommit commit Tn. sn=9 tn=4
+09:27:01.973 DBG Sending Htn. senderID=0 sn=9 view=0
+09:27:01.973 DBG Sending COMMIT. senderID=0 sn=11 tn=4 view=0
+09:27:01.973 DBG func sendCommit commit Tn. sn=11 tn=4
+09:27:01.973 DBG Sending Htn. senderID=0 sn=11 view=0
+09:27:01.974 DBG func handleCommit commit Tn. tn=4
+09:27:01.974 DBG func handleCommit commit Tn. tn=4
+09:27:01.974 DBG func handleCommit commit Tn. tn=4
+09:27:01.974 DBG func handleCommit commit Tn. tn=4
+09:27:01.974 DBG func handleCommit commit Tn. tn=4
+09:27:01.975 DBG func handleCommit commit Tn. tn=4
+09:27:01.975 INF Get logEntry.Sn from tn. Hn=3 SegID=1 Tn=4 logEntry.Sn=13
+09:27:01.975 INF Committed entry. latency=0 sn=13
+09:27:01.975 INF Get logEntry.Sn from tn. Hn=3 SegID=3 Tn=4 logEntry.Sn=15
+09:27:01.975 DBG Starting timer. sn=13 view=0
+09:27:01.975 INF Get logEntry.Sn from tn. Hn=3 SegID=2 Tn=4 logEntry.Sn=14
+09:27:01.975 DBG func handleCommit commit Tn. tn=4
+09:27:01.975 INF Committed entry. latency=0 sn=15
+09:27:01.975 INF Committed entry. latency=0 sn=14
+09:27:01.975 DBG Starting timer. sn=15 view=0
+09:27:01.975 DBG Starting timer. sn=14 view=0
+09:27:01.976 DBG func handleCommit commit Tn. tn=4
+09:27:01.975 DBG func handleCommit commit Tn. tn=4
+09:27:02.942 DBG Batch ready. batchSize=4096
+09:27:02.942 DBG Batch cut. left=0 nBuckets=16 nReq=125 next=0
+09:27:02.943 DBG Waiting for batch. batchSize=4096
+09:27:02.945 INF Sending PREPREPARE. nReq=125 senderID=0 sn=4 view=0
+09:27:02.961 INF Handling PREPREPARE. nReq=64 senderID=2 sn=14
+09:27:02.961 INF Hset. i=0 sn=14 tn=4
+09:27:02.961 INF Hset. i=1 sn=14 tn=4
+09:27:02.962 INF Hset. i=2 sn=14 tn=4
+09:27:02.962 INF Handling PREPREPARE. nReq=64 senderID=3 sn=15
+09:27:02.962 INF Hset. i=3 sn=14 tn=4
+09:27:02.962 DBG Creating new Batch. nReq=64
+09:27:02.962 INF Hset. i=0 sn=15 tn=4
+09:27:02.962 INF Hset. i=1 sn=15 tn=4
+09:27:02.962 INF Hset. i=2 sn=15 tn=4
+09:27:02.962 INF Handling PREPREPARE. nReq=64 senderID=1 sn=13
+09:27:02.962 INF Hset. i=3 sn=15 tn=4
+09:27:02.963 DBG Creating new Batch. nReq=64
+09:27:02.963 INF Hset. i=0 sn=13 tn=4
+09:27:02.963 INF Hset. i=1 sn=13 tn=4
+09:27:02.963 INF Hset. i=2 sn=13 tn=4
+09:27:02.963 INF Hset. i=3 sn=13 tn=4
+09:27:02.963 DBG Creating new Batch. nReq=64
+09:27:02.976 DBG Sending PREPARE. senderID=0 sn=15 view=0
+09:27:02.976 DBG func sendPrepare prepare Tn. sn=15 tn=5
+09:27:02.976 DBG Sending PREPARE. senderID=0 sn=13 view=0
+09:27:02.976 DBG func sendPrepare prepare Tn. sn=13 tn=5
+09:27:02.977 DBG Sending PREPARE. senderID=0 sn=14 view=0
+09:27:02.977 DBG func sendPrepare prepare Tn. sn=14 tn=5
+09:27:02.978 DBG Sending COMMIT. senderID=0 sn=13 tn=5 view=0
+09:27:02.978 DBG func sendCommit commit Tn. sn=13 tn=5
+09:27:02.978 DBG Sending Htn. senderID=0 sn=13 view=0
+09:27:02.979 DBG func handleCommit commit Tn. tn=5
+09:27:02.979 DBG Sending COMMIT. senderID=0 sn=14 tn=5 view=0
+09:27:02.979 DBG func sendCommit commit Tn. sn=14 tn=5
+09:27:02.979 DBG Sending COMMIT. senderID=0 sn=15 tn=5 view=0
+09:27:02.979 DBG Sending Htn. senderID=0 sn=14 view=0
+09:27:02.980 DBG func handleCommit commit Tn. tn=5
+09:27:02.980 DBG func handleCommit commit Tn. tn=5
+09:27:02.980 DBG func handleCommit commit Tn. tn=5
+09:27:02.980 DBG func sendCommit commit Tn. sn=15 tn=5
+09:27:02.980 DBG Sending Htn. senderID=0 sn=15 view=0
+09:27:02.981 INF Get logEntry.Sn from tn. Hn=4 SegID=1 Tn=5 logEntry.Sn=17
+09:27:02.981 DBG func handleCommit commit Tn. tn=5
+09:27:02.981 INF Committed entry. latency=0 sn=17
+09:27:02.981 DBG func handleCommit commit Tn. tn=5
+09:27:02.981 INF Get logEntry.Sn from tn. Hn=4 SegID=2 Tn=5 logEntry.Sn=18
+09:27:02.981 DBG Starting timer. sn=17 view=0
+09:27:02.981 INF Committed entry. latency=0 sn=18
+09:27:02.981 DBG func handleCommit commit Tn. tn=5
+09:27:02.981 DBG Starting timer. sn=18 view=0
+09:27:02.981 INF Get logEntry.Sn from tn. Hn=4 SegID=3 Tn=5 logEntry.Sn=19
+09:27:02.981 DBG func handleCommit commit Tn. tn=5
+09:27:02.981 INF Committed entry. latency=0 sn=19
+09:27:02.982 DBG Starting timer. sn=19 view=0
+09:27:02.982 DBG func handleCommit commit Tn. tn=5
+09:27:02.984 DBG Sending COMMIT. senderID=0 sn=4 tn=5 view=0
+09:27:02.984 DBG func sendCommit commit Tn. sn=4 tn=5
+09:27:02.984 DBG Sending Htn. senderID=0 sn=4 view=0
+09:27:02.985 DBG func handleCommit commit Tn. tn=5
+09:27:02.985 DBG func handleHtnmsg. newhtn=5 prelocalhtn=5 segment=0
+09:27:02.985 DBG func handleCommit commit Tn. tn=5
+09:27:02.985 INF Get logEntry.Sn from tn. Hn=2 SegID=0 Tn=5 logEntry.Sn=16
+09:27:02.985 INF Committed entry. latency=0 sn=8
+09:27:02.985 INF Delivered batch. sn=8
+09:27:02.986 WRN PbftOrderer handles message from self. sn=4
+09:27:02.986 INF Delivered batch. sn=9
+09:27:02.986 INF Delivered batch. sn=10
+09:27:02.986 INF Delivered batch. sn=11
+09:27:02.986 INF Get logEntry.Sn from tn. Nil Blocks. SegID=0 logEntry.Sn=8
+09:27:02.986 INF Committed entry. latency=0 sn=12
+09:27:02.986 INF Delivered batch. sn=12
+09:27:02.986 INF Delivered batch. sn=13
+09:27:02.986 INF Delivered batch. sn=14
+09:27:02.987 INF Delivered batch. sn=15
+09:27:02.987 INF Get logEntry.Sn from tn. Nil Blocks. SegID=0 logEntry.Sn=12
+09:27:02.987 INF Committed entry. latency=0 sn=16
+09:27:02.987 INF Delivered batch. sn=16
+09:27:02.987 INF Delivered batch. sn=17
+09:27:02.987 INF Delivered batch. sn=18
+09:27:02.987 INF Delivered batch. sn=19
+09:27:02.987 DBG Starting timer. sn=8 view=0
+09:27:02.987 DBG func handleHtnmsg. newhtn=5 prelocalhtn=5 segment=0
+09:27:02.988 DBG func handleHtnmsg. newhtn=5 prelocalhtn=5 segment=0
+09:27:02.988 INF Set TRUE. sn=8
+09:27:02.988 INF validHtnMsgs sets. validHtnMsgs=5
+09:27:02.988 INF validHtnMsgs sets. validHtnMsgs=5
+09:27:02.988 INF validHtnMsgs sets. validHtnMsgs=5
+09:27:02.988 DBG func handleCommit commit Tn. tn=5
+09:27:02.988 DBG func handleHtnmsg. newhtn=5 prelocalhtn=5 segment=0
+09:27:03.962 INF Handling PREPREPARE. nReq=65 senderID=1 sn=17
+09:27:03.962 INF Hset. i=0 sn=17 tn=5
+09:27:03.962 INF Hset. i=1 sn=17 tn=5
+09:27:03.963 INF Handling PREPREPARE. nReq=64 senderID=3 sn=19
+09:27:03.963 INF Hset. i=2 sn=17 tn=5
+09:27:03.963 INF Hset. i=0 sn=19 tn=5
+09:27:03.963 INF Hset. i=3 sn=17 tn=5
+09:27:03.963 INF Hset. i=1 sn=19 tn=5
+09:27:03.963 DBG Creating new Batch. nReq=65
+09:27:03.963 INF Handling PREPREPARE. nReq=64 senderID=2 sn=18
+09:27:03.963 INF Hset. i=2 sn=19 tn=5
+09:27:03.963 INF Hset. i=0 sn=18 tn=5
+09:27:03.963 INF Hset. i=3 sn=19 tn=5
+09:27:03.963 INF Hset. i=1 sn=18 tn=5
+09:27:03.963 DBG Creating new Batch. nReq=64
+09:27:03.963 INF Hset. i=2 sn=18 tn=5
+09:27:03.964 INF Hset. i=3 sn=18 tn=5
+09:27:03.964 DBG Creating new Batch. nReq=64
+09:27:03.975 DBG Sending PREPARE. senderID=0 sn=19 view=0
+09:27:03.975 DBG func sendPrepare prepare Tn. sn=19 tn=6
+09:27:03.976 DBG Sending COMMIT. senderID=0 sn=19 tn=6 view=0
+09:27:03.977 DBG func sendCommit commit Tn. sn=19 tn=6
+09:27:03.977 DBG Sending Htn. senderID=0 sn=19 view=0
+09:27:03.978 DBG func handleCommit commit Tn. tn=6
+09:27:03.980 DBG Sending PREPARE. senderID=0 sn=17 view=0
+09:27:03.980 DBG Sending PREPARE. senderID=0 sn=18 view=0
+09:27:03.980 DBG func sendPrepare prepare Tn. sn=17 tn=6
+09:27:03.980 DBG func sendPrepare prepare Tn. sn=18 tn=6
+09:27:03.980 DBG Sending COMMIT. senderID=0 sn=17 tn=6 view=0
+09:27:03.980 DBG Sending COMMIT. senderID=0 sn=18 tn=6 view=0
+09:27:03.980 DBG func sendCommit commit Tn. sn=17 tn=6
+09:27:03.980 DBG func sendCommit commit Tn. sn=18 tn=6
+09:27:03.980 DBG Sending Htn. senderID=0 sn=17 view=0
+09:27:03.981 DBG Sending Htn. senderID=0 sn=18 view=0
+09:27:03.981 DBG func handleCommit commit Tn. tn=6
+09:27:03.981 DBG func handleCommit commit Tn. tn=6
+09:27:03.981 DBG func handleCommit commit Tn. tn=6
+09:27:03.981 INF Get logEntry.Sn from tn. Hn=5 SegID=1 Tn=6 logEntry.Sn=21
+09:27:03.981 INF Get logEntry.Sn from tn. Hn=5 SegID=3 Tn=6 logEntry.Sn=23
+09:27:03.981 INF Committed entry. latency=0 sn=21
+09:27:03.981 INF Committed entry. latency=0 sn=23
+09:27:03.982 DBG Starting timer. sn=21 view=0
+09:27:03.982 DBG Starting timer. sn=23 view=0
+09:27:03.982 DBG func handleCommit commit Tn. tn=6
+09:27:03.982 DBG func handleCommit commit Tn. tn=6
+09:27:03.983 DBG func handleCommit commit Tn. tn=6
+09:27:03.983 INF Get logEntry.Sn from tn. Hn=5 SegID=2 Tn=6 logEntry.Sn=22
+09:27:03.983 INF Committed entry. latency=0 sn=22
+09:27:03.983 DBG Starting timer. sn=22 view=0
+09:27:03.984 DBG func handleCommit commit Tn. tn=6
+09:27:03.984 DBG func handleCommit commit Tn. tn=6
+09:27:04.941 DBG Batch ready. batchSize=4096
+09:27:04.942 DBG Batch cut. left=0 nBuckets=16 nReq=128 next=0
+09:27:04.942 DBG Waiting for batch. batchSize=4096
+09:27:04.944 INF Sending PREPREPARE. nReq=128 senderID=0 sn=8 view=0
+09:27:04.965 INF Handling PREPREPARE. nReq=64 senderID=1 sn=21
+09:27:04.966 INF Hset. i=0 sn=21 tn=6
+09:27:04.966 INF Hset. i=1 sn=21 tn=6
+09:27:04.966 INF Hset. i=2 sn=21 tn=6
+09:27:04.966 INF Hset. i=3 sn=21 tn=6
+09:27:04.966 DBG Creating new Batch. nReq=64
+09:27:04.967 INF Handling PREPREPARE. nReq=64 senderID=2 sn=22
+09:27:04.967 INF Hset. i=0 sn=22 tn=6
+09:27:04.967 INF Hset. i=1 sn=22 tn=6
+09:27:04.967 INF Hset. i=2 sn=22 tn=6
+09:27:04.968 INF Hset. i=3 sn=22 tn=6
+09:27:04.968 DBG Creating new Batch. nReq=64
+09:27:04.972 INF Handling PREPREPARE. nReq=64 senderID=3 sn=23
+09:27:04.972 INF Hset. i=0 sn=23 tn=6
+09:27:04.972 INF Hset. i=1 sn=23 tn=6
+09:27:04.973 INF Hset. i=2 sn=23 tn=6
+09:27:04.973 INF Hset. i=3 sn=23 tn=6
+09:27:04.973 DBG Creating new Batch. nReq=64
+09:27:04.979 DBG Sending COMMIT. senderID=0 sn=8 tn=7 view=0
+09:27:04.979 DBG Sending PREPARE. senderID=0 sn=21 view=0
+09:27:04.979 DBG func sendCommit commit Tn. sn=8 tn=7
+09:27:04.979 DBG Sending PREPARE. senderID=0 sn=22 view=0
+09:27:04.979 DBG func sendPrepare prepare Tn. sn=21 tn=7
+09:27:04.979 DBG Sending Htn. senderID=0 sn=8 view=0
+09:27:04.980 DBG func sendPrepare prepare Tn. sn=22 tn=7
+09:27:04.980 DBG Sending COMMIT. senderID=0 sn=21 tn=7 view=0
+09:27:04.980 DBG func sendCommit commit Tn. sn=21 tn=7
+09:27:04.980 DBG Sending COMMIT. senderID=0 sn=22 tn=7 view=0
+09:27:04.980 DBG func sendCommit commit Tn. sn=22 tn=7
+09:27:04.980 DBG Sending Htn. senderID=0 sn=21 view=0
+09:27:04.980 DBG Sending Htn. senderID=0 sn=22 view=0
+09:27:04.980 DBG func handleCommit commit Tn. tn=7
+09:27:04.980 DBG func handleHtnmsg. newhtn=7 prelocalhtn=7 segment=0
+09:27:04.981 DBG func handleCommit commit Tn. tn=7
+09:27:04.981 WRN PbftOrderer handles message from self. sn=8
+09:27:04.981 DBG func handleCommit commit Tn. tn=7
+09:27:04.981 DBG func handleCommit commit Tn. tn=7
+09:27:04.981 DBG Sending PREPARE. senderID=0 sn=23 view=0
+09:27:04.982 DBG func sendPrepare prepare Tn. sn=23 tn=7
+09:27:04.982 INF Get logEntry.Sn from tn. Hn=3 SegID=0 Tn=7 logEntry.Sn=24
+09:27:04.982 DBG Sending COMMIT. senderID=0 sn=23 tn=7 view=0
+09:27:04.982 INF Get logEntry.Sn from tn. Hn=6 SegID=1 Tn=7 logEntry.Sn=25
+09:27:04.982 INF Committed entry. latency=0 sn=20
+09:27:04.982 DBG func sendCommit commit Tn. sn=23 tn=7
+09:27:04.982 INF Delivered batch. sn=20
+09:27:04.982 INF Committed entry. latency=0 sn=25
+09:27:04.982 DBG func handleCommit commit Tn. tn=7
+09:27:04.982 DBG Sending Htn. senderID=0 sn=23 view=0
+09:27:04.982 INF Delivered batch. sn=21
+09:27:04.983 INF Delivered batch. sn=22
+09:27:04.983 DBG func handleCommit commit Tn. tn=7
+09:27:04.983 INF Delivered batch. sn=23
+09:27:04.983 INF Get logEntry.Sn from tn. Nil Blocks. SegID=0 logEntry.Sn=20
+09:27:04.983 INF Committed entry. latency=0 sn=24
+09:27:04.983 INF Get logEntry.Sn from tn. Hn=6 SegID=2 Tn=7 logEntry.Sn=26
+09:27:04.983 INF Committed entry. latency=0 sn=26
+09:27:04.983 INF Delivered batch. sn=24
+09:27:04.984 INF Delivered batch. sn=25
+09:27:04.984 INF Delivered batch. sn=26
+09:27:04.984 DBG Starting timer. sn=12 view=0
+09:27:04.984 DBG Starting timer. sn=25 view=0
+09:27:04.984 DBG func handleHtnmsg. newhtn=7 prelocalhtn=7 segment=0
+09:27:04.984 DBG Starting timer. sn=26 view=0
+09:27:04.984 DBG func handleCommit commit Tn. tn=7
+09:27:04.984 DBG func handleHtnmsg. newhtn=7 prelocalhtn=7 segment=0
+09:27:04.985 DBG func handleCommit commit Tn. tn=7
+09:27:04.985 INF Set TRUE. sn=12
+09:27:04.985 INF validHtnMsgs sets. validHtnMsgs=7
+09:27:04.985 DBG func handleCommit commit Tn. tn=7
+09:27:04.985 INF validHtnMsgs sets. validHtnMsgs=7
+09:27:04.985 INF validHtnMsgs sets. validHtnMsgs=7
+09:27:04.985 DBG func handleCommit commit Tn. tn=7
+09:27:04.985 DBG func handleCommit commit Tn. tn=7
+09:27:04.985 INF Get logEntry.Sn from tn. Hn=6 SegID=3 Tn=7 logEntry.Sn=27
+09:27:04.986 DBG func handleHtnmsg. newhtn=7 prelocalhtn=7 segment=0
+09:27:04.986 INF Committed entry. latency=0 sn=27
+09:27:04.986 INF Delivered batch. sn=27
+09:27:04.986 DBG Starting timer. sn=27 view=0
+09:27:04.986 DBG func handleCommit commit Tn. tn=7
+09:27:05.965 INF Handling PREPREPARE. nReq=64 senderID=1 sn=25
+09:27:05.965 INF Hset. i=0 sn=25 tn=7
+09:27:05.965 INF Hset. i=1 sn=25 tn=7
+09:27:05.965 INF Hset. i=2 sn=25 tn=7
+09:27:05.965 INF Hset. i=3 sn=25 tn=7
+09:27:05.965 DBG Creating new Batch. nReq=64
+09:27:05.965 INF Handling PREPREPARE. nReq=64 senderID=3 sn=27
+09:27:05.966 INF Hset. i=0 sn=27 tn=7
+09:27:05.966 INF Hset. i=1 sn=27 tn=7
+09:27:05.966 INF Hset. i=2 sn=27 tn=7
+09:27:05.966 INF Hset. i=3 sn=27 tn=7
+09:27:05.966 DBG Creating new Batch. nReq=64
+09:27:05.967 INF Handling PREPREPARE. nReq=65 senderID=2 sn=26
+09:27:05.967 INF Hset. i=0 sn=26 tn=7
+09:27:05.967 INF Hset. i=1 sn=26 tn=7
+09:27:05.967 INF Hset. i=2 sn=26 tn=7
+09:27:05.967 INF Hset. i=3 sn=26 tn=7
+09:27:05.967 DBG Creating new Batch. nReq=65
+09:27:05.978 DBG Sending PREPARE. senderID=0 sn=25 view=0
+09:27:05.978 DBG func sendPrepare prepare Tn. sn=25 tn=8
+09:27:05.978 DBG Sending PREPARE. senderID=0 sn=27 view=0
+09:27:05.978 DBG Sending COMMIT. senderID=0 sn=25 tn=8 view=0
+09:27:05.978 DBG func sendPrepare prepare Tn. sn=27 tn=8
+09:27:05.979 DBG func sendCommit commit Tn. sn=25 tn=8
+09:27:05.979 DBG Sending COMMIT. senderID=0 sn=27 tn=8 view=0
+09:27:05.979 DBG Sending PREPARE. senderID=0 sn=26 view=0
+09:27:05.979 DBG Sending Htn. senderID=0 sn=25 view=0
+09:27:05.979 DBG func sendCommit commit Tn. sn=27 tn=8
+09:27:05.979 DBG func sendPrepare prepare Tn. sn=26 tn=8
+09:27:05.979 DBG Sending Htn. senderID=0 sn=27 view=0
+09:27:05.979 DBG Sending COMMIT. senderID=0 sn=26 tn=8 view=0
+09:27:05.979 DBG func handleCommit commit Tn. tn=8
+09:27:05.979 DBG func handleCommit commit Tn. tn=8
+09:27:05.979 DBG func sendCommit commit Tn. sn=26 tn=8
+09:27:05.980 DBG Sending Htn. senderID=0 sn=26 view=0
+09:27:05.980 DBG func handleCommit commit Tn. tn=8
+09:27:05.980 DBG func handleCommit commit Tn. tn=8
+09:27:05.980 DBG func handleCommit commit Tn. tn=8
+09:27:05.980 INF Get logEntry.Sn from tn. Hn=7 SegID=2 Tn=8 logEntry.Sn=30
+09:27:05.981 INF Committed entry. latency=0 sn=30
+09:27:05.981 INF Get logEntry.Sn from tn. Hn=7 SegID=3 Tn=8 logEntry.Sn=31
+09:27:05.981 DBG func handleCommit commit Tn. tn=8
+09:27:05.981 DBG Starting timer. sn=30 view=0
+09:27:05.981 INF Committed entry. latency=0 sn=31
+09:27:05.981 DBG func handleCommit commit Tn. tn=8
+09:27:05.981 DBG Starting timer. sn=31 view=0
+09:27:05.981 INF Get logEntry.Sn from tn. Hn=7 SegID=1 Tn=8 logEntry.Sn=29
+09:27:05.981 DBG func handleCommit commit Tn. tn=8
+09:27:05.981 INF Committed entry. latency=0 sn=29
+09:27:05.981 DBG Starting timer. sn=29 view=0
+09:27:05.982 DBG func handleCommit commit Tn. tn=8
+09:27:06.941 DBG Batch ready. batchSize=4096
+09:27:06.942 DBG Batch cut. left=0 nBuckets=16 nReq=128 next=0
+09:27:06.942 DBG Waiting for batch. batchSize=4096
+09:27:06.944 INF Sending PREPREPARE. nReq=128 senderID=0 sn=12 view=0
+09:27:06.969 INF Handling PREPREPARE. nReq=64 senderID=1 sn=29
+09:27:06.969 INF Hset. i=0 sn=29 tn=8
+09:27:06.969 INF Hset. i=1 sn=29 tn=8
+09:27:06.970 INF Hset. i=2 sn=29 tn=8
+09:27:06.970 INF Hset. i=3 sn=29 tn=8
+09:27:06.970 DBG Creating new Batch. nReq=64
+09:27:06.972 INF Handling PREPREPARE. nReq=64 senderID=2 sn=30
+09:27:06.972 DBG Sending COMMIT. senderID=0 sn=12 tn=9 view=0
+09:27:06.972 INF Hset. i=0 sn=30 tn=8
+09:27:06.972 DBG func sendCommit commit Tn. sn=12 tn=9
+09:27:06.972 INF Hset. i=1 sn=30 tn=8
+09:27:06.973 DBG Sending Htn. senderID=0 sn=12 view=0
+09:27:06.973 INF Hset. i=2 sn=30 tn=8
+09:27:06.973 INF Hset. i=3 sn=30 tn=8
+09:27:06.973 INF Handling PREPREPARE. nReq=65 senderID=3 sn=31
+09:27:06.973 DBG Creating new Batch. nReq=64
+09:27:06.973 INF Hset. i=0 sn=31 tn=8
+09:27:06.973 INF Hset. i=1 sn=31 tn=8
+09:27:06.974 INF Hset. i=2 sn=31 tn=8
+09:27:06.974 INF Hset. i=3 sn=31 tn=8
+09:27:06.974 DBG func handleCommit commit Tn. tn=9
+09:27:06.974 DBG Creating new Batch. nReq=65
+09:27:06.974 DBG func handleHtnmsg. newhtn=9 prelocalhtn=9 segment=0
+09:27:06.975 WRN PbftOrderer handles message from self. sn=12
+09:27:06.975 DBG func handleHtnmsg. newhtn=9 prelocalhtn=9 segment=0
+09:27:06.976 DBG func handleCommit commit Tn. tn=9
+09:27:06.977 INF Get logEntry.Sn from tn. Hn=4 SegID=0 Tn=9 logEntry.Sn=32
+09:27:06.977 INF Committed entry. latency=0 sn=28
+09:27:06.977 INF Delivered batch. sn=28
+09:27:06.977 INF Delivered batch. sn=29
+09:27:06.978 INF Delivered batch. sn=30
+09:27:06.978 INF Delivered batch. sn=31
+09:27:06.978 INF Get logEntry.Sn from tn. Nil Blocks. SegID=0 logEntry.Sn=28
+09:27:06.978 INF Committed entry. latency=0 sn=32
+09:27:06.978 INF Delivered batch. sn=32
+09:27:06.978 DBG Starting timer. sn=16 view=0
+09:27:06.978 DBG func handleHtnmsg. newhtn=9 prelocalhtn=9 segment=0
+09:27:06.979 INF Set TRUE. sn=16
+09:27:06.979 INF validHtnMsgs sets. validHtnMsgs=9
+09:27:06.979 INF validHtnMsgs sets. validHtnMsgs=9
+09:27:06.979 INF validHtnMsgs sets. validHtnMsgs=9
+09:27:06.979 DBG func handleCommit commit Tn. tn=9
+09:27:06.979 DBG func handleHtnmsg. newhtn=9 prelocalhtn=9 segment=0
+09:27:06.981 DBG Sending PREPARE. senderID=0 sn=29 view=0
+09:27:06.982 DBG func sendPrepare prepare Tn. sn=29 tn=9
+09:27:06.982 DBG Sending COMMIT. senderID=0 sn=29 tn=9 view=0
+09:27:06.982 DBG func sendCommit commit Tn. sn=29 tn=9
+09:27:06.982 DBG Sending Htn. senderID=0 sn=29 view=0
+09:27:06.984 DBG func handleCommit commit Tn. tn=9
+09:27:06.985 DBG func handleCommit commit Tn. tn=9
+09:27:06.985 DBG Sending PREPARE. senderID=0 sn=30 view=0
+09:27:06.985 INF Get logEntry.Sn from tn. Hn=8 SegID=1 Tn=9 logEntry.Sn=33
+09:27:06.985 DBG Sending PREPARE. senderID=0 sn=31 view=0
+09:27:06.986 DBG func sendPrepare prepare Tn. sn=30 tn=9
+09:27:06.986 INF Committed entry. latency=0 sn=33
+09:27:06.986 DBG func sendPrepare prepare Tn. sn=31 tn=9
+09:27:06.986 INF Delivered batch. sn=33
+09:27:06.986 DBG Sending COMMIT. senderID=0 sn=30 tn=9 view=0
+09:27:06.986 DBG Starting timer. sn=33 view=0
+09:27:06.986 DBG func sendCommit commit Tn. sn=30 tn=9
+09:27:06.986 DBG Sending COMMIT. senderID=0 sn=31 tn=9 view=0
+09:27:06.986 DBG func sendCommit commit Tn. sn=31 tn=9
+09:27:06.986 DBG func handleCommit commit Tn. tn=9
+09:27:06.986 DBG Sending Htn. senderID=0 sn=31 view=0
+09:27:06.986 DBG Sending Htn. senderID=0 sn=30 view=0
+09:27:06.987 DBG func handleCommit commit Tn. tn=9
+09:27:06.987 DBG func handleCommit commit Tn. tn=9
+09:27:06.988 DBG func handleCommit commit Tn. tn=9
+09:27:06.988 INF Get logEntry.Sn from tn. Hn=8 SegID=2 Tn=9 logEntry.Sn=34
+09:27:06.988 INF Committed entry. latency=0 sn=34
+09:27:06.989 INF Delivered batch. sn=34
+09:27:06.989 DBG func handleCommit commit Tn. tn=9
+09:27:06.989 DBG Starting timer. sn=34 view=0
+09:27:06.989 DBG func handleCommit commit Tn. tn=9
+09:27:06.989 INF Get logEntry.Sn from tn. Hn=8 SegID=3 Tn=9 logEntry.Sn=35
+09:27:06.989 INF Committed entry. latency=0 sn=35
+09:27:06.989 INF Delivered batch. sn=35
+09:27:06.990 DBG Starting timer. sn=35 view=0
+09:27:06.990 DBG func handleCommit commit Tn. tn=9
+09:27:07.968 INF Handling PREPREPARE. nReq=64 senderID=1 sn=33
+09:27:07.969 INF Hset. i=0 sn=33 tn=9
+09:27:07.969 INF Hset. i=1 sn=33 tn=9
+09:27:07.969 INF Hset. i=2 sn=33 tn=9
+09:27:07.969 INF Hset. i=3 sn=33 tn=9
+09:27:07.969 DBG Creating new Batch. nReq=64
+09:27:07.969 INF Handling PREPREPARE. nReq=64 senderID=2 sn=34
+09:27:07.970 INF Hset. i=0 sn=34 tn=9
+09:27:07.970 INF Hset. i=1 sn=34 tn=9
+09:27:07.970 INF Hset. i=2 sn=34 tn=9
+09:27:07.970 INF Hset. i=3 sn=34 tn=9
+09:27:07.970 DBG Creating new Batch. nReq=64
+09:27:07.972 INF Handling PREPREPARE. nReq=64 senderID=3 sn=35
+09:27:07.973 INF Hset. i=0 sn=35 tn=9
+09:27:07.973 INF Hset. i=1 sn=35 tn=9
+09:27:07.973 INF Hset. i=2 sn=35 tn=9
+09:27:07.973 INF Hset. i=3 sn=35 tn=9
+09:27:07.973 DBG Creating new Batch. nReq=64
+09:27:07.982 DBG Sending PREPARE. senderID=0 sn=34 view=0
+09:27:07.982 DBG Sending PREPARE. senderID=0 sn=33 view=0
+09:27:07.982 DBG func sendPrepare prepare Tn. sn=34 tn=10
+09:27:07.982 DBG func sendPrepare prepare Tn. sn=33 tn=10
+09:27:07.982 DBG Sending COMMIT. senderID=0 sn=34 tn=10 view=0
+09:27:07.982 DBG Sending COMMIT. senderID=0 sn=33 tn=10 view=0
+09:27:07.983 DBG func sendCommit commit Tn. sn=34 tn=10
+09:27:07.983 DBG func sendCommit commit Tn. sn=33 tn=10
+09:27:07.983 DBG Sending Htn. senderID=0 sn=34 view=0
+09:27:07.983 DBG Sending Htn. senderID=0 sn=33 view=0
+09:27:07.983 DBG func handleCommit commit Tn. tn=10
+09:27:07.983 DBG func handleCommit commit Tn. tn=10
+09:27:07.983 DBG func handleCommit commit Tn. tn=10
+09:27:07.983 DBG Sending PREPARE. senderID=0 sn=35 view=0
+09:27:07.983 DBG func sendPrepare prepare Tn. sn=35 tn=10
+09:27:07.983 DBG func handleCommit commit Tn. tn=10
+09:27:07.983 INF Get logEntry.Sn from tn. Hn=9 SegID=1 Tn=10 logEntry.Sn=37
+09:27:07.983 DBG Sending COMMIT. senderID=0 sn=35 tn=10 view=0
+09:27:07.984 INF Committed entry. latency=0 sn=37
+09:27:07.984 DBG Starting timer. sn=37 view=0
+09:27:07.984 DBG func sendCommit commit Tn. sn=35 tn=10
+09:27:07.984 DBG func handleCommit commit Tn. tn=10
+09:27:07.984 INF Get logEntry.Sn from tn. Hn=9 SegID=2 Tn=10 logEntry.Sn=38
+09:27:07.984 DBG Sending Htn. senderID=0 sn=35 view=0
+09:27:07.984 INF Committed entry. latency=0 sn=38
+09:27:07.984 DBG Starting timer. sn=38 view=0
+09:27:07.984 DBG func handleCommit commit Tn. tn=10
+09:27:07.985 DBG func handleCommit commit Tn. tn=10
+09:27:07.985 DBG func handleCommit commit Tn. tn=10
+09:27:07.986 INF Get logEntry.Sn from tn. Hn=9 SegID=3 Tn=10 logEntry.Sn=39
+09:27:07.986 INF Committed entry. latency=0 sn=39
+09:27:07.986 DBG Starting timer. sn=39 view=0
+09:27:07.986 DBG func handleCommit commit Tn. tn=10
+09:27:08.941 DBG Batch ready. batchSize=4096
+09:27:08.941 DBG Batch cut. left=0 nBuckets=16 nReq=128 next=0
+09:27:08.941 DBG Waiting for batch. batchSize=4096
+09:27:08.944 INF Sending PREPREPARE. nReq=128 senderID=0 sn=16 view=0
+09:27:08.972 DBG Sending COMMIT. senderID=0 sn=16 tn=11 view=0
+09:27:08.972 DBG func sendCommit commit Tn. sn=16 tn=11
+09:27:08.972 DBG Sending Htn. senderID=0 sn=16 view=0
+09:27:08.973 DBG func handleCommit commit Tn. tn=11
+09:27:08.973 DBG func handleHtnmsg. newhtn=11 prelocalhtn=11 segment=0
+09:27:08.973 INF Handling PREPREPARE. nReq=64 senderID=1 sn=37
+09:27:08.973 DBG func handleCommit commit Tn. tn=11
+09:27:08.973 INF Hset. i=0 sn=37 tn=10
+09:27:08.973 INF Hset. i=1 sn=37 tn=10
+09:27:08.973 INF Hset. i=2 sn=37 tn=10
+09:27:08.974 INF Get logEntry.Sn from tn. Hn=5 SegID=0 Tn=11 logEntry.Sn=40
+09:27:08.974 INF Hset. i=3 sn=37 tn=10
+09:27:08.974 INF Committed entry. latency=0 sn=36
+09:27:08.974 DBG Creating new Batch. nReq=64
+09:27:08.974 INF Delivered batch. sn=36
+09:27:08.974 INF Delivered batch. sn=37
+09:27:08.974 WRN PbftOrderer handles message from self. sn=16
+09:27:08.974 INF Delivered batch. sn=38
+09:27:08.974 INF Delivered batch. sn=39
+09:27:08.974 INF Get logEntry.Sn from tn. Nil Blocks. SegID=0 logEntry.Sn=36
+09:27:08.974 INF Handling PREPREPARE. nReq=64 senderID=2 sn=38
+09:27:08.975 INF Committed entry. latency=0 sn=40
+09:27:08.975 INF Hset. i=0 sn=38 tn=10
+09:27:08.975 INF Handling PREPREPARE. nReq=64 senderID=3 sn=39
+09:27:08.975 INF Delivered batch. sn=40
+09:27:08.975 INF Hset. i=1 sn=38 tn=10
+09:27:08.975 INF Hset. i=0 sn=39 tn=10
+09:27:08.975 DBG Starting timer. sn=20 view=0
+09:27:08.975 INF Hset. i=2 sn=38 tn=10
+09:27:08.975 INF Hset. i=1 sn=39 tn=10
+09:27:08.975 DBG func handleHtnmsg. newhtn=11 prelocalhtn=11 segment=0
+09:27:08.975 INF Hset. i=2 sn=39 tn=10
+09:27:08.975 DBG func handleCommit commit Tn. tn=11
+09:27:08.976 INF Hset. i=3 sn=39 tn=10
+09:27:08.976 DBG Creating new Batch. nReq=64
+09:27:08.976 DBG func handleHtnmsg. newhtn=11 prelocalhtn=11 segment=0
+09:27:08.976 INF Set TRUE. sn=20
+09:27:08.976 INF validHtnMsgs sets. validHtnMsgs=11
+09:27:08.976 INF validHtnMsgs sets. validHtnMsgs=11
+09:27:08.976 INF validHtnMsgs sets. validHtnMsgs=11
+09:27:08.976 DBG func handleHtnmsg. newhtn=11 prelocalhtn=11 segment=0
+09:27:08.975 INF Hset. i=3 sn=38 tn=10
+09:27:08.977 DBG Creating new Batch. nReq=64
+09:27:08.987 DBG Sending PREPARE. senderID=0 sn=39 view=0
+09:27:08.987 DBG func sendPrepare prepare Tn. sn=39 tn=11
+09:27:08.987 DBG Sending PREPARE. senderID=0 sn=38 view=0
+09:27:08.987 DBG Sending COMMIT. senderID=0 sn=39 tn=11 view=0
+09:27:08.988 DBG func sendPrepare prepare Tn. sn=38 tn=11
+09:27:08.988 DBG Sending PREPARE. senderID=0 sn=37 view=0
+09:27:08.988 DBG func sendCommit commit Tn. sn=39 tn=11
+09:27:08.988 DBG func sendPrepare prepare Tn. sn=37 tn=11
+09:27:08.988 DBG Sending COMMIT. senderID=0 sn=38 tn=11 view=0
+09:27:08.988 DBG Sending Htn. senderID=0 sn=39 view=0
+09:27:08.988 DBG func sendCommit commit Tn. sn=38 tn=11
+09:27:08.988 DBG Sending COMMIT. senderID=0 sn=37 tn=11 view=0
+09:27:08.988 DBG func handleCommit commit Tn. tn=11
+09:27:08.988 DBG Sending Htn. senderID=0 sn=38 view=0
+09:27:08.988 DBG func sendCommit commit Tn. sn=37 tn=11
+09:27:08.988 DBG func handleCommit commit Tn. tn=11
+09:27:08.988 DBG Sending Htn. senderID=0 sn=37 view=0
+09:27:08.989 DBG func handleCommit commit Tn. tn=11
+09:27:08.989 DBG func handleCommit commit Tn. tn=11
+09:27:08.989 DBG func handleCommit commit Tn. tn=11
+09:27:08.989 DBG func handleCommit commit Tn. tn=11
+09:27:08.989 INF Get logEntry.Sn from tn. Hn=10 SegID=1 Tn=11 logEntry.Sn=41
+09:27:08.990 INF Get logEntry.Sn from tn. Hn=10 SegID=2 Tn=11 logEntry.Sn=42
+09:27:08.990 INF Get logEntry.Sn from tn. Hn=10 SegID=3 Tn=11 logEntry.Sn=43
+09:27:08.990 INF Committed entry. latency=0 sn=41
+09:27:08.990 INF Delivered batch. sn=41
+09:27:08.990 INF Committed entry. latency=0 sn=42
+09:27:08.990 INF Committed entry. latency=0 sn=43
+09:27:08.990 INF Delivered batch. sn=42
+09:27:08.990 INF Delivered batch. sn=43
+09:27:08.990 DBG Starting timer. sn=41 view=0
+09:27:08.990 DBG func handleCommit commit Tn. tn=11
+09:27:08.990 DBG Starting timer. sn=42 view=0
+09:27:08.990 DBG Starting timer. sn=43 view=0
+09:27:08.991 DBG func handleCommit commit Tn. tn=11
+09:27:08.991 DBG func handleCommit commit Tn. tn=11
+09:27:09.972 INF Handling PREPREPARE. nReq=64 senderID=1 sn=41
+09:27:09.972 INF Hset. i=0 sn=41 tn=11
+09:27:09.972 INF Hset. i=1 sn=41 tn=11
+09:27:09.973 INF Hset. i=2 sn=41 tn=11
+09:27:09.973 INF Hset. i=3 sn=41 tn=11
+09:27:09.973 DBG Creating new Batch. nReq=64
+09:27:09.973 INF Handling PREPREPARE. nReq=64 senderID=2 sn=42
+09:27:09.974 INF Hset. i=0 sn=42 tn=11
+09:27:09.974 INF Hset. i=1 sn=42 tn=11
+09:27:09.974 INF Hset. i=2 sn=42 tn=11
+09:27:09.974 INF Hset. i=3 sn=42 tn=11
+09:27:09.974 DBG Creating new Batch. nReq=64
+09:27:09.977 INF Handling PREPREPARE. nReq=64 senderID=3 sn=43
+09:27:09.978 INF Hset. i=0 sn=43 tn=11
+09:27:09.978 INF Hset. i=1 sn=43 tn=11
+09:27:09.978 INF Hset. i=2 sn=43 tn=11
+09:27:09.978 INF Hset. i=3 sn=43 tn=11
+09:27:09.978 DBG Creating new Batch. nReq=64
+09:27:09.983 DBG Sending PREPARE. senderID=0 sn=42 view=0
+09:27:09.984 DBG func sendPrepare prepare Tn. sn=42 tn=12
+09:27:09.984 DBG Sending PREPARE. senderID=0 sn=41 view=0
+09:27:09.984 DBG func sendPrepare prepare Tn. sn=41 tn=12
+09:27:09.984 DBG Sending COMMIT. senderID=0 sn=42 tn=12 view=0
+09:27:09.984 DBG Sending COMMIT. senderID=0 sn=41 tn=12 view=0
+09:27:09.984 DBG func sendCommit commit Tn. sn=42 tn=12
+09:27:09.984 DBG func sendCommit commit Tn. sn=41 tn=12
+09:27:09.984 DBG Sending Htn. senderID=0 sn=42 view=0
+09:27:09.985 DBG Sending Htn. senderID=0 sn=41 view=0
+09:27:09.985 DBG func handleCommit commit Tn. tn=12
+09:27:09.985 DBG func handleCommit commit Tn. tn=12
+09:27:09.985 INF Get logEntry.Sn from tn. Hn=11 SegID=1 Tn=12 logEntry.Sn=45
+09:27:09.985 INF Committed entry. latency=0 sn=45
+09:27:09.986 DBG Starting timer. sn=45 view=0
+09:27:09.986 DBG func handleCommit commit Tn. tn=12
+09:27:09.986 DBG func handleCommit commit Tn. tn=12
+09:27:09.987 DBG Sending PREPARE. senderID=0 sn=43 view=0
+09:27:09.987 DBG func handleCommit commit Tn. tn=12
+09:27:09.987 DBG func sendPrepare prepare Tn. sn=43 tn=12
+09:27:09.987 DBG Sending COMMIT. senderID=0 sn=43 tn=12 view=0
+09:27:09.987 INF Get logEntry.Sn from tn. Hn=11 SegID=2 Tn=12 logEntry.Sn=46
+09:27:09.987 DBG func sendCommit commit Tn. sn=43 tn=12
+09:27:09.987 INF Committed entry. latency=0 sn=46
+09:27:09.987 DBG Starting timer. sn=46 view=0
+09:27:09.987 DBG Sending Htn. senderID=0 sn=43 view=0
+09:27:09.988 DBG func handleCommit commit Tn. tn=12
+09:27:09.988 DBG func handleCommit commit Tn. tn=12
+09:27:09.989 DBG func handleCommit commit Tn. tn=12
+09:27:09.989 INF Get logEntry.Sn from tn. Hn=11 SegID=3 Tn=12 logEntry.Sn=47
+09:27:09.989 INF Committed entry. latency=0 sn=47
+09:27:09.989 DBG Starting timer. sn=47 view=0
+09:27:09.990 DBG func handleCommit commit Tn. tn=12
+09:27:10.769 INF Stopping profiler.
+09:27:10.769 INF Stopping Tracer. events=80 fileName=experiment-output/0000/slave-003/peer.trc
+==================
+WARNING: DATA RACE
+Read at 0x00c000a20000 by goroutine 115:
   runtime.racereadrange()
       <autogenerated>:1 +0x1b
   github.com/hyperledger-labs/mirbft/tracing.(*BufferedTrace).StopOnSignal.func1()
       /opt/gopath/src/github.com/hyperledger-labs/mirbft/tracing/bufferedtrace.go:298 +0x4e
 
-Previous write at 0x00c000980000 by goroutine 494:
+Previous write at 0x00c000a20000 by goroutine 411:
   github.com/hyperledger-labs/mirbft/tracing.(*BufferedTrace).Event()
       /opt/gopath/src/github.com/hyperledger-labs/mirbft/tracing/bufferedtrace.go:105 +0x2d9
   github.com/hyperledger-labs/mirbft/manager.(*MirManager).handleLogEntries()
@@ -311,7 +966,7 @@ Goroutine 115 (running) created at:
   main.main()
       /opt/gopath/src/github.com/hyperledger-labs/mirbft/cmd/orderingpeer/main.go:98 +0x9d6
 
-Goroutine 494 (running) created at:
+Goroutine 411 (running) created at:
   github.com/hyperledger-labs/mirbft/manager.(*MirManager).Start()
       /opt/gopath/src/github.com/hyperledger-labs/mirbft/manager/mirmanager.go:101 +0x19e
   main.main·dwrap·4()
@@ -319,13 +974,13 @@ Goroutine 494 (running) created at:
 ==================
 ==================
 WARNING: DATA RACE
-Read at 0x00c0009816f8 by goroutine 115:
+Read at 0x00c000a20c58 by goroutine 115:
   runtime.racereadrange()
       <autogenerated>:1 +0x1b
   github.com/hyperledger-labs/mirbft/tracing.(*BufferedTrace).StopOnSignal.func1()
       /opt/gopath/src/github.com/hyperledger-labs/mirbft/tracing/bufferedtrace.go:298 +0x4e
 
-Previous write at 0x00c0009816f8 by goroutine 114:
+Previous write at 0x00c000a20c58 by goroutine 114:
   github.com/hyperledger-labs/mirbft/tracing.(*BufferedTrace).Event()
       /opt/gopath/src/github.com/hyperledger-labs/mirbft/tracing/bufferedtrace.go:105 +0x2d9
   github.com/hyperledger-labs/mirbft/profiling.StartCPUTracing.func1()
@@ -347,19 +1002,90 @@ Goroutine 114 (running) created at:
   main.main()
       /opt/gopath/src/github.com/hyperledger-labs/mirbft/cmd/orderingpeer/main.go:98 +0x9d6
 ==================
-08:03:33.787 INF Trace data written.
-08:03:33.937 INF Connection terminated. error="rpc error: code = Canceled desc = context canceled" address=127.0.0.1:41736
-08:03:33.937 INF Connection terminated. error="rpc error: code = Canceled desc = context canceled" address=127.0.0.1:41826
-08:03:33.937 INF Connection terminated. error="rpc error: code = Canceled desc = context canceled" address=127.0.0.1:41798
-08:03:33.939 INF Connection terminated. error="rpc error: code = Canceled desc = context canceled" address=127.0.0.1:41752
-08:03:33.962 INF Profile data written. filename=experiment-output/0000/slave-003/prof.cpu name=cpu
-08:03:34.016 INF Connection terminated. error="rpc error: code = Canceled desc = context canceled" address=127.0.0.1:41774
-08:03:34.016 INF Connection terminated. error="rpc error: code = Canceled desc = context canceled" address=127.0.0.1:41784
-08:03:34.016 INF Connection terminated. error="rpc error: code = Canceled desc = context canceled" address=127.0.0.1:41726
-08:03:34.017 INF Connection terminated. error="rpc error: code = Canceled desc = context canceled" address=127.0.0.1:41786
-08:03:34.023 INF Profile data written. filename=experiment-output/0000/slave-003/prof.block name=block
-08:03:34.025 INF Connection terminated. error="rpc error: code = Canceled desc = context canceled" address=127.0.0.1:41424
-08:03:34.026 INF Connection terminated. error="rpc error: code = Canceled desc = context canceled" address=127.0.0.1:41432
-08:03:34.026 INF Connection terminated. error="rpc error: code = Canceled desc = context canceled" address=127.0.0.1:41626
-08:03:34.026 INF Connection terminated. error="rpc error: code = Canceled desc = context canceled" address=127.0.0.1:41486
-08:03:34.046 INF Profile data written. filename=experiment-output/0000/slave-003/prof.mutex name=mutex
+09:27:10.771 INF Trace data written.
+09:27:10.893 INF Profile data written. filename=experiment-output/0000/slave-003/prof.cpu name=cpu
+09:27:10.940 DBG Batch ready. batchSize=4096
+09:27:10.941 DBG Batch cut. left=0 nBuckets=16 nReq=128 next=0
+09:27:10.941 DBG Waiting for batch. batchSize=4096
+09:27:10.944 INF Sending PREPREPARE. nReq=128 senderID=0 sn=20 view=0
+09:27:10.967 INF Profile data written. filename=experiment-output/0000/slave-003/prof.block name=block
+09:27:10.974 DBG Sending COMMIT. senderID=0 sn=20 tn=13 view=0
+09:27:10.974 DBG func sendCommit commit Tn. sn=20 tn=13
+09:27:10.974 DBG Sending Htn. senderID=0 sn=20 view=0
+09:27:10.974 DBG func handleCommit commit Tn. tn=13
+09:27:10.974 DBG func handleHtnmsg. newhtn=13 prelocalhtn=13 segment=0
+09:27:10.974 DBG func handleCommit commit Tn. tn=13
+09:27:10.975 INF Get logEntry.Sn from tn. Hn=6 SegID=0 Tn=13 logEntry.Sn=48
+09:27:10.975 INF Committed entry. latency=0 sn=44
+09:27:10.975 INF Delivered batch. sn=44
+09:27:10.975 INF Delivered batch. sn=45
+09:27:10.975 INF Delivered batch. sn=46
+09:27:10.975 INF Delivered batch. sn=47
+09:27:10.976 INF Get logEntry.Sn from tn. Nil Blocks. SegID=0 logEntry.Sn=44
+09:27:10.976 INF Handling PREPREPARE. nReq=64 senderID=1 sn=45
+09:27:10.976 WRN PbftOrderer handles message from self. sn=20
+09:27:10.976 INF Committed entry. latency=0 sn=48
+09:27:10.976 INF Hset. i=0 sn=45 tn=12
+09:27:10.976 INF Delivered batch. sn=48
+09:27:10.976 INF Hset. i=1 sn=45 tn=12
+09:27:10.976 DBG Starting timer. sn=24 view=0
+09:27:10.976 INF Hset. i=2 sn=45 tn=12
+09:27:10.976 DBG func handleCommit commit Tn. tn=13
+09:27:10.976 INF Hset. i=3 sn=45 tn=12
+09:27:10.977 DBG Creating new Batch. nReq=64
+09:27:10.976 DBG func handleHtnmsg. newhtn=13 prelocalhtn=13 segment=0
+09:27:10.977 DBG func handleHtnmsg. newhtn=13 prelocalhtn=13 segment=0
+09:27:10.977 INF Set TRUE. sn=24
+09:27:10.977 INF validHtnMsgs sets. validHtnMsgs=13
+09:27:10.977 INF validHtnMsgs sets. validHtnMsgs=13
+09:27:10.977 INF Handling PREPREPARE. nReq=64 senderID=2 sn=46
+09:27:10.977 INF validHtnMsgs sets. validHtnMsgs=13
+09:27:10.977 INF Hset. i=0 sn=46 tn=12
+09:27:10.977 DBG func handleHtnmsg. newhtn=13 prelocalhtn=13 segment=0
+09:27:10.978 INF Hset. i=1 sn=46 tn=12
+09:27:10.978 INF Hset. i=2 sn=46 tn=12
+09:27:10.978 INF Hset. i=3 sn=46 tn=12
+09:27:10.978 DBG Creating new Batch. nReq=64
+09:27:10.988 INF Handling PREPREPARE. nReq=64 senderID=3 sn=47
+09:27:10.988 INF Hset. i=0 sn=47 tn=12
+09:27:10.989 INF Hset. i=1 sn=47 tn=12
+09:27:10.989 INF Hset. i=2 sn=47 tn=12
+09:27:10.989 INF Hset. i=3 sn=47 tn=12
+09:27:10.989 DBG Creating new Batch. nReq=64
+09:27:10.994 DBG Sending PREPARE. senderID=0 sn=46 view=0
+09:27:10.994 DBG func sendPrepare prepare Tn. sn=46 tn=13
+09:27:10.995 DBG Sending COMMIT. senderID=0 sn=46 tn=13 view=0
+09:27:10.995 DBG func sendCommit commit Tn. sn=46 tn=13
+09:27:10.995 DBG Sending Htn. senderID=0 sn=46 view=0
+09:27:10.995 DBG func handleCommit commit Tn. tn=13
+09:27:10.996 DBG func handleCommit commit Tn. tn=13
+09:27:10.996 INF Get logEntry.Sn from tn. Hn=12 SegID=2 Tn=13 logEntry.Sn=50
+09:27:10.996 INF Committed entry. latency=0 sn=50
+09:27:10.996 DBG Starting timer. sn=50 view=0
+09:27:10.997 DBG func handleCommit commit Tn. tn=13
+09:27:10.998 DBG Sending PREPARE. senderID=0 sn=47 view=0
+09:27:10.997 DBG Sending PREPARE. senderID=0 sn=45 view=0
+09:27:10.998 DBG func sendPrepare prepare Tn. sn=47 tn=13
+09:27:10.998 DBG func sendPrepare prepare Tn. sn=45 tn=13
+09:27:10.998 DBG Sending COMMIT. senderID=0 sn=47 tn=13 view=0
+09:27:10.998 DBG func sendCommit commit Tn. sn=47 tn=13
+09:27:10.998 DBG Sending COMMIT. senderID=0 sn=45 tn=13 view=0
+09:27:10.998 DBG Sending Htn. senderID=0 sn=47 view=0
+09:27:10.998 DBG func sendCommit commit Tn. sn=45 tn=13
+09:27:10.998 DBG func handleCommit commit Tn. tn=13
+09:27:10.998 DBG Sending Htn. senderID=0 sn=45 view=0
+09:27:10.999 DBG func handleCommit commit Tn. tn=13
+09:27:10.999 DBG func handleCommit commit Tn. tn=13
+09:27:10.999 DBG func handleCommit commit Tn. tn=13
+09:27:10.999 INF Get logEntry.Sn from tn. Hn=12 SegID=3 Tn=13 logEntry.Sn=51
+09:27:10.999 INF Get logEntry.Sn from tn. Hn=12 SegID=1 Tn=13 logEntry.Sn=49
+09:27:10.999 INF Committed entry. latency=0 sn=51
+09:27:10.999 INF Committed entry. latency=0 sn=49
+09:27:10.999 INF Delivered batch. sn=49
+09:27:10.999 INF Delivered batch. sn=50
+09:27:10.999 INF Delivered batch. sn=51
+09:27:11.000 DBG Starting timer. sn=51 view=0
+09:27:11.000 DBG Starting timer. sn=49 view=0
+09:27:11.000 DBG func handleCommit commit Tn. tn=13
+09:27:11.000 DBG func handleCommit commit Tn. tn=13
+09:27:11.006 INF Profile data written. filename=experiment-output/0000/slave-003/prof.mutex name=mutex

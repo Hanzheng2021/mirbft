@@ -1,3 +1,2 @@
 exp,peers,nlr,failures,crash-timing,vctimeout,datacenters,bandwidth,num-connections,orderer,clients,instances,client-threads,segment,leader-policy,epoch,batchsize,batchtimeout,batchrate,msgbatchperiod,buckets,leader-buckets,authentication,verify-early,throughput-cap,target-throughput,rate-per-client,hard-rate-limit,requests,cl-watermarks,batch-verifier,request-handlers,req-buffer-size
-0000,4,1,2,Straggler,60000,1,1gbit,4,Pbft,1,1,1,64,SimulatedRandomFailures,256,4096,1000,32,1,64,16,true,false,131072000,128,128,false,7680,4194304,external,32,8192
-0001,4,1,2,Straggler,60000,1,1gbit,4,Pbft,1,1,1,64,SimulatedRandomFailures,256,4096,1000,32,1,64,16,true,false,131072000,256,256,false,15360,4194304,external,32,8192
+0000,4,1,0,1,Straggler,60000,1,1gbit,4,Pbft,1,1,1,64,Blacklist,256,4096,1000,32,1,64,16,true,false,131072000,256,256,false,15360,4194304,external,32,8192

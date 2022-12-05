@@ -1,0 +1,340 @@
+{"level":"debug","Logging":"debug","time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","UseTLS":false,"time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","CACertFile":"tls-data/ca.pem","time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","KeyFile":"tls-data/auth.key","time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","CertFile":"tls-data/auth.pem","time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","PriorityConnections":2,"time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","BasicConnections":2,"time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","TestConnections":false,"time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","ExcessConnections":1,"time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","ConnectionTestMsgs":4,"time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","ConnectionTestPayload":131072,"time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","OutMessageBufsize":1024,"time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","OutMessageBufsize":2,"time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","ThroughputCap":131072000,"time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","StragglerTolerance":1000,"time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","BatchSizeIncrement":256,"time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","Orderer":"Pbft","time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","Manager":"Mir","time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","Failures":0,"time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","StragglerCnt":1,"time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","CrashTiming":"Straggler","time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","CheckpointInterval":256,"time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","WatermarkWindowSize":256,"time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","EpochLength":256,"time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","SegmentLength":32,"time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","WaitForCheckpoints":true,"time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","ClientWatermarkWindowSize":4194304,"time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","ClientRequestBacklogSize":4194304,"time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","RandomSeed":22565,"time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","NodeToLeaderRatio":1,"time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","LeaderPolicy":"Blacklist","time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","DefaultLeaderBan":2,"time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","NumBuckets":128,"time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","BatchSize":1000,"time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","DisabledViewChange":false,"time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","ViewChangeTimeout":60000,"time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","ClientTraceSampling":10,"time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","EventBufferSize":2097152,"time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","TraceSampling":1,"time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","ClientsPerProcess":1,"time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","RequestsPerClient":7680,"time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","ClientRunTime":15000,"time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","RequestRate":256,"time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","HardRequestRateLimit":false,"time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","RequestPayloadSize":500,"time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","SignRequests":true,"time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","ClientPrivKeyFile":"tls-data/client-ecdsa-256.key","time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","ClientPubKeyFile":"tls-data/client-ecdsa-256.pem","time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","PrecomputeRequests":false,"time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","RequestHandlerThreads":32,"time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","RequestInputChannelBuffer":8192,"time":"2022-12-05T16:20:42+08:00","message":"Config"}
+{"level":"debug","BatchVerifier":"external","time":"2022-12-05T16:20:42+08:00","message":"Config"}
+08:20:42.670 INF Registered with discovery server. numPeers=8 ownID=2
+08:20:42.671 INF Profiling enabled.
+08:20:42.671 INF Setting up profiling.
+08:20:42.671 INF Started Profiler: CPU
+08:20:42.671 INF Started Profiler: BLOCK
+08:20:42.671 INF Started Profiler: MUTEX
+08:20:42.671 INF Profiler will stop on signal. exit=true
+08:20:42.674 INF Tracing will stop on signal. exit=false
+08:20:42.675 INF Started tracing. traceFile=experiment-output/0000/slave-006/peer.trc
+08:20:42.676 DBG Starting backlog.
+08:20:42.676 INF Listening for connections. port=10022 useTLS=false
+08:20:42.677 INF Connecting to peer. addr=127.0.0.1:10022 basicConns=2 priorityConns=2
+08:20:42.677 INF Connecting to peer. addr=127.0.0.1:10033 basicConns=2 priorityConns=2
+08:20:42.677 INF Connecting to peer. addr=127.0.0.1:10044 basicConns=2 priorityConns=2
+08:20:42.677 INF Connecting to peer. addr=127.0.0.1:10055 basicConns=2 priorityConns=2
+08:20:42.678 INF Connecting to peer. addr=127.0.0.1:10066 basicConns=2 priorityConns=2
+08:20:42.684 INF Connecting to peer. addr=127.0.0.1:10077 basicConns=2 priorityConns=2
+08:20:42.689 INF Connecting to peer. addr=127.0.0.1:10000 basicConns=2 priorityConns=2
+08:20:42.693 INF Connecting to peer. addr=127.0.0.1:10011 basicConns=2 priorityConns=2
+08:20:42.705 INF Incoming connection for protocol messages. addr=127.0.0.1:60964
+08:20:42.710 INF Incoming connection for protocol messages. addr=127.0.0.1:60962
+08:20:42.717 INF Incoming connection for protocol messages. addr=127.0.0.1:60986
+08:20:42.719 INF Incoming connection for protocol messages. addr=127.0.0.1:32818
+08:20:42.724 INF Incoming connection for protocol messages. addr=127.0.0.1:60968
+08:20:42.725 INF Incoming connection for protocol messages. addr=127.0.0.1:32772
+08:20:42.729 INF Incoming connection for protocol messages. addr=127.0.0.1:32838
+08:20:42.731 INF Incoming connection for protocol messages. addr=127.0.0.1:32868
+08:20:42.732 INF Incoming connection for protocol messages. addr=127.0.0.1:60998
+08:20:42.734 INF Incoming connection for protocol messages. addr=127.0.0.1:32820
+08:20:42.734 INF Incoming connection for protocol messages. addr=127.0.0.1:60972
+08:20:42.735 INF Incoming connection for protocol messages. addr=127.0.0.1:32870
+08:20:42.738 INF Incoming connection for protocol messages. addr=127.0.0.1:32918
+08:20:42.738 INF Incoming connection for protocol messages. addr=127.0.0.1:32880
+08:20:42.739 INF Incoming connection for protocol messages. addr=127.0.0.1:32920
+08:20:42.742 INF Incoming connection for protocol messages. addr=127.0.0.1:32960
+08:20:42.742 DBG Connected. peerID=0
+08:20:42.743 INF Incoming connection for protocol messages. addr=127.0.0.1:32994
+08:20:42.745 DBG Connected. peerID=2
+08:20:42.745 DBG Connected. peerID=5
+08:20:42.746 INF Incoming connection for protocol messages. addr=127.0.0.1:33018
+08:20:42.746 INF Incoming connection for protocol messages. addr=127.0.0.1:33038
+08:20:42.746 INF Incoming connection for protocol messages. addr=127.0.0.1:33034
+08:20:42.746 INF Incoming connection for protocol messages. addr=127.0.0.1:32998
+08:20:42.747 DBG Connected. peerID=3
+08:20:42.747 DBG Connected. peerID=1
+08:20:42.747 INF Incoming connection for protocol messages. addr=127.0.0.1:33042
+08:20:42.748 INF Incoming connection for protocol messages. addr=127.0.0.1:33104
+08:20:42.748 INF Incoming connection for protocol messages. addr=127.0.0.1:33096
+08:20:42.749 INF Incoming connection for protocol messages. addr=127.0.0.1:33176
+08:20:42.750 INF Incoming connection for protocol messages. addr=127.0.0.1:33134
+08:20:42.752 INF Incoming connection for protocol messages. addr=127.0.0.1:32774
+08:20:42.752 INF Incoming connection for protocol messages. addr=127.0.0.1:33014
+08:20:42.753 INF Incoming connection for protocol messages. addr=127.0.0.1:33210
+08:20:42.756 INF Incoming connection for protocol messages. addr=127.0.0.1:32812
+08:20:42.756 INF Incoming connection for protocol messages. addr=127.0.0.1:32798
+08:20:42.756 DBG Connected. peerID=7
+08:20:42.767 DBG Connected. peerID=4
+08:20:42.775 DBG Connected. peerID=6
+08:20:42.775 INF Connected to all peers.
+08:20:42.778 INF Incoming connection for protocol messages. addr=127.0.0.1:33158
+08:20:42.790 INF All peers finished connecting. Starting ISS.
+08:20:42.791 DBG Buckets for 0-th leader 0: [0 8 16 24 32 40 48 56 64 72 80 88 96 104 112 120]
+08:20:42.791 DBG Buckets for 1-th leader 1: [1 9 17 25 33 41 49 57 65 73 81 89 97 105 113 121]
+08:20:42.791 DBG Buckets for 2-th leader 2: [2 10 18 26 34 42 50 58 66 74 82 90 98 106 114 122]
+08:20:42.791 DBG Buckets for 3-th leader 3: [3 11 19 27 35 43 51 59 67 75 83 91 99 107 115 123]
+08:20:42.791 DBG Buckets for 4-th leader 4: [4 12 20 28 36 44 52 60 68 76 84 92 100 108 116 124]
+08:20:42.791 DBG Buckets for 5-th leader 5: [5 13 21 29 37 45 53 61 69 77 85 93 101 109 117 125]
+08:20:42.791 DBG Buckets for 6-th leader 6: [6 14 22 30 38 46 54 62 70 78 86 94 102 110 118 126]
+08:20:42.792 DBG Buckets for 7-th leader 7: [7 15 23 31 39 47 55 63 71 79 87 95 103 111 119 127]
+08:20:42.792 INF PbftOrderer received a new segment: [3 11 19 27 35 43 51 59 67 75 83 91 99 107 115 123 131 139 147 155 163 171 179 187 195 203 211 219 227 235 243 251] first leader=3 firstSN=3 lastSN=251 len=32 length=32 segId=3
+08:20:42.792 INF Starting new view. segID=3 timeout=60000 view=0
+08:20:42.792 DBG Starting timer. sn=3 view=0
+08:20:42.793 INF Starting PBFT instance. first=3 last=251 segID=3
+08:20:42.793 DBG Subscribing to backlog. segID=3
+08:20:42.793 INF Starting serialized message processing. segID=3
+08:20:42.793 INF PbftOrderer received a new segment: [4 12 20 28 36 44 52 60 68 76 84 92 100 108 116 124 132 140 148 156 164 172 180 188 196 204 212 220 228 236 244 252] first leader=4 firstSN=4 lastSN=252 len=32 length=32 segId=4
+08:20:42.794 INF Starting new view. segID=4 timeout=60000 view=0
+08:20:42.794 DBG Starting timer. sn=4 view=0
+08:20:42.794 INF Starting PBFT instance. first=4 last=252 segID=4
+08:20:42.795 DBG Subscribing to backlog. segID=4
+08:20:42.795 INF Starting serialized message processing. segID=4
+08:20:42.795 INF PbftOrderer received a new segment: [5 13 21 29 37 45 53 61 69 77 85 93 101 109 117 125 133 141 149 157 165 173 181 189 197 205 213 221 229 237 245 253] first leader=5 firstSN=5 lastSN=253 len=32 length=32 segId=5
+08:20:42.795 INF Starting new view. segID=5 timeout=60000 view=0
+08:20:42.795 DBG Starting timer. sn=5 view=0
+08:20:42.795 INF Starting PBFT instance. first=5 last=253 segID=5
+08:20:42.796 DBG Subscribing to backlog. segID=5
+08:20:42.796 INF Starting serialized message processing. segID=5
+08:20:42.796 INF PbftOrderer received a new segment: [6 14 22 30 38 46 54 62 70 78 86 94 102 110 118 126 134 142 150 158 166 174 182 190 198 206 214 222 230 238 246 254] first leader=6 firstSN=6 lastSN=254 len=32 length=32 segId=6
+08:20:42.796 INF Starting new view. segID=6 timeout=60000 view=0
+08:20:42.796 DBG Starting timer. sn=6 view=0
+08:20:42.797 INF Starting PBFT instance. first=6 last=254 segID=6
+08:20:42.797 DBG Subscribing to backlog. segID=6
+08:20:42.797 INF Starting serialized message processing. segID=6
+08:20:42.797 INF PbftOrderer received a new segment: [7 15 23 31 39 47 55 63 71 79 87 95 103 111 119 127 135 143 151 159 167 175 183 191 199 207 215 223 231 239 247 255] first leader=7 firstSN=7 lastSN=255 len=32 length=32 segId=7
+08:20:42.797 INF Starting new view. segID=7 timeout=60000 view=0
+08:20:42.798 DBG Starting timer. sn=7 view=0
+08:20:42.798 INF Starting PBFT instance. first=7 last=255 segID=7
+08:20:42.798 DBG Subscribing to backlog. segID=7
+08:20:42.798 INF Starting serialized message processing. segID=7
+08:20:42.798 INF PbftOrderer received a new segment: [0 8 16 24 32 40 48 56 64 72 80 88 96 104 112 120 128 136 144 152 160 168 176 184 192 200 208 216 224 232 240 248] first leader=0 firstSN=0 lastSN=248 len=32 length=32 segId=0
+08:20:42.799 INF Starting new view. segID=0 timeout=60000 view=0
+08:20:42.799 DBG Starting timer. sn=0 view=0
+08:20:42.799 INF Starting PBFT instance. first=0 last=248 segID=0
+08:20:42.799 DBG Subscribing to backlog. segID=0
+08:20:42.799 INF Starting serialized message processing. segID=0
+08:20:42.800 INF PbftOrderer received a new segment: [1 9 17 25 33 41 49 57 65 73 81 89 97 105 113 121 129 137 145 153 161 169 177 185 193 201 209 217 225 233 241 249] first leader=1 firstSN=1 lastSN=249 len=32 length=32 segId=1
+08:20:42.800 INF Starting new view. segID=1 timeout=60000 view=0
+08:20:42.800 DBG Starting timer. sn=1 view=0
+08:20:42.800 INF Starting PBFT instance. first=1 last=249 segID=1
+08:20:42.801 DBG Subscribing to backlog. segID=1
+08:20:42.801 INF Starting serialized message processing. segID=1
+08:20:42.801 INF PbftOrderer received a new segment: [2 10 18 26 34 42 50 58 66 74 82 90 98 106 114 122 130 138 146 154 162 170 178 186 194 202 210 218 226 234 242 250] first leader=2 firstSN=2 lastSN=250 len=32 length=32 segId=2
+08:20:42.801 INF Starting new view. segID=2 timeout=60000 view=0
+08:20:42.801 DBG Starting timer. sn=2 view=0
+08:20:42.802 INF Starting PBFT instance. first=2 last=250 segID=2
+08:20:42.802 DBG Subscribing to backlog. segID=2
+08:20:42.802 DBG Leading segment. segID=2
+08:20:42.802 INF Starting serialized message processing. segID=2
+08:20:42.802 DBG Waiting for batch. batchSize=4096
+08:20:43.802 INF Handling PREPREPARE. nReq=0 senderID=3 sn=3
+08:20:43.802 INF Hset. i=0 sn=3 tn=0
+08:20:43.802 INF Handling PREPREPARE. nReq=0 senderID=5 sn=5
+08:20:43.802 DBG Creating new Batch. nReq=0
+08:20:43.802 INF Hset. i=0 sn=5 tn=0
+08:20:43.802 DBG Creating new Batch. nReq=0
+08:20:43.802 INF Handling PREPREPARE. nReq=0 senderID=6 sn=6
+08:20:43.803 DBG Sending PREPARE. senderID=2 sn=3 view=0
+08:20:43.803 DBG Batch ready. batchSize=4096
+08:20:43.803 DBG func sendPrepare prepare Tn. sn=3 tn=1
+08:20:43.803 DBG Sending PREPARE. senderID=2 sn=5 view=0
+08:20:43.803 INF Hset. i=0 sn=6 tn=0
+08:20:43.803 DBG func sendPrepare prepare Tn. sn=5 tn=1
+08:20:43.803 DBG Creating new Batch. nReq=0
+08:20:43.803 DBG Batch cut. left=0 nBuckets=16 nReq=0 next=0
+08:20:43.803 INF Sending PREPREPARE. nReq=0 senderID=2 sn=2 view=0
+08:20:43.803 DBG Waiting for batch. batchSize=4096
+08:20:43.803 DBG Sending PREPARE. senderID=2 sn=6 view=0
+08:20:43.803 INF Handling PREPREPARE. nReq=0 senderID=4 sn=4
+08:20:43.804 DBG func sendPrepare prepare Tn. sn=6 tn=1
+08:20:43.804 INF Hset. i=0 sn=4 tn=0
+08:20:43.804 DBG Creating new Batch. nReq=0
+08:20:43.804 INF Handling PREPREPARE. nReq=0 senderID=0 sn=0
+08:20:43.804 DBG Sending PREPARE. senderID=2 sn=4 view=0
+08:20:43.805 DBG func sendPrepare prepare Tn. sn=4 tn=1
+08:20:43.805 INF Handling PREPREPARE. nReq=0 senderID=1 sn=1
+08:20:43.805 INF Hset. i=0 sn=1 tn=0
+08:20:43.805 DBG Creating new Batch. nReq=0
+08:20:43.804 INF Hset. i=0 sn=0 tn=0
+08:20:43.806 DBG Creating new Batch. nReq=0
+08:20:43.806 DBG Sending PREPARE. senderID=2 sn=1 view=0
+08:20:43.806 DBG func sendPrepare prepare Tn. sn=1 tn=1
+08:20:43.806 DBG Sending PREPARE. senderID=2 sn=0 view=0
+08:20:43.806 DBG func sendPrepare prepare Tn. sn=0 tn=1
+08:20:43.807 DBG Sending COMMIT. senderID=2 sn=3 tn=1 view=0
+08:20:43.807 DBG Sending COMMIT. senderID=2 sn=6 tn=1 view=0
+08:20:43.809 DBG func sendCommit commit Tn. sn=3 tn=1
+08:20:43.810 DBG func sendCommit commit Tn. sn=6 tn=1
+08:20:43.810 DBG Sending COMMIT. senderID=2 sn=4 tn=1 view=0
+08:20:43.810 DBG Sending Htn. senderID=2 sn=3 view=0
+08:20:43.810 DBG Sending Htn. senderID=2 sn=6 view=0
+08:20:43.807 DBG Sending COMMIT. senderID=2 sn=5 tn=1 view=0
+08:20:43.810 DBG func sendCommit commit Tn. sn=4 tn=1
+08:20:43.811 DBG func sendCommit commit Tn. sn=5 tn=1
+08:20:43.811 DBG func handleCommit commit Tn. tn=1
+08:20:43.811 DBG Sending Htn. senderID=2 sn=4 view=0
+08:20:43.812 DBG Sending Htn. senderID=2 sn=5 view=0
+08:20:43.812 DBG func handleCommit commit Tn. tn=1
+08:20:43.815 DBG func handleCommit commit Tn. tn=1
+08:20:43.814 DBG func handleCommit commit Tn. tn=1
+08:20:43.812 DBG Sending COMMIT. senderID=2 sn=1 tn=1 view=0
+08:20:43.818 DBG func sendCommit commit Tn. sn=1 tn=1
+08:20:43.818 DBG func handleCommit commit Tn. tn=1
+08:20:43.818 DBG func handleCommit commit Tn. tn=1
+08:20:43.818 DBG func handleCommit commit Tn. tn=1
+08:20:43.817 DBG Sending COMMIT. senderID=2 sn=2 tn=1 view=0
+08:20:43.818 DBG func sendCommit commit Tn. sn=2 tn=1
+==================
+WARNING: DATA RACE
+Read at 0x00c0001fb5f0 by goroutine 502:
+  runtime.mapaccess1_fast64()
+      /home/dell/wmj/go/src/runtime/map_fast64.go:12 +0x0
+  github.com/hyperledger-labs/mirbft/orderer.(*pbftInstance).sendCommit()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftinstance.go:628 +0x933
+08:20:43.812 DBG Sending COMMIT. senderID=2 sn=0 tn=1 view=0
+  github.com/hyperledger-labs/mirbft/orderer.(*pbftInstance).handlePrepare()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftinstance.go:560 +0x69a
+  github.com/hyperledger-labs/mirbft/orderer.(*pbftInstance).handleMessage()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftinstance.go:1957 +0x2d4
+  github.com/hyperledger-labs/mirbft/orderer.(*pbftInstance).processSerializedMessages()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftinstance.go:1920 +0xdb
+  github.com/hyperledger-labs/mirbft/orderer.(*PbftOrderer).runSegment·dwrap·12()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftorderer.go:200 +0x39
+
+Previous write at 0x00c0001fb5f0 by goroutine 496:
+  runtime.mapassign_fast64()
+      /home/dell/wmj/go/src/runtime/map_fast64.go:92 +0x0
+  github.com/hyperledger-labs/mirbft/orderer.(*pbftInstance).sendCommit()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftinstance.go:629 +0x9e4
+  github.com/hyperledger-labs/mirbft/orderer.(*pbftInstance).handlePrepare()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftinstance.go:560 +0x69a
+  github.com/hyperledger-labs/mirbft/orderer.(*pbftInstance).handleMessage()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftinstance.go:1957 +0x2d4
+  github.com/hyperledger-labs/mirbft/orderer.(*pbftInstance).processSerializedMessages()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftinstance.go:1920 +0xdb
+08:20:43.818 DBG Sending Htn. senderID=2 sn=1 view=0
+  github.com/hyperledger-labs/mirbft/orderer.(*PbftOrderer).runSegment·dwrap·12()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftorderer.go:200 +0x39
+
+Goroutine 502 (running) created at:
+  github.com/hyperledger-labs/mirbft/orderer.(*PbftOrderer).runSegment()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftorderer.go:200 +0x3f0
+  github.com/hyperledger-labs/mirbft/orderer.(*PbftOrderer).Start()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftorderer.go:176 +0x355
+  main.main·dwrap·5()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/cmd/orderingpeer/main.go:169 +0x59
+
+Goroutine 496 (running) created at:
+  github.com/hyperledger-labs/mirbft/orderer.(*PbftOrderer).runSegment()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftorderer.go:200 +0x3f0
+  github.com/hyperledger-labs/mirbft/orderer.(*PbftOrderer).Start()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftorderer.go:176 +0x355
+  main.main·dwrap·5()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/cmd/orderingpeer/main.go:169 +0x59
+==================
+08:20:43.818 DBG func handleCommit commit Tn. tn=1
+08:20:43.819 DBG Sending Htn. senderID=2 sn=2 view=0
+08:20:43.819 DBG func handleCommit commit Tn. tn=1
+08:20:43.819 INF Get logEntry.Sn from tn. Hn=1 SegID=5 Tn=1 logEntry.Sn=5
+==================
+WARNING: DATA RACE
+Read at 0x00c00002c4c4 by goroutine 502:
+  github.com/hyperledger-labs/mirbft/orderer.(*pbftInstance).sendCommit()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftinstance.go:632 +0xa51
+  github.com/hyperledger-labs/mirbft/orderer.(*pbftInstance).handlePrepare()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftinstance.go:560 +0x69a
+  github.com/hyperledger-labs/mirbft/orderer.(*pbftInstance).handleMessage()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftinstance.go:1957 +0x2d4
+  github.com/hyperledger-labs/mirbft/orderer.(*pbftInstance).processSerializedMessages()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftinstance.go:1920 +0xdb
+  github.com/hyperledger-labs/mirbft/orderer.(*PbftOrderer).runSegment·dwrap·12()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftorderer.go:200 +0x39
+
+Previous write at 0x00c00002c4c4 by goroutine 496:
+  github.com/hyperledger-labs/mirbft/orderer.(*pbftInstance).sendCommit()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftinstance.go:633 +0xaf5
+  github.com/hyperledger-labs/mirbft/orderer.(*pbftInstance).handlePrepare()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftinstance.go:560 +0x69a
+  github.com/hyperledger-labs/mirbft/orderer.(*pbftInstance).handleMessage()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftinstance.go:1957 +0x2d4
+  github.com/hyperledger-labs/mirbft/orderer.(*pbftInstance).processSerializedMessages()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftinstance.go:1920 +0xdb
+  github.com/hyperledger-labs/mirbft/orderer.(*PbftOrderer).runSegment·dwrap·12()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftorderer.go:200 +0x39
+
+Goroutine 502 (running) created at:
+  github.com/hyperledger-labs/mirbft/orderer.(*PbftOrderer).runSegment()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftorderer.go:200 +0x3f0
+  github.com/hyperledger-labs/mirbft/orderer.(*PbftOrderer).Start()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftorderer.go:176 +0x355
+  main.main·dwrap·5()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/cmd/orderingpeer/main.go:169 +0x59
+
+Goroutine 496 (running) created at:
+  github.com/hyperledger-labs/mirbft/orderer.(*PbftOrderer).runSegment()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftorderer.go:200 +0x3f0
+  github.com/hyperledger-labs/mirbft/orderer.(*PbftOrderer).Start()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftorderer.go:176 +0x355
+  main.main·dwrap·5()
+      /opt/gopath/src/github.com/hyperledger-labs/mirbft/cmd/orderingpeer/main.go:169 +0x59
+==================
+panic: runtime error: invalid memory address or nil pointer dereference
+[signal SIGSEGV: segmentation violation code=0x1 addr=0x0 pc=0xb4e6da]
+
+goroutine 841 [running]:
+github.com/hyperledger-labs/mirbft/log.CommitEntry(0xc005c50900)
+	/opt/gopath/src/github.com/hyperledger-labs/mirbft/log/log.go:91 +0x17a
+github.com/hyperledger-labs/mirbft/announcer.Announce(...)
+	/opt/gopath/src/github.com/hyperledger-labs/mirbft/announcer/announcer.go:26
+github.com/hyperledger-labs/mirbft/orderer.(*pbftInstance).announce(0xc006b6a210, 0xc006b7e630, 0x5, 0x1, 0xc000369b80, 0x0, 0x172dd7eb9e965563, 0x172dd7eb9f8c48d2)
+	/opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftinstance.go:883 +0xd7a
+github.com/hyperledger-labs/mirbft/orderer.(*pbftInstance).handleCommit(0xc006b6a210, 0xc005bbac00, 0xc005b966c0)
+	/opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftinstance.go:761 +0x7f6
+github.com/hyperledger-labs/mirbft/orderer.(*pbftInstance).handleMessage(0xc006b6a210, 0xc005b966c0)
+	/opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftinstance.go:1966 +0x850
+github.com/hyperledger-labs/mirbft/orderer.(*pbftInstance).processSerializedMessages(0xc006b6a210)
+	/opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftinstance.go:1920 +0xdc
+created by github.com/hyperledger-labs/mirbft/orderer.(*PbftOrderer).runSegment
+	/opt/gopath/src/github.com/hyperledger-labs/mirbft/orderer/pbftorderer.go:200 +0x3f1

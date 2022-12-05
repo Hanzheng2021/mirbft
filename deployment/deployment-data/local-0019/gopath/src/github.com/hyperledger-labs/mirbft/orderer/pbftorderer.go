@@ -195,6 +195,7 @@ func (po *PbftOrderer) runSegment(seg manager.Segment) {
 
 	if isLeading(seg, membership.OwnID, pi.view) {
 		go pi.lead()
+		//go pi.lead(int32(pi.segment.SegID()))///1201
 	}
 	go pi.processSerializedMessages()
 

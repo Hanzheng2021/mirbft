@@ -123,20 +123,23 @@ func (po *PbftOrderer) HandleMessage(msg *pb.ProtocolMessage) {
 func (po *PbftOrderer) HandleEntry(entry *log.Entry) {
 	// Treat the log entry as a MissingEntry message
 	// and process it using the instance according to its sequence number.
-	po.HandleMessage(&pb.ProtocolMessage{
-		SenderId: -1,
-		Sn:       entry.Sn,
-		Msg: &pb.ProtocolMessage_MissingEntry{
-			MissingEntry: &pb.MissingEntry{
-				Sn:      entry.Sn,
-				Batch:   entry.Batch,
-				Digest:  entry.Digest,
-				Aborted: entry.Aborted,
-				Suspect: entry.Suspect,
-				Proof:   "Dummy Proof.",
+	if entry.Batch != nil {///1201
+
+		po.HandleMessage(&pb.ProtocolMessage{
+			SenderId: -1,
+			Sn:       entry.Sn,
+			Msg: &pb.ProtocolMessage_MissingEntry{
+				MissingEntry: &pb.MissingEntry{
+					Sn:      entry.Sn,
+					Batch:   entry.Batch,
+					Digest:  entry.Digest,
+					Aborted: entry.Aborted,
+					Suspect: entry.Suspect,
+					Proof:   "Dummy Proof.",
+				},
 			},
-		},
-	})
+		})
+	}
 }
 
 // Initializes the PbftOrderer.
@@ -195,6 +198,7 @@ func (po *PbftOrderer) runSegment(seg manager.Segment) {
 
 	if isLeading(seg, membership.OwnID, pi.view) {
 		go pi.lead()
+		//go pi.lead(int32(pi.segment.SegID()))///1201
 	}
 	go pi.processSerializedMessages()
 

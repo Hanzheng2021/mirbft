@@ -39,8 +39,9 @@ BatchSizeIncrement: 256 # Number of requests by which a fast node increases its 
 Orderer: Pbft # Oderer type. One of {Dummy, Pbft, HotStuff, Raft}
 Manager: "Mir"      # Manager type. One of {Dummy, Mir}
 Checkpointer: Signing # Checkpointer type. One of {Simple, Signing}
-Failures: 2
+Failures: 0
 Faulty: false
+StragglerCnt: 1
 CrashTiming: Straggler # EpochStart EpochEnd
                          # For peers that are supposed to simulate a crash, CrashTiming decides whether the crash
                          # happens at the start or at the end of the first epoch.
@@ -63,8 +64,8 @@ ClientWatermarkWindowSize: 4194304
 ClientRequestBacklogSize: 4194304 # The number of requests beyond client's current window that are backlogged.
 
 # Leader and failure handling
-RandomSeed: 27001     # Should be set to a random integer.
-LeaderPolicy: SimulatedRandomFailures # Leader selection policy. One of {Simple, Single, Backoff, Blacklist, Combined}
+RandomSeed: 5820     # Should be set to a random integer.
+LeaderPolicy: Blacklist # Leader selection policy. One of {Simple, Single, Backoff, Blacklist, Combined}
 NodeToLeaderRatio: 1        # Total number of nodes devided by this number gives number of leaders
 DefaultLeaderBan: 2        # The default number of epochs a node is excluded from the leaderset once suspected.
                            # Applies only to {Backoff, Combined} leader selection policies.
@@ -85,8 +86,8 @@ ClientTraceSampling: 10 # Only trace one out of ClientTraceSampling events at th
 
 # Client configuration
 ClientsPerProcess:    1       # Number of concurrent clients on each client machine (running as threads in a single process).
-RequestsPerClient:    15360      # Number of requests each client submits.
-ClientRunTime:        30000      # Timeout for client to submit all its requests, in milliseconds. Set to 0 for no timeout.
+RequestsPerClient:    7680      # Number of requests each client submits.
+ClientRunTime:        15000      # Timeout for client to submit all its requests, in milliseconds. Set to 0 for no timeout.
 RequestRate:          256   # Max request rate per client, in requests per second. Set to -1 for no limit.
 HardRequestRateLimit: false # If true, the client always waits for at least 1/RequestRateLimit between any two requests.
                                     # If false, the client treats RequestRateLimit as a limit on the average request rate,

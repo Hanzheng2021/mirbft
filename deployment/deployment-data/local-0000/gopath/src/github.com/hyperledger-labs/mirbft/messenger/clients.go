@@ -188,9 +188,7 @@ func RespondToClient(clientID int32, response *pb.ClientResponse) {
 
 		// Try sending the response.
 		if err := srv.(pb.Messenger_RequestServer).Send(response); err != nil {
-            //logger.Fatal("HELLOOOOOOOOOOOOOO: %d", response.OrderSn)////
-			logger.Fatal().Msg("OOOOOOOOOOOOOO")
-			///logger.Info().Msg("OOOOOOOOOOOOOO")
+
 			// Log sending error.
 			logger.Error().
 				Err(err).

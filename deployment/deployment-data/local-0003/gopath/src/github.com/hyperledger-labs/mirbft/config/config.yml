@@ -58,6 +58,7 @@ Orderer: "Pbft"             # Oderer type. One of {Dummy, Pbft, HotStuff, Raft}
 Manager: "Mir"              # Manager type. One of {Dummy, Mir}
 Checkpointer: "Simple"      # Checkpointer type. One of {Simple, Signing}
 Failures: 0
+StragglerCnt: 0
 CrashTiming: EpochEnd       # One of {EpochStart, EpochEnd}
                             # For peers that are supposed to simulate a crash, CrashTiming decides whether the crash
                             # happens at the start or at the end of the first epoch.

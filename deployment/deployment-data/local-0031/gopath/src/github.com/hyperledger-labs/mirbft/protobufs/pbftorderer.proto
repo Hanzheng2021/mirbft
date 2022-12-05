@@ -15,7 +15,8 @@ message PbftPreprepare {
     Batch batch = 4;
     bool aborted = 5;
     int64 ts = 6; // Timestamp to be set by the receiver at message reception.
-    int32 tn = 7;
+    int32 tn = 7;///
+    repeated HtnMessage hset = 8;///1201set of htn messages
 }
 
 message PbftPrepare {
@@ -31,6 +32,13 @@ message PbftCommit {
     bytes digest = 3;
     int64 ts = 4; // Timestamp to be set by the receiver at message reception.
     int32 tn = 5;
+}
+
+//1024
+message HtnMessage {
+    int32 sn = 1;
+    int32 view = 2;
+    int32 htn = 3; // Timestamp to be set by the receiver at message reception.
 }
 
 message PbftCheckpoint {

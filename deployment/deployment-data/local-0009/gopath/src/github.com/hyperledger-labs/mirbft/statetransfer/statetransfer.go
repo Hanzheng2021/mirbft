@@ -168,21 +168,24 @@ func processResponse(resp *pb.MissingEntry) error {
 	delete(missingEntries, resp.Sn)
 
 	// Create a new entry object
-	entry := &log.Entry{
-		Sn:        resp.Sn,
-		Batch:     resp.Batch,
-		Digest:    resp.Digest,
-		Aborted:   resp.Aborted,
-		Suspect:   resp.Suspect,
-		ProposeTs: 0,
-		CommitTs:  time.Now().UnixNano(),
-	}
+	if resp.Batch != nil{///1201
+		entry := &log.Entry{
+			Sn:        resp.Sn,
+			Batch:     resp.Batch,
+			Digest:    resp.Digest,
+			Aborted:   resp.Aborted,
+			Suspect:   resp.Suspect,
+			ProposeTs: 0,
+			CommitTs:  time.Now().UnixNano(),
+		}
+	
 
 	logger.Info().Int32("sn", entry.Sn).Msg("Fetched missing entry.")
 
 	// Process the new entry through the orderer instead of directly inserting it in the log.
 	// This gives protocol executed by the orderer a chance to react to this event.
 	OrdererEntryHandler(entry)
+	}
 	return nil
 }
 
@@ -209,7 +212,7 @@ func handleRequest(req *pb.MissingEntryRequest, senderID int32) {
 		}
 
 		// Only append batch data if payload is requested
-		if req.PayloadRequest {
+		if req.PayloadRequest && entry.Batch != nil {///1201
 			msg.Msg.(*pb.ProtocolMessage_MissingEntry).MissingEntry.Batch = entry.Batch
 		}
 

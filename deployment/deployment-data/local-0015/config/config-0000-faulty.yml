@@ -8,7 +8,7 @@ CACertFile:           "tls-data/ca.pem"
 KeyFile:              "tls-data/auth.key"
 CertFile:             "tls-data/auth.pem"
 
-PriorityConnections: 4  # Number of parallel priority connections between 2 peers
+PriorityConnections: 2  # Number of parallel priority connections between 2 peers
 BasicConnections: 2                       # Number underlying parallel network connections for each logical connection between 2 peers.
                                           # (not counting the priority connection).
 TestConnections: false # Enable testing of connections before the actual experiment starts.
@@ -21,7 +21,7 @@ OutMessageBufsize:    1024 # If > 0, all outgoing messages are first placed in b
                            # of OutMessageBufSize). One extra thread per logical connection reads messages from these
                            # channels and sends them to on the network.
                            # If set to 0, no channels (and no extra threads) are used.
-OutMessageBatchPeriod: 1 # If not zero, outgoing messages to each peer will be sent in batches each
+OutMessageBatchPeriod: 2 # If not zero, outgoing messages to each peer will be sent in batches each
                                       # OutMessageBatchPeriod milliseconds. This does not concern priority messages.
                                       # If zero, each message will be sent directly.
 ThroughputCap: 131072000  # In requests/s. Batches are not cut faster than at this rate.
@@ -39,8 +39,9 @@ BatchSizeIncrement: 256 # Number of requests by which a fast node increases its 
 Orderer: Pbft # Oderer type. One of {Dummy, Pbft, HotStuff, Raft}
 Manager: "Mir"      # Manager type. One of {Dummy, Mir}
 Checkpointer: Signing # Checkpointer type. One of {Simple, Signing}
-Failures: 1
+Failures: 0
 Faulty: true
+StragglerCnt: 1
 CrashTiming: Straggler # EpochStart EpochEnd
                          # For peers that are supposed to simulate a crash, CrashTiming decides whether the crash
                          # happens at the start or at the end of the first epoch.
@@ -52,7 +53,7 @@ WatermarkWindowSize: 256  # The number of "in-flight" sequence numbers.
 
 # Mir Manager Configuration
 EpochLength: 256 # Determines the length of the epoch, if SegmentLength is not specified. Ignored otherwise.
-SegmentLength: 64 # Number of sequence numbers in a segment.
+SegmentLength: 32 # Number of sequence numbers in a segment.
                              # Overrides EpochLength, which may vary depending on the number of leaders.
                              # If set to 0, epoch length remains constant (EpochLength).
 WaitForCheckpoints: true  # Wait for a stable checkpoint of an epoch before starting a new epoch.
@@ -63,14 +64,14 @@ ClientWatermarkWindowSize: 4194304
 ClientRequestBacklogSize: 4194304 # The number of requests beyond client's current window that are backlogged.
 
 # Leader and failure handling
-RandomSeed: 1615     # Should be set to a random integer.
-LeaderPolicy: SimulatedRandomFailures # Leader selection policy. One of {Simple, Single, Backoff, Blacklist, Combined}
+RandomSeed: 13742     # Should be set to a random integer.
+LeaderPolicy: Blacklist # Leader selection policy. One of {Simple, Single, Backoff, Blacklist, Combined}
 NodeToLeaderRatio: 1        # Total number of nodes devided by this number gives number of leaders
 DefaultLeaderBan: 2        # The default number of epochs a node is excluded from the leaderset once suspected.
                            # Applies only to {Backoff, Combined} leader selection policies.
 
 # Orderer config
-NumBuckets: 64         # Total number of buckets. Should be at least as many as the number of potential leaders.
+NumBuckets: 128         # Total number of buckets. Should be at least as many as the number of potential leaders.
 BatchSize: 4096        # Maximum number of requests per batch
 BatchTimeout: 1000  # Timeout (ms) to cut batch when the bucket has less requests than the BatchSize.
 
@@ -86,8 +87,8 @@ ClientTraceSampling: 10 # Only trace one out of ClientTraceSampling events at th
 # Client configuration
 ClientsPerProcess:    1       # Number of concurrent clients on each client machine (running as threads in a single process).
 RequestsPerClient:    7680      # Number of requests each client submits.
-ClientRunTime:        30000      # Timeout for client to submit all its requests, in milliseconds. Set to 0 for no timeout.
-RequestRate:          128   # Max request rate per client, in requests per second. Set to -1 for no limit.
+ClientRunTime:        15000      # Timeout for client to submit all its requests, in milliseconds. Set to 0 for no timeout.
+RequestRate:          256   # Max request rate per client, in requests per second. Set to -1 for no limit.
 HardRequestRateLimit: false # If true, the client always waits for at least 1/RequestRateLimit between any two requests.
                                     # If false, the client treats RequestRateLimit as a limit on the average request rate,
                                     # and might temporarily increase the rate to catch up with the prescribed average rate.

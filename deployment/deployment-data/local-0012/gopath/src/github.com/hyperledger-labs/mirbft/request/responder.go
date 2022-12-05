@@ -53,20 +53,22 @@ func (r *Responder) Start(wg *sync.WaitGroup) {
 	for e := <-r.entriesChan; e != nil; e = <-r.entriesChan {
 
 		// For each ClientRequest in the ordered batch
-		for _, req := range e.Batch.Requests {
-			logger.Trace().
-				Int32("clientId", req.RequestId.ClientId).
-				Int32("clientSn", req.RequestId.ClientSn).
-				Int32("sn", e.Sn).
-				Msg("Sending response to client.")
+		if e.Batch != nil {///1201
+			for _, req := range e.Batch.Requests {
+				logger.Trace().
+					Int32("clientId", req.RequestId.ClientId).
+					Int32("clientSn", req.RequestId.ClientSn).
+					Int32("sn", e.Sn).
+					Msg("Sending response to client.")
 
 			// Respond to the corresponding client.
-			tracing.MainTrace.Event(tracing.RESP_SEND, int64(req.RequestId.ClientId), int64(req.RequestId.ClientSn))
+				tracing.MainTrace.Event(tracing.RESP_SEND, int64(req.RequestId.ClientId), int64(req.RequestId.ClientSn))
 
-			messenger.RespondToClient(req.RequestId.ClientId, &pb.ClientResponse{
-				OrderSn:  e.Sn,
-				ClientSn: req.RequestId.ClientSn,
-			})
+				messenger.RespondToClient(req.RequestId.ClientId, &pb.ClientResponse{
+					OrderSn:  e.Sn,
+					ClientSn: req.RequestId.ClientSn,
+				})
+			}
 		}
 	}
 }
