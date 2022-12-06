@@ -40,7 +40,7 @@ faultyMachineLocations="sjc04 osa23 ams03 syd05 lon06 wdc07 che01 tok05 par01 da
 clients1="1"    # deploys 1 client machine which run the specified number of client instances
 clients16=""    # deploys 16 client machine which run the specified number of client instances
 clients32=""    # deploys 32 client machine which run the specified number of client instances
-systemSizes="4" # Must be sorted in ascending order!
+systemSizes="8" # Must be sorted in ascending order!
 failureCounts=(0) # For each system size, the corresponding failure count (on top of the correct nodes)
 
 StragglerCnt=(1) # Count of Straggler (Only effect when crashTimings is 'Straggler')
@@ -76,7 +76,7 @@ fixedEpochLength=false
 auths="true"
 bucketsPerLeader="16"
 minBuckets="16"
-minEpochLength="256"       # [entries]
+minEpochLength="1024"       # [entries]
 nodeConnections="1"
 minConnections="16"
 leaderPolicies="Blacklist"  # Possible values:

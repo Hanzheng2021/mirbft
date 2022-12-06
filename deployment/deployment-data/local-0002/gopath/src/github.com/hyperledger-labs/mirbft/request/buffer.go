@@ -137,11 +137,14 @@ func (b *Buffer) AdvanceWatermarks(entries []interface{}) watermarkRange { // ex
 
 	// Set the "committed" flag for all the requests among the committed entries that belong to this client buffer.
 	for _, entry := range entries {
-		for _, req := range entry.(*log.Entry).Batch.Requests {
-			if req.RequestId.ClientId == b.ClientID {
-				b.requestsCommitted[req.RequestId.ClientSn] = true
+		if entry.(*log.Entry).Batch != nil{///1205
+			for _, req := range entry.(*log.Entry).Batch.Requests {
+				if req.RequestId.ClientId == b.ClientID {
+					b.requestsCommitted[req.RequestId.ClientSn] = true
+				}
 			}
 		}
+		
 	}
 
 	// Save old watermark for returning it later.

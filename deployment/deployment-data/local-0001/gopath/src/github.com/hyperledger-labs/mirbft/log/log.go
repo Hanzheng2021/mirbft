@@ -85,14 +85,24 @@ func CommitEntry(entry *Entry) {
 		return
 	}
 
-	tracing.MainTrace.Event(tracing.COMMIT, int64(entry.Sn), 0)
-	logger.Info().
+	tracing.MainTrace.Event(tracing.COMMIT, int64(entry.Sn), 0) 
+	if entry.Batch != nil {///1205
+		logger.Info().
 		Int32("sn", entry.Sn).
 		Int("nReq", len(entry.Batch.Requests)).
 		//Time("proposed", time.Unix(0, entry.ProposeTs)).
 		//Time("committed", time.Unix(0, entry.CommitTs)).
 		Int64("latency", (entry.CommitTs-entry.CommitTs)/1000000).
-		Msg("Committed entry.")
+		Msg("Committed entry.")		
+	} else {
+		logger.Info().
+		Int32("sn", entry.Sn).
+		//Int("nReq", len(entry.Batch.Requests)).
+		//Time("proposed", time.Unix(0, entry.ProposeTs)).
+		//Time("committed", time.Unix(0, entry.CommitTs)).
+		Int64("latency", (entry.CommitTs-entry.CommitTs)/1000000).
+		Msg("Committed nil entry.")		
+	}
 
 	entryPublishLock.Lock()
 	publishEntry(entry, logSubscribersOutOfOrder)
@@ -259,11 +269,18 @@ func publishEntries() {
 	// push the corresponding Entry to the subscribers
 	// and increment firstEmptySN.
 	for entry, ok := entries.Load(firstEmptySN); ok; entry, ok = entries.Load(firstEmptySN) {
+		if entry.(*Entry).Batch !=nil {///1205
+			logger.Info().
+				Int32("sn", firstEmptySN).
+				Int("nReq", len(entry.(*Entry).Batch.Requests)).
+				Msg("Delivered batch.")
+		} else {
+			logger.Info().
+				Int32("sn", firstEmptySN).
+				//Int("nReq", len(entry.(*Entry).Batch.Requests)).
+				Msg("Delivered nil batch.")
+		}
 
-		logger.Info().
-			Int32("sn", firstEmptySN).
-			Int("nReq", len(entry.(*Entry).Batch.Requests)).
-			Msg("Delivered batch.")
 
 		// On each iteration, push new log Entry to all in-order subscriber channels.
 		publishEntry(entry.(*Entry), logSubscribers)

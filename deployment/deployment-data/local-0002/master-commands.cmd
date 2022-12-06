@@ -6,7 +6,7 @@ write-file master-ready READY
 
 
 # Wait for slaves.
-wait for slaves peers 4
+wait for slaves peers 8
 wait for slaves 1client 1
 
 # Create log directory.
@@ -22,7 +22,7 @@ sync peers
 sync 1client
 
 # Start peers.
-discover-reset 4
+discover-reset 8
 exec-start peers experiment-output/0000/slave-__id__/peer.log orderingpeer experiment-output/0000/slave-__id__/config/config.yml 127.0.0.1:9999 127.0.0.1 127.0.0.1 experiment-output/0000/slave-__id__/peer.trc experiment-output/0000/slave-__id__/prof
 discover-wait
 
@@ -47,7 +47,7 @@ write-file master-status 0000
 # Wait for all slaves, even if they were not involved in experiments.
 # Wait for slaves.
 wait for slaves 1client 1
-wait for slaves peers 4
+wait for slaves peers 8
 
 # Stop all slaves.
 stop __all__

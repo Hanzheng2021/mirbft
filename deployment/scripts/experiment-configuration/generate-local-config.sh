@@ -69,14 +69,14 @@ orderers="Pbft"             # Possible values: Pbft HotStuff Raft Dummy
 checkpointers="Signing"
 
 # Parameters chosen for experiments
-durations="13"             # [s]   !!! Don't forget to change the timeout in generate-master-commands.py if increasing this value !!!
+durations="30"             # [s]   !!! Don't forget to change the timeout in generate-master-commands.py if increasing this value !!!
 bandwidths="1gbit"         # any value accepted by the tc command or "unlimited" !!! ATTENTION: Adapt MaxProposeDataRate in config accordingly !!!
 payloadSizes="500"         # [Bytes]
 fixedEpochLength=false
 auths="true"
 bucketsPerLeader="16"
 minBuckets="16"
-minEpochLength="256"       # [entries]
+minEpochLength="1024"       # [entries]
 nodeConnections="1"
 minConnections="16"
 leaderPolicies="Blacklist"  # Possible values:

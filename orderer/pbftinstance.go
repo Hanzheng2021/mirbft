@@ -851,12 +851,6 @@ func (pi *pbftInstance) announce(batch *pbftBatch, sn int32, tn int32, reqBatch 
 	///1101
 	hn :=(sn - int32(pi.segment.SegID()))/int32(membership.NumNodes()) +1///1103
 	pi.hnsn[hn] = logEntry.Sn
-	logger.Info().
-		Int32("logEntry.Sn", logEntry.Sn).
-		Int32("Tn", tn).
-		Int32("Hn", hn).
-		Int("SegID", pi.segment.SegID()).
-		Msg("Get logEntry.Sn from tn.")
 	///1201
 	if hn==1 && pi.hnsn[hn] != int32(pi.segment.SegID()) {
 		for i := int32(pi.segment.SegID()); i < pi.hnsn[hn]; i=i+int32(membership.NumNodes()) {	
@@ -895,7 +889,13 @@ func (pi *pbftInstance) announce(batch *pbftBatch, sn int32, tn int32, reqBatch 
 		}
 	}
 	///1116 Announce decision.
-	announcer.Announce(logEntry)	
+	announcer.Announce(logEntry)
+	logger.Info().
+		Int32("logEntry.Sn", logEntry.Sn).
+		Int32("Tn", tn).
+		Int32("Hn", hn).
+		Int("SegID", pi.segment.SegID()).
+		Msg("Get logEntry.Sn from tn.")	
 	// Start new view change timeout
 	// for the fist uncommitted sequence number in the segment
 	finished := true // Will be set to false if any SN is still uncommitted

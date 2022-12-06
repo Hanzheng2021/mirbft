@@ -8,7 +8,7 @@ CACertFile:           "tls-data/ca.pem"
 KeyFile:              "tls-data/auth.key"
 CertFile:             "tls-data/auth.pem"
 
-PriorityConnections: 4  # Number of parallel priority connections between 2 peers
+PriorityConnections: 2  # Number of parallel priority connections between 2 peers
 BasicConnections: 2                       # Number underlying parallel network connections for each logical connection between 2 peers.
                                           # (not counting the priority connection).
 TestConnections: false # Enable testing of connections before the actual experiment starts.
@@ -21,7 +21,7 @@ OutMessageBufsize:    1024 # If > 0, all outgoing messages are first placed in b
                            # of OutMessageBufSize). One extra thread per logical connection reads messages from these
                            # channels and sends them to on the network.
                            # If set to 0, no channels (and no extra threads) are used.
-OutMessageBatchPeriod: 1 # If not zero, outgoing messages to each peer will be sent in batches each
+OutMessageBatchPeriod: 2 # If not zero, outgoing messages to each peer will be sent in batches each
                                       # OutMessageBatchPeriod milliseconds. This does not concern priority messages.
                                       # If zero, each message will be sent directly.
 ThroughputCap: 131072000  # In requests/s. Batches are not cut faster than at this rate.
@@ -47,31 +47,31 @@ CrashTiming: Straggler # EpochStart EpochEnd
                          # happens at the start or at the end of the first epoch.
 
 # Dummy Manager Configuration
-CheckpointInterval:  256  # The checkpointing protocol is triggered each checkpointInterval of contiguously committed sequence numbers.
-WatermarkWindowSize: 256  # The number of "in-flight" sequence numbers.
+CheckpointInterval:  1024  # The checkpointing protocol is triggered each checkpointInterval of contiguously committed sequence numbers.
+WatermarkWindowSize: 1024  # The number of "in-flight" sequence numbers.
                             # I.e., the maximum difference between the first uncommitted sequence number and the last sequence number for which a value can be proposed, plus 1.
 
 # Mir Manager Configuration
-EpochLength: 256 # Determines the length of the epoch, if SegmentLength is not specified. Ignored otherwise.
-SegmentLength: 64 # Number of sequence numbers in a segment.
+EpochLength: 1024 # Determines the length of the epoch, if SegmentLength is not specified. Ignored otherwise.
+SegmentLength: 128 # Number of sequence numbers in a segment.
                              # Overrides EpochLength, which may vary depending on the number of leaders.
                              # If set to 0, epoch length remains constant (EpochLength).
 WaitForCheckpoints: true  # Wait for a stable checkpoint of an epoch before starting a new epoch.
                           # This keeps the peers more in sync for the price of waiting longer between epochs.
 
 # Request Buffer Configuration
-ClientWatermarkWindowSize: 4194304
-ClientRequestBacklogSize: 4194304 # The number of requests beyond client's current window that are backlogged.
+ClientWatermarkWindowSize: 6291456
+ClientRequestBacklogSize: 6291456 # The number of requests beyond client's current window that are backlogged.
 
 # Leader and failure handling
-RandomSeed: 15044     # Should be set to a random integer.
+RandomSeed: 25959     # Should be set to a random integer.
 LeaderPolicy: Blacklist # Leader selection policy. One of {Simple, Single, Backoff, Blacklist, Combined}
 NodeToLeaderRatio: 1        # Total number of nodes devided by this number gives number of leaders
 DefaultLeaderBan: 2        # The default number of epochs a node is excluded from the leaderset once suspected.
                            # Applies only to {Backoff, Combined} leader selection policies.
 
 # Orderer config
-NumBuckets: 64         # Total number of buckets. Should be at least as many as the number of potential leaders.
+NumBuckets: 128         # Total number of buckets. Should be at least as many as the number of potential leaders.
 BatchSize: 4096        # Maximum number of requests per batch
 BatchTimeout: 1000  # Timeout (ms) to cut batch when the bucket has less requests than the BatchSize.
 

@@ -47,24 +47,24 @@ CrashTiming: Straggler # EpochStart EpochEnd
                          # happens at the start or at the end of the first epoch.
 
 # Dummy Manager Configuration
-CheckpointInterval:  256  # The checkpointing protocol is triggered each checkpointInterval of contiguously committed sequence numbers.
-WatermarkWindowSize: 256  # The number of "in-flight" sequence numbers.
+CheckpointInterval:  768  # The checkpointing protocol is triggered each checkpointInterval of contiguously committed sequence numbers.
+WatermarkWindowSize: 768  # The number of "in-flight" sequence numbers.
                             # I.e., the maximum difference between the first uncommitted sequence number and the last sequence number for which a value can be proposed, plus 1.
 
 # Mir Manager Configuration
-EpochLength: 256 # Determines the length of the epoch, if SegmentLength is not specified. Ignored otherwise.
-SegmentLength: 32 # Number of sequence numbers in a segment.
+EpochLength: 768 # Determines the length of the epoch, if SegmentLength is not specified. Ignored otherwise.
+SegmentLength: 96 # Number of sequence numbers in a segment.
                              # Overrides EpochLength, which may vary depending on the number of leaders.
                              # If set to 0, epoch length remains constant (EpochLength).
 WaitForCheckpoints: true  # Wait for a stable checkpoint of an epoch before starting a new epoch.
                           # This keeps the peers more in sync for the price of waiting longer between epochs.
 
 # Request Buffer Configuration
-ClientWatermarkWindowSize: 4194304
-ClientRequestBacklogSize: 4194304 # The number of requests beyond client's current window that are backlogged.
+ClientWatermarkWindowSize: 4718592
+ClientRequestBacklogSize: 4718592 # The number of requests beyond client's current window that are backlogged.
 
 # Leader and failure handling
-RandomSeed: 24985     # Should be set to a random integer.
+RandomSeed: 3772     # Should be set to a random integer.
 LeaderPolicy: Blacklist # Leader selection policy. One of {Simple, Single, Backoff, Blacklist, Combined}
 NodeToLeaderRatio: 1        # Total number of nodes devided by this number gives number of leaders
 DefaultLeaderBan: 2        # The default number of epochs a node is excluded from the leaderset once suspected.
