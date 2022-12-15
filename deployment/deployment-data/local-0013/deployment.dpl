@@ -1,0 +1,37 @@
+# Generated deployment file
+# 
+# systemSizes:      16
+# machineType:      cloud-machine-templates/small-machine
+# bandwidths:       1gbit
+# 
+# segmentLengths:   16
+# bucketsPerLeader: 16
+# batchsizes:       4096
+# auths:            true
+# clients8:         
+# clients16:        
+# duration:         
+# peerTag:          peers
+
+machine: cloud-machine-templates/small-machine-fra05.cmt
+deploy 1 1client
+
+
+# Parameters: exp,peers,nlr,failures,crash-timing,vctimeout,datacenters,bandwidth,num-connections,orderer,clients,instances,client-threads,leader-policy,segment,epoch,batchsize,batchtimeout,batchrate,msgbatchperiod,buckets,leader-buckets,authentication,verify-early,throughput-cap,target-throughput,rate-per-client,hard-rate-limit,requests,cl-watermarks,batch-verifier,request-handlers,req-buffer-size
+
+
+# ========================================
+#  Peers: 16
+# Faulty: 0
+# Straggler: 1
+#  Reuse: true
+# ========================================
+machine: cloud-machine-templates/small-machine-fra05.cmt
+deploy 16 peers
+
+bandwidth: 1gbit
+# 0000,16,0,1,60000,1,1gbit,1,Pbft,Signing,1,1,1,128,Blacklist,2048,4096,1000,32,4,256,16,true,false,131072000,256,256,false,15360,12582912,external,32,8192
+run 0000 config: config-0000.yml   peers: peers   clients: 1client
+
+bandwidth: 1gbit
+bandwidth: 1gbit
