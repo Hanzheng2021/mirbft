@@ -40,6 +40,10 @@ message HtnMessage {
     int32 view = 2;
     int32 htn = 3; // Timestamp to be set by the receiver at message reception.
 }
+//2023
+message EndBlock {
+    int32 sn = 1;   
+}
 
 message PbftCheckpoint {
     repeated bytes digests = 1;
