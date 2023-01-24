@@ -49,6 +49,7 @@ message ProtocolMessage {
         PbftCatchUp pbft_catchup = 27;
         HotStuffNewView hotstuff_newview = 28;
         HtnMessage htnmsg=29;///1024
+        EndBlock end_block=30;//2023
     }
 }
 
