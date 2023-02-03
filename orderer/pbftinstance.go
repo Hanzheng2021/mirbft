@@ -195,11 +195,11 @@ func (pi *pbftInstance) init(seg manager.Segment, orderer *PbftOrderer) {
 	/// 1024///1116///1201
 	//htnmember[pi.segment.SegID()] = 0
 	lock.Lock()
-	htnlog[pi.segment.SegID()] = (pi.segment.FirstSN() - int32(pi.segment.SegID()%membership.NumNodes())) / int32(membership.NumNodes()) ///2023
+	htnlog[pi.segment.SegID()] = (int32(pi.segment.FirstSN()) - int32(pi.segment.FirstSN())%int32(membership.NumNodes())) / int32(membership.NumNodes()) ///2023
 	lock.Unlock()
-	pi.vhtnsn[int32(pi.segment.SegID())] = true
+	pi.vhtnsn[pi.segment.FirstSN()] = true
 
-	pi.htnssn[int32(pi.segment.SegID())] = append(pi.htnssn[int32(pi.segment.SegID())], htnmsg0) ///1201
+	pi.htnssn[int32(pi.segment.FirstSN())] = append(pi.htnssn[int32(pi.segment.FirstSN())], htnmsg0) ///1201
 
 	// Non initializing final digests. Checked for nil in the code.
 	pi.startView(0)
@@ -235,7 +235,8 @@ func (pi *pbftInstance) lead() {
 	// Simulate a straggler.
 	//if membership.SimulatedCrashes[membership.OwnID] != nil && config.Config.CrashTiming == "Straggler" {
 	///1031
-	if membership.SimulatedStraggler[membership.OwnID] == 1 && config.Config.CrashTiming == "Straggler" {
+	//if membership.SimulatedStraggler[membership.OwnID] == 1 && config.Config.CrashTiming == "Straggler" {
+	if int32(pi.segment.SegID())%int32(membership.NumNodes())== 0 && config.Config.CrashTiming == "Straggler" {		
 		//if config.Config.CrashTiming == "Straggler" {
 		config.Config.BatchTimeoutMs = int(0.0333 * float64(config.Config.ViewChangeTimeoutMs))
 		config.Config.BatchTimeout = time.Duration(config.Config.BatchTimeoutMs) * time.Millisecond
@@ -287,11 +288,11 @@ func (pi *pbftInstance) lead() {
 		}
 		lock.Unlock()
 		///2023epoch结束的时候不再propose,并且补齐剩余的sn，但这个sn不应该马上补齐，对一个instance来说必须按顺序Announce
-		if htnlog[pi.segment.SegID()] + 1 > (pi.segment.LastSN()-int32(pi.segment.SegID()%membership.NumNodes()))/int32(membership.NumNodes()) {
+		if htnlog[pi.segment.SegID()]+1 > (pi.segment.LastSN()-int32(pi.segment.SegID()%membership.NumNodes()))/int32(membership.NumNodes()) {
 			hn := (sn-int32(pi.segment.SegID()%membership.NumNodes()))/int32(membership.NumNodes()) + 1 ///1103
 			for i := pi.hnsn[hn-1] + int32(membership.NumNodes()); i <= pi.segment.LastSN(); i = i + int32(membership.NumNodes()) {
-				if log.GetEntry(pi.hnsn[hn-1]) != nil{ //前一个sn已经Announce了
-				//if	!pi.batches[pi.view][pi.hnsn[hn-1]].committed {
+				if log.GetEntry(pi.hnsn[hn-1]) != nil { //前一个sn已经Announce了
+					//if	!pi.batches[pi.view][pi.hnsn[hn-1]].committed {
 					logEntry1 := &log.Entry{
 						Sn:        i,   ///1103
 						Batch:     nil, ///1205
@@ -311,9 +312,9 @@ func (pi *pbftInstance) lead() {
 					}
 					msg := &pb.ProtocolMessage{
 						SenderId: membership.OwnID,
-						Sn:    i,
+						Sn:       i,
 						Msg: &pb.ProtocolMessage_EndBlock{
-							EndBlock:   endblock,
+							EndBlock: endblock,
 						},
 					}
 					logger.Debug().Int32("sn", msg.Sn).
@@ -332,16 +333,16 @@ func (pi *pbftInstance) lead() {
 					for _, sn := range pi.segment.SNs() {
 						if !pi.batches[pi.view][sn].committed {
 							pi.setViewChangeTimer(sn, 0)
-								finished = false
-								break
+							finished = false
+							break
 						}
 					}
-	
+
 					// Submit own checkpoint message if all entries of the segment just have been committed.
 					if finished {
-	
+
 						pi.sendCheckpoint()
-	
+
 						// If no segment checkpoint exists yet, start a timer for a view change if the checkpoint is not created soon.
 						// This is required to help other peers that might be stuck in a future view. The high-level checkpoints are
 						// not sufficient for this, as multiple segments might be blocking each other.
@@ -352,7 +353,7 @@ func (pi *pbftInstance) lead() {
 				} else {
 					i = i - int32(membership.NumNodes())
 				}
-				
+
 			}
 			break
 		}
@@ -768,11 +769,12 @@ func GetMaxHtn(ary []*pb.HtnMessage) int32 {
 
 	return maxVal
 }
+
 ///2023
 func (pi *pbftInstance) handleEndBlock(endblock *pb.EndBlock, msg *pb.ProtocolMessage) error {
 	sn := msg.Sn
 	logEntry := &log.Entry{
-		Sn: sn,
+		Sn:        sn,
 		ProposeTs: 0,
 		CommitTs:  0,
 		Aborted:   false,
